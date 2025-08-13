@@ -2,6 +2,11 @@
 <html lang="en">
 
     <head>
+        <!-- Bootstrap 5 CDN (Add in <head> and before </body>)  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
         <meta charset="utf-8">
         <title>QSS</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -40,466 +45,751 @@
         <!-- Spinner End -->
 
 
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center">
-                <div class="col-lg-5 text-center text-lg-start mb-lg-0">
-                    <div class="d-flex">
-                        <a href="#" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>info@qss.net.in</a>
-                        <a href="#" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal text-secondary"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#" class="text-muted me-2"> Help</a><small> / </small>
-                        <a href="#" class="text-muted mx-2"> Support</a><small> / </small>
-                        <a href="#" class="text-muted ms-2"> Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Topbar End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-5 text-secondary m-0"><img src="img/brand-logo.png" class="img-fluid" alt="">Travisa</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+     <!-- Topbar Start -->
+<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #c9a560;">
+    <div class="row gx-0 align-items-center">
+        <!-- Left: Email & Phone -->
+        <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+            <div class="d-flex">
+                <a href="#" class="text-muted me-4">
+                    <i class="fas fa-envelope text-[rgb(75 75 75)] me-2"></i>info@qss.net.in
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Feature</a>
-                                <a href="countries.html" class="dropdown-item">Countries</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="training.html" class="dropdown-item">Training</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                    <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="text-muted me-0">
+                    <i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890
+                </a>
             </div>
         </div>
-        <!-- Modal Search End -->
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>
-                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li>
-                    <li class="breadcrumb-item active text-secondary">About</li>
-                </ol>    
+        <!-- Center: Removed Social Icons -->
+        <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+            <!-- Intentionally left empty as requested -->
+        </div>
+
+        <!-- Right: Help / Support / Contact -->
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a href="#" class="text-muted me-2">Help</a><small>/</small>
+                <a href="#" class="text-muted mx-2">Support</a><small>/</small>
+                <a href="#" class="text-muted ms-2">Contact</a>
             </div>
         </div>
-        <!-- Header End -->
+    </div>
+</div>
+<!-- Topbar End -->
 
-        <!-- About Start -->
-        <div class="container-fluid overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="bg-light rounded">
-                            <img src="img/about-2.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                            <img src="img/about-3.jpg" class="img-fluid w-100 border-bottom border-5 border-primary" style="border-top-right-radius: 300px; border-top-left-radius: 300px;" alt="Image">
+
+<!-- ✅ Header Section Start -->
+<section class="w-full border-b border-gray-200 shadow-sm">
+  <header class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+    <!-- Logo Section -->
+    <div class="flex items-center space-x-4">
+      <img src="/images/nav-logo.png" alt="QSS Logo" class="h-12">
+      <!-- <img src="your-uds-logo-path.png" alt="UDS Logo" class="h-12"> -->
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 font-medium relative">
+      <a href="#" class="text-[#c9a560] font-semibold">Home</a>
+
+      <!-- About Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">About ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Life @ QSS</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR @ QSS</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our Values</a> -->
+        </div>
+      </div>
+
+      <!-- Services Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">Services ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-72 hidden group-hover:block z-50 p-2">
+          <a href="service.html" class="block px-4 py-2 font-semibold">Overview</a>
+          <a href="#" class="block px-4 py-2">People</a>
+        
+          <div class="pl-4">
+         
+          </div>
+        </div>
+      </div>
+
+      <!-- Insights Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">Insights ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Case Studies</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletter</a>
+        </div>
+      </div>
+
+      <a href="#" class="hover:text-[#c9a560]">Careers ▾</a>
+      <a href="#" class="hover:text-[#c9a560]">Contact Us</a>
+
+      <!-- Pay Button -->
+      <!-- <a href="#" class="bg-[#002F63] text-white px-4 py-2 rounded-full font-medium">₹ Pay</a>
+    </nav> -->
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium">
+    <a href="#" class="block">Home</a>
+
+    <!-- About -->
+    <details class="group">
+      <summary class="cursor-pointer">About</summary>
+      <div class="pl-4">
+        <a href="#" class="block py-1">Who We Are</a>
+        <a href="#" class="block py-1">Team</a>
+        <a href="#" class="block py-1">Life @ QSS</a>
+        <a href="#" class="block py-1">CSR @ QSS</a>
+        <a href="#" class="block py-1">Our Values</a>
+      </div>
+    </details>
+
+    <!-- Services -->
+    <details class="group">
+      <summary class="cursor-pointer">Services</summary>
+      <div class="pl-4">
+        <a href="service.html" class="block py-1 font-semibold">Overview</a>
+        <a href="#" class="block py-1">People</a>
+        <a href="#" class="block py-1 font-semibold">Product and Process</a>
+        <div class="pl-4">
+         
+        </div>
+      </div>
+    </details>
+
+    <!-- Insights -->
+    <details class="group">
+      <summary class="cursor-pointer">Insights</summary>
+      <div class="pl-4">
+        <a href="#" class="block py-1">Blog</a>
+        <a href="#" class="block py-1">Videos</a>
+        <a href="#" class="block py-1">News and Events</a>
+       
+      </div>
+    </details>
+
+    <a href="" class="block">Careers ▾</a>
+    <a href="contact.html" class="block">Contact Us</a>
+  
+  </div>
+</section>
+<!-- ✅ Header Section End -->
+
+
+
+<!-- herosection -->
+<section id="matrix-slider" class="py-5">
+  <style>
+    /* Custom color classes */
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-custom {
+      background-color: #c9a560;
+      color: #fff;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #b08e4f;
+      color: #fff;
+    }
+  </style>
+
+  
+</section>
+
+
+       <!-- Modal Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <style>
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-highlight {
+      background-color: #c9a560 !important;
+      color: #fff !important;
+      border: none;
+    }
+    .btn-highlight:hover {
+      background-color: #b08e4f !important;
+      color: #fff !important;
+    }
+    .input-group-text {
+      background-color: #c9a560 !important;
+      color: #fff !important;
+      border: none;
+    }
+    .form-control {
+      border: 1px solid #c9a560;
+      color: rgb(75, 75, 75);
+    }
+    .form-control::placeholder {
+      color: rgba(75, 75, 75, 0.6);
+    }
+  </style>
+
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h4 class="modal-title text-primary-custom mb-0" id="exampleModalLabel">Search by keyword</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex align-items-center">
+        <div class="input-group w-75 mx-auto d-flex">
+          <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+          <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Search End -->
+
+
+
+   <!-- About Start -->
+<div class="container-fluid overflow-hidden py-5" style="background-color: #fff; font-family: 'Merriweather', serif;">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            
+            <!-- Left Image Column -->
+            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+                    <img src="img/about-2.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                    <img src="img/about-3.jpg" class="img-fluid w-100" style="border-top-right-radius: 300px; border-top-left-radius: 300px; border-bottom: 5px solid #c9a560;" alt="Image">
+                </div>
+            </div>
+
+            <!-- Right Content Column -->
+            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s" style="animation-duration: 1.2s; font-family: 'Open Sans', sans-serif;">
+                
+                <!-- Section Heading -->
+                <h5 style="color: #c9a560; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: relative; display: inline-block; margin-bottom: 15px;">
+                    About the company
+                    <span style="position: absolute; bottom: -5px; left: 0; width: 50%; height: 3px; background-color: #c9a560; border-radius: 2px;"></span>
+                </h5>
+
+                <h1 style="color: #4b4b4b; font-size: 2.5rem; font-family: 'Merriweather', serif; font-weight: 700; margin-bottom: 20px; line-height: 1.3;">
+                    We’re Trusted Immigration Consultant Agency.
+                </h1>
+
+                <p style="color: #4b4b4b; font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!
+                </p>
+
+                <!-- Features -->
+                <div class="row gy-4 align-items-center">
+                    <div class="col-12 col-sm-6 d-flex align-items-center">
+                        <i class="fas fa-map-marked-alt fa-3x" style="color: #c9a560;"></i>
+                        <h5 class="ms-4" style="color: #4b4b4b;">Best Immigration Resources</h5>
+                    </div>
+                    <div class="col-12 col-sm-6 d-flex align-items-center">
+                        <i class="fas fa-passport fa-3x" style="color: #c9a560;"></i>
+                        <h5 class="ms-4" style="color: #4b4b4b;">Return Visas Available</h5>
+                    </div>
+
+                    <!-- Years of Experience Card -->
+                    <div class="col-4 col-md-3">
+                        <div style="background-color: #fff; text-align: center; border-radius: 10px; padding: 20px 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <div class="mb-2">
+                                <i class="fas fa-ticket-alt fa-4x" style="color: #c9a560;"></i>
+                            </div>
+                            <h1 style="color: #4b4b4b; font-weight: 700; font-size: 2.5rem;">34</h1>
+                            <p style="color: #777; margin-bottom: 0;">Years of Experience</p>
                         </div>
                     </div>
-                    <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                        <h5 class="sub-title pe-3">About the company</h5>
-                        <h1 class="display-5 mb-4">We’re Trusted Immigration Consultant Agency.</h1>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!</p>
-                        <div class="row gy-4 align-items-center">
-                            <div class="col-12 col-sm-6 d-flex align-items-center">
-                                <i class="fas fa-map-marked-alt fa-3x text-secondary"></i>
-                                <h5 class="ms-4">Best Immigration Resources</h5>
-                            </div>
-                            <div class="col-12 col-sm-6 d-flex align-items-center">
-                                <i class="fas fa-passport fa-3x text-secondary"></i>
-                                <h5 class="ms-4">Return Visas Availabile</h5>
-                            </div>
-                            <div class="col-4 col-md-3">
-                                <div class="bg-light text-center rounded p-3">
-                                    <div class="mb-2">
-                                        <i class="fas fa-ticket-alt fa-4x text-primary"></i>
+
+                    <!-- List and Contact -->
+                    <div class="col-8 col-md-9">
+                        <div style="margin-bottom: 25px;">
+                            <p style="color: #4b4b4b; font-size: 1rem; margin-bottom: 10px;">
+                                <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 8px;"></i> Offer 100% Genuine Assistance
+                            </p>
+                            <p style="color: #4b4b4b; font-size: 1rem; margin-bottom: 10px;">
+                                <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 8px;"></i> Faster & Reliable Execution
+                            </p>
+                            <p style="color: #4b4b4b; font-size: 1rem;">
+                                <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 8px;"></i> Accurate & Expert Advice
+                            </p>
+                        </div>
+
+                        <!-- Contact Box -->
+                        <div class="d-flex flex-wrap align-items-center">
+                            <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                                <a href="tel:+01234567890" style="position: relative; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+                                    <i class="fa fa-phone-alt fa-3x" style="color: #c9a560;"></i>
+                                    <div style="position: absolute; top: 0; left: 25px;">
+                                        <span><i class="fa fa-comment-dots" style="color: #4b4b4b;"></i></span>
                                     </div>
-                                    <h1 class="display-5 fw-bold mb-2">34</h1>
-                                    <p class="text-muted mb-0">Years of Experience</p>
-                                </div>
+                                </a>
                             </div>
-                            <div class="col-8 col-md-9">
-                                <div class="mb-5">
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Offer 100 % Genuine Assistance</p>
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> It’s Faster & Reliable Execution</p>
-                                    <p class="text-primary h6 mb-3"><i class="fa fa-check-circle text-secondary me-2"></i> Accurate & Expert Advice</p>
-                                </div>
-                                <div class="d-flex flex-wrap">
-                                    <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                                        <a href="" class="position-relative wow tada" data-wow-delay=".9s">
-                                            <i class="fa fa-phone-alt text-primary fa-3x"></i>
-                                            <div class="position-absolute" style="top: 0; left: 25px;">
-                                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <span class="text-primary">Have any questions?</span>
-                                        <span class="text-secondary fw-bold fs-5" style="letter-spacing: 2px;">Free: +0123 456 7890</span>
-                                    </div>
-                                </div>
+                            <div class="d-flex flex-column justify-content-center">
+                                <span style="color: #c9a560; font-weight: 600;">Have any questions?</span>
+                                <span style="color: #4b4b4b; font-weight: bold; font-size: 1.2rem; letter-spacing: 1px;">Free: +0123 456 7890</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
-        <!-- About End -->
+    </div>
+</div>
+<!-- About End -->
 
 
-        <!-- Counter Facts Start -->
-        <div class="container-fluid counter-facts py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-passport"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Visa Categories</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">31</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                </div>
-                            </div>
-                        </div>
+<!-- Counter Facts Start -->
+<div class="container-fluid py-5" style="background-color: #fff; font-family: 'Open Sans', sans-serif;">
+    <div class="container py-5">
+        <div class="row g-4 text-center">
+            
+            <!-- Counter Item -->
+            <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 15px; padding: 30px 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                    <div style="background-color: #c9a56020; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-passport" style="color: #c9a560; font-size: 2rem;"></i>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Team Members</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">377</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Visa Process</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">4.9</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">K</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Success Rates</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">98</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                                </div>
-                            </div>
-                        </div>
+                    <h3 style="font-family: 'Merriweather', serif; color: #4b4b4b; font-weight: 700; font-size: 1.25rem; margin-bottom: 15px;">Visa Categories</h3>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="counter-value" data-toggle="counter-up" style="color: #c9a560; font-size: 2rem; font-weight: 700;">31</span>
+                        <h4 style="color: #4b4b4b; font-weight: 600; font-size: 1.5rem; margin: 0 0 0 5px;">+</h4>
                     </div>
                 </div>
             </div>
+
+            <!-- Counter Item -->
+            <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 15px; padding: 30px 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                    <div style="background-color: #c9a56020; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-users" style="color: #c9a560; font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="font-family: 'Merriweather', serif; color: #4b4b4b; font-weight: 700; font-size: 1.25rem; margin-bottom: 15px;">Team Members</h3>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="counter-value" data-toggle="counter-up" style="color: #c9a560; font-size: 2rem; font-weight: 700;">377</span>
+                        <h4 style="color: #4b4b4b; font-weight: 600; font-size: 1.5rem; margin: 0 0 0 5px;">+</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counter Item -->
+            <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 15px; padding: 30px 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                    <div style="background-color: #c9a56020; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-check" style="color: #c9a560; font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="font-family: 'Merriweather', serif; color: #4b4b4b; font-weight: 700; font-size: 1.25rem; margin-bottom: 15px;">Visa Process</h3>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="counter-value" data-toggle="counter-up" style="color: #c9a560; font-size: 2rem; font-weight: 700;">4.9</span>
+                        <h4 style="color: #4b4b4b; font-weight: 600; font-size: 1.5rem; margin: 0 0 0 5px;">K</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Counter Item -->
+            <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 15px; padding: 30px 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); transition: all 0.3s ease-in-out;">
+                    <div style="background-color: #c9a56020; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-handshake" style="color: #c9a560; font-size: 2rem;"></i>
+                    </div>
+                    <h3 style="font-family: 'Merriweather', serif; color: #4b4b4b; font-weight: 700; font-size: 1.25rem; margin-bottom: 15px;">Success Rates</h3>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span class="counter-value" data-toggle="counter-up" style="color: #c9a560; font-size: 2rem; font-weight: 700;">98</span>
+                        <h4 style="color: #4b4b4b; font-weight: 600; font-size: 1.5rem; margin: 0 0 0 5px;">%</h4>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!-- Counter Facts End -->
+    </div>
+</div>
+<!-- Counter Facts End -->
+
 
         <!-- Countries We Offer Start -->
-        <div class="container-fluid country overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">COUNTRIES WE OFFER</h5>
+<div class="container-fluid country overflow-hidden py-5" style="background-color: #ffffff;">
+    <div class="container py-5">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 70px;">
+            <div class="sub-style" style="display: inline-block; border-bottom: 3px solid #c9a560; padding-bottom: 5px;">
+                <h5 class="sub-title px-3" style="color: #c9a560; font-family: 'Merriweather', serif; letter-spacing: 1px;">COUNTRIES WE OFFER</h5>
+            </div>
+            <h1 class="display-5 mb-4" style="color: #4b4b4b; font-family: 'Playfair Display', serif;">Immigration & visa services following Countries</h1>
+            <p class="mb-0" style="color: #666666; font-family: 'Open Sans', sans-serif; max-width: 800px; margin: auto;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!
+            </p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="country-item" style="position: relative;">
+                    <div class="rounded overflow-hidden shadow" style="border: 3px solid #c9a560;">
+                        <img src="img/country-1.jpg" class="img-fluid w-100 rounded" alt="Image">
                     </div>
-                    <h1 class="display-5 mb-4">Immigration & visa services following Countries</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
+                    <div class="country-flag" style="margin-top: -30px;">
+                        <img src="img/brazil.jpg" class="img-fluid rounded-circle border border-3" style="border-color: #c9a560;" alt="Image">
+                    </div>
+                    <div class="country-name" style="margin-top: 15px;">
+                        <a href="#" class="fs-4" style="color: #4b4b4b; text-decoration: none; font-weight: 600;">Brazil</a>
+                    </div>
                 </div>
-                <div class="row g-4 text-center">
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/brazil.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">Brazil</a>
-                            </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="country-item" style="position: relative;">
+                    <div class="rounded overflow-hidden shadow" style="border: 3px solid #c9a560;">
+                        <img src="img/country-2.jpg" class="img-fluid w-100 rounded" alt="Image">
+                    </div>
+                    <div class="country-flag" style="margin-top: -30px;">
+                        <img src="img/india.jpg" class="img-fluid rounded-circle border border-3" style="border-color: #c9a560;" alt="Image">
+                    </div>
+                    <div class="country-name" style="margin-top: 15px;">
+                        <a href="#" class="fs-4" style="color: #4b4b4b; text-decoration: none; font-weight: 600;">India</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="country-item" style="position: relative;">
+                    <div class="rounded overflow-hidden shadow" style="border: 3px solid #c9a560;">
+                        <img src="img/country-3.jpg" class="img-fluid w-100 rounded" alt="Image">
+                    </div>
+                    <div class="country-flag" style="margin-top: -30px;">
+                        <img src="img/usa.jpg" class="img-fluid rounded-circle border border-3" style="border-color: #c9a560;" alt="Image">
+                    </div>
+                    <div class="country-name" style="margin-top: 15px;">
+                        <a href="#" class="fs-4" style="color: #4b4b4b; text-decoration: none; font-weight: 600;">New York</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="country-item" style="position: relative;">
+                    <div class="rounded overflow-hidden shadow" style="border: 3px solid #c9a560;">
+                        <img src="img/country-4.jpg" class="img-fluid w-100 rounded" alt="Image">
+                    </div>
+                    <div class="country-flag" style="margin-top: -30px;">
+                        <img src="img/italy.jpg" class="img-fluid rounded-circle border border-3" style="border-color: #c9a560;" alt="Image">
+                    </div>
+                    <div class="country-name" style="margin-top: 15px;">
+                        <a href="#" class="fs-4" style="color: #4b4b4b; text-decoration: none; font-weight: 600;">Italy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <a class="btn rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#"
+                   style="background-color: #c9a560; border: none; color: #fff; font-weight: 600; font-size: 16px;">
+                   More Countries
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Countries We Offer End -->
+
+
+
+       <!-- Training Start -->
+<div class="container-fluid training overflow-hidden py-5" style="background-color: #ffffff;">
+    <div class="container py-5">
+        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="sub-style" style="display: inline-block; border-bottom: 3px solid #c9a560; padding-bottom: 5px;">
+                <h5 class="sub-title px-3" style="color: #c9a560; font-family: 'Merriweather', serif; letter-spacing: 1px;">CHECK OUR TRAINING</h5>
+            </div>
+            <h1 class="display-5 mb-4" style="color: #4b4b4b; font-family: 'Playfair Display', serif;">Get the Best Coaching Service Training with Our Travisa</h1>
+            <p class="mb-0" style="color: #666666; font-family: 'Open Sans', sans-serif; max-width: 800px; margin: auto;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
+                    <div class="training-inner">
+                        <img src="img/training-1.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">IELTS</a>
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/india.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">india</a>
-                            </div>
+                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
+                        <a href="#"><h4 style="color: #ffffff;">IELTS Coaching</h4></a>
+                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
+                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
+                    <div class="training-inner">
+                        <img src="img/training-2.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">TOEFL</a>
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/usa.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">New York</a>
-                            </div>
+                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
+                        <a href="#"><h4 style="color: #ffffff;">TOEFL Coaching</h4></a>
+                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
+                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
+                    <div class="training-inner">
+                        <img src="img/training-3.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">PTE</a>
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="country-item">
-                            <div class="rounded overflow-hidden">
-                                <img src="img/country-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                            </div>
-                            <div class="country-flag">
-                                <img src="img/italy.jpg" class="img-fluid rounded-circle" alt="Image">
-                            </div>
-                            <div class="country-name">
-                                <a href="#" class="text-white fs-4">Italy</a>
-                            </div>
+                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
+                        <a href="#"><h4 style="color: #ffffff;">PTE Coaching</h4></a>
+                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
+                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
+                    <div class="training-inner">
+                        <img src="img/training-4.jpg" class="img-fluid w-100" alt="Image">
+                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">OET</a>
+                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Countries</a>
+                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
+                        <a href="#"><h4 style="color: #ffffff;">OET Coaching</h4></a>
+                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
+                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="col-12 text-center">
+                <a class="btn rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#"
+                   style="background-color: #c9a560; border: none; color: #fff; font-weight: 600; font-size: 16px;">
+                   View More
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Training End -->
+
+
+
+       <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Contact Info</h4>
+                    <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i> 123 Business Park, Indore, MP</a>
+                    <a href="mailto:info@example.com" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@example.com</a>
+                    <a href="tel:+911234567890" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91 12345 67890</a>
+                    <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91 12345 67891</a>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opening Time -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Opening Time</h4>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Mon - Friday:</h6>
+                        <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Saturday:</h6>
+                        <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Vacation:</h6>
+                        <p class="mb-0 text-white">All Sunday is our vacation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Our Services</h4>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Tax Planning</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit Services</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> GST Compliance</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Business Registration</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Financial Advisory</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Company Compliance</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                    <h4 class="mb-4" style="color: #c9a560;">Newsletter</h4>
+                    <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
+                    <div class="position-relative">
+                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
+                        <button type="button" class="btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2" style="background-color: #c9a560; color: white; border: none; padding: 0 15px;">SignUp</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Countries We Offer End -->
+    </div>
+</div>
+<!-- Footer End -->
 
-
-        <!-- Training Start -->
-        <div class="container-fluid training overflow-hidden bg-light py-5">
-            <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3">CHECK OUR TRAINING</h5>
-                    </div>
-                    <h1 class="display-5 mb-4">Get the Best Coacing Service Training with Our Travisa</h1>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-1.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">IELTS</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#"><h4 class="text-white">IELTS Coaching</h4></a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-2.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">TOEFL</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#"><h4 class="text-white">TOEFL Coaching</h4></a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-3.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">PTE</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#"><h4 class="text-white">PTE Coaching</h4></a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="training-item">
-                            <div class="training-inner">
-                                <img src="img/training-4.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                <div class="training-title-name">
-                                    <a href="#" class="h4 text-white mb-0">OET</a>
-                                    <a href="#" class="h4 text-white mb-0">Coaching</a>
-                                </div>
-                            </div>
-                            <div class="training-content bg-secondary rounded-bottom p-4">
-                                <a href="#"><h4 class="text-white">OET Coaching</h4></a>
-                                <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                                <a class="btn btn-secondary rounded-pill text-white p-0" href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">View More</a>
-                    </div>
-                </div>
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4" style="background-color: rgb(201, 165, 96) !important;">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span class="text-white">
+                    <i class="fas fa-copyright me-2" style="color: #fff;"></i>
+                    2024 Your Firm Name. All rights reserved.
+                </span>
+            </div>
+            <div class="col-md-6 text-center text-md-end text-white">
+                <span>Designed with <i class="fas fa-heart" style="color: #fff;"></i> by Your Team</span>
             </div>
         </div>
-        <!-- Training End -->
+    </div>
+</div>
+<!-- Copyright End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Opening Time</h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Mon - Friday:</h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Satday:</h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Vacation:</h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Our Services</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Business</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Evaluation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Migrate</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Study</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Counselling</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Work / Career</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-secondary mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="position-relative mx-auto rounded-pill">
-                                <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
 
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+    input::placeholder {
+        color: rgba(255,255,255,0.7) !important;
+    }
+    input:focus {
+        background-color: rgba(255,255,255,0.2) !important;
+        color: white !important;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(201,165,96,0.5);
+    }
+</style>
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+</style>
         
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

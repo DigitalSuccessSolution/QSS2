@@ -46,13 +46,13 @@
 
 
      <!-- Topbar Start -->
-<div class="container-fluid  px-5 d-none d-lg-block" style="background-color: rgb(0 47 99);">
+<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #c9a560;">
     <div class="row gx-0 align-items-center">
         <!-- Left: Email & Phone -->
         <div class="col-lg-5 text-center text-lg-start mb-lg-0">
             <div class="d-flex">
                 <a href="#" class="text-muted me-4">
-                    <i class="fas fa-envelope text-secondary me-2"></i>info@qss.net.in
+                    <i class="fas fa-envelope text-[rgb(75 75 75)] me-2"></i>info@qss.net.in
                 </a>
                 <a href="#" class="text-muted me-0">
                     <i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890
@@ -83,50 +83,42 @@
   <header class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
     <!-- Logo Section -->
     <div class="flex items-center space-x-4">
-      <img src="img/logo.png" alt="QSS Logo" class="h-12">
+      <img src="/images/nav-logo.png" alt="QSS Logo" class="h-12">
       <!-- <img src="your-uds-logo-path.png" alt="UDS Logo" class="h-12"> -->
     </div>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center space-x-6 font-medium relative">
-      <a href="#" class="text-[#002F63] font-semibold">Home</a>
+      <a href="#" class="text-[#c9a560] font-semibold">Home</a>
 
       <!-- About Dropdown -->
       <div class="group relative">
-        <button class="hover:text-blue-600">About ▾</button>
+        <button class="hover:text-[#c9a560]">About ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Life @ QSS</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Life @ QSS</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR @ QSS</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our Values</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our Values</a> -->
         </div>
       </div>
 
       <!-- Services Dropdown -->
       <div class="group relative">
-        <button class="hover:text-blue-600">Services ▾</button>
+        <button class="hover:text-[#c9a560]">Services ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-72 hidden group-hover:block z-50 p-2">
-          <a href="#" class="block px-4 py-2 font-semibold">Overview</a>
+          <a href="service.html" class="block px-4 py-2 font-semibold">Overview</a>
           <a href="#" class="block px-4 py-2">People</a>
-          <a href="#" class="block px-4 py-2 font-semibold">Product and Process</a>
+        
           <div class="pl-4">
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Trade Promotion Management</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Supply Chain Audits</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Fixed Asset verification</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Credit Collateral Audits</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Franchise Management Support</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Customer Experience Support</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Ecommerce Support</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Reconciliation Support Services</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Mystery Audit services</a>
+         
           </div>
         </div>
       </div>
 
       <!-- Insights Dropdown -->
       <div class="group relative">
-        <button class="hover:text-blue-600">Insights ▾</button>
+        <button class="hover:text-[#c9a560]">Insights ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
@@ -136,12 +128,12 @@
         </div>
       </div>
 
-      <a href="#" class="hover:text-blue-600">Careers ▾</a>
-      <a href="#" class="hover:text-blue-600">Contact Us</a>
+      <a href="#" class="hover:text-[#c9a560]">Careers ▾</a>
+      <a href="#" class="hover:text-[#c9a560]">Contact Us</a>
 
       <!-- Pay Button -->
-      <a href="#" class="bg-[#002F63] text-white px-4 py-2 rounded-full font-medium">₹ Pay</a>
-    </nav>
+      <!-- <a href="#" class="bg-[#002F63] text-white px-4 py-2 rounded-full font-medium">₹ Pay</a>
+    </nav> -->
 
     <!-- Mobile Menu Button -->
     <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
@@ -171,19 +163,11 @@
     <details class="group">
       <summary class="cursor-pointer">Services</summary>
       <div class="pl-4">
-        <a href="#" class="block py-1 font-semibold">Overview</a>
+        <a href="service.html" class="block py-1 font-semibold">Overview</a>
         <a href="#" class="block py-1">People</a>
         <a href="#" class="block py-1 font-semibold">Product and Process</a>
         <div class="pl-4">
-          <a href="#" class="block py-1">Trade Promotion Management</a>
-          <a href="#" class="block py-1">Supply Chain Audits</a>
-          <a href="#" class="block py-1">Fixed Asset verification</a>
-          <a href="#" class="block py-1">Credit Collateral Audits</a>
-          <a href="#" class="block py-1">Franchise Management Support</a>
-          <a href="#" class="block py-1">Customer Experience Support</a>
-          <a href="#" class="block py-1">Ecommerce Support</a>
-          <a href="#" class="block py-1">Reconciliation Support Services</a>
-          <a href="#" class="block py-1">Mystery Audit services</a>
+         
         </div>
       </div>
     </details>
@@ -195,14 +179,13 @@
         <a href="#" class="block py-1">Blog</a>
         <a href="#" class="block py-1">Videos</a>
         <a href="#" class="block py-1">News and Events</a>
-        <a href="#" class="block py-1">Case Studies</a>
-        <a href="#" class="block py-1">Newsletter</a>
+       
       </div>
     </details>
 
-    <a href="#" class="block">Careers ▾</a>
-    <a href="#" class="block">Contact Us</a>
-    <a href="#" class="block bg-[#002F63] text-white px-4 py-2 rounded-full w-max">₹ Pay</a>
+    <a href="" class="block">Careers ▾</a>
+    <a href="contact.html" class="block">Contact Us</a>
+  
   </div>
 </section>
 <!-- ✅ Header Section End -->
@@ -210,129 +193,97 @@
 
 
 <!-- herosection -->
+<section id="matrix-slider" class="py-5">
+  <style>
+    /* Custom color classes */
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-custom {
+      background-color: #c9a560;
+      color: #fff;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #b08e4f;
+      color: #fff;
+    }
+  </style>
 
-       <section id="matrix-slider" class="py-5">
   <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
-        
-
       <!-- Slide 1 -->
-     <div class="carousel-item active">
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+      <div class="carousel-item active">
+        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+          <!-- Text Content -->
+          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
+            <h3 class="fw-bold text-primary-custom">
+              Powering Trust Through Precision
+            </h3>
+            <p class="text-primary-custom mb-2">
+              <strong class="text-highlight">We don’t just audit—we uncover, assure, and empower.<br>India’s trusted partner for Audit, Risk</strong><br>
+              Compliance Services.
+            </p>
+            <a href="#" class="btn mt-3 btn-custom">Know more</a>
+          </div>
+          <!-- Image -->
+          <div class="text-center">
+            <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" alt="Award" class="img-fluid" style="max-height: 300px;">
+          </div>
+        </div>
+      </div>
 
-    <!-- Text Content -->
-    <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-      <h3 class="fw-bold text-dark">
-        Powering Trust Through Precision
-      </h3>
-      <p class="text-dark mb-2">
-        <strong class="text-danger">'We don’t just audit—we uncover, assure, and empower. <br>India’s trusted partner for Audit, Risk'</strong><br>
-        Compliance Services.
-      </p>
-      <a href="#" class="btn mt-3 text-white" style="background-color: #002f63;">Know more</a>
-    </div>
-
-    <!-- Image -->
-    <div class="text-center">
-      <img src="your-image-path.png" alt="Award" class="img-fluid" style="max-height: 300px;">
-    </div>
-
-  </div>
-</div>
-
-
-
-     
-              
-      <!-- Duplicate this block 4 more times and change content as needed -->
       <!-- Slide 2 -->
-     <div class="carousel-item">
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
-
-    <!-- Text Content -->
-    <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-      <h3 class="fw-bold text-dark">
-        Tech Platform – QuickEx™
-      </h3>
-      <p class="text-dark mb-2">
-        <strong class="text-danger">'QuickEx™ is QSS’s proprietary background verification engine, built for speed, security,'</strong><br>
-        and transparency.
-      </p>
-      <a href="#" class="btn mt-3 text-white" style="background-color: #002f63;">Know more</a>
-    </div>
-
-    <!-- Image -->
-    <div class="text-center">
-      <img src="your-image-path.png" alt="Award" class="img-fluid" style="max-height: 300px;">
-    </div>
-
-  </div>
-</div>
-
+      <div class="carousel-item">
+        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+          <!-- Text Content -->
+          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
+            <h3 class="fw-bold text-primary-custom">
+              Tech Platform – QuickEx™
+            </h3>
+            <p class="text-primary-custom mb-2">
+              <strong class="text-highlight">QuickEx™ is QSS’s proprietary background verification engine, built for speed, security,</strong><br>
+              and transparency.
+            </p>
+            <a href="#" class="btn mt-3 btn-custom">Know more</a>
+          </div>
+          <!-- Image -->
+          <div class="text-center">
+            <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" alt="Award" class="img-fluid" style="max-height: 300px;">
+          </div>
+        </div>
+      </div>
 
       <!-- Slide 3 -->
-     <div class="carousel-item">
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
-    
-    <!-- Text Content -->
-    <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-      <h3 class="fw-bold text-dark">
-        Industry-Specific Foresight. Local Precision.
-      </h3>
-      <p class="text-dark mb-2">
-        <strong class="text-danger">'QSS delivers more than audits—'</strong><br>
-        Backed by industry specialists and boots-on-ground auditors across India, 
-        we turn operational complexity into compliant clarity.
-      </p>
-      <p class="text-dark mb-2">
-        We bring strategic foresight tailored to your sector’s pulse. From the factory floor 
-        to multi-site retail audits, our teams embed deeply into client ecosystems 
-        to flag risks before they escalate.
-      </p>
-      <a href="#" class="btn mt-3 text-white" style="background-color: #002f63;">Know more</a>
-    </div>
-
-    <!-- Image -->
-    <div class="text-center">
-      <img src="your-image-path.png" alt="Award" class="img-fluid" style="max-height: 300px;">
-    </div>
-    
-  </div>
-</div>
-
-
-      <!-- Slide 4 -->
-      <!-- <div class="carousel-item">
-        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
-          <div class="text-center text-lg-start mb-4 mb-lg-0">
-            <h3 class="fw-bold text-dark">Recognised for<br>
-              <span class="text-danger fw-bold">'Supply Chain Leadership'</span><br>
-              by Reckitt Benckiser
+      <div class="carousel-item">
+        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+          <!-- Text Content -->
+          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
+            <h3 class="fw-bold text-primary-custom">
+              Industry-Specific Foresight. Local Precision.
             </h3>
-            <a href="#" class="btn  mt-3 text-white" style="background-color: #002f63;">Know more</a>
+            <p class="text-primary-custom mb-2">
+              <strong class="text-highlight">QSS delivers more than audits—</strong><br>
+              Backed by industry specialists and boots-on-ground auditors across India, 
+              we turn operational complexity into compliant clarity.
+            </p>
+            <p class="text-primary-custom mb-2">
+              We bring strategic foresight tailored to your sector’s pulse. From the factory floor 
+              to multi-site retail audits, our teams embed deeply into client ecosystems 
+              to flag risks before they escalate.
+            </p>
+            <a href="#" class="btn mt-3 btn-custom">Know more</a>
           </div>
-          <div>
-            <img src="your-image-path.png" alt="Award" class="img-fluid" style="max-height: 300px;">
+          <!-- Image -->
+          <div class="text-center">
+            <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" alt="Award" class="img-fluid" style="max-height: 300px;">
           </div>
         </div>
-      </div> -->
-
-      <!-- Slide 5 -->
-      <!-- <div class="carousel-item">
-        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
-          <div class="text-center text-lg-start mb-4 mb-lg-0">
-            <h3 class="fw-bold text-dark">QSS recognised for<br>
-              <span class="text-danger fw-bold">'Operational Excellence'</span><br>
-              by Johnson & Johnson
-            </h3>
-            <a href="#" class="btn  mt-3 text-white"  style="background-color: #002f63;">Know more</a>
-          </div>
-          <div>
-            <img src="your-image-path.png" alt="Award" class="img-fluid" style="max-height: 300px;">
-          </div>
-        </div>
-      </div> -->
+      </div>
 
     </div>
 
@@ -349,29 +300,78 @@
 </section>
 
 
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       <!-- Modal Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <style>
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-highlight {
+      background-color: #c9a560 !important;
+      color: #fff !important;
+      border: none;
+    }
+    .btn-highlight:hover {
+      background-color: #b08e4f !important;
+      color: #fff !important;
+    }
+    .input-group-text {
+      background-color: #c9a560 !important;
+      color: #fff !important;
+      border: none;
+    }
+    .form-control {
+      border: 1px solid #c9a560;
+      color: rgb(75, 75, 75);
+    }
+    .form-control::placeholder {
+      color: rgba(75, 75, 75, 0.6);
+    }
+  </style>
+
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h4 class="modal-title text-primary-custom mb-0" id="exampleModalLabel">Search by keyword</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex align-items-center">
+        <div class="input-group w-75 mx-auto d-flex">
+          <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+          <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
         </div>
-        <!-- Modal Search End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Search End -->
 
 
 
-       <!-- About Start -->
+
+   <!-- About Start -->
 <div class="container-fluid py-5">
+  <style>
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-custom {
+      background-color: #c9a560;
+      color: #fff;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #b08e4f;
+      color: #fff;
+    }
+  </style>
+
   <div class="container py-5">
     <div class="row g-5">
       <!-- Left Image Column -->
@@ -383,18 +383,18 @@
 
       <!-- Right Content Column -->
       <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-        <h5 class="text-primary text-uppercase mb-3">About Us</h5>
-        <h1 class="mb-4">Powering Trust Through Precision</h1>
-        <p class="mb-4">
+        <h5 class="text-highlight text-uppercase mb-3">About Us</h5>
+        <h1 class="mb-4 text-primary-custom">Powering Trust Through Precision</h1>
+        <p class="mb-4 text-primary-custom">
           We are committed to delivering excellence through precision and transparency.
           Our team works with integrity and professionalism, ensuring client satisfaction
           at every step of the journey.
         </p>
-        <p class="mb-4">
+        <p class="mb-4 text-primary-custom">
           Our goal is to build long-term relationships with our clients by providing reliable services,
           tailored solutions, and unmatched dedication.
         </p>
-        <a href="#" class="btn btn-primary py-3 px-5 rounded-pill">Learn More</a>
+        <a href="#" class="btn btn-custom py-3 px-5 rounded-pill">Learn More</a>
       </div>
     </div>
   </div>
@@ -403,102 +403,191 @@
 
 
 
-        <!-- Counter Facts Start -->
-        <div class="container-fluid counter-facts py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-passport"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Service Categories</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">31</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Team Members</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">377</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Visa Process</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">4.9</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">K</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>Success Rates</h3>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value" data-toggle="counter-up">98</span>
-                                    <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+<!-- Counter Facts Start -->
+<div class="container-fluid counter-facts py-5">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500;600&display=swap');
+
+    .counter-facts {
+      background-color: #ffffff !important;
+    }
+    .counter {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(75,75,75,0.08);
+      border: 1px solid rgba(75,75,75,0.1);
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+    .counter:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(75,75,75,0.12);
+      border-color: rgba(201,165,96,0.3);
+    }
+    .counter-icon {
+      background: rgba(201,165,96,0.15);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .counter-icon i {
+      font-size: 40px;
+      color: #c9a560;
+      transition: all 0.3s ease;
+    }
+    .counter:hover .counter-icon i {
+      transform: scale(1.1);
+      color: #b8934b;
+    }
+    .counter h3 {
+      font-family: 'Playfair Display', serif;
+      color: rgb(75, 75, 75);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .counter-value {
+      font-size: 42px;
+      font-weight: 700;
+      color: #c9a560;
+      line-height: 1;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    .counter:hover .counter-value {
+      color: #b8934b;
+    }
+    .counter h4 {
+      color: rgb(75, 75, 75);
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 1;
+      margin-left: 4px;
+      transition: all 0.3s ease;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .counter-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .value-container {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 5px;
+    }
+  </style>
+
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Counter 1 -->
+      <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="counter text-center">
+          <div class="counter-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <div class="counter-content">
+            <h3>Service Categories</h3>
+            <div class="value-container">
+              <span class="counter-value" data-toggle="counter-up">31</span>
+              <h4>+</h4>
             </div>
+          </div>
         </div>
-        <!-- Counter Facts End -->
+      </div>
+
+      <!-- Counter 2 -->
+      <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="counter text-center">
+          <div class="counter-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="counter-content">
+            <h3>Expert Team</h3>
+            <div class="value-container">
+              <span class="counter-value" data-toggle="counter-up">377</span>
+              <h4>+</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter 3 -->
+      <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="counter text-center">
+          <div class="counter-icon">
+            <i class="fas fa-smile-beam"></i>
+          </div>
+          <div class="counter-content">
+            <h3>Happy Clients</h3>
+            <div class="value-container">
+              <span class="counter-value" data-toggle="counter-up">4.9</span>
+              <h4>K</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter 4 -->
+      <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+        <div class="counter text-center">
+          <div class="counter-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="counter-content">
+            <h3>Success Rate</h3>
+            <div class="value-container">
+              <span class="counter-value" data-toggle="counter-up">98</span>
+              <h4>%</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Counter Facts End -->
 
 
-     <!-- Services Start -->
-<div class="container-fluid service overflow-hidden pt-5">
+   <!-- Services Start -->
+<div class="container-fluid service overflow-hidden pt-5 bg-white">
     <div class="container py-5">
         <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="sub-style">
-                <h5 class="sub-title text-primary px-3">Service Categories</h5>
+                <h5 class="sub-title" style="color: #c9a560;">Service Categories</h5>
             </div>
-            <h1 class="display-5 mb-4">Explore Our Core Chartered Accounting Services</h1>
-            <p class="mb-0">We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.</p>
+            <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Explore Our Core Chartered Accounting Services</h1>
+            <p class="mb-0" style="color: rgb(75,75,75);">We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.</p>
         </div>
         <div class="row g-4">
             <!-- Service 1 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Taxation Services</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Taxation Services</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">Efficient income tax filing, GST compliance, and tax planning for individuals and businesses.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">Efficient income tax filing, GST compliance, and tax planning for individuals and businesses.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -508,22 +597,22 @@
             <!-- Service 2 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Audit & Assurance</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Audit & Assurance</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">Internal and statutory audits to ensure financial transparency and regulatory compliance.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">Internal and statutory audits to ensure financial transparency and regulatory compliance.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -533,22 +622,22 @@
             <!-- Service 3 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Business Registration</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Business Registration</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">End-to-end assistance with company formation, GST, MSME, and startup registration.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">End-to-end assistance with company formation, GST, MSME, and startup registration.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -558,22 +647,22 @@
             <!-- Service 4 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Accounting & Bookkeeping</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Accounting & Bookkeeping</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">Daily, monthly, and annual accounting services to help track and manage financials efficiently.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">Daily, monthly, and annual accounting services to help track and manage financials efficiently.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -583,22 +672,22 @@
             <!-- Service 5 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Company Compliance</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Company Compliance</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">ROC filings, annual returns, board resolutions & other mandatory compliance tasks.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">ROC filings, annual returns, board resolutions & other mandatory compliance tasks.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -608,22 +697,22 @@
             <!-- Service 6 -->
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item">
-                    <div class="service-inner">
+                    <div class="service-inner bg-white rounded shadow-sm">
                         <div class="service-img">
-                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded" alt="Image">
+                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         </div>
                         <div class="service-title">
                             <div class="service-title-name">
-                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
                                     <a href="#" class="h4 text-white mb-0">Investment Advisory</a>
                                 </div>
-                                <a class="btn bg-light text-secondary rounded-pill py-3 px-5 mb-4" href="#">Explore More</a>
+                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
                             </div>
-                            <div class="service-content pb-4">
+                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#"><h4 class="text-white mb-4 py-3">Investment Advisory</h4></a>
                                 <div class="px-4">
-                                    <p class="mb-4">Personalized financial and investment planning to help you build long-term wealth securely.</p>
-                                    <a class="btn btn-primary border-secondary rounded-pill text-white py-3 px-5" href="#">Explore More</a>
+                                    <p class="mb-4 text-white">Personalized financial and investment planning to help you build long-term wealth securely.</p>
+                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="#">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -636,74 +725,124 @@
 <!-- Services End -->
 
 
-
-
-      <!-- Features Start -->
-<div class="container-fluid features overflow-hidden py-5">
+<!-- Features Start -->
+<div class="container-fluid features overflow-hidden py-5 bg-white">
     <div class="container">
         <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="sub-style">
-                <h5 class="sub-title text-primary px-3">Why Choose Us</h5>
+                <h5 class="sub-title px-3" style="color: #c9a560;">Why Choose Us</h5>
             </div>
-            <h1 class="display-5 mb-4">Tailored Chartered Accounting Services for Your Business</h1>
-            <p class="mb-0">We provide expert, personalized solutions in taxation, auditing, and financial planning to help you grow and stay compliant. Our commitment to accuracy and integrity ensures your peace of mind.</p>
+            <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Tailored Chartered Accounting Services for Your Business</h1>
+            <p class="mb-0" style="color: rgb(75,75,75);">We provide expert, personalized solutions in taxation, auditing, and financial planning to help you grow and stay compliant. Our commitment to accuracy and integrity ensures your peace of mind.</p>
         </div>
         <div class="row g-4 justify-content-center text-center">
+            <!-- Feature 1 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="feature-item text-center p-4">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-calculator fa-4x text-primary"></i>
+                        <i class="fas fa-calculator fa-4x" style="color: #c9a560;"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Tax Planning</h5>
-                        <p class="mb-3">Expert strategies to minimize tax liabilities while staying compliant with all legal regulations.</p>
-                        <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3" style="color: rgb(75,75,75);">Tax Planning</h5>
+                        <p class="mb-3" style="color: rgb(75,75,75);">Expert strategies to minimize tax liabilities while staying compliant with all legal regulations.</p>
+                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Feature 2 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="feature-item text-center p-4">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-file-invoice-dollar fa-4x text-primary"></i>
+                        <i class="fas fa-file-invoice-dollar fa-4x" style="color: #c9a560;"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Auditing Services</h5>
-                        <p class="mb-3">Accurate and transparent auditing services for businesses of all scales and sectors.</p>
-                        <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3" style="color: rgb(75,75,75);">Auditing Services</h5>
+                        <p class="mb-3" style="color: rgb(75,75,75);">Accurate and transparent auditing services for businesses of all scales and sectors.</p>
+                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Feature 3 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="feature-item text-center p-4">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-chart-line fa-4x text-primary"></i>
+                        <i class="fas fa-chart-line fa-4x" style="color: #c9a560;"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Financial Advisory</h5>
-                        <p class="mb-3">Tailored financial guidance to help you make better business and investment decisions.</p>
-                        <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3" style="color: rgb(75,75,75);">Financial Advisory</h5>
+                        <p class="mb-3" style="color: rgb(75,75,75);">Tailored financial guidance to help you make better business and investment decisions.</p>
+                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
+            
+            <!-- Feature 4 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="feature-item text-center p-4">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-briefcase fa-4x text-primary"></i>
+                        <i class="fas fa-briefcase fa-4x" style="color: #c9a560;"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Business Registration</h5>
-                        <p class="mb-3">Complete support in setting up your business entity including GST, LLP, and ROC compliance.</p>
-                        <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3" style="color: rgb(75,75,75);">Business Registration</h5>
+                        <p class="mb-3" style="color: rgb(75,75,75);">Complete support in setting up your business entity including GST, LLP, and ROC compliance.</p>
+                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <a class="btn btn-primary border-secondary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#">More Services</a>
+            
+            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                <a class="btn rounded-pill py-3 px-5" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">More Services</a>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Features End -->
+
+<style>
+/* Feature Card Base Style */
+.feature-item {
+    border: 1px solid rgba(75, 75, 75, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: सिर्फ उठने का और shadow का */
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
+    border-color: rgba(201, 165, 96, 0.3);
+    background-color: #fff !important; /* background same रहेगा */
+}
+
+/* Icon Style */
+.feature-icon i {
+    color: #c9a560;
+    transition: transform 0.3s ease;
+}
+
+/* Hover पर सिर्फ scale, no color change */
+.feature-item:hover .feature-icon i {
+    transform: scale(1.1);
+    color: #c9a560 !important; /* hover पर भी वही color */
+}
+
+/* Button Style */
+.feature-item .btn {
+    background-color: #c9a560;
+    color: white;
+    border-color: #c9a560;
+}
+
+/* Button Hover */
+.feature-item .btn:hover {
+    background-color: #b8934b;
+    border-color: #b8934b;
+}
+</style>
+
 
 
 
@@ -711,80 +850,82 @@
       
 
 
-     <!-- Testimonial Start -->
-<div class="container-fluid testimonial overflow-hidden pb-5">
+    <!-- Testimonial Start -->
+<div class="container-fluid testimonial overflow-hidden pb-5 bg-white">
     <div class="container py-5">
         <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="sub-style">
-                <h5 class="sub-title text-primary px-3">Client Testimonials</h5>
+                <h5 class="sub-title px-3" style="color: #c9a560;">Client Testimonials</h5>
             </div>
-            <h1 class="display-5 mb-4">Hear What Our Clients Say</h1>
-            <p class="mb-0">Our clients’ success stories speak volumes. Here's what businesses and individuals across industries have to say about our professional services and how we helped them achieve their goals.</p>
+            <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Hear What Our Clients Say</h1>
+            <p class="mb-0" style="color: rgb(75,75,75);">Our clients' success stories speak volumes. Here's what businesses and individuals across industries have to say about our professional services and how we helped them achieve their goals.</p>
         </div>
         <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
             <!-- Testimonial 1 -->
             <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5">
-                    <p class="fs-5 mb-0">“Exceptional service from start to finish. The team guided me through the entire visa process with clarity and professionalism. Highly recommend for anyone looking for reliable visa consultancy.”</p>
+                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+                    <p class="fs-5 mb-0" style="color: rgb(75,75,75);">"Exceptional accounting service from start to finish. The team guided me through complex tax planning with clarity and professionalism. Highly recommend for any business looking for reliable financial services."</p>
                     <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
                     </div>
                 </div>
                 <div class="d-flex">
-                    <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="img">
+                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-1.jpg" alt="Sarah Thompson">
                     </div>
                     <div class="my-auto">
-                        <h5>Sarah Thompson</h5>
-                        <p class="mb-0">HR Manager, GlobalTech</p>
+                        <h5 style="color: rgb(75,75,75);">Sarah Thompson</h5>
+                        <p class="mb-0" style="color: #c9a560;">CEO, TechSolutions</p>
                     </div>
                 </div>
             </div>
+            
             <!-- Testimonial 2 -->
             <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5">
-                    <p class="fs-5 mb-0">“They made the entire business visa process seamless. Their in-depth knowledge and prompt communication were key in securing our approvals faster than expected.”</p>
+                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+                    <p class="fs-5 mb-0" style="color: rgb(75,75,75);">"They made our entire audit process seamless. Their in-depth knowledge of financial regulations and prompt communication were key in completing our statutory audits efficiently."</p>
                     <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
                     </div>
                 </div>
                 <div class="d-flex">
-                    <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="img">
+                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-2.jpg" alt="Ahmed Khan">
                     </div>
                     <div class="my-auto">
-                        <h5>Ahmed Khan</h5>
-                        <p class="mb-0">Entrepreneur, TechBridge</p>
+                        <h5 style="color: rgb(75,75,75);">Ahmed Khan</h5>
+                        <p class="mb-0" style="color: #c9a560;">Finance Director, RetailChain</p>
                     </div>
                 </div>
             </div>
+            
             <!-- Testimonial 3 -->
             <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5">
-                    <p class="fs-5 mb-0">“Their team truly goes the extra mile. I was impressed with the attention to detail and their commitment to getting my student visa approved smoothly.”</p>
+                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+                    <p class="fs-5 mb-0" style="color: rgb(75,75,75);">"Their team truly goes the extra mile. I was impressed with their strategic financial advice that helped us optimize our business structure and tax obligations."</p>
                     <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
-                        <i class="fas fa-star text-secondary"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
+                        <i class="fas fa-star" style="color: #c9a560;"></i>
                     </div>
                 </div>
                 <div class="d-flex">
-                    <div class="rounded-circle me-4" style="width: 100px; height: 100px;">
-                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" alt="img">
+                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-3.jpg" alt="Maria Gomez">
                     </div>
                     <div class="my-auto">
-                        <h5>Maria Gomez</h5>
-                        <p class="mb-0">International Student</p>
+                        <h5 style="color: rgb(75,75,75);">Maria Gomez</h5>
+                        <p class="mb-0" style="color: #c9a560;">Founder, GreenStartups</p>
                     </div>
                 </div>
             </div>
@@ -793,77 +934,114 @@
 </div>
 <!-- Testimonial End -->
 
+<style>
+    .testimonial-item {
+        padding: 20px;
+    }
+    .testimonial-content {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    .testimonial-content:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 40px;
+        border-width: 15px 15px 0;
+        border-style: solid;
+        border-color: white transparent;
+        filter: drop-shadow(0 2px 2px rgba(75,75,75,0.1));
+    }
+    .testimonial-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(75,75,75,0.1);
+    }
+    .owl-carousel .owl-nav button {
+        background: #c9a560 !important;
+        color: white !important;
+        width: 40px;
+        height: 40px;
+        border-radius: 50% !important;
+        margin: 0 10px;
+    }
+    .owl-carousel .owl-nav button:hover {
+        background: #b8934b !important;
+    }
+</style>
+
 
 
 
        
 
-
-       <!-- Contact Start -->
-<div class="container-fluid contact overflow-hidden pb-5">
+<!-- Contact Start -->
+<div class="container-fluid contact overflow-hidden pb-5 bg-white">
     <div class="container py-5">
         <div class="office pt-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
-                    <h5 class="sub-title text-primary px-3">Worldwide Offices</h5>
+                    <h5 class="sub-title px-3" style="color: #c9a560;" >Our Offices</h5>
                 </div>
-                <h1 class="display-5 mb-4">Connect with Our Global Offices</h1>
-                <p class="mb-0">We proudly serve clients across the globe. Whether you're in North America, Europe, Asia, or beyond — our dedicated teams are here to support your immigration journey. Find the office nearest to you.</p>
+                <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Connect With Our Team</h1>
+                <p class="mb-0" style="color: rgb(75,75,75);">We proudly serve clients across India. Whether you're in Indore, Ujjain, Delhi, or Mumbai — our dedicated teams are here to support your accounting and financial needs.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <!-- Australia Office -->
+                <!-- Indore Office -->
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="office-item p-4">
-                        <div class="office-img mb-4">
-                            <img src="img/office-2.jpg" class="img-fluid w-100 rounded" alt="Australia Office">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-2.jpg" class="img-fluid w-100" alt="Indore Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2">indore</h4>
-                            <a href="tel:+1234567890" class="text-secondary fs-5 mb-2">+123 456 7890</a>
-                            <a href="mailto:travisa@example.com" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                            <p class="mb-0">Suite 201, Level 2, George Street, Sydney NSW 2000, Australia</p>
+                            <h4 class="mb-2" style="color: #c9a560;">Indore</h4>
+                            <a href="tel:+1234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+123 456 7890</a>
+                            <a href="mailto:info@example.com" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@example.com</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">Suite 201, Business Tower, AB Road, Indore, MP 452001</p>
                         </div>
                     </div>
                 </div>
-                <!-- Canada Office -->
+                
+                <!-- Ujjain Office -->
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="office-item p-4">
-                        <div class="office-img mb-4">
-                            <img src="img/office-1.jpg" class="img-fluid w-100 rounded" alt="Canada Office">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-1.jpg" class="img-fluid w-100" alt="Ujjain Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2">ujjain</h4>
-                            <a href="tel:+101203456789" class="text-secondary fs-5 mb-2">(012) 0345 6789</a>
-                            <a href="mailto:travisa@example.com" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                            <p class="mb-0">500 King Street West, Toronto, ON M5V 1M1, Canada</p>
+                            <h4 class="mb-2" style="color: #c9a560;">Ujjain</h4>
+                            <a href="tel:+101203456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">(012) 0345 6789</a>
+                            <a href="mailto:info@example.com" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@example.com</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">45 Freeganj Road, Ujjain, MP 456010</p>
                         </div>
                     </div>
                 </div>
-                <!-- UK Office -->
+                
+                <!-- Delhi Office -->
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="office-item p-4">
-                        <div class="office-img mb-4">
-                            <img src="img/office-3.jpg" class="img-fluid w-100 rounded" alt="UK Office">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-3.jpg" class="img-fluid w-100" alt="Delhi Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2">delhi</h4>
-                            <a href="tel:+441234567890" class="text-secondary fs-5 mb-2">01234 567 890</a>
-                            <a href="mailto:travisa@example.com" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                            <p class="mb-0">45 Baker Street, London W1U 8EW, United Kingdom</p>
+                            <h4 class="mb-2" style="color: #c9a560;">Delhi</h4>
+                            <a href="tel:+911234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 12345 67890</a>
+                            <a href="mailto:info@example.com" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@example.com</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Connaught Place, New Delhi 110001</p>
                         </div>
                     </div>
                 </div>
-                <!-- India Office -->
+                
+                <!-- Mumbai Office -->
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="office-item p-4">
-                        <div class="office-img mb-4">
-                            <img src="img/office-4.jpg" class="img-fluid w-100 rounded" alt="India Office">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-4.jpg" class="img-fluid w-100" alt="Mumbai Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2">mumbai</h4>
-                            <a href="tel:+911234567890" class="text-secondary fs-5 mb-2">+91 12345 67890</a>
-                            <a href="mailto:travisa@example.com" class="text-muted fs-5 mb-2">travisa@example.com</a>
-                            <p class="mb-0">C-204, Sector 63, Noida, Uttar Pradesh 201301, India</p>
+                            <h4 class="mb-2" style="color: #c9a560;">Mumbai</h4>
+                            <a href="tel:+912234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 22 3456 7890</a>
+                            <a href="mailto:info@example.com" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@example.com</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">45 Nariman Point, Mumbai, MH 400021</p>
                         </div>
                     </div>
                 </div>
@@ -873,93 +1051,204 @@
 </div>
 <!-- Contact End -->
 
+<style>
+    .office-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(75,75,75,0.12);
+        border-color: rgba(201,165,96,0.3) !important;
+    }
+    .office-img img {
+        transition: all 0.5s ease;
+    }
+    .office-item:hover .office-img img {
+        transform: scale(1.05);
+    }
+    a:hover {
+        color: #c9a560 !important;
+    }
+</style>
 
+     <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Contact Info</h4>
+                    <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i> 123 Business Park, Indore, MP</a>
+                    <a href="mailto:info@example.com" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@example.com</a>
+                    <a href="tel:+911234567890" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91 12345 67890</a>
+                    <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91 12345 67891</a>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
+            <!-- Opening Time -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Opening Time</h4>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Mon - Friday:</h6>
+                        <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Opening Time</h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Mon - Friday:</h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Satday:</h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0">Vacation:</h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Saturday:</h6>
+                        <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4">Our Services</h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Business</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Evaluation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Migrate</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Study</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Counselling</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Work / Career</a>
-                        </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Vacation:</h6>
+                        <p class="mb-0 text-white">All Sunday is our vacation</p>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-secondary mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="position-relative mx-auto rounded-pill">
-                                <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Our Services</h4>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Tax Planning</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit Services</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> GST Compliance</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Business Registration</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Financial Advisory</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Company Compliance</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                    <h4 class="mb-4" style="color: #c9a560;">Newsletter</h4>
+                    <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
+                    <div class="position-relative">
+                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
+                        <button type="button" class="btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2" style="background-color: #c9a560; color: white; border: none; padding: 0 15px;">SignUp</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+    </div>
+</div>
+<!-- Footer End -->
 
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                </div>
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4" style="background-color: rgb(201, 165, 96) !important;">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span class="text-white">
+                    <i class="fas fa-copyright me-2" style="color: #fff;"></i>
+                    2024 Your Firm Name. All rights reserved.
+                </span>
+            </div>
+            <div class="col-md-6 text-center text-md-end text-white">
+                <span>Designed with <i class="fas fa-heart" style="color: #fff;"></i> by Your Team</span>
             </div>
         </div>
-        <!-- Copyright End -->
+    </div>
+</div>
+<!-- Copyright End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+    input::placeholder {
+        color: rgba(255,255,255,0.7) !important;
+    }
+    input:focus {
+        background-color: rgba(255,255,255,0.2) !important;
+        color: white !important;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(201,165,96,0.5);
+    }
+</style>
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+</style>
 
         
     <!-- JavaScript Libraries -->
