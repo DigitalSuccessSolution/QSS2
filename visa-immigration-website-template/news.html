@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="utf-8">
+        <title>QSS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+     <!-- Topbar Start -->
+<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #c9a560;">
+    <div class="row gx-0 align-items-center">
+        <!-- Left: Email & Phone -->
+        <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+            <div class="d-flex">
+                <a href="#" class="text-muted me-4">
+                    <i class="fas fa-envelope text-[rgb(75 75 75)] me-2"></i>info@qss.net.in
+                </a>
+                <a href="#" class="text-muted me-0">
+                    <i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890
+                </a>
+            </div>
+        </div>
+
+        <!-- Center: Removed Social Icons -->
+        <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+            <!-- Intentionally left empty as requested -->
+        </div>
+
+        <!-- Right: Help / Support / Contact -->
+        <div class="col-lg-4 text-center text-lg-end">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+                <a href="#" class="text-muted me-2">Help</a><small>/</small>
+                <a href="#" class="text-muted mx-2">Support</a><small>/</small>
+                <a href="#" class="text-muted ms-2">Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- ✅ Header Section Start -->
+<section class="w-full border-b border-gray-200 shadow-sm">
+  <header class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+  <div class="flex items-center space-x-4">
+  <img src="/images/nav-logo.png" alt="QSS Logo" 
+       class="h-12 block max-w-full" 
+       style="max-height: 3rem;">
+</div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 font-medium relative">
+      <a href="index.html" class="text-[#c9a560] font-semibold">Home</a>
+
+      <!-- About Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">About ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
+          <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+        </div>
+      </div>
+
+      <!-- Services Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">Services ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-72 hidden group-hover:block z-50 p-2">
+          <a href="service.html" class="block px-4 py-2 font-semibold">Overview</a>
+          <a href="#" class="block px-4 py-2">People</a>
+        </div>
+      </div>
+
+      <!-- Insights Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">Insights ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
+          <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a> -->
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
+        </div>
+      </div>
+
+      <a href="career.html" class="hover:text-[#c9a560]">Careers</a>
+      <a href="contact.html" class="hover:text-[#c9a560]">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium bg-white shadow-md">
+    <a href="#" class="block">Home</a>
+
+    <!-- About -->
+    <details class="group">
+      <summary class="cursor-pointer">About</summary>
+      <div class="pl-4">
+        <a href="about.html" class="block py-1">Who We Are</a>
+        <a href="team.html" class="block py-1">Team</a>
+      </div>
+    </details>
+
+    <!-- Services -->
+    <details class="group">
+      <summary class="cursor-pointer">Services</summary>
+      <div class="pl-4">
+        <a href="service.html" class="block py-1 font-semibold">Overview</a>
+        <a href="#" class="block py-1">People</a>
+      </div>
+    </details>
+
+    <!-- Insights -->
+    <details class="group">
+      <summary class="cursor-pointer">Insights</summary>
+      <div class="pl-4">
+        <a href="blogs.html" class="block py-1">Blog</a>
+        <!-- <a href="#" class="block py-1">Videos</a> -->
+        <a href="news.html" class="block py-1">News and Events</a>
+      </div>
+    </details>
+
+    <a href="career.html" class="block">Careers</a>
+    <a href="contact.html" class="block">Contact Us</a>
+  </div>
+</section>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
+<!-- ✅ Header Section End -->
+
+
+<div class="featured-news-section" style="max-width: 1200px; margin: 60px auto; padding: 0 20px; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px; position: relative;">
+    Latest News
+    <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: #c9a560;"></span>
+  </h2>
+  
+  <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08);">
+    <div style="position: relative;">
+      <div style="height: 400px; background: url('https://via.placeholder.com/1200x800') no-repeat center/cover;"></div>
+      <div style="position: absolute; top: 20px; right: 20px; background: rgba(201, 165, 96, 0.95); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 14px;">
+        June 24, 2024
+      </div>
+    </div>
+    <div style="padding: 40px;">
+      <span style="color: #c9a560; font-weight: 600; letter-spacing: 1px; font-size: 14px;">TAX UPDATES</span>
+      <h3 style="color: #4b4b4b; font-size: 28px; margin: 15px 0 20px; line-height: 1.4;">
+        New GST Regulations Effective From July 2024
+      </h3>
+      <p style="color: #666; line-height: 1.7; margin-bottom: 30px; font-size: 16px;">
+        The Central Board of Indirect Taxes and Customs has announced significant changes to GST filing procedures that will impact all businesses with turnover above ₹5 crore. Key changes include quarterly return filing and new invoice matching requirements.
+      </p>
+      <a href="#" style="display: inline-flex; align-items: center; padding: 12px 25px; background: #c9a560; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: background 0.3s;">
+        Read Full Story
+        <svg style="margin-left: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .featured-news-section h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+  .featured-news-section div[style*="height: 400px"] {
+    height: 250px !important;
+  }
+  .featured-news-section div[style*="padding: 40px"] {
+    padding: 20px !important;
+  }
+  .featured-news-section h3 {
+    font-size: 22px !important;
+  }
+  .featured-news-section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+}
+</style>
+
+<div class="events-timeline-section" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <!-- Events content here (same as before) -->
+</div>
+
+<!-- नीचे की लाइन -->
+<div style="width: 100%; height: 4px; background: #c9a560; margin-top: 20px;"></div>
+
+<style>
+@media (max-width: 768px) {
+  .events-timeline-section h2 { font-size: 28px; }
+  .events-timeline-section div[style*="display: flex"] { flex-direction: column; }
+  .events-timeline-section div[style*="flex: 0 0 100px"] { 
+    flex: 0 0 auto; 
+    margin-right: 0; 
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .events-timeline-section div[style*="position: absolute; top: 30px; left: -8px;"] {
+    top: -8px;
+    left: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .events-timeline-section h2 { font-size: 24px; }
+  .events-timeline-section h3 { font-size: 20px; }
+  .events-timeline-section div[style*="padding: 25px"] { padding: 20px; }
+}
+</style>
+
+
+
+<div class="news-grid-section" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px; position: relative;">
+    Accounting News
+    <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: #c9a560;"></span>
+  </h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+    <!-- News 1 -->
+    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+      <div style="height: 220px; background: #f5f5f5; background-size: cover; position: relative;">
+        <div style="position: absolute; bottom: 15px; left: 15px; background: #c9a560; color: white; padding: 5px 15px; border-radius: 30px; font-size: 12px; font-weight: 600;">June 18, 2024</div>
+      </div>
+      <div style="padding: 25px;">
+        <span style="color: #c9a560; font-size: 14px; font-weight: 600; display: block; margin-bottom: 10px;">AUDIT STANDARDS</span>
+        <h3 style="color: #4b4b4b; font-size: 20px; margin: 0 0 15px; line-height: 1.4;">Revised Audit Documentation Requirements for FY 2024-25</h3>
+        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">The ICAI has released new guidelines for audit documentation that will be mandatory for all statutory audits conducted after April 1, 2024.</p>
+        <a href="#" style="color: #4b4b4b; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center;">
+          Read More
+          <svg style="margin-left: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- News 2 -->
+    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+      <div style="height: 220px; background: #f5f5f5; background-size: cover; position: relative;">
+        <div style="position: absolute; bottom: 15px; left: 15px; background: #c9a560; color: white; padding: 5px 15px; border-radius: 30px; font-size: 12px; font-weight: 600;">June 12, 2024</div>
+      </div>
+      <div style="padding: 25px;">
+        <span style="color: #c9a560; font-size: 14px; font-weight: 600; display: block; margin-bottom: 10px;">TECHNOLOGY</span>
+        <h3 style="color: #4b4b4b; font-size: 20px; margin: 0 0 15px; line-height: 1.4;">AI Tools That Are Transforming Accounting Practices</h3>
+        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Discover the top 5 artificial intelligence applications that leading accounting firms are using to enhance accuracy and efficiency.</p>
+        <a href="#" style="color: #4b4b4b; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center;">
+          Read More
+          <svg style="margin-left: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    
+    <!-- News 3 -->
+    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+      <div style="height: 220px; background: #f5f5f5; background-size: cover; position: relative;">
+        <div style="position: absolute; bottom: 15px; left: 15px; background: #c9a560; color: white; padding: 5px 15px; border-radius: 30px; font-size: 12px; font-weight: 600;">June 5, 2024</div>
+      </div>
+      <div style="padding: 25px;">
+        <span style="color: #c9a560; font-size: 14px; font-weight: 600; display: block; margin-bottom: 10px;">FINANCE</span>
+        <h3 style="color: #4b4b4b; font-size: 20px; margin: 0 0 15px; line-height: 1.4;">RBI Announces New Guidelines for MSME Loan Restructuring</h3>
+        <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">The Reserve Bank has introduced relaxed norms for MSME loan restructuring to help small businesses recover from pandemic impacts.</p>
+        <a href="#" style="color: #4b4b4b; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center;">
+          Read More
+          <svg style="margin-left: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 50px;">
+    <a href="#" style="display: inline-block; padding: 12px 30px; background: white; color: #4b4b4b; text-decoration: none; border: 2px solid #c9a560; border-radius: 30px; font-weight: 600; transition: all 0.3s;">
+      View All News
+    </a>
+  </div>
+</div>
+
+<div class="events-timeline-section" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <!-- Events content here (same as before) -->
+</div>
+
+<!-- नीचे की लाइन -->
+<div style="width: 100%; height: 4px; background: #c9a560; margin-top: 20px;"></div>
+
+<style>
+@media (max-width: 768px) {
+  .events-timeline-section h2 { font-size: 28px; }
+  .events-timeline-section div[style*="display: flex"] { flex-direction: column; }
+  .events-timeline-section div[style*="flex: 0 0 100px"] { 
+    flex: 0 0 auto; 
+    margin-right: 0; 
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .events-timeline-section div[style*="position: absolute; top: 30px; left: -8px;"] {
+    top: -8px;
+    left: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .events-timeline-section h2 { font-size: 24px; }
+  .events-timeline-section h3 { font-size: 20px; }
+  .events-timeline-section div[style*="padding: 25px"] { padding: 20px; }
+}
+</style>
+
+
+<style>
+@media (max-width: 768px) {
+  .news-grid-section h2 { font-size: 28px; }
+  .news-grid-section div[style*="grid-template-columns"] { grid-template-columns: 1fr; }
+  .news-grid-section div[style*="height: 220px"] { height: 200px; }
+}
+@media (max-width: 480px) {
+  .news-grid-section h2 { font-size: 24px; }
+  .news-grid-section div[style*="padding: 25px"] { padding: 20px; }
+}
+</style>
+
+
+<div class="events-timeline-section-uniq" style="max-width: 1200px; margin: 80px auto; padding: 0 20px; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px; position: relative;">
+    Upcoming Events
+    <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: #c9a560;"></span>
+  </h2>
+  
+  <div style="max-width: 800px; margin: 0 auto;">
+    
+    <!-- Event Item -->
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 40px; position: relative; align-items: flex-start;">
+      <div style="flex: 0 0 100px; margin-right: 30px; text-align: center; min-width: 80px;">
+        <div style="background: #f8f3e8; border-radius: 10px; padding: 15px 10px;">
+          <div style="color: #c9a560; font-weight: 700; font-size: 28px; line-height: 1;">15</div>
+          <div style="color: #4b4b4b; font-weight: 600; font-size: 14px; text-transform: uppercase;">July</div>
+        </div>
+      </div>
+      <div style="flex: 1; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); position: relative; min-width: 250px;">
+        <div style="position: absolute; top: 30px; left: -8px; width: 16px; height: 16px; background: #c9a560; border-radius: 50%;"></div>
+        <h3 style="color: #4b4b4b; font-size: 22px; margin: 0 0 10px;">Annual Tax Conference 2024</h3>
+        <div style="display: flex; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+          <svg style="margin-right: 8px;" width="16" height="16" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span style="color: #666; font-size: 14px;">July 15-17, 2024 | 9:00 AM - 5:00 PM</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-bottom: 15px; flex-wrap: wrap;">
+          <svg style="margin-right: 8px;" width="16" height="16" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span style="color: #666; font-size: 14px;">Grand Hyatt, Mumbai</span>
+        </div>
+        <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">Join industry leaders and tax experts for this 3-day conference covering the latest developments in tax legislation, compliance strategies, and international taxation.</p>
+        <a href="#" style="display: inline-block; padding: 10px 20px; background: #c9a560; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 14px;">Register Now</a>
+      </div>
+    </div>
+    
+    <!-- Repeat other events with same structure -->
+     <!-- Event 2 --> <div style="display: flex; margin-bottom: 40px; position: relative;"> <div style="flex: 0 0 100px; margin-right: 30px; text-align: center;"> <div style="background: #f8f3e8; border-radius: 10px; padding: 15px 10px;"> <div style="color: #c9a560; font-weight: 700; font-size: 28px; line-height: 1;">28</div> <div style="color: #4b4b4b; font-weight: 600; font-size: 14px; text-transform: uppercase;">July</div> </div> </div> <div style="flex: 1; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); position: relative;"> <div style="position: absolute; top: 30px; left: -8px; width: 16px; height: 16px; background: #c9a560; border-radius: 50%;"></div> <h3 style="color: #4b4b4b; font-size: 22px; margin: 0 0 10px;">GST Masterclass Workshop</h3> <div style="display: flex; align-items: center; margin-bottom: 15px;"> <svg style="margin-right: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect> <line x1="16" y1="2" x2="16" y2="6"></line> <line x1="8" y1="2" x2="8" y2="6"></line> <line x1="3" y1="10" x2="21" y2="10"></line> </svg> <span style="color: #666; font-size: 14px;">July 28, 2024 | 10:00 AM - 4:00 PM</span> </div> <div style="display: flex; align-items: center; margin-bottom: 15px;"> <svg style="margin-right: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path> <circle cx="12" cy="10" r="3"></circle> </svg> <span style="color: #666; font-size: 14px;">Online Webinar</span> </div> <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">Deep dive into advanced GST concepts with practical case studies and live Q&A session with senior GST practitioners.</p> <a href="#" style="display: inline-block; padding: 10px 20px; background: #c9a560; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 14px;">Register Now</a> </div> </div> <!-- Event 3 --> <div style="display: flex; margin-bottom: 40px; position: relative;"> <div style="flex: 0 0 100px; margin-right: 30px; text-align: center;"> <div style="background: #f8f3e8; border-radius: 10px; padding: 15px 10px;"> <div style="color: #c9a560; font-weight: 700; font-size: 28px; line-height: 1;">10</div> <div style="color: #4b4b4b; font-weight: 600; font-size: 14px; text-transform: uppercase;">Aug</div> </div> </div> <div style="flex: 1; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); position: relative;"> <div style="position: absolute; top: 30px; left: -8px; width: 16px; height: 16px; background: #c9a560; border-radius: 50%;"></div> <h3 style="color: #4b4b4b; font-size: 22px; margin: 0 0 10px;">CA Networking Meet</h3> <div style="display: flex; align-items: center; margin-bottom: 15px;"> <svg style="margin-right: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect> <line x1="16" y1="2" x2="16" y2="6"></line> <line x1="8" y1="2" x2="8" y2="6"></line> <line x1="3" y1="10" x2="21" y2="10"></line> </svg> <span style="color: #666; font-size: 14px;">August 10, 2024 | 6:00 PM - 9:00 PM</span> </div> <div style="display: flex; align-items: center; margin-bottom: 15px;"> <svg style="margin-right: 8px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path> <circle cx="12" cy="10" r="3"></circle> </svg> <span style="color: #666; font-size: 14px;">The Lalit, New Delhi</span> </div> <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">An exclusive networking event for practicing Chartered Accountants to connect, share insights and explore collaboration opportunities.</p> <a href="#" style="display: inline-block; padding: 10px 20px; background: #c9a560; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 14px;">Register Now</a> </div> </div> </div> <div style="text-align: center; margin-top: 30px;"> <a href="#" style="display: inline-block; padding: 12px 30px; background: white; color: #4b4b4b; text-decoration: none; border: 2px solid #c9a560; border-radius: 30px; font-weight: 600; transition: all 0.3s;"></a>
+    
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="#" style="display: inline-block; padding: 12px 30px; background: white; color: #4b4b4b; text-decoration: none; border: 2px solid #c9a560; border-radius: 30px; font-weight: 600; transition: all 0.3s;">
+      View All Events
+    </a>
+  </div>
+</div>
+
+<div class="events-timeline-section" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <!-- Events content here (same as before) -->
+</div>
+
+<!-- नीचे की लाइन -->
+<div style="width: 100%; height: 4px; background: #c9a560; margin-top: 20px;"></div>
+
+<style>
+@media (max-width: 768px) {
+  .events-timeline-section h2 { font-size: 28px; }
+  .events-timeline-section div[style*="display: flex"] { flex-direction: column; }
+  .events-timeline-section div[style*="flex: 0 0 100px"] { 
+    flex: 0 0 auto; 
+    margin-right: 0; 
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .events-timeline-section div[style*="position: absolute; top: 30px; left: -8px;"] {
+    top: -8px;
+    left: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .events-timeline-section h2 { font-size: 24px; }
+  .events-timeline-section h3 { font-size: 20px; }
+  .events-timeline-section div[style*="padding: 25px"] { padding: 20px; }
+}
+</style>
+
+
+
+
+
+
+
+
+
+<style>
+@media (max-width: 768px) {
+  .events-timeline-section-uniq h2 {
+    font-size: 28px !important;
+  }
+  .events-timeline-section-uniq > div > div {
+    flex-direction: column !important;
+  }
+  .events-timeline-section-uniq div[style*="flex: 0 0 100px"] {
+    margin-right: 0 !important;
+    margin-bottom: 15px !important;
+    text-align: left !important;
+  }
+  .events-timeline-section-uniq div[style*="position: absolute; top: 30px; left: -8px;"] {
+    top: -8px !important;
+    left: 30px !important;
+  }
+}
+@media (max-width: 480px) {
+  .events-timeline-section-uniq h2 {
+    font-size: 24px !important;
+  }
+  .events-timeline-section-uniq h3 {
+    font-size: 20px !important;
+  }
+  .events-timeline-section-uniq div[style*="padding: 25px"] {
+    padding: 20px !important;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<div class="news-events-combo" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+    <!-- News Column -->
+    <div>
+      <h2 style="color: #4b4b4b; font-size: 24px; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #c9a560; display: inline-block;">
+        Recent News
+      </h2>
+      
+      <div style="background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 30px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          <div style="width: 40px; height: 40px; background: #f8f3e8; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3 style="color: #4b4b4b; font-size: 18px; margin: 0 0 5px;">IFRS Update: New Revenue Recognition Standards</h3>
+            <span style="color: #c9a560; font-size: 13px; font-weight: 500;">June 20, 2024</span>
+          </div>
+        </div>
+        <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 15px;">The International Accounting Standards Board has released updated guidance on revenue recognition that will affect companies reporting under IFRS.</p>
+        <a href="#" style="color: #4b4b4b; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center;">
+          Read More
+          <svg style="margin-left: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div style="background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 30px;">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          <div style="width: 40px; height: 40px; background: #f8f3e8; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3 style="color: #4b4b4b; font-size: 18px; margin: 0 0 5px;">RBI Extends Loan Moratorium for Affected Sectors</h3>
+            <span style="color: #c9a560; font-size: 13px; font-weight: 500;">June 15, 2024</span>
+          </div>
+        </div>
+        <p style="color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 15px;">The Reserve Bank announces 6-month extension of loan moratorium for hospitality, travel and retail sectors facing continued pandemic impacts.</p>
+        <a href="#" style="color: #4b4b4b; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center;">
+          Read More
+          <svg style="margin-left: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="#" style="display: inline-block; padding: 8px 20px; background: white; color: #4b4b4b; text-decoration: none; border: 1px solid #c9a560; border-radius: 4px; font-weight: 600; font-size: 14px;">
+          View All News
+        </a>
+      </div>
+    </div>
+
+    
+    <!-- Events Column -->
+    <div>
+      <h2 style="color: #4b4b4b; font-size: 24px; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid #c9a560; display: inline-block;">
+        Upcoming Events
+      </h2>
+      
+      <div style="background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 30px;">
+        <div style="display: flex; margin-bottom: 15px;">
+          <div style="flex: 0 0 60px; margin-right: 15px; text-align: center;">
+            <div style="background: #f8f3e8; border-radius: 6px; padding: 10px 5px;">
+              <div style="color: #c9a560; font-weight: 700; font-size: 18px; line-height: 1;">22</div>
+              <div style="color: #4b4b4b; font-weight: 600; font-size: 12px; text-transform: uppercase;">July</div>
+            </div>
+          </div>
+          <div>
+            <h3 style="color: #4b4b4b; font-size: 18px; margin: 0 0 5px;">CA Tech Summit 2024</h3>
+            <div style="color: #666; font-size: 13px; margin-bottom: 10px;">
+              <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                <svg style="margin-right: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>July 22, 2024 | 9:00 AM - 6:00 PM</span>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <svg style="margin-right: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Taj Lands End, Mumbai</span>
+              </div>
+            </div>
+            <a href="#" style="display: inline-block; padding: 6px 12px; background: #c9a560; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px;">Register</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 30px;">
+        <div style="display: flex; margin-bottom: 15px;">
+          <div style="flex: 0 0 60px; margin-right: 15px; text-align: center;">
+            <div style="background: #f8f3e8; border-radius: 6px; padding: 10px 5px;">
+              <div style="color: #c9a560; font-weight: 700; font-size: 18px; line-height: 1;">05</div>
+              <div style="color: #4b4b4b; font-weight: 600; font-size: 12px; text-transform: uppercase;">Aug</div>
+            </div>
+          </div>
+          <div>
+            <h3 style="color: #4b4b4b; font-size: 18px; margin: 0 0 5px;">Financial Reporting Workshop</h3>
+            <div style="color: #666; font-size: 13px; margin-bottom: 10px;">
+              <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                <svg style="margin-right: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>August 5, 2024 | 2:00 PM - 5:00 PM</span>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <svg style="margin-right: 5px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Online Webinar</span>
+              </div>
+            </div>
+            <a href="#" style="display: inline-block; padding: 6px 12px; background: #c9a560; color: white; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 13px;">Register</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center;">
+        <a href="#" style="display: inline-block; padding: 8px 20px; background: white; color: #4b4b4b; text-decoration: none; border: 1px solid #c9a560; border-radius: 4px; font-weight: 600; font-size: 14px;">
+          View All Events
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="events-timeline-section" style="max-width: 1200px; margin: 80px auto; padding: 0 20px;">
+  <!-- Events content here (same as before) -->
+</div>
+
+<!-- नीचे की लाइन -->
+<div style="width: 100%; height: 4px; background: #c9a560; margin-top: 20px;"></div>
+
+<style>
+@media (max-width: 768px) {
+  .events-timeline-section h2 { font-size: 28px; }
+  .events-timeline-section div[style*="display: flex"] { flex-direction: column; }
+  .events-timeline-section div[style*="flex: 0 0 100px"] { 
+    flex: 0 0 auto; 
+    margin-right: 0; 
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .events-timeline-section div[style*="position: absolute; top: 30px; left: -8px;"] {
+    top: -8px;
+    left: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .events-timeline-section h2 { font-size: 24px; }
+  .events-timeline-section h3 { font-size: 20px; }
+  .events-timeline-section div[style*="padding: 25px"] { padding: 20px; }
+}
+</style>
+
+
+<style>
+@media (max-width: 768px) {
+  .news-events-combo div[style*="grid-template-columns"] { grid-template-columns: 1fr; gap: 30px; }
+  .news-events-combo h2 { font-size: 22px; }
+}
+@media (max-width: 480px) {
+  .news-events-combo h3 { font-size: 16px; }
+  .news-events-combo div[style*="padding: 20px"] { padding: 15px; }
+}
+</style>
+
+     <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Contact Info</h4>
+                    <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i> 123 Business Park, Indore, MP</a>
+                    <a href="mailto:info@example.com" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@example.com</a>
+                    <a href="tel:+911234567890" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91 12345 67890</a>
+                    <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91 12345 67891</a>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opening Time -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Opening Time</h4>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Mon - Friday:</h6>
+                        <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Saturday:</h6>
+                        <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Vacation:</h6>
+                        <p class="mb-0 text-white">All Sunday is our vacation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="mb-4" style="color: #c9a560;">Our Services</h4>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Tax Planning</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit Services</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> GST Compliance</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Business Registration</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Financial Advisory</a>
+                    <a href="#" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Company Compliance</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                    <h4 class="mb-4" style="color: #c9a560;">Newsletter</h4>
+                    <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
+                    <div class="position-relative">
+                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
+                        <button type="button" class="btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2" style="background-color: #c9a560; color: white; border: none; padding: 0 15px;">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4" style="background-color: rgb(201, 165, 96) !important;">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-md-0">
+                <span class="text-white">
+                    <i class="fas fa-copyright me-2" style="color: #fff;"></i>
+                    2024 Your Firm Name. All rights reserved.
+                </span>
+            </div>
+            <div class="col-md-6 text-center text-md-end text-white">
+                <span>Designed with <i class="fas fa-heart" style="color: #fff;"></i> by Your Team</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+    input::placeholder {
+        color: rgba(255,255,255,0.7) !important;
+    }
+    input:focus {
+        background-color: rgba(255,255,255,0.2) !important;
+        color: white !important;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(201,165,96,0.5);
+    }
+</style>
+
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg-square back-to-top" style="background-color: #c9a560; color: white;"><i class="fa fa-arrow-up"></i></a>
+
+<style>
+    .footer-item a:hover {
+        color: #c9a560 !important;
+        padding-left: 5px;
+        transition: all 0.3s ease;
+    }
+    .btn-social {
+        transition: all 0.3s ease;
+    }
+    .btn-social:hover {
+        background-color: #c9a560 !important;
+        border-color: #c9a560 !important;
+    }
+    .btn-social:hover i {
+        color: white !important;
+    }
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none;
+        z-index: 99;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+        background-color: #b8934b !important;
+        transform: translateY(-5px);
+    }
+</style>
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>

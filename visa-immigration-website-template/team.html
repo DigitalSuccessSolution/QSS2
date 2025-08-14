@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-       
+        <!-- Bootstrap 5 CDN (Add in <head> and before </body>)  -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -97,7 +97,7 @@
         <button class="hover:text-[#c9a560]">About ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
           <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
-          <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
         </div>
       </div>
 
@@ -114,14 +114,14 @@
       <div class="group relative">
         <button class="hover:text-[#c9a560]">Insights ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
-          <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
-          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a> -->
-          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
         </div>
       </div>
 
-      <a href="career.html" class="hover:text-[#c9a560]">Careers</a>
-      <a href="contact.html" class="hover:text-[#c9a560]">Contact Us</a>
+      <a href="#" class="hover:text-[#c9a560]">Careers</a>
+      <a href="#" class="hover:text-[#c9a560]">Contact Us</a>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -141,7 +141,7 @@
       <summary class="cursor-pointer">About</summary>
       <div class="pl-4">
         <a href="about.html" class="block py-1">Who We Are</a>
-        <a href="team.html" class="block py-1">Team</a>
+        <a href="#" class="block py-1">Team</a>
       </div>
     </details>
 
@@ -158,13 +158,13 @@
     <details class="group">
       <summary class="cursor-pointer">Insights</summary>
       <div class="pl-4">
-        <a href="blogs.html" class="block py-1">Blog</a>
-        <!-- <a href="#" class="block py-1">Videos</a> -->
-        <a href="news.html" class="block py-1">News and Events</a>
+        <a href="#" class="block py-1">Blog</a>
+        <a href="#" class="block py-1">Videos</a>
+        <a href="#" class="block py-1">News and Events</a>
       </div>
     </details>
 
-    <a href="career.html" class="block">Careers</a>
+    <a href="#" class="block">Careers</a>
     <a href="contact.html" class="block">Contact Us</a>
   </div>
 </section>
@@ -179,223 +179,175 @@
 
 
 
-<section class="contact-hero" style="width: 100%; background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('office-bg.jpg'); background-size: cover; padding: 80px 0;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-    <h1 style="color: #4b4b4b; font-size: 42px; margin-bottom: 20px;">Get in Touch</h1>
-    <p style="color: #666; font-size: 18px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
-      Reach out for accounting solutions tailored to your business needs.
+<section 
+  class="ca-team-hero-unique" 
+  style="
+    position: relative; 
+    background: url('images/ca-team-bg.jpg') no-repeat center/cover; 
+    min-height: 60vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    text-align: center; 
+    font-family: 'Inter', sans-serif; 
+    padding: 40px 20px;
+  "
+>
+  <!-- Overlay -->
+  <div 
+    style="
+      position: absolute; 
+      inset: 0; 
+      background: rgba(0, 0, 0, 0.5);
+    "
+  ></div>
+
+  <!-- Content -->
+  <div 
+    style="
+      position: relative; 
+      max-width: 800px; 
+      z-index: 1;
+    "
+  >
+    <h1 
+      style="
+        font-size: clamp(28px, 5vw, 48px); 
+        font-weight: 700; 
+        margin-bottom: 15px; 
+        color: #FFD700;
+      "
+    >
+      Meet Our Chartered Accountants
+    </h1>
+    <p 
+      style="
+        font-size: clamp(16px, 2vw, 18px); 
+        line-height: 1.6; 
+        color: #fff;
+      "
+    >
+      Our team of expert Chartered Accountants brings years of experience, precision, and dedication to ensure your business thrives with strategic financial solutions.
     </p>
-    <a href="#contact-form" style="display: inline-block; padding: 15px 35px; background: #c9a560; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; transition: all 0.3s;">
-      Send a Message
-    </a>
   </div>
 </section>
 
-<!-- Interactive Map -->
-<div class="office-map" style="width: 100%; height: 400px; background: #f5f5f5;">
-  <!-- Embed Google Map Here -->
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.215340978635!2d77.1234567890123!3d28.65432109876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzE1LjYiTiA3N8KwMDcnMjEuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
+
+
+<style>
+  .profile-container {
+    max-width: 1100px; /* Content ka max width */
+    margin: auto;
+    padding: 0 20px; /* Side padding for small screens */
+    box-sizing: border-box;
+  }
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: nowrap;
+  }
+
+  .profile-section img {
+    width: 300px;
+    height: 300px; /* Square image */
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .profile-text {
+    flex: 1;
+  }
+
+  .profile-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(195, 147, 34);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .profile-desc {
+    font-size: clamp(14px, 2vw, 15px);
+    text-align: justify;
+    line-height: 1.8;
+    color: rgb(75, 75, 75);
+  }
+
+  /* Alternate image position for even sections */
+  .profile-section.reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .profile-section,
+    .profile-section.reverse {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .profile-section img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .profile-text {
+      text-align: justify;
+    }
+  }
+</style>
+
+<div class="profile-container " style="padding-top: 20px;">
+  <!-- Managing Director -->
+  <div class="profile-section">
+    <img src="img/carousel-1.jpg" alt="Managing Director">
+    <div class="profile-text">
+      <div class="profile-title">Mr. JEEVAN SINGH (Managing Director)</div>
+      <p class="profile-desc">
+        A pioneer in the field of security with vast experience of many years. He launched his own Security Service Company and extended his wings with the motive of "sky is the limit". He has also diversified into Real Estate, Hotels, and Leasing Business. With his vision, dexterity, ingrained business acumen, and professionalism, he has managed and developed the security company to the top level. The company today has a national presence with 22 branches all over India and a guard force of over 6000 personnel.
+      </p>
+    </div>
+  </div>
+
+  <!-- Executive Director -->
+  <div class="profile-section reverse">
+    <img src="img/country-2.jpg" alt="Executive Director">
+    <div class="profile-text">
+      <div class="profile-title">Mr. RANJEET SINGH CHANDRAWAT (Executive Director)</div>
+      <p class="profile-desc">
+        A Management graduate with professional experience spread across admin, material management, business development, and client servicing in industries such as textile, FMCG, steel, and service industry. He has been instrumental in establishing business networks and developing training programs for specific manpower categories. He has organized management development programs for senior management in various reputed organizations.
+      </p>
+    </div>
+  </div>
+
+  <!-- General Manager -->
+  <div class="profile-section">
+    <img src="img/training-2.jpg" alt="General Manager">
+    <div class="profile-text">
+      <div class="profile-title">Mr. DEEPNARAYAN DWIVEDI (General Manager)</div>
+      <p class="profile-desc">
+        An officer from Combat Arm of the Indian Army, with two and a half decades in Army service besides four years in the National Defence Academy and Indian Military Academy. He has had long tenures in insurgent areas and served with the National Security Guard, India’s premier security setup. He has completed security courses with the Military Intelligence and Security College and Industrial Security under the aegis of DGR. He has handled VIP security at both national and international levels and coordinated with 18 standalone training venues of the Commonwealth Games where security was of utmost priority.
+      </p>
+    </div>
+  </div>
 </div>
 
 
 
-<section class="contact-methods" style="width: 100%; padding: 80px 0; background: white;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      <!-- Card 1 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Call Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">+91 98765 43210</p>
-        <p style="color: #666;">Mon-Fri: 9AM - 6PM</p>
-      </div>
-      
-      <!-- Card 2 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Email Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">info@yourfirm.com</p>
-        <p style="color: #666;">Response within 24 hours</p>
-      </div>
-      
-      <!-- Card 3 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Visit Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">123 Financial Street</p>
-        <p style="color: #666;">Mumbai, Maharashtra 400001</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
-<section id="contact-form" style="width: 100%; padding: 80px 0; background: #f9f9f9;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <div style="background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 50px;">
-      <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 30px;">Send Us a Message</h2>
-      
-      <form style="display: grid; gap: 20px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">First Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-          </div>
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Last Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-          </div>
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Email*</label>
-          <input type="email" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Phone</label>
-          <input type="tel" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Service Needed*</label>
-          <select required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill="%234b4b4b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 16px;">
-            <option value="">Select a service</option>
-            <option value="audit">Audit & Assurance</option>
-            <option value="tax">Tax Planning</option>
-            <option value="gst">GST Services</option>
-            <option value="accounting">Accounting</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Message*</label>
-          <textarea required rows="5" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; resize: vertical;"></textarea>
-        </div>
-        
-        <button type="submit" style="width: 100%; padding: 15px; background: #c9a560; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px;">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section style="width: 100%; padding: 80px 0; background: white;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
-    
-    <div style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-      <!-- FAQ 1 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">What are your working hours?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Our office is open Monday to Friday from 9:00 AM to 6:00 PM. For urgent matters outside these hours, please call our emergency contact number.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 2 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">How quickly will I receive a response?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>We typically respond to emails within 24 hours. For phone inquiries, our team will get back to you within 2 business hours during working days.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 3 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">Do you offer virtual consultations?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Yes, we provide video consultations via Zoom, Microsoft Teams, or Google Meet. Schedule an appointment through our contact form.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Base Responsive Styles */
-  @media (max-width: 768px) {
-    /* Hero Section */
-    .contact-hero h1 { font-size: 32px; }
-    .contact-hero p { font-size: 16px; }
-    .office-map { height: 300px; }
-    
-    /* Contact Cards */
-    .contact-methods div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
-    }
-    
-    /* Contact Form */
-    #contact-form div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
-    }
-    
-    /* FAQ Section */
-    details summary span { font-size: 16px; }
-  }
-  
-  @media (max-width: 480px) {
-    /* Padding Adjustments */
-    section { padding: 60px 0 !important; }
-    
-    /* Form Elements */
-    input, select, textarea, button { 
-      padding: 10px 12px !important; 
-      font-size: 15px !important; 
-    }
-    
-    /* FAQ Icons */
-    details svg { width: 16px; height: 16px; }
-  }
-  
-  /* Interactive Elements */
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #c9a560;
-    box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
-  }
-  
-  button:hover { background: #b8934d !important; }
-  
-  details[open] svg { transform: rotate(180deg); }
-  
-  .contact-methods div[style*="box-shadow"]:hover { 
-    transform: translateY(-5px); 
-  }
-</style>
-
-
-
-
-
-
-
-     <!-- Footer Start -->
+   <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5">

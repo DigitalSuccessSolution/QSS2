@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <!-- Bootstrap 5 CDN (Add in <head> and before </body>)  -->
+       
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -81,25 +81,23 @@
 <!-- ✅ Header Section Start -->
 <section class="w-full border-b border-gray-200 shadow-sm">
   <header class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-    <!-- Logo Section -->
-    <div class="flex items-center space-x-4">
-      <img src="/images/nav-logo.png" alt="QSS Logo" class="h-12">
-      <!-- <img src="your-uds-logo-path.png" alt="UDS Logo" class="h-12"> -->
-    </div>
+    <!-- Logo -->
+  <div class="flex items-center space-x-4">
+  <img src="/images/nav-logo.png" alt="QSS Logo" 
+       class="h-12 block max-w-full" 
+       style="max-height: 3rem;">
+</div>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center space-x-6 font-medium relative">
-      <a href="#" class="text-[#c9a560] font-semibold">Home</a>
+      <a href="index.html" class="text-[#c9a560] font-semibold">Home</a>
 
       <!-- About Dropdown -->
       <div class="group relative">
         <button class="hover:text-[#c9a560]">About ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
           <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
-          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Life @ QSS</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">CSR @ QSS</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our Values</a> -->
+          <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Team</a>
         </div>
       </div>
 
@@ -109,10 +107,6 @@
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-72 hidden group-hover:block z-50 p-2">
           <a href="service.html" class="block px-4 py-2 font-semibold">Overview</a>
           <a href="#" class="block px-4 py-2">People</a>
-        
-          <div class="pl-4">
-         
-          </div>
         </div>
       </div>
 
@@ -120,23 +114,18 @@
       <div class="group relative">
         <button class="hover:text-[#c9a560]">Insights ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Case Studies</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Newsletter</a>
+          <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a> -->
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
         </div>
       </div>
 
-      <a href="#" class="hover:text-[#c9a560]">Careers ▾</a>
-      <a href="#" class="hover:text-[#c9a560]">Contact Us</a>
-
-      <!-- Pay Button -->
-      <!-- <a href="#" class="bg-[#002F63] text-white px-4 py-2 rounded-full font-medium">₹ Pay</a>
-    </nav> -->
+      <a href="career.html" class="hover:text-[#c9a560]">Careers</a>
+      <a href="contact.html" class="hover:text-[#c9a560]">Contact Us</a>
+    </nav>
 
     <!-- Mobile Menu Button -->
-    <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+    <button id="menuToggle" class="md:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
@@ -144,18 +133,15 @@
   </header>
 
   <!-- Mobile Navigation -->
-  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium">
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium bg-white shadow-md">
     <a href="#" class="block">Home</a>
 
     <!-- About -->
     <details class="group">
       <summary class="cursor-pointer">About</summary>
       <div class="pl-4">
-        <a href="#" class="block py-1">Who We Are</a>
-        <a href="#" class="block py-1">Team</a>
-        <a href="#" class="block py-1">Life @ QSS</a>
-        <a href="#" class="block py-1">CSR @ QSS</a>
-        <a href="#" class="block py-1">Our Values</a>
+        <a href="about.html" class="block py-1">Who We Are</a>
+        <a href="team.html" class="block py-1">Team</a>
       </div>
     </details>
 
@@ -165,10 +151,6 @@
       <div class="pl-4">
         <a href="service.html" class="block py-1 font-semibold">Overview</a>
         <a href="#" class="block py-1">People</a>
-        <a href="#" class="block py-1 font-semibold">Product and Process</a>
-        <div class="pl-4">
-         
-        </div>
       </div>
     </details>
 
@@ -176,18 +158,23 @@
     <details class="group">
       <summary class="cursor-pointer">Insights</summary>
       <div class="pl-4">
-        <a href="#" class="block py-1">Blog</a>
-        <a href="#" class="block py-1">Videos</a>
-        <a href="#" class="block py-1">News and Events</a>
-       
+        <a href="blogs.html" class="block py-1">Blog</a>
+        <!-- <a href="#" class="block py-1">Videos</a> -->
+        <a href="news.html" class="block py-1">News and Events</a>
       </div>
     </details>
 
-    <a href="" class="block">Careers ▾</a>
+    <a href="career.html" class="block">Careers</a>
     <a href="contact.html" class="block">Contact Us</a>
-  
   </div>
 </section>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
 <!-- ✅ Header Section End -->
 
 

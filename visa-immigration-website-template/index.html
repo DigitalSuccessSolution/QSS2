@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <!-- Bootstrap 5 CDN (Add in <head> and before </body>)  -->
+        
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -45,37 +45,52 @@
         <!-- Spinner End -->
 
 
-     <!-- Topbar Start -->
-<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #c9a560;">
+    <!-- Topbar Start -->
+<div class="container-fluid px-4 py-2" style="background-color: #c9a560;">
     <div class="row gx-0 align-items-center">
-        <!-- Left: Email & Phone -->
-        <div class="col-lg-5 text-center text-lg-start mb-lg-0">
-            <div class="d-flex">
-                <a href="#" class="text-muted me-4">
-                    <i class="fas fa-envelope text-[rgb(75 75 75)] me-2"></i>info@qss.net.in
+
+        <!-- Left (Mobile: Phone | Desktop: Email & Phone) -->
+        <div class="col-6 col-lg-5 text-start mb-lg-0">
+            <div class="d-none d-lg-flex">
+                <!-- Desktop View -->
+                <a href="mailto:info@qss.net.in" class="text-dark me-4">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
                 </a>
-                <a href="#" class="text-muted me-0">
-                    <i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890
+                <a href="tel:+01234567890" class="text-dark">
+                    <i class="fas fa-phone-alt me-2"></i>+01234567890
+                </a>
+            </div>
+            <div class="d-flex d-lg-none">
+                <!-- Mobile View -->
+                <a href="tel:+01234567890" class="text-dark">
+                    <i class="fas fa-phone-alt me-2"></i>+01234567890
                 </a>
             </div>
         </div>
 
-        <!-- Center: Removed Social Icons -->
-        <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
-            <!-- Intentionally left empty as requested -->
-        </div>
-
-        <!-- Right: Help / Support / Contact -->
-        <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="#" class="text-muted me-2">Help</a><small>/</small>
-                <a href="#" class="text-muted mx-2">Support</a><small>/</small>
-                <a href="#" class="text-muted ms-2">Contact</a>
+        <!-- Right (Mobile: Email | Desktop: Social Icons) -->
+        <div class="col-6 col-lg-7 text-end">
+            <div class="d-none d-lg-flex justify-content-lg-end">
+                <!-- Desktop Social Icons -->
+                <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="d-flex d-lg-none justify-content-end">
+                <!-- Mobile Email -->
+                <a href="mailto:info@qss.net.in" class="text-dark">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
+                </a>
             </div>
         </div>
+
     </div>
 </div>
 <!-- Topbar End -->
+
+
+
+     
 
 
 <!-- ✅ Header Section Start -->
@@ -90,14 +105,14 @@
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center space-x-6 font-medium relative">
-      <a href="#" class="text-[#c9a560] font-semibold">Home</a>
+      <a href="index.html" class="text-[#c9a560] font-semibold">Home</a>
 
       <!-- About Dropdown -->
       <div class="group relative">
         <button class="hover:text-[#c9a560]">About ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
           <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+          <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Team</a>
         </div>
       </div>
 
@@ -114,14 +129,14 @@
       <div class="group relative">
         <button class="hover:text-[#c9a560]">Insights ▾</button>
         <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
+          <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a> -->
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
         </div>
       </div>
 
-      <a href="#" class="hover:text-[#c9a560]">Careers</a>
-      <a href="#" class="hover:text-[#c9a560]">Contact Us</a>
+      <a href="career.html" class="hover:text-[#c9a560]">Careers</a>
+      <a href="contact.html" class="hover:text-[#c9a560]">Contact Us</a>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -141,7 +156,7 @@
       <summary class="cursor-pointer">About</summary>
       <div class="pl-4">
         <a href="about.html" class="block py-1">Who We Are</a>
-        <a href="#" class="block py-1">Team</a>
+        <a href="team.html" class="block py-1">Team</a>
       </div>
     </details>
 
@@ -158,13 +173,13 @@
     <details class="group">
       <summary class="cursor-pointer">Insights</summary>
       <div class="pl-4">
-        <a href="#" class="block py-1">Blog</a>
-        <a href="#" class="block py-1">Videos</a>
-        <a href="#" class="block py-1">News and Events</a>
+        <a href="blogs.html" class="block py-1">Blog</a>
+        <!-- <a href="#" class="block py-1">Videos</a> -->
+        <a href="news.html" class="block py-1">News and Events</a>
       </div>
     </details>
 
-    <a href="#" class="block">Careers</a>
+    <a href="career.html" class="block">Careers</a>
     <a href="contact.html" class="block">Contact Us</a>
   </div>
 </section>
@@ -178,9 +193,10 @@
 <!-- ✅ Header Section End -->
 
 
+<!-- hero section  -->
 
-<!-- herosection -->
-<section id="matrix-slider" class="py-5">
+
+<section id="matrix-slider" class="pb-4 pb-md-5 position-relative" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); overflow: hidden; padding-top: 0 !important;">
   <style>
     /* Custom color classes */
     .text-primary-custom {
@@ -193,94 +209,356 @@
       background-color: #c9a560;
       color: #fff;
       border: none;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
     }
     .btn-custom:hover {
       background-color: #b08e4f;
-      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(201, 165, 96, 0.4);
+    }
+    .btn-custom:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+      z-index: -1;
+    }
+    .btn-custom:focus:after {
+      animation: ripple 1s ease-out;
+    }
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 1;
+      }
+      20% {
+        transform: scale(25, 25);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(40, 40);
+      }
+    }
+    
+    /* Carousel enhancements */
+    #matrixCarousel {
+      position: relative;
+      z-index: 2;
+    }
+    .carousel-item {
+      padding: 40px 0;
+    }
+    .carousel-inner {
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(201, 165, 96, 0.9);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(2px);
+    }
+    .carousel-control-prev {
+      left: 15px;
+    }
+    .carousel-control-next {
+      right: 15px;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+      background: #c9a560;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 5px 15px rgba(201, 165, 96, 0.4);
+    }
+    .carousel-indicators {
+      bottom: 15px;
+    }
+    .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(201, 165, 96, 0.4);
+      border: none;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+    .carousel-indicators button.active {
+      background-color: #c9a560;
+      transform: scale(1.3);
+      box-shadow: 0 0 8px rgba(201, 165, 96, 0.6);
+    }
+    
+    /* Content styling - Consistent for all slides */
+    .carousel-content-wrapper {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      height: 100%;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 15px;
+    }
+    .carousel-content-wrapper:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: #c9a560;
+    }
+    .carousel-item h3 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .carousel-item h3:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: #c9a560;
+      border-radius: 2px;
+    }
+    .carousel-item p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .carousel-item .text-highlight {
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    /* Image styling - Consistent for all slides */
+    .carousel-img-container {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 15px;
+    }
+    .carousel-item img {
+      border-radius: 12px;
+      transition: all 0.5s ease;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-item:hover img {
+      transform: scale(1.02);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1199.98px) {
+      .carousel-item h3 {
+        font-size: 1.8rem;
+      }
+      .carousel-item p {
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 991.98px) {
+      .carousel-item {
+        padding: 30px 0;
+      }
+      .carousel-content-wrapper {
+        padding: 30px;
+        min-height: 300px;
+      }
+      .carousel-img-container {
+        height: 300px;
+      }
+      .carousel-item h3 {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .carousel-item {
+        padding: 20px 0;
+      }
+      .carousel-content-wrapper {
+        min-height: auto;
+        margin-bottom: 20px;
+      }
+      .carousel-item h3 {
+        font-size: 1.4rem;
+      }
+      .carousel-item h3:after {
+        width: 50px;
+        height: 2px;
+        bottom: -8px;
+      }
+      .carousel-item p {
+        font-size: 0.95rem;
+      }
+      .carousel-control-prev, .carousel-control-next {
+        width: 40px;
+        height: 40px;
+      }
+      .carousel-control-prev {
+        left: 5px;
+      }
+      .carousel-control-next {
+        right: 5px;
+      }
+      .carousel-content-wrapper,
+      .carousel-img-container {
+        margin: 0 5px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .carousel-content-wrapper {
+        padding: 20px;
+      }
+      .carousel-item h3 {
+        font-size: 1.3rem;
+      }
+      .btn-custom {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 
   <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="2"></button>
+    </div>
 
+    <div class="carousel-inner">
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
-          <!-- Text Content -->
-          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-            <h3 class="fw-bold text-primary-custom">
-              Powering Trust Through Precision
-            </h3>
-            <p class="text-primary-custom mb-2">
-              <strong class="text-highlight" style="text-align: justify;">We don’t just audit—we uncover, assure, and empower.<br>India’s trusted partner for Audit, Risk</strong><br>
-              Compliance Services.
-            </p>
-            <a href="#" class="btn mt-3 btn-custom">Know more</a>
-          </div>
-          <!-- Image -->
-          <div class="text-center">
-            <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" alt="Award" class="img-fluid" style="max-height: 300px;">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Powering Trust Through Precision
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
+                  India's trusted partner for Audit, Risk & Compliance Services.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
-        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
-          <!-- Text Content -->
-          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-            <h3 class="fw-bold text-primary-custom">
-              Tech Platform – QuickEx™
-            </h3>
-            <p class="text-primary-custom mb-2">
-              <strong class="text-highlight" style="text-align: justify;">QuickEx™ is QSS’s proprietary background verification engine, built for speed, security,</strong><br>
-              and transparency.
-            </p>
-            <a href="#" class="btn mt-3 btn-custom">Know more</a>
-          </div>
-          <!-- Image -->
-          <div class="text-center">
-            <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" alt="Award" class="img-fluid" style="max-height: 300px;">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Tech Platform – QuickEx™
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
-        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
-          <!-- Text Content -->
-          <div class="text-center text-lg-start mb-4 mb-lg-0" style="max-width: 650px;">
-            <h3 class="fw-bold text-primary-custom">
-              Industry-Specific Foresight. Local Precision.
-            </h3>
-            <p class="text-primary-custom mb-2">
-              <strong class="text-highlight" style="text-align: justify;">QSS delivers more than audits—</strong><br>
-              Backed by industry specialists and boots-on-ground auditors across India, 
-              we turn operational complexity into compliant clarity.
-            </p>
-            <p class="text-primary-custom mb-2">
-              We bring strategic foresight tailored to your sector’s pulse. From the factory floor 
-              to multi-site retail audits, our teams embed deeply into client ecosystems 
-              to flag risks before they escalate.
-            </p>
-            <a href="#" class="btn mt-3 btn-custom">Know more</a>
-          </div>
-          <!-- Image -->
-          <div class="text-center">
-            <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" alt="Award" class="img-fluid" style="max-height: 300px;">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Industry-Specific Foresight. Local Precision.
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">QSS delivers more than audits—</span><br>
+                  Backed by industry specialists and boots-on-ground auditors across India, 
+                  we turn operational complexity into compliant clarity.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Navigation Arrows -->
     <button class="carousel-control-prev" type="button" data-bs-target="#matrixCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#matrixCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>

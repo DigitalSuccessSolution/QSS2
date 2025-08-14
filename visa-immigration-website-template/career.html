@@ -178,216 +178,326 @@
 <!-- ✅ Header Section End -->
 
 
+<!-- AOS CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-<section class="contact-hero" style="width: 100%; background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('office-bg.jpg'); background-size: cover; padding: 80px 0;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-    <h1 style="color: #4b4b4b; font-size: 42px; margin-bottom: 20px;">Get in Touch</h1>
-    <p style="color: #666; font-size: 18px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
-      Reach out for accounting solutions tailored to your business needs.
-    </p>
-    <a href="#contact-form" style="display: inline-block; padding: 15px 35px; background: #c9a560; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; transition: all 0.3s;">
-      Send a Message
-    </a>
-  </div>
-</section>
+  <style>
+    /* --- Your existing styles (kept & slightly cleaned) --- */
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#4b4b4b; background:#fff; }
 
-<!-- Interactive Map -->
-<div class="office-map" style="width: 100%; height: 400px; background: #f5f5f5;">
-  <!-- Embed Google Map Here -->
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.215340978635!2d77.1234567890123!3d28.65432109876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzE1LjYiTiA3N8KwMDcnMjEuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
+    .why-join-us { width: 100%; background: #f9f9f9; padding: 80px 0; }
+    .why-join-us .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .why-join-us h2 { color:#4b4b4b; font-size:36px; text-align:center; margin-bottom:50px; }
 
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: start;
+    }
 
+    .benefit {
+      text-align: center;
+      padding: 10px;
+    }
 
-<section class="contact-methods" style="width: 100%; padding: 80px 0; background: white;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      <!-- Card 1 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Call Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">+91 98765 43210</p>
-        <p style="color: #666;">Mon-Fri: 9AM - 6PM</p>
-      </div>
-      
-      <!-- Card 2 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Email Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">info@yourfirm.com</p>
-        <p style="color: #666;">Response within 24 hours</p>
-      </div>
-      
-      <!-- Card 3 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Visit Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">123 Financial Street</p>
-        <p style="color: #666;">Mumbai, Maharashtra 400001</p>
-      </div>
-    </div>
-  </div>
-</section>
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      background: #f8f3e8;
+      border-radius: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin: 0 auto 25px;
+    }
 
+    .benefit h3 { color:#4b4b4b; font-size:22px; margin:0 0 15px; }
+    .benefit p { color:#666; line-height:1.6; margin:0; }
 
+    .cta-wrap { text-align:center; margin-top:60px; }
 
-<section id="contact-form" style="width: 100%; padding: 80px 0; background: #f9f9f9;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <div style="background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 50px;">
-      <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 30px;">Send Us a Message</h2>
-      
-      <form style="display: grid; gap: 20px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">First Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
+    .cta-wrap a {
+      display:inline-block;
+      padding:15px 40px;
+      background:#c9a560;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:600;
+      font-size:16px;
+      transition: background .3s;
+    }
+    .cta-wrap a:hover { background:#b8934d; }
+
+    /* Career inquiry */
+    .career-inquiry-section { width:100%; background:#f9f9f9; padding:80px 0; }
+    .career-inquiry-section .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+    .career-wrap { display:flex; flex-wrap:wrap; gap:60px; align-items:center; }
+    .career-left { flex:1 1 400px; min-width:280px; }
+    .career-right { flex:1 1 400px; min-width:280px; background:white; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.05); padding:40px; }
+
+    .contact-row { display:grid; gap:25px; }
+    .contact-item { display:flex; gap:20px; align-items:center; }
+    .small-circle { flex:0 0 60px; height:60px; background:#f8f3e8; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+
+    form { display:grid; gap:20px; }
+    label { display:block; color:#4b4b4b; font-weight:600; margin-bottom:8px; }
+    input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"] {
+      width:100%;
+      padding:12px 15px;
+      border:1px solid #ddd;
+      border-radius:6px;
+      font-size:16px;
+      transition: border .3s;
+      background: white;
+    }
+    button[type="submit"] {
+      width:100%;
+      padding:15px;
+      background:#c9a560;
+      color:white;
+      border:none;
+      border-radius:6px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .3s;
+    }
+    button[type="submit"]:hover { background:#b8934d; }
+
+    /* Focus styles */
+    input:focus, select:focus { outline:none; border-color:#c9a560; box-shadow:0 0 0 2px rgba(201,165,96,0.15); }
+
+    /* Responsive tweaks */
+    @media (max-width:1024px) {
+      .why-join-us, .career-inquiry-section { padding:60px 0; }
+      .why-join-us h2, .career-inquiry-section h2 { font-size:32px; }
+      .career-right { padding:30px; }
+    }
+    @media (max-width:768px) {
+      .why-join-us, .career-inquiry-section { padding:50px 0; }
+      .why-join-us h2, .career-inquiry-section h2 { font-size:28px; }
+      .career-wrap { flex-direction:column; gap:40px; }
+      .why-grid { grid-template-columns:1fr; }
+      .icon-circle { width:70px; height:70px; }
+    }
+    @media (max-width:480px) {
+      .why-join-us h2 { font-size:26px; }
+      .benefit h3 { font-size:20px; }
+      .icon-circle { width:60px; height:60px; }
+      input, select, button { padding:10px 12px !important; font-size:15px !important; }
+      .small-circle { flex:0 0 50px; height:50px; }
+      .career-right { padding:25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WHY JOIN -->
+  <section class="why-join-us" aria-labelledby="why-join-title">
+    <div class="container">
+      <h2 id="why-join-title" data-aos="fade-up" data-aos-duration="700">Why Join Our Firm?</h2>
+
+      <div class="why-grid" role="list">
+        <!-- Benefit 1 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
           </div>
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Last Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
+          <h3>Professional Growth</h3>
+          <p>Structured career path with sponsorship for advanced certifications and regular training programs.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+          <h3>Positive Culture</h3>
+          <p>Collaborative environment that values work-life balance and employee well-being.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <h3>Competitive Compensation</h3>
+          <p>Attractive salary packages with performance bonuses and comprehensive benefits.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Diverse Clientele</h3>
+          <p>Work with clients across industries from startups to multinational corporations.</p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <h3>Modern Technology</h3>
+          <p>Access to cutting-edge accounting software and productivity tools.</p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="benefit" role="listitem" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
+          <div class="icon-circle" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h3>Global Opportunities</h3>
+          <p>Potential for international assignments and cross-border projects.</p>
+        </div>
+      </div>
+
+      <div class="cta-wrap" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="700">
+        <a href="#" aria-label="Explore Career Paths">Explore Career Paths</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER INQUIRY -->
+  <section class="career-inquiry-section" aria-labelledby="career-title">
+    <div class="container">
+      <div class="career-wrap">
+        <!-- Left Content -->
+        <div class="career-left" data-aos="fade-right" data-aos-duration="800">
+          <h2 id="career-title">Career Opportunities</h2>
+          <p style="color:#666; font-size:18px; line-height:1.6; margin-bottom:30px;">
+            Interested in joining our team? Submit your details and we'll contact you when positions matching your profile become available.
+          </p>
+
+          <div class="contact-row">
+            <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="small-circle" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size:20px; margin:0 0 10px;">Email Us</h3>
+                <p style="color:#666; margin:0;">careers@yourfirm.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="small-circle" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size:20px; margin:0 0 10px;">Call Us</h3>
+                <p style="color:#666; margin:0;">+91 98765 43210</p>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Email*</label>
-          <input type="email" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Phone</label>
-          <input type="tel" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Service Needed*</label>
-          <select required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill="%234b4b4b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 16px;">
-            <option value="">Select a service</option>
-            <option value="audit">Audit & Assurance</option>
-            <option value="tax">Tax Planning</option>
-            <option value="gst">GST Services</option>
-            <option value="accounting">Accounting</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Message*</label>
-          <textarea required rows="5" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; resize: vertical;"></textarea>
-        </div>
-        
-        <button type="submit" style="width: 100%; padding: 15px; background: #c9a560; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px;">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
 
-<section style="width: 100%; padding: 80px 0; background: white;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
-    
-    <div style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-      <!-- FAQ 1 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">What are your working hours?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Our office is open Monday to Friday from 9:00 AM to 6:00 PM. For urgent matters outside these hours, please call our emergency contact number.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 2 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">How quickly will I receive a response?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>We typically respond to emails within 24 hours. For phone inquiries, our team will get back to you within 2 business hours during working days.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 3 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">Do you offer virtual consultations?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Yes, we provide video consultations via Zoom, Microsoft Teams, or Google Meet. Schedule an appointment through our contact form.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
+        <!-- Right Form -->
+        <div class="career-right" data-aos="fade-left" data-aos-duration="800">
+          <h3 style="color:#4b4b4b; font-size:24px; margin-bottom:30px; text-align:center;">Submit Your Details</h3>
+          <form onsubmit="event.preventDefault(); alert('Form submitted (demo) — integrate backend to actually send).');" enctype="multipart/form-data">
+            <div>
+              <label for="name">Full Name*</label>
+              <input type="text" id="name" required placeholder="Enter your full name" />
+            </div>
 
-<style>
-  /* Base Responsive Styles */
-  @media (max-width: 768px) {
-    /* Hero Section */
-    .contact-hero h1 { font-size: 32px; }
-    .contact-hero p { font-size: 16px; }
-    .office-map { height: 300px; }
-    
-    /* Contact Cards */
-    .contact-methods div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
-    }
-    
-    /* Contact Form */
-    #contact-form div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
-    }
-    
-    /* FAQ Section */
-    details summary span { font-size: 16px; }
-  }
-  
-  @media (max-width: 480px) {
-    /* Padding Adjustments */
-    section { padding: 60px 0 !important; }
-    
-    /* Form Elements */
-    input, select, textarea, button { 
-      padding: 10px 12px !important; 
-      font-size: 15px !important; 
-    }
-    
-    /* FAQ Icons */
-    details svg { width: 16px; height: 16px; }
-  }
-  
-  /* Interactive Elements */
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #c9a560;
-    box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
-  }
-  
-  button:hover { background: #b8934d !important; }
-  
-  details[open] svg { transform: rotate(180deg); }
-  
-  .contact-methods div[style*="box-shadow"]:hover { 
-    transform: translateY(-5px); 
-  }
-</style>
+            <div>
+              <label for="email">Email*</label>
+              <input type="email" id="email" required placeholder="Enter your email" />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number*</label>
+              <input type="tel" id="phone" required placeholder="Enter your phone number" />
+            </div>
+
+            <div>
+              <label for="qualification">Highest Qualification*</label>
+              <select id="qualification" required>
+                <option value="">Select qualification</option>
+                <option value="ca">Chartered Accountant (CA)</option>
+                <option value="ca_inter">CA Intermediate</option>
+                <option value="cma">Cost Management Accountant (CMA)</option>
+                <option value="cs">Company Secretary (CS)</option>
+                <option value="mcom">M.Com</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="experience">Years of Experience*</label>
+              <select id="experience" required>
+                <option value="">Select experience</option>
+                <option value="fresher">Fresher</option>
+                <option value="1-3">1-3 years</option>
+                <option value="3-5">3-5 years</option>
+                <option value="5-10">5-10 years</option>
+                <option value="10+">10+ years</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="resume">Upload Resume (PDF)*</label>
+              <input type="file" id="resume" accept=".pdf" required />
+            </div>
+
+            <div style="margin-top:10px;">
+              <button type="submit">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    // 'once: true' makes animation play only once (remove if you want repeat on scroll)
+    AOS.init({
+      duration: 800,         // global animation duration in ms
+      easing: 'ease-in-out', // easing for animations
+      once: true,            // whether animation should happen only once - while scrolling down
+      offset: 120            // offset (in px) from the original trigger point
+    });
+
+    // Optional: refresh AOS after window load (helps if fonts/images change layout)
+    window.addEventListener('load', function() {
+      AOS.refresh();
+    });
+  </script>
 
 
 
