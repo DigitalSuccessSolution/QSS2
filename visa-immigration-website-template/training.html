@@ -40,37 +40,49 @@
         <!-- Spinner End -->
 
 
-        <!-- Topbar Start -->
-<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #c9a560;">
+         <!-- Topbar Start -->
+<div class="container-fluid px-4 py-2" style="background-color: #c9a560;">
     <div class="row gx-0 align-items-center">
-        <!-- Left: Email & Phone -->
-        <div class="col-lg-5 text-center text-lg-start mb-lg-0">
-            <div class="d-flex">
-                <a href="#" class="text-muted me-4">
-                    <i class="fas fa-envelope text-[rgb(75 75 75)] me-2"></i>info@qss.net.in
+
+        <!-- Left (Mobile: Phone | Desktop: Email & Phone) -->
+        <div class="col-6 col-lg-5 text-start mb-lg-0">
+            <div class="d-none d-lg-flex">
+                <!-- Desktop View -->
+                <a href="mailto:info@qss.net.in" class="text-dark me-4">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
                 </a>
-                <a href="#" class="text-muted me-0">
-                    <i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890
+                <a href="tel:+01234567890" class="text-dark">
+                    <i class="fas fa-phone-alt me-2"></i>+01234567890
+                </a>
+            </div>
+            <div class="d-flex d-lg-none">
+                <!-- Mobile View -->
+                <a href="tel:+01234567890" class="text-dark">
+                    <i class="fas fa-phone-alt me-2"></i>+01234567890
                 </a>
             </div>
         </div>
 
-        <!-- Center: Removed Social Icons -->
-        <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
-            <!-- Intentionally left empty as requested -->
-        </div>
-
-        <!-- Right: Help / Support / Contact -->
-        <div class="col-lg-4 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a href="#" class="text-muted me-2">Help</a><small>/</small>
-                <a href="#" class="text-muted mx-2">Support</a><small>/</small>
-                <a href="#" class="text-muted ms-2">Contact</a>
+        <!-- Right (Mobile: Email | Desktop: Social Icons) -->
+        <div class="col-6 col-lg-7 text-end">
+            <div class="d-none d-lg-flex justify-content-lg-end">
+                <!-- Desktop Social Icons -->
+                <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="d-flex d-lg-none justify-content-end">
+                <!-- Mobile Email -->
+                <a href="mailto:info@qss.net.in" class="text-dark">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
+                </a>
             </div>
         </div>
+
     </div>
 </div>
 <!-- Topbar End -->
+
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid nav-bar p-0">
