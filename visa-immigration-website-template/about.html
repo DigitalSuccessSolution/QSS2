@@ -293,9 +293,29 @@
                     We’re Trusted Immigration Consultant Agency.
                 </h1>
 
-                <p style="color: #4b4b4b; font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px;">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!
-                </p>
+              <style>
+p.responsive-text {
+    color: #4b4b4b;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Mobile ke liye */
+@media (max-width: 600px) {
+  p.responsive-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+</style>
+
+<p class="responsive-text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt architecto consectetur iusto perferendis blanditiis assumenda dignissimos, commodi fuga culpa earum explicabo libero sint est mollitia saepe! Sequi asperiores rerum nemo!
+</p>
+
 
                 <!-- Features -->
                 <div class="row gy-4 align-items-center">
