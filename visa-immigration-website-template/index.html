@@ -926,67 +926,62 @@
         <div class="row g-4 justify-content-center text-center">
             <!-- Feature 1 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-calculator fa-4x" style="color: #c9a560;"></i>
+                        <i class="fas fa-calculator fa-4x"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3" style="color: rgb(75,75,75);">Tax Planning</h5>
-                        <p class="mb-3" style="color: rgb(75,75,75);">Expert strategies to minimize tax liabilities while staying compliant with all legal regulations.</p>
-                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3">Tax Planning</h5>
+                        <p class="mb-3">Expert strategies to minimize tax liabilities while staying compliant with all legal regulations.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Feature 2 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-file-invoice-dollar fa-4x" style="color: #c9a560;"></i>
+                        <i class="fas fa-file-invoice-dollar fa-4x"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3" style="color: rgb(75,75,75);">Auditing Services</h5>
-                        <p class="mb-3" style="color: rgb(75,75,75);">Accurate and transparent auditing services for businesses of all scales and sectors.</p>
-                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3">Auditing Services</h5>
+                        <p class="mb-3">Accurate and transparent auditing services for businesses of all scales and sectors.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Feature 3 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-chart-line fa-4x" style="color: #c9a560;"></i>
+                        <i class="fas fa-chart-line fa-4x"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3" style="color: rgb(75,75,75);">Financial Advisory</h5>
-                        <p class="mb-3" style="color: rgb(75,75,75);">Tailored financial guidance to help you make better business and investment decisions.</p>
-                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3">Financial Advisory</h5>
+                        <p class="mb-3">Tailored financial guidance to help you make better business and investment decisions.</p>
                     </div>
                 </div>
             </div>
             
             <!-- Feature 4 -->
             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
                     <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-briefcase fa-4x" style="color: #c9a560;"></i>
+                        <i class="fas fa-briefcase fa-4x"></i>
                     </div>
                     <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3" style="color: rgb(75,75,75);">Business Registration</h5>
-                        <p class="mb-3" style="color: rgb(75,75,75);">Complete support in setting up your business entity including GST, LLP, and ROC compliance.</p>
-                        <a class="btn rounded-pill mt-auto" href="#" style="background-color: #c9a560; color: white; border-color: #c9a560;">Read More<i class="fas fa-arrow-right ms-2"></i></a>
+                        <h5 class="mb-3">Business Registration</h5>
+                        <p class="mb-3">Complete support in setting up your business entity including GST, LLP, and ROC compliance.</p>
                     </div>
                 </div>
             </div>
             
             <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                <a class="btn rounded-pill py-3 px-5" href="service.html" style="background-color: #c9a560; color: white; border-color: #c9a560;">More Services</a>
+                <a class="btn rounded-pill py-3 px-5" href="service.html">More Services</a>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Features End -->
 
 <style>
@@ -997,12 +992,12 @@
     transition: all 0.3s ease;
 }
 
-/* Hover Effect: सिर्फ उठने का और shadow का */
-.feature-item:hover {
+/* Hover Effect (Desktop) */
+.feature-item:hover,
+.feature-item.active { /* active class for mobile scroll */
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
     border-color: rgba(201, 165, 96, 0.3);
-    background-color: #fff !important; /* background same रहेगा */
 }
 
 /* Icon Style */
@@ -1011,25 +1006,48 @@
     transition: transform 0.3s ease;
 }
 
-/* Hover पर सिर्फ scale, no color change */
-.feature-item:hover .feature-icon i {
+/* Hover & Active Icon */
+.feature-item:hover .feature-icon i,
+.feature-item.active .feature-icon i {
     transform: scale(1.1);
-    color: #c9a560 !important; /* hover पर भी वही color */
+    color: #c9a560 !important;
 }
 
 /* Button Style */
-.feature-item .btn {
+.btn {
     background-color: #c9a560;
     color: white;
     border-color: #c9a560;
 }
 
 /* Button Hover */
-.feature-item .btn:hover {
+.btn:hover {
     background-color: #b8934b;
     border-color: #b8934b;
 }
 </style>
+
+<script>
+// Intersection Observer for Mobile "auto hover effect"
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".feature-item");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active"); // add hover-like effect
+                } else {
+                    entry.target.classList.remove("active");
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+});
+</script>
+
 
 
 
