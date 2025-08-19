@@ -208,14 +208,14 @@
       color: #c9a560 !important;
     }
     .btn-custom {
-      background-color: #c9a560;
+      /* background-color: #c9a560;
       color: #fff;
-      border: none;
+      border: none; */
       padding: 14px 32px;
       border-radius: 50px;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3);
+      /* box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3); */
       position: relative;
       overflow: hidden;
       z-index: 1;
@@ -628,15 +628,7 @@
     .text-highlight {
       color: #c9a560 !important;
     }
-    .btn-custom {
-      background-color: #c9a560;
-      color: #fff;
-      border: none;
-    }
-    .btn-custom:hover {
-      background-color: #b08e4f;
-      color: #fff;
-    }
+  
   </style>
 
   <div class="container py-5">
@@ -736,11 +728,41 @@
             </div>
         </div>
         
-        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.9s">
-            <a href="service.html" class="btn btn-lg rounded-pill px-5 py-3" style="background-color: #c9a560; color: white; border: 2px solid #c9a560; transition: all 0.3s;">
-                Explore Our Services <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
+       <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.9s">
+    <a href="service.html" class="btn btn-lg rounded-pill explore-btn">
+        Explore Our Services <i class="fas fa-arrow-right ms-2"></i>
+    </a>
+</div>
+
+        <style>
+          .explore-btn {
+    border: 2px solid #c9a560 !important;
+    transition: all 0.3s !important;
+    font-size: 18px !important; /* base mobile font */
+    color: #4b4b4b !important;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .explore-btn {
+        font-size: 22px !important;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .explore-btn {
+        font-size: 24px !important;
+    }
+}
+
+.explore-btn:hover {
+    background-color: #b8934b !important;
+    border-color: #b8934b !important;
+    color: #fff !important;
+}
+
+        </style>
     </div>
 </div>
 <!-- Premium Counter Facts End -->
@@ -1021,16 +1043,21 @@
 }
 
 /* Button Style */
-.btn {
-    background-color: #c9a560;
-    color: white;
+.btn, 
+.btn-custom {
+    /* background-color: #c9a560; */
+    background-color: none !important;
+    color: #4b4b4b;
     border-color: #c9a560;
 }
 
-.btn:hover {
-    background-color: #b8934b;
-    border-color: #b8934b;
+.btn:hover, 
+.btn-custom:hover {
+    background-color: #b8934b !important;
+    border-color: #b8934b !important;
+    color: white !important;
 }
+
 </style>
 
 <script>
@@ -1287,7 +1314,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 </style>
 
-     <!-- Footer Start -->
+     
+       <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5">
@@ -1303,10 +1331,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91-9202456705</a>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; background: none; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
                     </div>
                 </div>
             </div>

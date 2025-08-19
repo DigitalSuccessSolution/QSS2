@@ -195,7 +195,7 @@
   class="ca-team-hero-unique" 
   style="
     position: relative; 
-    background: url('images/ca-team-bg.jpg') no-repeat center/cover; 
+    background: url('https://images.unsplash.com/photo-1616344787254-d4575aa102ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVhbSUyMG1lbWJlcnMlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center/cover; 
     min-height: 60vh; 
     display: flex; 
     align-items: center; 
@@ -252,45 +252,97 @@
 
 <style>
   .profile-container {
-    max-width: 1100px; /* Content ka max width */
+    max-width: 1200px; /* Slightly increased for a more spacious look */
     margin: auto;
-    padding: 0 20px; /* Side padding for small screens */
+    padding: 0 20px;
     box-sizing: border-box;
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); /* Subtle gradient for premium feel */
   }
 
   .profile-section {
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 40px;
+    margin-bottom: 80px;
     flex-wrap: nowrap;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-section:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   }
 
   .profile-section img {
-    width: 300px;
-    height: 300px; /* Square image */
+    width: 320px;
+    height: 320px; /* Slightly larger for prominence */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
     flex-shrink: 0;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, rgb(195, 147, 34), rgb(75, 75, 75)) border-box; /* Gradient border */
+    transition: border 0.3s ease;
+  }
+
+  .profile-section img:hover {
+    border: 2px solid rgb(195, 147, 34); /* Highlight border on hover */
   }
 
   .profile-text {
     flex: 1;
+    position: relative;
   }
 
   .profile-title {
-    font-size: 15px;
+    font-size: 16px;
     text-transform: uppercase;
     color: rgb(195, 147, 34);
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px; /* Refined typography */
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  .profile-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgb(195, 147, 34); /* Underline effect */
+    transition: width 0.3s ease;
+  }
+
+  .profile-section:hover .profile-title::after {
+    width: 100px; /* Extend underline on hover */
   }
 
   .profile-desc {
     font-size: clamp(14px, 2vw, 15px);
     text-align: justify;
-    line-height: 1.8;
+    line-height: 1.9;
     color: rgb(75, 75, 75);
+    font-family: 'Georgia', serif; /* Premium typography */
+  }
+
+  .profile-quote {
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(75, 75, 75);
+    margin-top: 15px;
+    padding-left: 20px;
+    border-left: 3px solid rgb(195, 147, 34); /* Quote styling */
+    transition: background 0.3s ease;
+  }
+
+  .profile-quote:hover {
+    background: rgba(195, 147, 34, 0.05); /* Subtle hover effect */
   }
 
   /* Alternate image position for even sections */
@@ -304,56 +356,123 @@
     .profile-section.reverse {
       flex-direction: column;
       text-align: center;
-      gap: 20px;
+      gap: 25px;
+      padding: 20px;
     }
 
     .profile-section img {
       width: 100%;
-      max-width: 350px;
+      max-width: 300px;
       height: auto;
     }
 
     .profile-text {
       text-align: justify;
     }
+
+    .profile-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+    }
+
+    .profile-section:hover .profile-title::after {
+      width: 80px;
+    }
   }
 </style>
 
-<div class="profile-container " style="padding-top: 20px;">
+<div class="profile-container" style="padding-top: 40px;">
   <!-- Managing Director -->
   <div class="profile-section">
-    <img src="img/carousel-1.jpg" alt="Managing Director">
+    <img src="https://qss.net.in/assets/images/anjali.png" alt="Managing Director">
     <div class="profile-text">
-      <div class="profile-title">Mr. JEEVAN SINGH (Managing Director)</div>
+      <div class="profile-title">CA Anjali Bhavsar (Founder & Director @ QSS)</div>
       <p class="profile-desc">
-        A pioneer in the field of security with vast experience of many years. He launched his own Security Service Company and extended his wings with the motive of "sky is the limit". He has also diversified into Real Estate, Hotels, and Leasing Business. With his vision, dexterity, ingrained business acumen, and professionalism, he has managed and developed the security company to the top level. The company today has a national presence with 22 branches all over India and a guard force of over 6000 personnel.
+        FCA, B.Com, MBA<br>
+        A Chartered Accountant with 10+ years of experience in audit and compliance across Retail, Infra, Manufacturing & BFSI.
+      </p>
+      <p class="profile-quote">
+      “Our audits empower organizations to operate with clarity and control.
       </p>
     </div>
   </div>
 
   <!-- Executive Director -->
   <div class="profile-section reverse">
-    <img src="img/country-2.jpg" alt="Executive Director">
+    <img src="https://qss.net.in/assets/images/suraj.jpeg" alt="Executive Director">
     <div class="profile-text">
-      <div class="profile-title">Mr. RANJEET SINGH CHANDRAWAT (Executive Director)</div>
+      <div class="profile-title">Mr. Suraj Hipale (CEO & Director)</div>
       <p class="profile-desc">
-        A Management graduate with professional experience spread across admin, material management, business development, and client servicing in industries such as textile, FMCG, steel, and service industry. He has been instrumental in establishing business networks and developing training programs for specific manpower categories. He has organized management development programs for senior management in various reputed organizations.
+        BBA, MBA in Operations Management<br>
+        Leads QSS’s vision and operational excellence, specializing in governance and risk-based audits.
+      </p>
+      <p class="profile-quote">
+        “Trust is built through every insight we deliver.
       </p>
     </div>
   </div>
 
   <!-- General Manager -->
   <div class="profile-section">
-    <img src="img/training-2.jpg" alt="General Manager">
+    <img src="https://qss.net.in/assets/images/rahul.png" alt="General Manager">
     <div class="profile-text">
-      <div class="profile-title">Mr. DEEPNARAYAN DWIVEDI (General Manager)</div>
+      <div class="profile-title">Mr. Rahul Bhavsar (Managing Director)</div>
       <p class="profile-desc">
-        An officer from Combat Arm of the Indian Army, with two and a half decades in Army service besides four years in the National Defence Academy and Indian Military Academy. He has had long tenures in insurgent areas and served with the National Security Guard, India’s premier security setup. He has completed security courses with the Military Intelligence and Security College and Industrial Security under the aegis of DGR. He has handled VIP security at both national and international levels and coordinated with 18 standalone training venues of the Commonwealth Games where security was of utmost priority.
+        MBA (Business Analytics) | CA Finalist | 8+ Years<br>
+        Drives strategic growth and digital innovation in audits, blending analytics with governance.
+      </p>
+      <p class="profile-quote">
+        “We merge intelligence with audit integrity for future-ready assurance.”
+      </p>
+    </div>
+  </div>
+
+  <!-- Executive Director -->
+  <div class="profile-section reverse">
+    <img src="https://qss.net.in/assets/images/vikas.jpeg" alt="Executive Director">
+    <div class="profile-text">
+      <div class="profile-title">Mr. Vikas Sharma (General Manager – Business Development)</div>
+      <p class="profile-desc">
+        MBA | 15+ Years<br>
+        Builds strong client relationships with sector-specific audit strategies.
+      </p>
+      <p class="profile-quote">
+        “We build assurance-led partnerships that grow with our clients.”
+      </p>
+    </div>
+  </div>
+
+  <!-- General Manager -->
+  <div class="profile-section">
+    <img src="https://qss.net.in/assets/images/nikhil.png" alt="General Manager">
+    <div class="profile-text">
+      <div class="profile-title">Mr. Nikhil Parmar (General Manager – Operations & MIS)</div>
+      <p class="profile-desc">
+        MBA | Ops Specialist<br>
+        Leads multi-site audit operations and execution excellence.
+      </p>
+      <p class="profile-quote">
+        “Operational discipline ensures every audit delivers value.”
+      </p>
+    </div>
+  </div>
+
+  <!-- Executive Director -->
+  <div class="profile-section reverse">
+    <img src="https://qss.net.in/assets/images/naveen.png" alt="Executive Director">
+    <div class="profile-text">
+      <div class="profile-title">Mr. Naveen Verma (General Manager – Audit & Assurance)</div>
+      <p class="profile-desc">
+        MBA | Audit Expert<br>
+        Focuses on risk-aligned audit strategies and governance transformation.
+      </p>
+      <p class="profile-quote">
+        “We audit with precision to unlock long-term business value.”
       </p>
     </div>
   </div>
 </div>
-
 
 
 
