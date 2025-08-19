@@ -618,54 +618,126 @@
 
 
 
-
-   <!-- About Start -->
+<!-- About Start -->
 <div class="container-fluid py-5">
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    .text-primary-custom {
-      color: rgb(75, 75, 75) !important;
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #4b4b4b;
     }
+
+    .text-primary-custom {
+      color: #4b4b4b !important;
+    }
+
     .text-highlight {
       color: #c9a560 !important;
+      font-weight: 600;
     }
+
+    h1, h5 {
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
     .btn-custom {
       background-color: #c9a560;
       color: #fff;
       border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: 1rem; /* ✅ Button ke upar space */
+      display: inline-block;
     }
+
     .btn-custom:hover {
       background-color: #b08e4f;
       color: #fff;
     }
+
+    /* ✅ Responsive Font Sizes */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      h5 {
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 
   <div class="container py-5">
-    <div class="row g-5">
+    <div class="row g-5 align-items-center">
       <!-- Left Image Column -->
-      <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-        <div class="bg-light rounded overflow-hidden">
+      <div class="col-xl-5 col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+        <div class="bg-light rounded overflow-hidden shadow-sm">
           <img src="img/about-2.png" class="img-fluid w-100" alt="About Image">
         </div>
       </div>
 
       <!-- Right Content Column -->
-      <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-        <h5 class="text-highlight text-uppercase mb-3">About Us</h5>
-        <h1 class="mb-4 text-primary-custom">QSS is a tech-enabled, ISO-certified audit and compliance firm offering   precision-driven .</h1>
-        <p class="mb-4 text-primary-custom" style="text-align: justify;">
-       services across internal audits, inventory checks, background verifications, and manpower outsourcing. With 10+ years of experience, Pan-India reach, and trusted by 100+ enterprises, QSS
+      <div class="col-xl-7 col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+        <h5 class="text-highlight text-uppercase">About Us</h5>
+        <h1 class="text-primary-custom">
+          QSS is a tech-enabled, ISO-certified audit and compliance firm offering precision-driven solutions.
+        </h1>
+        <p class="text-primary-custom">
+          We provide services across internal audits, inventory checks, background verifications, and manpower outsourcing. With 10+ years of experience, a Pan-India presence, and trust from 100+ enterprises, QSS stands as a reliable partner.
         </p>
-        <p class="mb-4 text-primary-custom" style="text-align: justify;">
-         empowers organizations with governance, control, and transparency through its 360° assurance approach—Performance, Protection, and Proof.
+        <p class="text-primary-custom">
+          Our 360° assurance approach ensures governance, control, and transparency with a strong focus on Performance, Protection, and Proof.
         </p>
-        <a href="#" class="btn btn-custom py-3 px-5 rounded-pill">Learn More</a>
+        <!-- ✅ Button with extra space -->
+        <a href="about.html" class="btn btn-custom py-3 px-5 rounded-pill">Learn More</a>
       </div>
     </div>
   </div>
 </div>
 <!-- About End -->
-
-
 
 
 
