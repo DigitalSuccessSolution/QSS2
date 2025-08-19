@@ -605,6 +605,7 @@
     position: relative;
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 .features .feature-item::after {
@@ -620,7 +621,9 @@
     transition: 0.5s;
 }
 
-.features .feature-item:hover::after {
+/* Hover OR Active Effect */
+.features .feature-item:hover::after,
+.features .feature-item.active::after {
     height: 100%;
 }
 
@@ -636,21 +639,25 @@
     transition: 0.5s;
 }
 
-.features .feature-item:hover .feature-icon {
+/* Hover OR Active */
+.features .feature-item:hover .feature-icon,
+.features .feature-item.active .feature-icon {
     border-radius: 50%;
     background: var(--bs-white) !important;
 }
 
 .features .feature-item .feature-icon i {
-    transition: 0.5s;
+    color: #c9a560 !important; /* fixed color */
+    transition: transform 0.6s ease;
 }
 
-.features .feature-item:hover .feature-icon i {
-    color: var(--bs-secondary) !important;
+/* Hover OR Active rotation */
+.features .feature-item:hover .feature-icon i,
+.features .feature-item.active .feature-icon i {
     transform: rotate(360deg);
-    transition: all 0.5s ease;
 }
 /*** Features End ***/
+
 
 
 /*** Country Start ***/

@@ -992,25 +992,32 @@
     transition: all 0.3s ease;
 }
 
-/* Hover Effect (Desktop) */
-.feature-item:hover,
-.feature-item.active { /* active class for mobile scroll */
+/* Hover Effect (Desktop only) */
+@media (min-width: 992px) {
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
+        border-color: rgba(201, 165, 96, 0.3);
+    }
+    .feature-item:hover .feature-icon i {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll effect (Mobile: active class) */
+.feature-item.active {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
     border-color: rgba(201, 165, 96, 0.3);
 }
+.feature-item.active .feature-icon i {
+    transform: rotate(360deg);
+}
 
 /* Icon Style */
 .feature-icon i {
-    color: #c9a560;
-    transition: transform 0.3s ease;
-}
-
-/* Hover & Active Icon */
-.feature-item:hover .feature-icon i,
-.feature-item.active .feature-icon i {
-    transform: scale(1.1);
-    color: #c9a560 !important;
+    color: #c9a560; /* Fixed color (no change on hover/active) */
+    transition: transform 0.6s ease;
 }
 
 /* Button Style */
@@ -1020,7 +1027,6 @@
     border-color: #c9a560;
 }
 
-/* Button Hover */
 .btn:hover {
     background-color: #b8934b;
     border-color: #b8934b;
@@ -1028,20 +1034,19 @@
 </style>
 
 <script>
-// Intersection Observer for Mobile "auto hover effect"
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".feature-item");
+    const items = document.querySelectorAll(".features .feature-item");
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("active"); // add hover-like effect
+                    entry.target.classList.add("active"); 
                 } else {
                     entry.target.classList.remove("active");
                 }
             });
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 } // 30% visible pe effect start hoga
     );
 
     items.forEach((item) => observer.observe(item));
