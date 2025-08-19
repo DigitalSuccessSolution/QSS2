@@ -740,103 +740,370 @@ QSS is a tech-enabled, ISO-certified audit and compliance firm offering precisio
 
 
       
-       <!-- Training Start -->
-<div class="container-fluid training overflow-hidden py-5" style="background-color: #ffffff;">
-    <div class="container py-5">
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style" style="display: inline-block; border-bottom: 3px solid #c9a560; padding-bottom: 5px;">
-                <h5 class="sub-title px-3" style="color: #c9a560; font-family: 'Merriweather', serif; letter-spacing: 1px;">CHECK OUR TRAINING</h5>
-            </div>
-            <h1 class="display-5 mb-4" style="color: #4b4b4b; font-family: 'Playfair Display', serif;">Get the Best Coaching Service Training with Our Travisa</h1>
-            <p class="mb-0" style="color: #666666; font-family: 'Open Sans', sans-serif; max-width: 800px; margin: auto;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!
-            </p>
-        </div>
+         <style>
+        :root {
+            --primary-gold: #c9a560;
+            --dark-gray: #4b4b4b;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --card-bg: #ffffff;
+            --overlay-bg: rgba(33, 37, 41, 0.92);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container-fluid {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .sub-style {
+            display: inline-block;
+            border-bottom: 3px solid var(--primary-gold);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .sub-title {
+            color: var(--primary-gold);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        .section-title h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-top: 15px;
+            line-height: 1.2;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+        
+        .col-lg-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 15px;
+        }
+        
+        @media (max-width: 992px) {
+            .col-lg-3 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .col-lg-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .section-title h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .service-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            background: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .service-card:hover .card-image img {
+            transform: scale(1.08);
+        }
+        
+        .card-title-visible {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: white;
+            z-index: 2;
+        }
+        
+        .card-title-visible h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            color: white;
+        }
+        
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 12px;
+        }
+        
+        .card-content p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .btn-read {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-read i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-read:hover {
+            color: #b08d4c;
+        }
+        
+        .btn-read:hover i {
+            transform: translateX(4px);
+        }
+        
+        .card-hover-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--overlay-bg);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 3;
+        }
+        
+        .service-card:hover .card-hover-content {
+            opacity: 1;
+        }
+        
+        .card-hover-content h4 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .card-hover-content p {
+            margin-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .hover-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary-gold);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: fit-content;
+        }
+        
+        .hover-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-btn:hover {
+            background: #b08d4c;
+            transform: translateY(-2px);
+        }
+        
+        .hover-btn:hover i {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body>
 
-        <div class="row g-4">
-            <!-- Item 1 -->
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
-                    <div class="training-inner">
-                        <img src="img/training-1.jpg" class="img-fluid w-100" alt="Image">
-                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">IELTS</a>
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
-                        </div>
-                    </div>
-                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
-                        <a href="#"><h4 style="color: #ffffff;">IELTS Coaching</h4></a>
-                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
-                    <div class="training-inner">
-                        <img src="img/training-2.jpg" class="img-fluid w-100" alt="Image">
-                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">TOEFL</a>
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
-                        </div>
-                    </div>
-                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
-                        <a href="#"><h4 style="color: #ffffff;">TOEFL Coaching</h4></a>
-                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
-                    <div class="training-inner">
-                        <img src="img/training-3.jpg" class="img-fluid w-100" alt="Image">
-                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">PTE</a>
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
-                        </div>
-                    </div>
-                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
-                        <a href="#"><h4 style="color: #ffffff;">PTE Coaching</h4></a>
-                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 4 -->
-            <div class="col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="training-item" style="border: 3px solid #c9a560; border-radius: 8px; overflow: hidden;">
-                    <div class="training-inner">
-                        <img src="img/training-4.jpg" class="img-fluid w-100" alt="Image">
-                        <div class="training-title-name" style="position: absolute; bottom: 15px; left: 15px;">
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">OET</a>
-                            <a href="#" class="h4 mb-0" style="color: #ffffff;">Coaching</a>
-                        </div>
-                    </div>
-                    <div class="training-content rounded-bottom p-4" style="background-color: #4b4b4b;">
-                        <a href="#"><h4 style="color: #ffffff;">OET Coaching</h4></a>
-                        <p style="color: rgba(255,255,255,0.7);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, veritatis.</p>
-                        <a class="btn rounded-pill text-white p-0" href="#" style="background-color: #c9a560; padding: 6px 15px;">Read More <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View More Button -->
-            <div class="col-12 text-center">
-                <a class="btn rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s" href="#"
-                   style="background-color: #c9a560; border: none; color: #fff; font-weight: 600; font-size: 16px;">
-                   View More
-                </a>
-            </div>
-        </div>
+<!-- Services (CA Chartered Accountant) Start -->
+<div class="container-fluid">
+  <div class="container">
+    <div class="section-title">
+      <div class="sub-style">
+        <h5 class="sub-title">OUR CORE SERVICES</h5>
+      </div>
+      <h1>Professional CA & Business Advisory Solutions</h1>
     </div>
+
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-lg-3">
+        <div class="service-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Audit & Assurance">
+            <div class="card-title-visible">
+              <h4>Audit & Assurance</h4>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h4>Audit & Assurance</h4>
+            <p>Independent audits ensuring accuracy, compliance, and transparency in financial reporting for businesses of all sizes.</p>
+            <a href="service.html" class="btn-read">Explore Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="card-hover-content">
+            <h4>Audit & Assurance</h4>
+            <p>Our comprehensive audit services provide stakeholders with confidence in your financial statements. We deliver meticulous examination and verification of financial records.</p>
+            <a href="service.html" class="hover-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-3">
+        <div class="service-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Taxation Services">
+            <div class="card-title-visible">
+              <h4>Taxation Services</h4>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h4>Taxation Services</h4>
+            <p>Expert assistance in direct & indirect tax planning, filing, and compliance for individuals and businesses.</p>
+            <a href="service.html" class="btn-read">Explore Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="card-hover-content">
+            <h4>Taxation Services</h4>
+            <p>We provide strategic tax planning to minimize liabilities while ensuring full compliance with all tax regulations and legislation.</p>
+            <a href="service.html" class="hover-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-3">
+        <div class="service-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="GST & Compliance">
+            <div class="card-title-visible">
+              <h4>GST & Compliance</h4>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h4>GST & Compliance</h4>
+            <p>Complete GST solutions including registration, return filing, and compliance advisory for businesses.</p>
+            <a href="service.html" class="btn-read">Explore Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="card-hover-content">
+            <h4>GST & Compliance</h4>
+            <p>Our GST experts help navigate the complexities of GST regulations, ensuring seamless compliance and optimal tax structure.</p>
+            <a href="service.html" class="hover-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-lg-3">
+        <div class="service-card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Business Advisory">
+            <div class="card-title-visible">
+              <h4>Business Advisory</h4>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <h4>Business Advisory</h4>
+            <p>Strategic advisory for startups and corporates covering finance, risk management, and regulatory compliance.</p>
+            <a href="service.html" class="btn-read">Explore Service <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="card-hover-content">
+            <h4>Business Advisory</h4>
+            <p>We provide strategic insights and practical solutions to help your business navigate challenges and capitalize on opportunities.</p>
+            <a href="service.html" class="hover-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- Training End -->
+<!-- Services End -->
 
 
 
