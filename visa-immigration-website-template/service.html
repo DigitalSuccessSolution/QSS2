@@ -189,196 +189,268 @@
 </script>
 <!-- ✅ Header Section End -->
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            color: #4b4b4b; /* Updated heading color as requested */
-        }
-        
-        p {
-            color: #666666; /* Updated paragraph color as requested */
-        }
-        
-        .gold-accent {
-            color: #c9a560;
-        }
-        
-        .dark-bg {
-            background-color: #4b4b4b;
-        }
-        
-        .service-card {
-            transition: all 0.3s ease;
-            border: none;
-            overflow: hidden;
-            height: 100%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-img {
-            height: 220px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.05);
-        }
-        
-        .service-content {
-            padding: 1.5rem;
-        }
-        
-        .divider {
-            width: 60px;
-            height: 3px;
-            background-color: #c9a560;
-            margin: 1rem 0;
-        }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: #c9a560;
-        }
-    </style>
+      <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    h1, h2, h3, h4, h5 {
+        font-family: 'Playfair Display', serif;
+        color: #4b4b4b;
+    }
+    p {
+        color: #666666;
+    }
+    .gold-accent {
+        color: #c9a560;
+    }
+    .service-card {
+        transition: all 0.3s ease;
+        border: none;
+        overflow: hidden;
+        height: 100%;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .service-img {
+        height: 220px;
+        overflow: hidden;
+    }
+    .service-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .service-card:hover .service-img img {
+        transform: scale(1.05);
+    }
+    .service-content {
+        padding: 1.5rem;
+    }
+    .divider {
+        width: 60px;
+        height: 3px;
+        background-color: #c9a560;
+        margin: 1rem 0;
+    }
+    /* Read More / View Less */
+    .content-preview {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* show only 4 lines */
+        -webkit-box-orient: vertical;
+    }
+    .read-more-btn {
+        background: none;
+        border: none;
+        color: #c9a560;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        padding: 0;
+    }
+    .read-more-btn:hover {
+        color: #a58440;
+        text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <!-- Services Start -->
-    <div class="container-fluid py-5 bg-white">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-uppercase gold-accent mb-3" style="letter-spacing: 2px;">Service Categories</h5>
-                <h1 class="display-5 fw-bold mb-4">Explore Our Core Chartered Accounting Services</h1>
-                <p class="lead mx-auto" style="max-width: 700px;">
-                    We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.
-                </p>
-            </div>
 
-            <div class="row g-4">
-                <!-- Service 1 -->
-                <div class="col-lg-4 col-md-6" >
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Inventory Management">
-                        </div>
-                        <!-- Service Page -->
-<div class="service-content" id="inventory">
-    <h4 class="mb-3">Inventory Management</h4>
-    <div class="divider"></div>
-    <p class="mb-0"><strong>Ensuring real-time stock accuracy and end-to-end inventory control.</strong> 
-    QSS delivers audit-ready inventory verification services tailored for businesses with complex supply chains. 
-    We ensure integrity in stock reporting and visibility across plants, warehouses, and vendor locations.</p>
-</div>
+<!-- Services Start -->
+<div class="container-fluid py-5 bg-white">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h5 class="text-uppercase gold-accent mb-3" style="letter-spacing: 2px;">Service Categories</h5>
+            <h1 class="display-5 fw-bold mb-4">Explore Our Core Chartered Accounting Services</h1>
+            <p class="lead mx-auto" style="max-width: 700px;">
+                We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.
+            </p>
+        </div>
 
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Inventory Management">
                     </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Audit & Assurance">
+                    <div class="service-content">
+                        <h4 class="mb-3">Inventory Management</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Driving accuracy, efficiency, and end-to-end control across your inventory lifecycle.</strong></p>
+                            <p>
+                                QSS delivers comprehensive, audit-ready inventory management solutions designed for businesses with complex and distributed supply chains.  
+                                Our methodologies ensure transparency, reliability, and compliance—providing real-time insights across plants, warehouses, vendors, and project sites.  
+                                We help organizations maintain stock integrity, minimize risks, and optimize overall supply chain efficiency.
+                            </p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>Periodic & Perpetual Inventory Verification:</strong> Rolling and structured audits to detect discrepancies, prevent pilferage, and eliminate system mismatches.</li>
+                              <li><strong>Stock Audits – Plants, Warehouses, CFAs, Vendors:</strong> End-to-end physical verification ensuring accuracy of stock levels, flow, and reporting integrity.</li>
+                              <li><strong>Raw Material & Finished Goods Audits:</strong> Specialized checks on RM & FG inventories to monitor usage, movement, and compliance with operational standards.</li>
+                              <li><strong>Project Site Inventory & Contractor Reconciliations:</strong> Detailed monitoring of project-based inventory, contractor stock handling, and material consumption controls.</li>
+                            </ul>
                         </div>
-                        <!-- Service Page -->
-<div class="service-content" id="b">
-                            <h4 class="mb-3">Audit & Assurance</h4>
-                            <div class="divider"></div>
-                            <p class="mb-0">Robust internal controls, streamlined operations, and financial integrity—audited with precision. At QSS, our Audit & Assurance services go beyond compliance.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://plus.unsplash.com/premium_photo-1661719980531-70e144c3dcb2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNoYXJ0ZXJlZCUyMGFjY291bnRhbnQlMjBzZXJ2aWNlcyUyMGFzc2V0fGVufDB8fDB8fHww" alt="Asset Management">
-                        </div>
-                         <!-- Service Page -->
-<div class="service-content" id="c">
-                            <h4 class="mb-3">Asset Management</h4>
-                            <div class="divider"></div>
-                            <p class="mb-0"><strong>Safeguarding your physical assets with transparent tracking and reconciliation.</strong> QSS provides structured solutions for managing and validating fixed assets to maintain compliance and ensure accurate financial representation.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Showroom Audits">
-                        </div>
-                          <!-- Service Page -->
-<div class="service-content" id="d">
-                            <h4 class="mb-3">Showroom Audits</h4>
-                            <div class="divider"></div>
-                            <p class="mb-0">Retail is dynamic. So are our audits. Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to reconcile physical stock with system records.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Manpower Outsourcing">
-                        </div>
-                          <!-- Service Page -->
-<div class="service-content" id="e">
-                            <h4 class="mb-3">Manpower Outsourcing</h4>
-                            <div class="divider"></div>
-                            <p class="mb-0">Deploy skilled resources that are compliant, accountable, and audit-ready. We provide agile staffing solutions designed for operational flexibility and compliance.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Background Verification Services">
-                        </div>
-                          <!-- Service Page -->
-<div class="service-content" id="f">
-                            <h4 class="mb-3">Background Verification</h4>
-                            <div class="divider"></div>
-                            <p class="mb-0"><strong>Seamless, secure, and fully digitized verification—powered by QuickEx™.</strong> Our background verification services ensure that your workforce is validated and reliable.</p>
-                        </div>
+                        <button class="read-more-btn">Read More</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Service 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Audit & Assurance">
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Audit & Assurance</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Robust internal controls, streamlined operations, and financial integrity—audited with precision.</strong></p>
+                            <p>
+                                At QSS, our Audit & Assurance services go beyond compliance.  
+                                We deliver insights that drive process optimisation and risk mitigation.  
+                                Our structured methodologies, backed by ISO standards and domain expertise, are tailored to each client’s operational footprint.
+                            </p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>Internal, Transaction & Concurrent Audits:</strong> Comprehensive evaluations to ensure accuracy, efficiency, and regulatory adherence in real-time operations.</li>
+                              <li><strong>SOX / IFC Compliance Testing:</strong> Internal Financial Controls and Sarbanes-Oxley audits for governance-led organizations.</li>
+                              <li><strong>Financial Bill Pre-Checks:</strong> Pre-audit of invoices and financial claims to detect errors, anomalies, or non-compliant spending.</li>
+                              <li><strong>Branch, Factory & Site Audits:</strong> Multi-location physical and operational audits to ensure systemic integrity.</li>
+                              <li><strong>SOP Reviews, IS & IT Security Audits:</strong> Deep-dive assessments into standard procedures and information systems to safeguard data and operations.</li>
+                              <li><strong>ESG, Regulatory & Risk-Control Audits:</strong> Environmental, Social & Governance audits aligned with modern stakeholder expectations and regulatory needs.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661719980531-70e144c3dcb2?w=600&auto=format&fit=crop&q=60" alt="Asset Management">
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Asset Management</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Safeguarding your physical assets with transparent tracking and reconciliation.</strong></p>
+                            <p>
+                                QSS provides structured solutions for managing and validating fixed assets to maintain compliance  
+                                and ensure accurate financial representation.
+                            </p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>Asset Tagging, Barcode Numbering & Capitalization:</strong> Unique identification and classification of fixed assets for depreciation and lifecycle tracking.</li>
+                              <li><strong>FA Reconciliation – Finance, GAAP, Customs:</strong> Bridging the gap between physical verification and book records for finance, statutory, and customs purposes.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1592301933927-35b597393c0a?auto=format&fit=crop&w=600&q=80" alt="Showroom Audits">
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Showroom Audits</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Retail is dynamic. So are our audits.</strong> Conduct barcode-based inventory audits to reconcile physical stock with system records.</p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>SOP Compliance Reviews:</strong> Assess adherence to retail standard operating procedures covering billing, returns, service delivery, and hygiene protocols.</li>
+                              <li><strong>Dealer & Depot Process Audits:</strong> Audit supply chain endpoints such as dealers, depots, and CFA locations for operational compliance and discipline.</li>
+                              <li><strong>Stock Return & Damage Analysis:</strong> Investigate the causes of product damage, manage reverse logistics, and evaluate supplier non-compliance issues.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Manpower Outsourcing">
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Manpower Outsourcing</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Deploy skilled resources that are compliant, accountable, and audit-ready.</strong></p>
+                            <p>
+                                We provide agile staffing solutions designed for operational flexibility and compliance.  
+                                Every resource is vetted, trained, and managed under stringent audit frameworks.
+                            </p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>Skilled Resource Sourcing & Placement:</strong> Professionally matched candidates for back-office, audit-support, and technical roles.</li>
+                              <li><strong>Contract Staffing Services:</strong> Fully compliant contract staffing, including payroll, documentation, and attendance systems.</li>
+                              <li><strong>Short-Term Project Deployments:</strong> Project-based staffing for seasonal, pilot, or audit-specific tasks.</li>
+                              <li><strong>Facility & Back-Office Staff Deployment:</strong> End-to-end manpower deployment for administrative, facilities, and data processing roles.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card rounded shadow-sm">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80" alt="Background Verification Services">
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Background Verification</h4>
+                        <div class="divider"></div>
+                        <div class="service-text content-preview">
+                            <p><strong>Seamless, secure, and fully digitized verification—powered by QuickEx™.</strong></p>
+                            <p>Our background verification services ensure that your workforce is validated and reliable.</p>
+                            <p><strong>Service Inclusions:</strong></p>
+                            <ul>
+                              <li><strong>Employee Background Checks (Pan-India):</strong> Verification of past employment, personal identity, and professional conduct.</li>
+                              <li><strong>Police Record Verification:</strong> Direct checks with police authorities for criminal history validation.</li>
+                              <li><strong>Address & Residence Confirmation:</strong> Physical and digital verification of current and permanent addresses.</li>
+                              <li><strong>Education & Document Validation:</strong> Confirmation of academic credentials, degrees, and certifications.</li>
+                              <li><strong>Fully Digital Process Monitoring via QuickEx™:</strong> Clients get real-time access to verification statuses, reports, and audit trails on a tamper-proof platform.</li>
+                            </ul>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- Services End -->
+</div>
+<!-- Services End -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll(".read-more-btn").forEach(btn => {
+      btn.addEventListener("click", function() {
+          const content = this.previousElementSibling;
+          content.classList.toggle("content-preview");
+          this.textContent = this.textContent === "Read More" ? "View Less" : "Read More";
+      });
+  });
+</script>
 
 
 <div class="ca-services" style="
