@@ -189,7 +189,196 @@
 </script>
 <!-- ✅ Header Section End -->
 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            color: #4b4b4b; /* Updated heading color as requested */
+        }
+        
+        p {
+            color: #666666; /* Updated paragraph color as requested */
+        }
+        
+        .gold-accent {
+            color: #c9a560;
+        }
+        
+        .dark-bg {
+            background-color: #4b4b4b;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #c9a560;
+            margin: 1rem 0;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #c9a560;
+        }
+    </style>
+</head>
+<body>
+    <!-- Services Start -->
+    <div class="container-fluid py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-uppercase gold-accent mb-3" style="letter-spacing: 2px;">Service Categories</h5>
+                <h1 class="display-5 fw-bold mb-4">Explore Our Core Chartered Accounting Services</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.
+                </p>
+            </div>
 
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" >
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Inventory Management">
+                        </div>
+                        <!-- Service Page -->
+<div class="service-content" id="inventory">
+    <h4 class="mb-3">Inventory Management</h4>
+    <div class="divider"></div>
+    <p class="mb-0"><strong>Ensuring real-time stock accuracy and end-to-end inventory control.</strong> 
+    QSS delivers audit-ready inventory verification services tailored for businesses with complex supply chains. 
+    We ensure integrity in stock reporting and visibility across plants, warehouses, and vendor locations.</p>
+</div>
+
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Audit & Assurance">
+                        </div>
+                        <!-- Service Page -->
+<div class="service-content" id="b">
+                            <h4 class="mb-3">Audit & Assurance</h4>
+                            <div class="divider"></div>
+                            <p class="mb-0">Robust internal controls, streamlined operations, and financial integrity—audited with precision. At QSS, our Audit & Assurance services go beyond compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://plus.unsplash.com/premium_photo-1661719980531-70e144c3dcb2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNoYXJ0ZXJlZCUyMGFjY291bnRhbnQlMjBzZXJ2aWNlcyUyMGFzc2V0fGVufDB8fDB8fHww" alt="Asset Management">
+                        </div>
+                         <!-- Service Page -->
+<div class="service-content" id="c">
+                            <h4 class="mb-3">Asset Management</h4>
+                            <div class="divider"></div>
+                            <p class="mb-0"><strong>Safeguarding your physical assets with transparent tracking and reconciliation.</strong> QSS provides structured solutions for managing and validating fixed assets to maintain compliance and ensure accurate financial representation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1592301933927-35b597393c0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Showroom Audits">
+                        </div>
+                          <!-- Service Page -->
+<div class="service-content" id="d">
+                            <h4 class="mb-3">Showroom Audits</h4>
+                            <div class="divider"></div>
+                            <p class="mb-0">Retail is dynamic. So are our audits. Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to reconcile physical stock with system records.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Manpower Outsourcing">
+                        </div>
+                          <!-- Service Page -->
+<div class="service-content" id="e">
+                            <h4 class="mb-3">Manpower Outsourcing</h4>
+                            <div class="divider"></div>
+                            <p class="mb-0">Deploy skilled resources that are compliant, accountable, and audit-ready. We provide agile staffing solutions designed for operational flexibility and compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card rounded shadow-sm">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Background Verification Services">
+                        </div>
+                          <!-- Service Page -->
+<div class="service-content" id="f">
+                            <h4 class="mb-3">Background Verification</h4>
+                            <div class="divider"></div>
+                            <p class="mb-0"><strong>Seamless, secure, and fully digitized verification—powered by QuickEx™.</strong> Our background verification services ensure that your workforce is validated and reliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 <div class="ca-services" style="
@@ -1390,171 +1579,8 @@
 
 
 
-<!-- Services Start -->
-<div class="container-fluid service overflow-hidden pt-5 bg-white">
-    <div class="container py-5">
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title" style="color: #c9a560;">Service Categories</h5>
-            </div>
-            <h1 class="display-5 mb-4" style="color: rgb(75,75,75); ">Explore Our Core Chartered Accounting Services</h1>
-            <p class="mb-0" style="color: rgb(75,75,75); text-align: justify;">We offer specialized financial services crafted to support individuals, startups, and businesses in managing taxes, compliance, and strategic growth effectively.</p>
-        </div>
-        <div class="row g-4">
-            <!-- Service 1 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Taxation Services</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Taxation Services</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">Efficient income tax filing, GST compliance, and tax planning for individuals and businesses.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service 2 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Audit & Assurance</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Audit & Assurance</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">Internal and statutory audits to ensure financial transparency and regulatory compliance.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service 3 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Business Registration</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Business Registration</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">End-to-end assistance with company formation, GST, MSME, and startup registration.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service 4 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Accounting & Bookkeeping</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Accounting & Bookkeeping</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">Daily, monthly, and annual accounting services to help track and manage financials efficiently.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service 5 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Company Compliance</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Company Compliance</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">ROC filings, annual returns, board resolutions & other mandatory compliance tasks.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service 6 -->
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item">
-                    <div class="service-inner bg-white rounded shadow-sm">
-                        <div class="service-img">
-                            <img src="img/service-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                        </div>
-                        <div class="service-title">
-                            <div class="service-title-name">
-                                <div class="text-center rounded p-3 mx-5 mb-4" style="background-color: #c9a560;">
-                                    <a href="#" class="h4 text-white mb-0">Investment Advisory</a>
-                                </div>
-                                <a class="btn bg-light rounded-pill py-3 px-5 mb-4" style="color: rgb(75,75,75); border-color: #c9a560;" href="#">Explore More</a>
-                            </div>
-                            <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
-                                <a href="#"><h4 class="text-white mb-4 py-3">Investment Advisory</h4></a>
-                                <div class="px-4">
-                                    <p class="mb-4 text-white">Personalized financial and investment planning to help you build long-term wealth securely.</p>
-                                    <a class="btn rounded-pill py-3 px-5" style="background-color: #c9a560; color: white; border-color: #c9a560;" href="service.html">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Services End -->
+  
+
 
 <!-- Premium Counter Facts Start -->
 <div class="container-fluid premium-counter py-5 bg-white">
