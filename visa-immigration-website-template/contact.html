@@ -94,11 +94,13 @@
   <header class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
     
     <!-- Logo -->
-    <div class="flex items-center">
-      <img src="/images/nav-logo.png" 
-           alt="QSS Logo" 
-           class="block h-10 md:h-12 w-auto max-w-full">
-    </div>
+    <div class="flex items-center space-x-4">
+<img src="/images/Main Logo.png" 
+     alt="QSS Logo" 
+     class="block h-12 w-auto max-w-full" 
+     style="max-height: 3rem;">
+
+</div>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center space-x-6 font-medium relative">
@@ -191,215 +193,605 @@
 
 
 
-<section class="contact-hero" style="width: 100%; background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('office-bg.jpg'); background-size: cover; padding: 80px 0;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-    <h1 style="color: #4b4b4b; font-size: 42px; margin-bottom: 20px;">Get in Touch</h1>
-    <p style="color: #666; font-size: 18px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
-      Reach out for accounting solutions tailored to your business needs.
-    </p>
-    <a href="#contact-form" style="display: inline-block; padding: 15px 35px; background: #c9a560; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 16px; transition: all 0.3s;">
-      Send a Message
-    </a>
-  </div>
-</section>
+
 
 <!-- Interactive Map -->
-<div class="office-map" style="width: 100%; height: 400px; background: #f5f5f5;">
+<!-- <div class="office-map" style="width: 100%; height: 400px; background: #f5f5f5;"> -->
   <!-- Embed Google Map Here -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15133.702543316178!2d73.96149209361643!3d18.50965816794395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCorporate%20HQ%3A%20S.R.%20No.%2071C%2F2%2C%20Flat%20No.%20201%2C%20Harpale%20Complex%2C%20Haveli%2C%20Pune%2C%20Manjari%20Bk%2C%20412307!5e0!3m2!1sen!2sin!4v1755604654561!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15133.702543316178!2d73.96149209361643!3d18.50965816794395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCorporate%20HQ%3A%20S.R.%20No.%2071C%2F2%2C%20Flat%20No.%20201%2C%20Harpale%20Complex%2C%20Haveli%2C%20Pune%2C%20Manjari%20Bk%2C%20412307!5e0!3m2!1sen!2sin!4v1755604654561!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div> -->
+
+
+
+
+<section id="contact-section" style="width: 100%; padding: 100px 0; background: #fff;">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2 class="contact-title">Contact Us</h2>
+      <div class="title-divider"></div>
+      <p class="contact-intro">Get in touch with our team for any inquiries or assistance</p>
+    </div>
+    
+    <div class="contact-grid">
+      
+      <!-- Left Side (Business Enquiries + Form) -->
+      <div class="contact-card">
+        <div class="card-header">
+          <h3 class="contact-subtitle">For Business Enquiries</h3>
+          <div class="subtitle-divider"></div>
+        </div>
+        
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <a href="mailto:info@matrixbsindia.com" class="contact-link">info@matrixbsindia.com</a>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <a href="tel:+919940176700" class="contact-link">+91 9940176700</a>
+              <p class="info-description">(For Employee Background Check Services)</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>
+              <a href="tel:+919591713333" class="contact-link">+91 9591713333</a>
+              <p class="info-description">(For Audit & Assurance Services)</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="input-group">
+              <input type="text" placeholder="Name *" required>
+              <div class="input-underline"></div>
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Email *" required>
+              <div class="input-underline"></div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="input-group">
+              <input type="tel" placeholder="Phone *" required>
+              <div class="input-underline"></div>
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="City *" required>
+              <div class="input-underline"></div>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <textarea placeholder="Message *" rows="4" required></textarea>
+            <div class="input-underline"></div>
+          </div>
+          
+          <div class="form-terms">
+            <label class="checkbox-container">
+              <input type="checkbox" required>
+              <span class="checkmark"></span>
+              I've read and accept the 
+              <a href="#" class="terms-link">Terms & Conditions</a> and 
+              <a href="#" class="terms-link">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Submit</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+
+                <!-- Contact Form -->
+  
+        <!-- Google Map Embed -->
+        <div class="google-map" style="margin-top:25px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.433358938493!2d80.23461187504039!3d13.041857790817111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267ab2745070f%3A0x61a9b7f17a571e4!2sT%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600017!5e0!3m2!1sen!2sin!4v1695199356789!5m2!1sen!2sin" 
+            width="100%" 
+            height="250" 
+            style="border:0; border-radius:10px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+<!-- Right Side (Job Opportunities + Candidate Queries + Office Locations) -->
+<div class="contact-card">
+  <!-- Job Opportunities -->
+  <div class="card-header">
+    <h3 class="contact-subtitle">For Job Opportunities</h3>
+    <div class="subtitle-divider"></div>
+  </div>
+
+  <div class="location-info">
+    <div class="location-item">
+      <h4 class="location-name">Chennai</h4>
+      <p class="location-contact">Mr. Naresh</p>
+      <div class="phone-info">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:04440107290" class="contact-link">044 40107290</a>
+      </div>
+    </div>
+
+    <div class="location-item">
+      <h4 class="location-name">Bangalore</h4>
+      <p class="location-contact">Mr. Ebinesh</p>
+      <div class="phone-info">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:08040045324" class="contact-link">080 40045324</a>
+      </div>
+    </div>
+
+    <div class="location-item">
+      <h4 class="location-name">Noida</h4>
+      <p class="location-contact">Ms. Nandhini Singh</p>
+      <div class="phone-info">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:01204598721" class="contact-link">0120 4598721</a>
+      </div>
+    </div>
+
+    <div class="location-item">
+      <h4 class="location-name">Hyderabad</h4>
+      <p class="location-contact">Mr. Parasu Ramudu</p>
+      <div class="phone-info">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:04047978823" class="contact-link">040 47978823</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Candidate Queries -->
+  <div class="card-header" style="margin-top: 30px;">
+    <h3 class="contact-subtitle">Candidate Queries</h3>
+    <div class="subtitle-divider"></div>
+  </div>
+
+  <div class="contact-info">
+    <div class="info-item">
+      <div class="info-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <a href="mailto:candidate.help@matrixbsindia.com" class="contact-link">candidate.help@matrixbsindia.com</a>
+    </div>
+  </div>
+
+  <!-- Additional Locations Section (from image) -->
+  <div class="card-header" style="margin-top: 30px;">
+    <h3 class="contact-subtitle">Our Office Locations</h3>
+    <div class="subtitle-divider"></div>
+  </div>
+
+  <div class="contact-info" style="line-height: 1.7;">
+    <p><strong style="color: #4b4b4b;">Head Office</strong><br style="color: #8b7a7a;">
+      Sree Mahamathi Towers, No. 17, Arunachalam Street,<br>
+      T. Nagar, Chennai – 600017,<br>
+      Tamil Nadu, India.<br>
+      📞 044 40107200, 044 43508985
+    </p>
+
+    <p><strong  style="color: #4b4b4b;">Chennai – Sarangapani</strong><br>
+      Pathma Tower, No.47/1, Sarangapani Street,<br>
+      T. Nagar, Chennai – 600017,<br>
+      Tamil Nadu, India.
+    </p>
+
+    <p><strong  style="color: #4b4b4b;">Chennai – Nandanam</strong><br>
+      Old No.126, New No.24, Chamiers Road,<br>
+      Nandanam, Chennai – 600035,<br>
+      Tamil Nadu, India.
+    </p>
+
+    <p><strong  style="color: #4b4b4b;">Bengaluru Branch</strong><br>
+      First Floor, Saiapurna Sattva Galleria,<br>
+      No. 207, Kashi Nagar, Byatarayanapura,<br>
+      (Above Slimji Nandhini), Bellary Road,<br>
+      Bengaluru – 560092,<br>
+      Karnataka, India.
+    </p>
+
+    <p><strong  style="color: #4b4b4b;">Hyderabad Branch</strong><br>
+      9-1-77, Draupathi Chamber II, 2nd Floor,<br>
+      31 S D Road, Secunderabad – 500003,<br>
+      Telangana, India.
+    </p>
+
+    <p><strong  style="color: #4b4b4b;" >Mumbai Branch</strong><br>
+      Plot No.24, Unit No.303, Steel House,<br>
+      Mahal Industrial Estate, Off Mahakali Caves Road,<br>
+      Andheri East, Mumbai – 400093,<br>
+      Maharashtra, India.
+    </p>
+
+    <p><strong   style="color: #4b4b4b;">Noida Branch</strong><br>
+      E – 148, Sector – 8,<br>
+      Noida – 201301,<br>
+      Uttar Pradesh, India.
+    </p>
+  </div>
 </div>
 
-
-
-<section class="contact-methods" style="width: 100%; padding: 80px 0; background: white;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      <!-- Card 1 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Call Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">+91-9202456705</p>
-        <p style="color: #666;">Mon-Fri: 9AM - 6PM</p>
-      </div>
-      
-      <!-- Card 2 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Email Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">info@qss.net.in</p>
-        <p style="color: #666;">Response within 24 hours</p>
-      </div>
-      
-      <!-- Card 3 -->
-      <div style="text-align: center; padding: 40px 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;">
-        <div style="width: 80px; height: 80px; background: #f8f3e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3 style="color: #4b4b4b; font-size: 22px; margin-bottom: 15px;">Visit Us</h3>
-        <p style="color: #666; margin-bottom: 10px;">Corporate HQ: S.R. No. 71C/2, Flat No. 201,</p>
-        <p style="color: #666;">Harpale Complex, Haveli, Pune, Manjari Bk (N.V.), </p>
       </div>
     </div>
-  </div>
-</section>
-
-
-
-<section id="contact-form" style="width: 100%; padding: 80px 0; background: #f9f9f9;" >
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <div style="background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); padding: 50px;" id="footer" >
-      <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 30px;">Send Us a Message</h2 >
-      
-      <form style="display: grid; gap: 20px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">First Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-          </div>
-          <div>
-            <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Last Name*</label>
-            <input type="text" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-          </div>
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Email*</label>
-          <input type="email" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Phone</label>
-          <input type="tel" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px;">
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Service Needed*</label>
-          <select required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill="%234b4b4b" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); background-repeat: no-repeat; background-position: right 10px center; background-size: 16px;">
-            <option value="">Select a service</option>
-            <option value="audit">Audit & Assurance</option>
-            <option value="tax">Tax Planning</option>
-            <option value="gst">GST Services</option>
-            <option value="accounting">Accounting</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        
-        <div>
-          <label style="display: block; color: #4b4b4b; font-weight: 600; margin-bottom: 8px;">Message*</label>
-          <textarea required rows="5" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; resize: vertical;"></textarea>
-        </div>
-        
-        <button type="submit" style="width: 100%; padding: 15px; background: #c9a560; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; margin-top: 10px;">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section style="width: 100%; padding: 80px 0; background: white; " >
-  <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="color: #4b4b4b; font-size: 32px; text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
-    
-    <div style="border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-      <!-- FAQ 1 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">What are your working hours?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Our office is open Monday to Friday from 9:00 AM to 6:00 PM. For urgent matters outside these hours, please call our emergency contact number.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 2 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">How quickly will I receive a response?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>We typically respond to emails within 24 hours. For phone inquiries, our team will get back to you within 2 business hours during working days.</p>
-        </div>
-      </details>
-      
-      <!-- FAQ 3 -->
-      <details style="border-bottom: 1px solid #eee;">
-        <summary style="padding: 20px; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: #4b4b4b; font-weight: 600; font-size: 18px;">Do you offer virtual consultations?</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a560" stroke-width="2" style="transition: transform 0.3s;">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
-        </summary>
-        <div style="padding: 0 20px 20px 20px; color: #666; line-height: 1.6;">
-          <p>Yes, we provide video consultations via Zoom, Microsoft Teams, or Google Meet. Schedule an appointment through our contact form.</p>
-        </div>
-      </details>
-    </div>
-  </div>
+ 
 </section>
 
 <style>
-  /* Base Responsive Styles */
+  /* Container */
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* Header */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .contact-title {
+    color: #4b4b4b;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-divider {
+    width: 80px;
+    height: 3px;
+    background: #c9a560;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+  }
+  
+  .contact-intro {
+    color: #7a7a7a;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Grid Layout */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  .contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-header {
+    margin-bottom: 25px;
+  }
+  
+  .contact-subtitle {
+    color: #4b4b4b;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .subtitle-divider {
+    width: 50px;
+    height: 2px;
+    background: #c9a560;
+    border-radius: 2px;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .info-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(201, 165, 96, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .info-icon i {
+    color: #c9a560;
+    font-size: 16px;
+  }
+  
+  .info-description {
+    color: #7a7a7a;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .contact-link {
+    color: #4b4b4b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .contact-link:hover {
+    color: #c9a560;
+  }
+
+  /* Location Info */
+  .location-info {
+    margin-bottom: 10px;
+  }
+  
+  .location-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .location-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .location-name {
+    color: #4b4b4b;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .location-contact {
+    color: #7a7a7a;
+    margin-bottom: 10px;
+  }
+  
+  .phone-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone-info i {
+    color: #c9a560;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  /* Form */
+  .contact-form {
+    display: grid;
+    gap: 25px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    color: #4b4b4b;
+    background: transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input::placeholder, 
+  .contact-form textarea::placeholder {
+    color: #a0a0a0;
+  }
+  
+  .contact-form input:focus, 
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #c9a560;
+  }
+  
+  .input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c9a560;
+    transition: width 0.3s ease;
+  }
+  
+  .contact-form input:focus ~ .input-underline,
+  .contact-form textarea:focus ~ .input-underline {
+    width: 100%;
+  }
+  
+  .form-terms {
+    margin-top: 10px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #7a7a7a;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #c9a560;
+    border-color: #c9a560;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .terms-link {
+    color: #c9a560;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .terms-link:hover {
+    color: #b8934d;
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    background: #c9a560;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+  }
+  
+  .submit-btn:hover {
+    background: #b8934d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 147, 77, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .contact-card {
+      padding: 25px;
+    }
+  }
+  
   @media (max-width: 768px) {
-    /* Hero Section */
-    .contact-hero h1 { font-size: 32px; }
-    .contact-hero p { font-size: 16px; }
-    .office-map { height: 300px; }
-    
-    /* Contact Cards */
-    .contact-methods div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
+    .contact-container {
+      padding: 0 25px;
     }
     
-    /* Contact Form */
-    #contact-form div[style*="grid-template-columns"] { 
-      grid-template-columns: 1fr; 
+    .contact-title {
+      font-size: 32px;
     }
     
-    /* FAQ Section */
-    details summary span { font-size: 16px; }
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .contact-header {
+      margin-bottom: 40px;
+    }
   }
   
   @media (max-width: 480px) {
-    /* Padding Adjustments */
-    section { padding: 60px 0 !important; }
-    
-    /* Form Elements */
-    input, select, textarea, button { 
-      padding: 10px 12px !important; 
-      font-size: 15px !important; 
+    .contact-container {
+      padding: 0 20px;
     }
     
-    /* FAQ Icons */
-    details svg { width: 16px; height: 16px; }
-  }
-  
-  /* Interactive Elements */
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #c9a560;
-    box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
-  }
-  
-  button:hover { background: #b8934d !important; }
-  
-  details[open] svg { transform: rotate(180deg); }
-  
-  .contact-methods div[style*="box-shadow"]:hover { 
-    transform: translateY(-5px); 
+    .contact-card {
+      padding: 20px;
+    }
+    
+    .contact-title {
+      font-size: 28px;
+    }
+    
+    .contact-subtitle {
+      font-size: 20px;
+    }
   }
 </style>
-
 
 
 
