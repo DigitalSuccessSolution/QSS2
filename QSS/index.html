@@ -691,36 +691,63 @@
 
 
 
-   <!-- About Start -->
+ <!-- About Start -->
 <div class="container-fluid py-5">
   <style>
     .text-primary-custom {
-      color: rgb(75, 75, 75) !important;
+      color: #4b4b4b !important;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      font-size: 16.5px;
+      line-height: 1.8;
     }
+
     .text-highlight {
       color: #c9a560 !important;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
-  
+
+    .about-title {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #4b4b4b;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    .btn-custom {
+      background-color: #c9a560;
+      color: white;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: #a1844a;
+      color: white;
+    }
   </style>
 
   <div class="container py-5">
-    <div class="row g-5">
+    <div class="row g-5 align-items-center">
       <!-- Left Image Column -->
       <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
         <div class="bg-light rounded overflow-hidden">
-          <img src="img/hb.png"img-fluid w-100" alt="About Image">
+          <img src="img/hb.png" class="img-fluid w-100" alt="About Image">
         </div>
       </div>
 
       <!-- Right Content Column -->
       <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
         <h5 class="text-highlight text-uppercase mb-3">About Us</h5>
-        <h1 class="mb-4 text-primary-custom">QSS is a tech-enabled, ISO-certified audit and compliance firm offering   precision-driven .</h1>
+        <h1 class="about-title mb-4">
+          QSS is a tech-enabled, ISO-certified audit and compliance firm offering precision-driven solutions.
+        </h1>
         <p class="mb-4 text-primary-custom" style="text-align: justify;">
-       services across internal audits, inventory checks, background verifications, and manpower outsourcing. With 10+ years of experience, Pan-India reach, and trusted by 100+ enterprises, QSS
+          We specialize in internal audits, inventory verification, background checks, and manpower outsourcing. With over 10 years of experience and a strong Pan-India presence, QSS is trusted by more than 100 enterprises.
         </p>
         <p class="mb-4 text-primary-custom" style="text-align: justify;">
-         empowers organizations with governance, control, and transparency through its 360° assurance approach—Performance, Protection, and Proof.
+          Our proprietary 360° Assurance Approach — covering Performance, Protection, and Proof — helps organizations achieve governance, transparency, and operational control.
         </p>
         <a href="about.html" class="btn btn-custom py-3 px-5 rounded-pill">Learn More</a>
       </div>
@@ -820,8 +847,8 @@
         <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="sub-style">
                 <h5 class="sub-title" style="color: #c9a560;">Service Categories</h5>
-            </div>
-            <h1 class="text-2xl md:text-4xl font-bold mb-4 text-gray-800 text-center md:text-left">
+            </div> 
+            <h1  class="text-2xl md:text-4xl font-bold mb-4 text-gray-800 text-center md:text-left  text-primary-custom" >
                 Explore Our Core Chartered Accounting Services
             </h1>
             <!-- <p class="text-gray-700 leading-relaxed text-justify md:text-left">
@@ -857,7 +884,7 @@
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Inventory Management</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Inventory Management</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white"><strong>Ensuring real-time stock accuracy and end-to-end inventory control. </strong>
@@ -892,7 +919,7 @@
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Audit & Assurance</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Audit & Assurance</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white">
@@ -926,7 +953,7 @@
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Asset Management</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Asset Management</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white"><strong>Safeguarding your physical assets with transparent tracking and reconciliation.</strong>
@@ -959,7 +986,7 @@
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Showroom Audits</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Showroom Audits</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white">
@@ -994,7 +1021,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Manpower Outsourcing</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Manpower Outsourcing</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white">
@@ -1028,7 +1055,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                             </div>
                             <div class="service-content pb-4" style="background-color: rgb(75,75,75);">
                                 <a href="#">
-                                    <h4 class="text-white mb-4 py-3">Background Verification Services</h4>
+                                    <h4  class="text-primary-custom text-white mb-4 py-3">Background Verification Services</h4>
                                 </a>
                                 <div class="px-4">
                                     <p class="mb-4 text-white"><strong>Seamless, secure, and fully digitized verification—powered by QuickEx™.</strong>
@@ -1057,314 +1084,260 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 
 
 <!-- Features Start -->
-<div class="container-fluid features overflow-hidden py-5 bg-white">
-    <div class="container">
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title px-3" style="color: #c9a560;">Why Choose Us</h5>
-            </div>
-            <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Excellence, Trust & Innovation in Auditing</h1>
-            <p class="mb-0" style="color: rgb(75,75,75);">With 10+ years of proven expertise, we deliver ISO-certified, tech-driven, and client-focused audit & verification solutions across India.</p>
-        </div>
-        <div class="row g-4 justify-content-center text-center">
-
-            <!-- Feature 1 -->
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
-                    <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-globe-asia fa-4x"></i>
-                    </div>
-                    <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">PAN-India Reach</h5>
-                        <p class="mb-3">Serving urban, semi-urban & remote regions with reliable audit and verification services.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Feature 2 -->
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
-                    <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-laptop-code fa-4x"></i>
-                    </div>
-                    <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Smart Tech Platform</h5>
-                        <p class="mb-3">QuickEx™ engine ensures secure, fast & tech-integrated background verification processes.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Feature 3 -->
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
-                    <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-certificate fa-4x"></i>
-                    </div>
-                    <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Certified Excellence</h5>
-                        <p class="mb-3">ISO-certified frameworks customized for Retail, BFSI, Infra & other industry sectors.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Feature 4 -->
-            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
-                    <div class="feature-icon p-3 mb-4">
-                        <i class="fas fa-handshake fa-4x"></i>
-                    </div>
-                    <div class="feature-content d-flex flex-column">
-                        <h5 class="mb-3">Trusted by Clients</h5>
-                        <p class="mb-3">Recognized for innovation, trusted by 100+ enterprises, delivering results for over a decade.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-            </div>
-        </div>
+<div class="container-fluid features overflow-hidden py-5 bg-white" style="font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
+  <div class="container">
+    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="sub-style">
+        <h5 class="sub-title px-3 text-highlight">Why Choose Us</h5>
+      </div>
+      <h1 class="about-title mb-4">Excellence, Trust & Innovation in Auditing</h1>
+      <p class="text-primary-custom mb-0">
+        With 10+ years of proven expertise, we deliver ISO-certified, tech-driven, and client-focused audit & verification solutions across India.
+      </p>
     </div>
+
+    <div class="row g-4 justify-content-center text-center">
+      <!-- Feature 1 -->
+      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
+          <div class="feature-icon p-3 mb-4">
+            <i class="fas fa-globe-asia fa-4x"></i>
+          </div>
+          <div class="feature-content d-flex flex-column">
+            <h5 class="mb-3 text-primary-custom">PAN-India Reach</h5>
+            <p class="text-primary-custom mb-3">
+              Serving urban, semi-urban & remote regions with reliable audit and verification services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
+          <div class="feature-icon p-3 mb-4">
+            <i class="fas fa-laptop-code fa-4x"></i>
+          </div>
+          <div class="feature-content d-flex flex-column">
+            <h5 class="mb-3 text-primary-custom">Smart Tech Platform</h5>
+            <p class="text-primary-custom mb-3">
+              QuickEx™ engine ensures secure, fast & tech-integrated background verification processes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
+          <div class="feature-icon p-3 mb-4">
+            <i class="fas fa-certificate fa-4x"></i>
+          </div>
+          <div class="feature-content d-flex flex-column">
+            <h5 class="mb-3 text-primary-custom">Certified Excellence</h5>
+            <p class="text-primary-custom mb-3">
+              ISO-certified frameworks customized for Retail, BFSI, Infra & other industry sectors.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+        <div class="feature-item text-center p-4 bg-white rounded shadow-sm h-100">
+          <div class="feature-icon p-3 mb-4">
+            <i class="fas fa-handshake fa-4x"></i>
+          </div>
+          <div class="feature-content d-flex flex-column">
+            <h5 class="mb-3 text-primary-custom">Trusted by Clients</h5>
+            <p class="text-primary-custom mb-3">
+              Recognized for innovation, trusted by 100+ enterprises, delivering results for over a decade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-
-<style>
-/* Feature Card Base Style */
-.feature-item {
-    border: 1px solid rgba(75, 75, 75, 0.1);
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect (Desktop only) */
-@media (min-width: 992px) {
-    .feature-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
-        border-color: rgba(201, 165, 96, 0.3);
-    }
-    .feature-item:hover .feature-icon i {
-        transform: rotate(360deg);
-    }
-}
-
-/* Scroll effect (Mobile: active class) */
-.feature-item.active {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(75, 75, 75, 0.1);
-    border-color: rgba(201, 165, 96, 0.3);
-}
-.feature-item.active .feature-icon i {
-    transform: rotate(360deg);
-}
-
-/* Icon Style */
-.feature-icon i {
-    color: #c9a560; /* Fixed color (no change on hover/active) */
-    transition: transform 0.6s ease;
-}
-
-/* Button Style */
-.btn, 
-.btn-custom {
-    /* background-color: #c9a560; */
-    background-color: none !important;
-    color: #4b4b4b;
-    border-color: #c9a560;
-}
-
-.btn:hover, 
-.btn-custom:hover {
-    background-color: #b8934b !important;
-    border-color: #b8934b !important;
-    color: white !important;
-}
-
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".features .feature-item");
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active"); 
-                } else {
-                    entry.target.classList.remove("active");
-                }
-            });
-        },
-        { threshold: 0.3 } // 30% visible pe effect start hoga
-    );
-
-    items.forEach((item) => observer.observe(item));
-});
-</script>
 <!-- Features End -->
 
 
 
+
  <!-- Premium Counter Facts Start -->
-    <div class="container-fluid premium-counter py-5 bg-white">
-        <div class="container py-5">
-            <div class="section-title text-center mb-5">
-                <h5 class="text-uppercase mb-3 gold-accent" style="letter-spacing: 3px;">OUR ACHIEVEMENTS</h5>
-                <h1 class="display-5 mb-4">Excellence in Audit & Assurance Services </h1>
-                <p class="mb-0 mx-auto" style="max-width: 600px; opacity: 0.8;">Proudly delivering exceptional Audit & Assurance solutions backed by proven client success.</p>
-            </div>
-            
-            <div class="row g-4 justify-content-center">
-                <!-- Counter Item 1 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
-                        <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-calculator fa-2x" style="color: #c9a560;"></i>
-                        </div>
-                        <h3 class="mb-3">Associates </h3>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value display-5 fw-bold" style="color: #4b4b4b;" data-toggle="counter-up">100</span>
-                            <h4 class="mb-0 ms-2" style="font-weight: 600; font-size: 25px; color: #c9a560;">+</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Counter Item 2 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
-                        <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-users fa-2x" style="color: #c9a560;"></i>
-                        </div>
-                        <h3 class="mb-3">Branches</h3>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value display-5 fw-bold" style="color: #4b4b4b;" data-toggle="counter-up">8 </span>
-                            <h4 class="mb-0 ms-2" style="font-weight: 600; font-size: 25px; color: #c9a560;">+</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Counter Item 3 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
-                        <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-chart-line fa-2x" style="color: #c9a560;"></i>
-                        </div>
-                        <h3 class="mb-3">Corporate Clients</h3>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value display-5 fw-bold" style="color: #4b4b4b;" data-toggle="counter-up">200 </span>
-                            <h4 class="mb-0 ms-2" style="font-weight: 600; font-size: 25px; color: #c9a560;">+</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Counter Item 4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
-                        <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-award fa-2x" style="color: #c9a560;"></i>
-                        </div>
-                        <h3 class="mb-3">Employees</h3>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <span class="counter-value display-5 fw-bold" style="color: #4b4b4b;" data-toggle="counter-up">1000 </span>
-                            <h4 class="mb-0 ms-2" style="font-weight: 600; font-size: 25px; color: #c9a560;">+</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="service.html" class="btn btn-custom btn-lg rounded-pill px-5 py-3">
-                    Explore Our Services <i class="fas fa-arrow-right ms-2"></i>
-                </a>
-            </div>
-        </div>
+<div class="container-fluid premium-counter py-5 bg-white" style="font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
+  <div class="container py-5">
+    <div class="section-title text-center mb-5">
+      <h5 class="text-uppercase mb-3 text-highlight" style="letter-spacing: 3px;">OUR ACHIEVEMENTS</h5>
+      <h1 class="about-title mb-4">Excellence in Audit & Assurance Services</h1>
+      <p class="text-primary-custom mb-0 mx-auto" style="max-width: 600px;">
+        Proudly delivering exceptional Audit & Assurance solutions backed by proven client success.
+      </p>
     </div>
-    <!-- Premium Counter Facts End -->
+
+    <div class="row g-4 justify-content-center">
+      <!-- Counter Item 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
+          <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-calculator fa-2x" style="color: #c9a560;"></i>
+          </div>
+          <h3 class="mb-3 text-primary-custom">Associates</h3>
+          <div class="d-flex align-items-center justify-content-center">
+            <span class="counter-value display-5 fw-bold text-primary-custom" data-toggle="counter-up">100</span>
+            <h4 class="text-highlight mb-0 ms-2" style="font-weight: 600; font-size: 25px;">+</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter Item 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
+          <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-users fa-2x" style="color: #c9a560;"></i>
+          </div>
+          <h3 class="mb-3 text-primary-custom">Branches</h3>
+          <div class="d-flex align-items-center justify-content-center">
+            <span class="counter-value display-5 fw-bold text-primary-custom" data-toggle="counter-up">8</span>
+            <h4 class="text-highlight mb-0 ms-2" style="font-weight: 600; font-size: 25px;">+</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter Item 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
+          <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-chart-line fa-2x" style="color: #c9a560;"></i>
+          </div>
+          <h3 class="mb-3 text-primary-custom">Corporate Clients</h3>
+          <div class="d-flex align-items-center justify-content-center">
+            <span class="counter-value display-5 fw-bold text-primary-custom" data-toggle="counter-up">200</span>
+            <h4 class="text-highlight mb-0 ms-2" style="font-weight: 600; font-size: 25px;">+</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counter Item 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="premium-counter-item p-4 text-center h-100" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid #c9a560;">
+          <div class="counter-icon mb-3" style="width: 70px; height: 70px; margin: 0 auto; background-color: rgba(201, 165, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-award fa-2x" style="color: #c9a560;"></i>
+          </div>
+          <h3 class="mb-3 text-primary-custom">Employees</h3>
+          <div class="d-flex align-items-center justify-content-center">
+            <span class="counter-value display-5 fw-bold text-primary-custom" data-toggle="counter-up">1000</span>
+            <h4 class="text-highlight mb-0 ms-2" style="font-weight: 600; font-size: 25px;">+</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="service.html" class="btn btn-custom btn-lg rounded-pill px-5 py-3">
+        Explore Our Services <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Premium Counter Facts End -->
+
 
       
 
 
-    <!-- Testimonial Start -->
-<div class="container-fluid testimonial overflow-hidden pb-5 bg-white">
-    <div class="container py-5">
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title px-3" style="color: #c9a560;">Client Testimonials</h5>
-            </div>
-            <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Hear What Our Clients Say</h1>
-            <p class="mb-0" style="color: rgb(75,75,75); ">Our clients' success stories speak volumes. Here's what businesses and individuals across industries have to say about our professional services and how we helped them achieve their goals.</p>
-        </div>
-        <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
-                    <p class="fs-5 mb-0" style="color: rgb(75,75,75); ;"  >"Exceptional accounting service from start to finish. The team guided me through complex tax planning with clarity and professionalism. Highly recommend for any business looking for reliable financial services."</p>
-                    <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-1.jpg" alt="Sarah Thompson">
-                    </div>
-                    <div class="my-auto">
-                        <h5 style="color: rgb(75,75,75);">Sarah Thompson</h5>
-                        <p class="mb-0" style="color: #c9a560;">CEO, TechSolutions</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 2 -->
-            <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
-                    <p class="fs-5 mb-0" style="color: rgb(75,75,75); ">"They made our entire audit process seamless. Their in-depth knowledge of financial regulations and prompt communication were key in completing our statutory audits efficiently."</p>
-                    <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-2.jpg" alt="Ahmed Khan">
-                    </div>
-                    <div class="my-auto">
-                        <h5 style="color: rgb(75,75,75);">Ahmed Khan</h5>
-                        <p class="mb-0" style="color: #c9a560;">Finance Director, RetailChain</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Testimonial 3 -->
-            <div class="testimonial-item">
-                <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
-                    <p class="fs-5 mb-0" style="color: rgb(75,75,75); ">"Their team truly goes the extra mile. I was impressed with their strategic financial advice that helped us optimize our business structure and tax obligations."</p>
-                    <div class="d-flex justify-content-end mt-3">
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                        <i class="fas fa-star" style="color: #c9a560;"></i>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-3.jpg" alt="Maria Gomez">
-                    </div>
-                    <div class="my-auto">
-                        <h5 style="color: rgb(75,75,75);">Maria Gomez</h5>
-                        <p class="mb-0" style="color: #c9a560;">Founder, GreenStartups</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+   <!-- Testimonial Start -->
+<div class="container-fluid testimonial overflow-hidden pb-5 bg-white" style="font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;">
+  <div class="container py-5">
+    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="sub-style">
+        <h5 class="text-highlight sub-title px-3">Client Testimonials</h5>
+      </div>
+      <h1 class="about-title mb-4">Hear What Our Clients Say</h1>
+      <p class="text-primary-custom mb-0">
+        Our clients' success stories speak volumes. Here's what businesses and individuals across industries have to say about our professional services and how we helped them achieve their goals.
+      </p>
     </div>
+
+    <div class="owl-carousel testimonial-carousel wow zoomInDown" data-wow-delay="0.2s">
+      
+      <!-- Testimonial 1 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+          <p class="text-primary-custom fs-5 mb-0">
+            "Exceptional accounting service from start to finish. The team guided me through complex tax planning with clarity and professionalism. Highly recommend for any business looking for reliable financial services."
+          </p>
+          <div class="d-flex justify-content-end mt-3">
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+            <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-1.jpg" alt="Sarah Thompson">
+          </div>
+          <div class="my-auto">
+            <h5 class="text-primary-custom mb-1">Sarah Thompson</h5>
+            <p class="mb-0 text-highlight">CEO, TechSolutions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+          <p class="text-primary-custom fs-5 mb-0">
+            "They made our entire audit process seamless. Their in-depth knowledge of financial regulations and prompt communication were key in completing our statutory audits efficiently."
+          </p>
+          <div class="d-flex justify-content-end mt-3">
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+            <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-2.jpg" alt="Ahmed Khan">
+          </div>
+          <div class="my-auto">
+            <h5 class="text-primary-custom mb-1">Ahmed Khan</h5>
+            <p class="mb-0 text-highlight">Finance Director, RetailChain</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content p-4 mb-5 bg-white rounded shadow-sm" style="border: 1px solid rgba(75,75,75,0.1);">
+          <p class="text-primary-custom fs-5 mb-0">
+            "Their team truly goes the extra mile. I was impressed with their strategic financial advice that helped us optimize our business structure and tax obligations."
+          </p>
+          <div class="d-flex justify-content-end mt-3">
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+            <i class="fas fa-star text-highlight"></i>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="rounded-circle me-4 overflow-hidden" style="width: 80px; height: 80px; border: 2px solid #c9a560;">
+            <img class="img-fluid w-100 h-100 object-fit-cover" src="img/testimonial-3.jpg" alt="Maria Gomez">
+          </div>
+          <div class="my-auto">
+            <h5 class="text-primary-custom mb-1">Maria Gomez</h5>
+            <p class="mb-0 text-highlight">Founder, GreenStartups</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 <!-- Testimonial End -->
 
@@ -1414,160 +1387,141 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="office pt-5">
             <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="sub-style">
-                    <h5 class="sub-title px-3" style="color: #c9a560;" >Our Offices</h5>
+                    <h5 class="sub-title px-3" style="color: #c9a560;">Our Offices</h5>
                 </div>
-                <h1 class="display-5 mb-4" style="color: rgb(75,75,75);">Connect With Our Team</h1>
-                <p class="mb-0" style="color: rgb(75,75,75);">We proudly serve clients across India. Whether you're in Indore, Ujjain, Delhi, or Mumbai — our dedicated teams are here to support your accounting and financial needs.</p>
+                <h1 class=" about-title  display-5 mb-4" style="color: rgb(75,75,75);">Connect With Our Team</h1>
+                <p class="mb-0" style="color: rgb(75,75,75);">
+                    We proudly serve clients across India. Whether you're in Indore, Ujjain, Delhi, or Mumbai — our dedicated teams are here to support your accounting and financial needs.
+                </p>
             </div>
             <div class="row g-4 justify-content-center">
 
+                <!-- Bangalore Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-2.jpg" class="img-fluid w-100" alt="Bangalore Office" style="height: 180px; object-fit: cover;">
+                        </div>
+                        <div class="office-content d-flex flex-column">
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Bangalore</h4>
+                            <a href="tel:+91234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 234 567 890</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">Suite 201, Business Tower, MG Road, Bangalore, KA 560001</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hyderabad Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-1.jpg" class="img-fluid w-100" alt="Hyderabad Office" style="height: 180px; object-fit: cover;">
+                        </div>
+                        <div class="office-content d-flex flex-column">
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Hyderabad</h4>
+                            <a href="tel:+910123456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 012 345 6789</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">45 Freeganj Road, Hyderabad, TS 500001</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pune Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-3.jpg" class="img-fluid w-100" alt="Pune Office" style="height: 180px; object-fit: cover;">
+                        </div>
+                        <div class="office-content d-flex flex-column">
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Pune</h4>
+                            <a href="tel:+919202456705" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 920 245 6705</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Connaught Place, Pune, MH 411001</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mumbai Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-4.jpg" class="img-fluid w-100" alt="Mumbai Office" style="height: 180px; object-fit: cover;">
+                        </div>
+                        <div class="office-content d-flex flex-column">
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Mumbai</h4>
+                            <a href="tel:+912234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 22 3456 7890</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">45 Nariman Point, Mumbai, MH 400021</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ahmedabad Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
+                        <div class="office-img mb-4 overflow-hidden rounded">
+                            <img src="img/office-5.jpg" class="img-fluid w-100" alt="Ahmedabad Office" style="height: 180px; object-fit: cover;">
+                        </div>
+                        <div class="office-content d-flex flex-column">
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Ahmedabad</h4>
+                            <a href="tel:+912345678901" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 234 567 8901</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">Business Tower, SG Highway, Ahmedabad, GJ 380015</p>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Indore Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.1s">
                     <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                         <div class="office-img mb-4 overflow-hidden rounded">
                             <img src="img/office-2.jpg" class="img-fluid w-100" alt="Indore Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Bangalore</h4>
-                            <a href="tel:+1234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+123 456 7890</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Indore</h4>
+                            <a href="tel:+910123456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 012 345 6789</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
                             <p class="mb-0" style="color: rgb(75,75,75);">Suite 201, Business Tower, AB Road, Indore, MP 452001</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Ujjain Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+
+                <!-- Kolkata Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.3s">
                     <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                         <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-1.jpg" class="img-fluid w-100" alt="Ujjain Office" style="height: 180px; object-fit: cover;">
+                            <img src="img/office-6.jpg" class="img-fluid w-100" alt="Kolkata Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Hyderabad</h4>
-                            <a href="tel:+101203456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">(012) 0345 6789</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">45 Freeganj Road, Ujjain, MP 456010</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Delhi Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
-                        <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-3.jpg" class="img-fluid w-100" alt="Delhi Office" style="height: 180px; object-fit: cover;">
-                        </div>
-                        <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Pune </h4>
-                            <a href="tel:+911234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91-9202456705</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Connaught Place, New Delhi 110001</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mumbai Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
-                        <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-4.jpg" class="img-fluid w-100" alt="Mumbai Office" style="height: 180px; object-fit: cover;">
-                        </div>
-                        <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Mumbai</h4>
-                            <a href="tel:+912234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 22 3456 7890</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">45 Nariman Point, Mumbai, MH 400021</p>
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Kolkata</h4>
+                            <a href="tel:+919202456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 920 245 6789</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Park Street, Kolkata, WB 700016</p>
                         </div>
                     </div>
                 </div>
 
-
-
-
-
-
-
-                              <!-- Indore Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Delhi NCR Office -->
+                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.5s">
                     <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
                         <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-2.jpg" class="img-fluid w-100" alt="Indore Office" style="height: 180px; object-fit: cover;">
+                            <img src="img/office-3.jpg" class="img-fluid w-100" alt="Delhi NCR Office" style="height: 180px; object-fit: cover;">
                         </div>
                         <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Ahmedabad</h4>
-                            <a href="tel:+1234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+123 456 7890</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">Suite 201, Business Tower, AB Road, Indore, MP 452001</p>
+                            <h4 class="text-primary-custom mb-2" style="color: #c9a560;">Delhi NCR</h4>
+                            <a href="tel:+919876543210" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 987 654 3210</a>
+                            <a href="mailto:info@qss.net.in" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in</a>
+                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Connaught Place, New Delhi, DL 110001</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Ujjain Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
-                        <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-1.jpg" class="img-fluid w-100" alt="Ujjain Office" style="height: 180px; object-fit: cover;">
-                        </div>
-                        <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Indore</h4>
-                            <a href="tel:+101203456789" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">(012) 0345 6789</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">45 Freeganj Road, Ujjain, MP 456010</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Delhi Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
-                        <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-3.jpg" class="img-fluid w-100" alt="Delhi Office" style="height: 180px; object-fit: cover;">
-                        </div>
-                        <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">KolKata</h4>
-                            <a href="tel:+911234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91-9202456705</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">C-204, Connaught Place, New Delhi 110001</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mumbai Office -->
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="office-item p-4 bg-white rounded shadow-sm h-100" style="border: 1px solid rgba(75,75,75,0.1); transition: all 0.3s ease;">
-                        <div class="office-img mb-4 overflow-hidden rounded">
-                            <img src="img/office-4.jpg" class="img-fluid w-100" alt="Mumbai Office" style="height: 180px; object-fit: cover;">
-                        </div>
-                        <div class="office-content d-flex flex-column">
-                            <h4 class="mb-2" style="color: #c9a560;">Delhi NCR</h4>
-                            <a href="tel:+912234567890" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">+91 22 3456 7890</a>
-                            <a href="mailto:info@qss.net.in
-" class="fs-5 mb-2" style="color: rgb(75,75,75); text-decoration: none;">info@qss.net.in
-</a>
-                            <p class="mb-0" style="color: rgb(75,75,75);">45 Nariman Point, Mumbai, MH 400021</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
 </div>
 <!-- Contact End -->
+
 
 <style>
     .office-item:hover {
@@ -1594,7 +1548,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Contact Info -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4" style="color: #c9a560;">Contact Info</h4>
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Contact Info</h4>
                     <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i>Corporate HQ: S.R. No. 71C/2, Flat No. 201, Harpale Complex, Haveli, Pune, Manjari Bk (N.V.), 412307</a>
                     <a href="mailto:info@qss.net.in
 " class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@qss.net.in
@@ -1603,10 +1557,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91-9202456705</a>
                     <div class="d-flex align-items-center">
                         <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; background: none; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center;  background: none; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram" style="color: #c9a560;"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in" style="color: #c9a560;"></i></a>
                     </div>
                 </div>
             </div>
@@ -1614,7 +1568,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Opening Time -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4" style="color: #c9a560;">Opening Time</h4>
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Opening Time</h4>
                     <div class="mb-3">
                         <h6 class="mb-0 text-white">Mon - Friday:</h6>
                         <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
@@ -1633,8 +1587,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Our Services -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4" style="color: #c9a560;">Our Services</h4>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Inventory Management</a>
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Our Services</h4>
+                        <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Inventory Management</a>
                     <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit & Assurance</a>
                     <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Asset Management</a>
                     <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Showroom Audits</a>
@@ -1646,7 +1600,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Newsletter -->
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item">
-                    <h4 class="mb-4" style="color: #c9a560;">Newsletter</h4>
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Newsletter</h4>
                     <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
                     <div class="position-relative">
                         <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
