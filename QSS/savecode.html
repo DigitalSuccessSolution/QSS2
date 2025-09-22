@@ -1,0 +1,374 @@
+<section id="matrix-slider" class="pb-4 pb-md-5 position-relative" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); overflow: hidden; padding-top: 0 !important;">
+  <style>
+    /* Custom color classes */
+    .text-primary-custom {
+      color: rgb(75, 75, 75) !important;
+    }
+    .text-highlight {
+      color: #c9a560 !important;
+    }
+    .btn-custom {
+      /* background-color: #c9a560;
+      color: #fff;
+      border: none; */
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      /* box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3); */
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn-custom:hover {
+      background-color: #b08e4f;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(201, 165, 96, 0.4);
+    }
+    .btn-custom:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.5);
+      opacity: 0;
+      border-radius: 100%;
+      transform: scale(1, 1) translate(-50%);
+      transform-origin: 50% 50%;
+      z-index: -1;
+    }
+    .btn-custom:focus:after {
+      animation: ripple 1s ease-out;
+    }
+    @keyframes ripple {
+      0% {
+        transform: scale(0, 0);
+        opacity: 1;
+      }
+      20% {
+        transform: scale(25, 25);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(40, 40);
+      }
+    }
+    
+    /* Carousel enhancements */
+    #matrixCarousel {
+      position: relative;
+      z-index: 2;
+    }
+    .carousel-item {
+      padding: 40px 0;
+    }
+    .carousel-inner {
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(201, 165, 96, 0.9);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(2px);
+    }
+    .carousel-control-prev {
+      left: 15px;
+    }
+    .carousel-control-next {
+      right: 15px;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+      background: #c9a560;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 5px 15px rgba(201, 165, 96, 0.4);
+    }
+    .carousel-indicators {
+      bottom: 15px;
+    }
+    .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(201, 165, 96, 0.4);
+      border: none;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+    .carousel-indicators button.active {
+      background-color: #c9a560;
+      transform: scale(1.3);
+      box-shadow: 0 0 8px rgba(201, 165, 96, 0.6);
+    }
+    
+    /* Content styling - Consistent for all slides */
+    .carousel-content-wrapper {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      height: 100%;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 15px;
+    }
+    .carousel-content-wrapper:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: #c9a560;
+    }
+    .carousel-item h3 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .carousel-item h3:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: #c9a560;
+      border-radius: 2px;
+    }
+    .carousel-item p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .carousel-item .text-highlight {
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    /* Image styling - Consistent for all slides */
+    .carousel-img-container {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 15px;
+    }
+    .carousel-item img {
+      border-radius: 12px;
+      transition: all 0.5s ease;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-item:hover img {
+      transform: scale(1.02);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1199.98px) {
+      .carousel-item h3 {
+        font-size: 1.8rem;
+      }
+      .carousel-item p {
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 991.98px) {
+      .carousel-item {
+        padding: 30px 0;
+      }
+      .carousel-content-wrapper {
+        padding: 30px;
+        min-height: 300px;
+      }
+      .carousel-img-container {
+        height: 300px;
+      }
+      .carousel-item h3 {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .carousel-item {
+        padding: 20px 0;
+      }
+      .carousel-content-wrapper {
+        min-height: auto;
+        margin-bottom: 20px;
+      }
+      .carousel-item h3 {
+        font-size: 1.4rem;
+      }
+      .carousel-item h3:after {
+        width: 50px;
+        height: 2px;
+        bottom: -8px;
+      }
+      .carousel-item p {
+        font-size: 0.95rem;
+      }
+      .carousel-control-prev, .carousel-control-next {
+        width: 40px;
+        height: 40px;
+      }
+      .carousel-control-prev {
+        left: 5px;
+      }
+      .carousel-control-next {
+        right: 5px;
+      }
+      .carousel-content-wrapper,
+      .carousel-img-container {
+        margin: 0 5px;
+      }
+    }
+    @media (max-width: 575.98px) {
+      .carousel-content-wrapper {
+        padding: 20px;
+      }
+      .carousel-item h3 {
+        font-size: 1.3rem;
+      }
+      .btn-custom {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+
+  <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Powering Trust Through Precision
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
+                  India's trusted partner for Audit, Risk & Compliance Services.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Tech Platform – QuickEx™
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <div class="carousel-content-wrapper">
+                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
+                  Industry-Specific Foresight. Local Precision.
+                </h3>
+                <p class="text-primary-custom text-center text-lg-start">
+                  <span class="text-highlight">QSS delivers more than audits—</span><br>
+                  Backed by industry specialists and boots-on-ground auditors across India, 
+                  we turn operational complexity into compliant clarity.
+                </p>
+                <div class="text-center text-lg-start">
+                  <a href="#" class="btn btn-custom">Know more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="carousel-img-container">
+                <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                     alt="Award" 
+                     class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#matrixCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#matrixCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+<!-- hero end -->
+
+
+
+

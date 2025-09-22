@@ -204,32 +204,31 @@
 
 
 <!-- hero section  -->
-
-
 <section id="matrix-slider" class="pb-4 pb-md-5 position-relative" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); overflow: hidden; padding-top: 0 !important;">
   <style>
     /* Custom color classes */
     .text-primary-custom {
-      color: rgb(75, 75, 75) !important;
+      color: rgb(45, 45, 45) !important;
     }
     .text-highlight {
       color: #c9a560 !important;
     }
     .btn-custom {
-      /* background-color: #c9a560;
+      background: linear-gradient(135deg, #c9a560 0%, #b08e4f 100%);
       color: #fff;
-      border: none; */
+      border: none;
       padding: 14px 32px;
       border-radius: 50px;
       font-weight: 600;
       transition: all 0.3s ease;
-      /* box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3); */
+      box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3);
       position: relative;
       overflow: hidden;
       z-index: 1;
+      letter-spacing: 0.5px;
     }
     .btn-custom:hover {
-      background-color: #b08e4f;
+      background: linear-gradient(135deg, #b08e4f 0%, #a07e45 100%);
       transform: translateY(-3px);
       box-shadow: 0 12px 25px rgba(201, 165, 96, 0.4);
     }
@@ -271,7 +270,7 @@
       z-index: 2;
     }
     .carousel-item {
-      padding: 40px 0;
+      padding: 60px 0;
     }
     .carousel-inner {
       border-radius: 0;
@@ -289,10 +288,10 @@
       backdrop-filter: blur(2px);
     }
     .carousel-control-prev {
-      left: 15px;
+      left: 30px;
     }
     .carousel-control-next {
-      right: 15px;
+      right: 30px;
     }
     .carousel-control-prev:hover, .carousel-control-next:hover {
       background: #c9a560;
@@ -300,170 +299,258 @@
       box-shadow: 0 5px 15px rgba(201, 165, 96, 0.4);
     }
     .carousel-indicators {
-      bottom: 15px;
+      bottom: 25px;
     }
     .carousel-indicators button {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background-color: rgba(201, 165, 96, 0.4);
-      border: none;
-      margin: 0 5px;
+      border: 2px solid transparent;
+      margin: 0 6px;
       transition: all 0.3s ease;
     }
     .carousel-indicators button.active {
       background-color: #c9a560;
+      border-color: #fff;
       transform: scale(1.3);
       box-shadow: 0 0 8px rgba(201, 165, 96, 0.6);
     }
     
-    /* Content styling - Consistent for all slides */
-    .carousel-content-wrapper {
+    /* Combined card styling */
+    .combined-card {
       background: white;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      height: 100%;
-      min-height: 350px;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      height: 450px;
+      margin: 0 30px;
+      transition: all 0.4s ease;
+    }
+    .combined-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 40px 70px rgba(0,0,0,0.18);
+    }
+    
+    .card-content-section {
+      flex: 1;
+      padding: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       position: relative;
-      overflow: hidden;
-      margin: 0 15px;
     }
-    .carousel-content-wrapper:before {
+    .card-content-section:before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 5px;
       height: 100%;
-      background: #c9a560;
+      background: linear-gradient(to bottom, #c9a560, #b08e4f);
     }
+    
+    .card-image-section {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-image-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+    }
+    .card-image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    .combined-card:hover .card-image-section img {
+      transform: scale(1.03);
+    }
+    
     .carousel-item h3 {
-      font-size: 2rem;
-      line-height: 1.2;
+      font-size: 2.2rem;
+      line-height: 1.3;
       margin-bottom: 1.5rem;
       position: relative;
       display: inline-block;
       font-weight: 700;
+      letter-spacing: -0.5px;
     }
     .carousel-item h3:after {
       content: '';
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 0;
-      width: 70px;
-      height: 3px;
-      background: #c9a560;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #c9a560, #b08e4f);
       border-radius: 2px;
     }
     .carousel-item p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.15rem;
+      line-height: 1.7;
       color: #555;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
     .carousel-item .text-highlight {
       font-weight: 600;
       display: inline-block;
+      position: relative;
+    }
+    .carousel-item .text-highlight:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(201, 165, 96, 0.2);
+      z-index: -1;
     }
     
-    /* Image styling - Consistent for all slides */
-    .carousel-img-container {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 15px;
+    /* Premium decorative elements */
+    .premium-decoration {
+      position: absolute;
+      z-index: 0;
     }
-    .carousel-item img {
-      border-radius: 12px;
-      transition: all 0.5s ease;
-      object-fit: cover;
+    .decoration-1 {
+      top: 10%;
+      right: 5%;
+      width: 120px;
+      height: 120px;
+      border: 15px solid rgba(201, 165, 96, 0.1);
+      border-radius: 50%;
+    }
+    .decoration-2 {
+      bottom: 15%;
+      left: 5%;
+      width: 80px;
+      height: 80px;
+      border: 10px solid rgba(201, 165, 96, 0.08);
+      transform: rotate(45deg);
+    }
+    
+    /* Subtle background pattern */
+    .bg-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-    }
-    .carousel-item:hover img {
-      transform: scale(1.02);
+      background-image: radial-gradient(rgba(201, 165, 96, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+      opacity: 0.5;
     }
     
     /* Responsive adjustments */
     @media (max-width: 1199.98px) {
       .carousel-item h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      .carousel-item p {
-        font-size: 1rem;
+      .card-content-section {
+        padding: 40px;
+      }
+      .combined-card {
+        height: 420px;
       }
     }
     @media (max-width: 991.98px) {
       .carousel-item {
+        padding: 40px 0;
+      }
+      .combined-card {
+        flex-direction: column;
+        height: auto;
+        margin: 0 20px;
+      }
+      .card-content-section {
+        padding: 35px;
+        order: 2;
+      }
+      .card-image-section {
+        height: 350px;
+        order: 1;
+      }
+      .carousel-item h3 {
+        font-size: 1.8rem;
+      }
+      .carousel-control-prev {
+        left: 15px;
+      }
+      .carousel-control-next {
+        right: 15px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .carousel-item {
         padding: 30px 0;
       }
-      .carousel-content-wrapper {
-        padding: 30px;
-        min-height: 300px;
+      .combined-card {
+        margin: 0 15px;
       }
-      .carousel-img-container {
+      .card-content-section {
+        padding: 30px;
+      }
+      .card-image-section {
         height: 300px;
       }
       .carousel-item h3 {
         font-size: 1.6rem;
       }
-    }
-    @media (max-width: 767.98px) {
-      .carousel-item {
-        padding: 20px 0;
-      }
-      .carousel-content-wrapper {
-        min-height: auto;
-        margin-bottom: 20px;
-      }
-      .carousel-item h3 {
-        font-size: 1.4rem;
-      }
       .carousel-item h3:after {
-        width: 50px;
-        height: 2px;
-        bottom: -8px;
+        width: 60px;
+        height: 3px;
+        bottom: -10px;
       }
       .carousel-item p {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
       }
       .carousel-control-prev, .carousel-control-next {
         width: 40px;
         height: 40px;
       }
       .carousel-control-prev {
-        left: 5px;
+        left: 10px;
       }
       .carousel-control-next {
-        right: 5px;
-      }
-      .carousel-content-wrapper,
-      .carousel-img-container {
-        margin: 0 5px;
+        right: 10px;
       }
     }
     @media (max-width: 575.98px) {
-      .carousel-content-wrapper {
-        padding: 20px;
+      .card-content-section {
+        padding: 25px;
       }
       .carousel-item h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
       .btn-custom {
-        padding: 10px 25px;
+        padding: 12px 28px;
         font-size: 0.95rem;
+      }
+      .carousel-indicators {
+        bottom: 15px;
+      }
+      .card-image-section {
+        height: 250px;
       }
     }
   </style>
+
+  <!-- Decorative elements -->
+  <div class="premium-decoration decoration-1"></div>
+  <div class="premium-decoration decoration-2"></div>
+  <div class="bg-pattern"></div>
 
   <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Indicators -->
@@ -477,26 +564,22 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Powering Trust Through Precision
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
-                  India's trusted partner for Audit, Risk & Compliance Services.
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
+          <div class="combined-card">
+            <div class="card-image-section">
+              <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" 
+                   alt="Award" 
+                   class="img-fluid">
             </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" 
-                     alt="Award" 
-                     class="img-fluid">
+            <div class="card-content-section">
+              <h3 class="fw-bold text-primary-custom">
+                Powering Trust Through Precision
+              </h3>
+              <p class="text-primary-custom">
+                <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
+                India's trusted partner for Audit, Risk & Compliance Services.
+              </p>
+              <div>
+                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
               </div>
             </div>
           </div>
@@ -506,25 +589,21 @@
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Tech Platform – QuickEx™
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
+          <div class="combined-card">
+            <div class="card-image-section">
+              <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                   alt="Award" 
+                   class="img-fluid">
             </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" 
-                     alt="Award" 
-                     class="img-fluid">
+            <div class="card-content-section">
+              <h3 class="fw-bold text-primary-custom">
+                Tech Platform – QuickEx™
+              </h3>
+              <p class="text-primary-custom">
+                <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
+              </p>
+              <div>
+                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
               </div>
             </div>
           </div>
@@ -534,27 +613,23 @@
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Industry-Specific Foresight. Local Precision.
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">QSS delivers more than audits—</span><br>
-                  Backed by industry specialists and boots-on-ground auditors across India, 
-                  we turn operational complexity into compliant clarity.
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
+          <div class="combined-card">
+            <div class="card-image-section">
+              <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" 
+                   alt="Award" 
+                   class="img-fluid">
             </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" 
-                     alt="Award" 
-                     class="img-fluid">
+            <div class="card-content-section">
+              <h3 class="fw-bold text-primary-custom">
+                Industry-Specific Foresight. Local Precision.
+              </h3>
+              <p class="text-primary-custom">
+                <span class="text-highlight">QSS delivers more than audits—</span><br>
+                Backed by industry specialists and boots-on-ground auditors across India, 
+                we turn operational complexity into compliant clarity.
+              </p>
+              <div>
+                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
               </div>
             </div>
           </div>
@@ -573,56 +648,7 @@
     </button>
   </div>
 </section>
-
-
-       <!-- Modal Search Start -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <style>
-    .text-primary-custom {
-      color: rgb(75, 75, 75) !important;
-    }
-    .text-highlight {
-      color: #c9a560 !important;
-    }
-    .btn-highlight {
-      background-color: #c9a560 !important;
-      color: #fff !important;
-      border: none;
-    }
-    .btn-highlight:hover {
-      background-color: #b08e4f !important;
-      color: #fff !important;
-    }
-    .input-group-text {
-      background-color: #c9a560 !important;
-      color: #fff !important;
-      border: none;
-    }
-    .form-control {
-      border: 1px solid #c9a560;
-      color: rgb(75, 75, 75);
-    }
-    .form-control::placeholder {
-      color: rgba(75, 75, 75, 0.6);
-    }
-  </style>
-
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content rounded-0">
-      <div class="modal-header">
-        <h4 class="modal-title text-primary-custom mb-0" id="exampleModalLabel">Search by keyword</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body d-flex align-items-center">
-        <div class="input-group w-75 mx-auto d-flex">
-          <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-          <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal Search End -->
+<!-- hero section end  -->
 
 
 
