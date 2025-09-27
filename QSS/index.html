@@ -842,6 +842,7 @@
             height: 3px;
             background-color: #c9a560;
         }
+       
     </style>
 
    
@@ -1710,68 +1711,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 
 
 
-<!-- Back to Top Button -->
-<a href="#" class="btn btn-lg-square back-to-top" style="background-color: white; color: #c9a560; border: 1px solid #c9a560;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-    </svg>
-</a>
 
-<style>
-    /* Footer Link Hover Effect */
-    .footer-item a:hover {
-        color: #c9a560 !important;
-        padding-left: 5px;
-        transition: all 0.3s ease;
-    }
-    
-    /* Social Button Effects */
-    .btn-social {
-        transition: all 0.3s ease;
-    }
-    .btn-social:hover {
-        background-color: #c9a560 !important;
-        border-color: #c9a560 !important;
-    }
-    .btn-social:hover i {
-        color: white !important;
-    }
-    
-    /* Back to Top Button Styles */
-    .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        display: none;
-        z-index: 99;
-        outline: none;
-        cursor: pointer;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .back-to-top:hover {
-        background-color: white !important;
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .back-to-top svg {
-        width: 20px;
-        height: 20px;
-        transition: all 0.3s ease;
-    }
-    .back-to-top:hover svg {
-        color: #b8934b; /* Slightly darker gold on hover */
-        transform: scale(1.1);
-    }
-</style>
 
 
         
@@ -1800,30 +1740,30 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quality Success Solutions - Voice Chatbot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #c9a560;
             --secondary-color: #d4b57d;
             --accent-color: #a8864a;
-            --light-color: #faf5eb;
+            --light-color: #f5f5f5;
             --dark-color: #5c4a2a;
             --success-color: #10b981;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
+            --shadow: 0 2px 4px rgba(201, 165, 96, 0.2);
+            --border-radius: 12px;
+            --transition: all 0.2s ease;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: #f5f7fa;
+            background-color: #ffffff;
         }
 
         .chatbot-container {
@@ -1831,9 +1771,9 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             bottom: 80px;
             right: 20px;
             width: 100%;
-            max-width: 350px;
-            height: 500px;
-            background-color: white;
+            max-width: 320px;
+            height: 450px;
+            background-color: #ffffff;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             display: none;
@@ -1850,294 +1790,303 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .chatbot-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 20px;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 12px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 16px; /* Professional font size */
+            font-size: 14px;
             font-weight: 500;
         }
 
         .header-content {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .logo {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .header-text h3 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             margin-bottom: 2px;
+            color: var(--primary-color);
         }
 
         .header-text p {
-            font-size: 13px; /* Adjusted for premium look */
-            opacity: 0.8;
+            font-size: 12px;
+            opacity: 0.85;
         }
 
         .control-btn {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             border: none;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--primary-color);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .control-btn:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: #e8d9b9;
         }
 
         .control-btn.close:hover {
             background-color: var(--accent-color);
+            color: #ffffff;
         }
 
         .chatbot-messages {
             flex: 1;
-            padding: 20px;
+            padding: 16px;
             overflow-y: auto;
-            background-color: var(--light-color);
+            background-color: #ffffff;
             display: flex;
-            flex-direction: column; /* Changed to column */
-            gap: 15px;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .message {
-            max-width: 80%;
-            padding: 12px 16px;
-            border-radius: 18px;
-            line-height: 1.4;
-            font-size: 14px;
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 16px;
+            line-height: 1.5;
+            font-size: 13px;
             position: relative;
             animation: fadeIn 0.3s ease;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .bot-message {
-            background-color: white;
+            background-color: var(--light-color);
             color: var(--dark-color);
             border-bottom-left-radius: 4px;
             margin-right: auto;
             box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e5e7eb;
         }
 
         .bot-message::before {
             content: '';
             position: absolute;
-            left: -8px;
+            left: -6px;
             bottom: 0;
-            border: 10px solid transparent;
-            border-right-color: white;
+            border: 8px solid transparent;
+            border-right-color: var(--light-color);
             border-bottom: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .user-message {
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--dark-color);
             border-bottom-right-radius: 4px;
             margin-left: auto;
+            box-shadow: var(--shadow);
         }
 
         .user-message::after {
             content: '';
             position: absolute;
-            right: -8px;
+            right: -6px;
             bottom: 0;
-            border: 10px solid transparent;
-            border-left-color: var(--secondary-color);
+            border: 8px solid transparent;
+            border-left-color: var(--light-color);
             border-bottom: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .message-time {
             display: block;
             font-size: 10px;
-            opacity: 0.7;
+            opacity: 0.6;
             margin-top: 4px;
             text-align: right;
         }
 
         .chatbot-input-area {
-            border-top: 1px solid #e0e0e0;
-            background-color: white;
-            padding: 15px;
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            padding: 12px;
         }
 
         .input-container {
             display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
         }
 
         #user-input {
             flex: 1;
-            padding: 12px 15px;
-            border: 1px solid #e0e0e0;
+            padding: 10px 12px;
+            border: 1px solid #e5e7eb;
             border-radius: var(--border-radius);
             outline: none;
             transition: var(--transition);
-            font-size: 14px;
+            font-size: 13px;
         }
 
         #user-input:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         #send-btn, #mic-btn, #voice-toggle-btn {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: var(--border-radius);
             border: none;
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--primary-color);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         #send-btn:hover, #mic-btn:hover, #voice-toggle-btn:hover {
-            background-color: var(--accent-color);
+            background-color: #e8d9b9;
         }
 
         #mic-btn.active {
             background-color: var(--success-color);
+            color: #ffffff;
             animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
         #voice-toggle-btn.muted {
-            background-color: var(--accent-color);
+            background-color: var(--light-color);
+            color: var(--accent-color);
         }
 
         .quick-reply-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .quick-reply-btn {
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-radius: 20px;
-            border: 1px solid var(--secondary-color);
-            background-color: white;
-            color: var(--secondary-color);
-            font-size: 13px; /* Adjusted for premium */
+            border: 1px solid var(--primary-color);
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 12px;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
         .quick-reply-btn:hover {
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--primary-color);
+            color: #ffffff;
         }
 
         .options-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
+            gap: 8px;
+            margin-top: 8px;
         }
 
         .option-btn {
-            padding: 12px 15px;
+            padding: 10px 12px;
             border-radius: var(--border-radius);
             border: none;
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--primary-color);
             text-align: left;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 15px; /* Professional size */
+            gap: 8px;
+            font-size: 13px;
             font-weight: 500;
+            box-shadow: var(--shadow);
         }
 
         .option-btn:hover {
-            background-color: var(--accent-color);
-            transform: translateX(5px);
+            background-color: #e8d9b9;
+            transform: translateX(3px);
         }
 
         .service-options {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .service-btn {
-            padding: 12px;
+            padding: 10px;
             border-radius: var(--border-radius);
             border: none;
-            background-color: white;
-            color: var(--dark-color);
+            background-color: var(--light-color);
+            color: var(--primary-color);
             box-shadow: var(--shadow);
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
         }
 
         .service-btn i {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--primary-color);
         }
 
         .service-btn:hover {
             background-color: var(--primary-color);
-            color: white;
+            color: #ffffff;
         }
 
         .service-btn:hover i {
-            color: white;
+            color: #ffffff;
         }
 
         .form-container {
-            margin-top: 15px;
+            margin-top: 12px;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
+            margin-bottom: 4px;
+            font-size: 13px;
             color: var(--dark-color);
             font-weight: 500;
         }
@@ -2146,71 +2095,75 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #e0e0e0;
+            padding: 8px 10px;
+            border: 1px solid #e5e7eb;
             border-radius: var(--border-radius);
-            font-size: 14px;
+            font-size: 13px;
             transition: var(--transition);
         }
 
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
             outline: none;
         }
 
         .form-group textarea {
-            min-height: 80px;
+            min-height: 70px;
             resize: vertical;
         }
 
         .submit-btn {
             width: 100%;
-            padding: 12px;
-            border-radius: var(--border-radius);
-            border: none;
-            background-color: var(--success-color);
-            color: white;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 15px;
-        }
-
-        .submit-btn:hover {
-            background-color: #059669;
-        }
-
-        .back-btn {
-            padding: 10px 15px;
+            padding: 10px;
             border-radius: var(--border-radius);
             border: none;
             background-color: var(--light-color);
-            color: var(--dark-color);
-            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 13px;
+            box-shadow: var(--shadow);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .back-btn {
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 13px;
             cursor: pointer;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            margin-top: 10px;
+            gap: 4px;
+            margin-top: 8px;
+            box-shadow: var(--shadow);
         }
 
         .back-btn:hover {
-            background-color: #e8d9b9;
+            background-color: var(--primary-color);
+            color: #ffffff;
         }
 
         .chatbot-launcher {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--primary-color);
             border: none;
             box-shadow: var(--shadow);
             cursor: pointer;
@@ -2222,31 +2175,32 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .chatbot-launcher:hover {
-            transform: scale(1.1);
-            background-color: var(--accent-color);
+            transform: scale(1.05);
+            background-color: var(--primary-color);
+            color: #ffffff;
         }
 
         .chatbot-launcher i {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .typing-indicator {
             display: flex;
-            gap: 5px;
-            padding: 12px 16px;
-            background-color: white;
-            border-radius: 18px;
+            gap: 4px;
+            padding: 10px 14px;
+            background-color: var(--light-color);
+            border-radius: 16px;
             border-bottom-left-radius: 4px;
             width: fit-content;
             box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e5e7eb;
             margin-right: auto;
         }
 
         .typing-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #9ca3af;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
             border-radius: 50%;
             animation: typingAnimation 1.4s infinite ease-in-out;
         }
@@ -2257,7 +2211,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 
         @keyframes typingAnimation {
             0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-5px); }
+            30% { transform: translateY(-4px); }
         }
 
         @media (max-width: 480px) {
@@ -2270,23 +2224,23 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             }
 
             .chatbot-header {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .header-text h3 {
-                font-size: 16px;
+                font-size: 15px;
             }
 
             .header-text p {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .option-btn {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .service-btn {
-                font-size: 13px;
+                font-size: 12px;
             }
         }
 
@@ -2299,10 +2253,10 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             top: 100%;
             left: 0;
             right: 0;
-            background-color: white;
-            border: 1px solid #e0e0e0;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
             border-radius: var(--border-radius);
-            max-height: 150px;
+            max-height: 140px;
             overflow-y: auto;
             display: none;
             z-index: 10;
@@ -2313,7 +2267,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .city-suggestion {
-            padding: 8px 12px;
+            padding: 6px 10px;
             cursor: pointer;
         }
 
@@ -2322,18 +2276,20 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .other-option {
-            padding: 8px 12px;
+            padding: 6px 10px;
             cursor: pointer;
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         .other-option:hover {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
+            color: #ffffff;
         }
 
         .address-proof-container {
-            margin-top: 10px;
+            margin-top: 8px;
             display: none;
         }
 
@@ -3152,6 +3108,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
     </script>
 </body>
 </html>
+
 
     </body>
 

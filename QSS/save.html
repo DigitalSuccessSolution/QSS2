@@ -1,0 +1,1360 @@
+<!-- chatboat -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Success Solutions - Voice Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #c9a560;
+            --secondary-color: #d4b57d;
+            --accent-color: #a8864a;
+            --light-color: #faf5eb;
+            --dark-color: #5c4a2a;
+            --success-color: #10b981;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 100%;
+            max-width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .chatbot-container.active {
+            display: flex !important;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px; /* Professional font size */
+            font-weight: 500;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header-text h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .header-text p {
+            font-size: 13px; /* Adjusted for premium look */
+            opacity: 0.8;
+        }
+
+        .control-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .control-btn.close:hover {
+            background-color: var(--accent-color);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: var(--light-color);
+            display: flex;
+            flex-direction: column; /* Changed to column */
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            line-height: 1.4;
+            font-size: 14px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bot-message {
+            background-color: white;
+            color: var(--dark-color);
+            border-bottom-left-radius: 4px;
+            margin-right: auto;
+            box-shadow: var(--shadow);
+            border: 1px solid #e0e0e0;
+        }
+
+        .bot-message::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            bottom: 0;
+            border: 10px solid transparent;
+            border-right-color: white;
+            border-bottom: 0;
+            margin-bottom: 8px;
+        }
+
+        .user-message {
+            background-color: var(--secondary-color);
+            color: white;
+            border-bottom-right-radius: 4px;
+            margin-left: auto;
+        }
+
+        .user-message::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            bottom: 0;
+            border: 10px solid transparent;
+            border-left-color: var(--secondary-color);
+            border-bottom: 0;
+            margin-bottom: 8px;
+        }
+
+        .message-time {
+            display: block;
+            font-size: 10px;
+            opacity: 0.7;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .chatbot-input-area {
+            border-top: 1px solid #e0e0e0;
+            background-color: white;
+            padding: 15px;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            outline: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        #user-input:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
+        }
+
+        #send-btn, #mic-btn, #voice-toggle-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--secondary-color);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        #send-btn:hover, #mic-btn:hover, #voice-toggle-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        #mic-btn.active {
+            background-color: var(--success-color);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        #voice-toggle-btn.muted {
+            background-color: var(--accent-color);
+        }
+
+        .quick-reply-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .quick-reply-btn {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--secondary-color);
+            background-color: white;
+            color: var(--secondary-color);
+            font-size: 13px; /* Adjusted for premium */
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quick-reply-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .option-btn {
+            padding: 12px 15px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px; /* Professional size */
+            font-weight: 500;
+        }
+
+        .option-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .service-btn {
+            padding: 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: white;
+            color: var(--dark-color);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .service-btn i {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .service-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .service-btn:hover i {
+            color: white;
+        }
+
+        .form-container {
+            margin-top: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(201, 165, 96, 0.2);
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--success-color);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .submit-btn:hover {
+            background-color: #059669;
+        }
+
+        .back-btn {
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .back-btn:hover {
+            background-color: #e8d9b9;
+        }
+
+        .chatbot-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+
+        .chatbot-launcher:hover {
+            transform: scale(1.1);
+            background-color: var(--accent-color);
+        }
+
+        .chatbot-launcher i {
+            font-size: 24px;
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 12px 16px;
+            background-color: white;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+            width: fit-content;
+            box-shadow: var(--shadow);
+            border: 1px solid #e0e0e0;
+            margin-right: auto;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #9ca3af;
+            border-radius: 50%;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: 0s; }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-container {
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+                height: 100vh;
+                max-width: 100%;
+            }
+
+            .chatbot-header {
+                font-size: 14px;
+            }
+
+            .header-text h3 {
+                font-size: 16px;
+            }
+
+            .header-text p {
+                font-size: 12px;
+            }
+
+            .option-btn {
+                font-size: 14px;
+            }
+
+            .service-btn {
+                font-size: 13px;
+            }
+        }
+
+        .city-search {
+            position: relative;
+        }
+
+        .city-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--border-radius);
+            max-height: 150px;
+            overflow-y: auto;
+            display: none;
+            z-index: 10;
+        }
+
+        .city-suggestions.active {
+            display: block;
+        }
+
+        .city-suggestion {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .city-suggestion:hover {
+            background-color: var(--light-color);
+        }
+
+        .other-option {
+            padding: 8px 12px;
+            cursor: pointer;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .other-option:hover {
+            background-color: var(--accent-color);
+        }
+
+        .address-proof-container {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .address-proof-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <div class="header-content">
+                <img src="img/222.png" alt="Quality Success Solutions Logo" class="logo">
+                <div class="header-text">
+                    <h3>Quality Success Solutions</h3>
+                    <p>Audit & Assurance</p>
+                </div>
+            </div>
+            <button class="control-btn close" id="close-btn" aria-label="Close chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages" aria-live="polite"></div>
+        <div class="chatbot-input-area">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type or speak your message..." aria-label="Type or speak your message">
+                <button id="mic-btn" aria-label="Toggle microphone"><i class="fas fa-microphone"></i></button>
+                <button id="voice-toggle-btn" aria-label="Toggle voice output"><i class="fas fa-volume-up"></i></button>
+                <button id="send-btn" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="quick-reply-container" id="quick-reply-container"></div>
+        </div>
+    </div>
+    <button class="chatbot-launcher" id="chatbot-launcher" aria-label="Open chatbot">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // DOM Elements
+            const chatbotLauncher = document.getElementById('chatbot-launcher');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const closeBtn = document.getElementById('close-btn');
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            const micBtn = document.getElementById('mic-btn');
+            const voiceToggleBtn = document.getElementById('voice-toggle-btn');
+            const quickReplyContainer = document.getElementById('quick-reply-container');
+
+            // State
+            let isChatOpen = false;
+            let currentState = 'main';
+            let isVoiceEnabled = true;
+            let isListening = false;
+
+            // WhatsApp and Email
+            const whatsappNumber = '+917171122231';
+            const businessEmail = 'info@qualitysuccesssolutions.in';
+
+            // Speech Recognition
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            let recognition = SpeechRecognition ? new SpeechRecognition() : null;
+
+            // City Search Data
+            const cities = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Patna', 'Vadodara', 'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi', 'Srinagar', 'Aurangabad', 'Dhanbad', 'Amritsar', 'Navi Mumbai', 'Allahabad', 'Ranchi', 'Howrah', 'Coimbatore', 'Jabalpur', 'Gwalior', 'Vijayawada', 'Jodhpur', 'Madurai', 'Raipur', 'Kota', 'Guwahati', 'Chandigarh', 'Solapur', 'Hubli-Dharwad', 'Bareilly', 'Moradabad', 'Mysore', 'Gurgaon', 'Aligarh', 'Jalandhar', 'Tiruchirappalli', 'Bhopal', 'Salem', 'Warangal', 'Guntur', 'Bhiwandi', 'Saharanpur', 'Gorakhpur', 'Bikaner', 'Amravati', 'Noida', 'Jamshedpur', 'Bhilai', 'Cuttack', 'Firozabad', 'Kochi', 'Nellore', 'Bhavnagar', 'Durgapur', 'Asansol', 'Rourkela', 'Nanded', 'Kolhapur', 'Ajmer', 'Akola', 'Gulbarga', 'Jamnagar', 'Ujjain', 'Latur', 'Dhule', 'Maheshtala', 'Davanagere', 'Kurnool', 'Ajmer', 'Ratlam', 'Hapur', 'Anantapur', 'Karimnagar', 'Bihar Sharif', 'Panchkula', 'Bhilwara', 'Ahmednagar', 'Ambala', 'Morena', 'Ozhukarai', 'Bathinda', 'Rampur', 'Shimla', 'Gandhinagar', 'Shivpuri', 'Chandrapur', 'Junagadh', 'Thrissur', 'Alwar', 'Kakinada', 'Nizamabad', 'Parbhani', 'Tumkur', 'Khammam', 'Ooty', 'Imphal', 'Shillong', 'Aizawl', 'Kohima', 'Gangtok', 'Agartala', 'Itanagar', 'Panaji', 'Port Blair'];
+
+            // Validate DOM Elements
+            if (!chatbotLauncher || !chatbotContainer || !chatMessages || !closeBtn || !userInput || !sendBtn || !micBtn || !voiceToggleBtn || !quickReplyContainer) {
+                console.error('One or more DOM elements are missing:', {
+                    launcher: !!chatbotLauncher,
+                    container: !!chatbotContainer,
+                    messages: !!chatMessages,
+                    closeBtn: !!closeBtn,
+                    userInput: !!userInput,
+                    sendBtn: !!sendBtn,
+                    micBtn: !!micBtn,
+                    voiceToggleBtn: !!voiceToggleBtn,
+                    quickReplyContainer: !!quickReplyContainer
+                });
+                return;
+            }
+
+            console.log('Voice chatbot script loaded successfully');
+
+            // Initialize Speech Recognition
+            if (recognition) {
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'en-US';
+
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript.trim();
+                    console.log('Voice input:', transcript);
+                    userInput.value = transcript;
+                    sendMessage();
+                };
+
+                recognition.onerror = (event) => {
+                    console.error('Speech recognition error:', event.error);
+                    micBtn.classList.remove('active');
+                    isListening = false;
+                    addBotMessage('Sorry, I couldn’t understand your voice input. Please try again or type your message.');
+                };
+
+                recognition.onend = () => {
+                    console.log('Speech recognition ended');
+                    micBtn.classList.remove('active');
+                    isListening = false;
+                };
+            } else {
+                console.warn('SpeechRecognition not supported in this browser');
+                micBtn.style.display = 'none';
+                addBotMessage('Voice input is not supported in your browser. Please type your message.');
+            }
+
+            // Toggle Microphone
+            micBtn.addEventListener('click', () => {
+                console.log('Microphone button clicked');
+                if (!recognition) return;
+                if (isListening) {
+                    recognition.stop();
+                    micBtn.classList.remove('active');
+                    isListening = false;
+                } else {
+                    recognition.start();
+                    micBtn.classList.add('active');
+                    isListening = true;
+                }
+            });
+
+            // Toggle Voice Output
+            voiceToggleBtn.addEventListener('click', () => {
+                console.log('Voice toggle clicked');
+                isVoiceEnabled = !isVoiceEnabled;
+                voiceToggleBtn.classList.toggle('muted', !isVoiceEnabled);
+                voiceToggleBtn.innerHTML = `<i class="fas fa-volume-${isVoiceEnabled ? 'up' : 'mute'}"></i>`;
+                if (!isVoiceEnabled) {
+                    speechSynthesis.cancel();
+                }
+            });
+
+            // Open Chatbot
+            chatbotLauncher.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Chatbot launcher clicked');
+                try {
+                    isChatOpen = !isChatOpen;
+                    if (isChatOpen) {
+                        chatbotContainer.classList.add('active');
+                        chatbotContainer.style.display = 'flex';
+                        if (!chatMessages.children.length) {
+                            goToMain();
+                        }
+                    } else {
+                        chatbotContainer.classList.remove('active');
+                        chatbotContainer.style.display = 'none';
+                        if (isListening && recognition) {
+                            recognition.stop();
+                            micBtn.classList.remove('active');
+                            isListening = false;
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error toggling chatbot:', error);
+                    alert('Unable to open chatbot. Please try again later.');
+                }
+            }, { capture: true });
+
+            // Close Chatbot
+            closeBtn.addEventListener('click', () => {
+                console.log('Close button clicked');
+                isChatOpen = false;
+                chatbotContainer.classList.remove('active');
+                chatbotContainer.style.display = 'none';
+                if (isListening && recognition) {
+                    recognition.stop();
+                    micBtn.classList.remove('active');
+                    isListening = false;
+                }
+            });
+
+            // Prevent Closing on Inner Clicks
+            chatbotContainer.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            // Send Message
+            sendBtn.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendMessage();
+            });
+
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message) {
+                    addUserMessage(message);
+                    userInput.value = '';
+                    showTypingIndicator();
+                    setTimeout(() => processUserMessage(message), 1000);
+                }
+            }
+
+            function displayMainOptions() {
+                console.log('Displaying main options');
+                clearQuickReplies();
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const options = [
+                    { text: '1 - Explore Services', icon: 'fa-briefcase', label: 'Explore our services' },
+                    { text: '2 - Applying for Audits', icon: 'fa-file-alt', label: 'Apply for audits' },
+                    { text: '3 - Fill - Auditor KYA Form', icon: 'fa-file-signature', label: 'Fill auditor KYA form' },
+                    { text: '4 - Contact Us', icon: 'fa-envelope', label: 'Contact us' }
+                ];
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="fas ${opt.icon}"></i> ${opt.text}`;
+                    btn.setAttribute('aria-label', opt.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Option clicked: ${opt.text}`);
+                        handleMainOption(opt.text);
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addQuickReplies(['Explore Services', 'Applying for Audits', 'Fill Auditor KYA Form', 'Contact Us']);
+                scrollToStart();
+                if (isVoiceEnabled) {
+                    speak('Please select an option or speak your choice.');
+                }
+            }
+
+            function goToMain() {
+                console.log('Going to main');
+                clearChat();
+                currentState = 'main';
+                const greeting = "Hi! 👋 Welcome to Quality Success Solutions. How can we help you today? You can speak or type your response.";
+                addBotMessage(greeting);
+                speak(greeting);
+                displayMainOptions();
+            }
+
+            function sanitizeInput(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            function addUserMessage(text) {
+                console.log('Adding user message:', text);
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user-message';
+                messageDiv.textContent = sanitizeInput(text);
+                const timeSpan = document.createElement('span');
+                timeSpan.className = 'message-time';
+                timeSpan.textContent = getCurrentTime();
+                messageDiv.appendChild(timeSpan);
+                chatMessages.appendChild(messageDiv);
+                scrollToStart();
+            }
+
+            function addBotMessage(text) {
+                console.log('Adding bot message:', text);
+                const typingIndicator = document.querySelector('.typing-indicator');
+                if (typingIndicator) typingIndicator.remove();
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message bot-message';
+                messageDiv.innerHTML = text;
+                const timeSpan = document.createElement('span');
+                timeSpan.className = 'message-time';
+                timeSpan.textContent = getCurrentTime();
+                messageDiv.appendChild(timeSpan);
+                chatMessages.appendChild(messageDiv);
+                scrollToStart();
+                speak(text);
+            }
+
+            function speak(text) {
+                if (!isVoiceEnabled || !speechSynthesis) return;
+                console.log('Speaking:', text);
+                speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.pitch = 1;
+                utterance.rate = 1;
+                utterance.volume = 1;
+                speechSynthesis.speak(utterance);
+            }
+
+            function showTypingIndicator() {
+                console.log('Showing typing indicator');
+                const existingIndicator = document.querySelector('.typing-indicator');
+                if (existingIndicator) existingIndicator.remove();
+                const indicatorDiv = document.createElement('div');
+                indicatorDiv.className = 'typing-indicator';
+                for (let i = 0; i < 3; i++) {
+                    indicatorDiv.appendChild(document.createElement('div')).className = 'typing-dot';
+                }
+                chatMessages.appendChild(indicatorDiv);
+                scrollToStart();
+            }
+
+            function handleMainOption(option) {
+                console.log('Handling main option:', option);
+                if (option.includes('Explore Services')) {
+                    showServiceOptions();
+                } else if (option.includes('Applying for Audits')) {
+                    showApplyOptions();
+                } else if (option.includes('Fill - Auditor KYA Form')) {
+                    showKYAForm();
+                } else if (option.includes('Contact Us')) {
+                    showContactUs();
+                }
+            }
+
+            function showServiceOptions() {
+                console.log('Showing service options');
+                currentState = 'service-options';
+                clearChat();
+                const message = "We offer a wide range of audit and assurance solutions. Please select a service category:";
+                addBotMessage(message);
+                const serviceOptionsDiv = document.createElement('div');
+                serviceOptionsDiv.className = 'service-options';
+                const services = [
+                    { name: 'Inventory Management', icon: 'fa-warehouse', label: 'Inventory management solutions' },
+                    { name: 'Audit & Assurance', icon: 'fa-shield-alt', label: 'Audit and assurance services' },
+                    { name: 'Asset Management', icon: 'fa-chart-line', label: 'Asset management solutions' },
+                    { name: 'Showroom Audits', icon: 'fa-store', label: 'Audit services for showrooms' },
+                    { name: 'Manpower Outsourcing', icon: 'fa-user-tie', label: 'Manpower outsourcing services' },
+                    { name: 'Background Verification', icon: 'fa-user-check', label: 'Background verification services' }
+                ];
+                services.forEach(service => {
+                    const btn = document.createElement('button');
+                    btn.className = 'service-btn';
+                    btn.innerHTML = `<i class="fas ${service.icon}"></i> ${service.name}`;
+                    btn.setAttribute('aria-label', service.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Service clicked: ${service.name}`);
+                        showServiceDetails(service.name);
+                    });
+                    serviceOptionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(serviceOptionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showServiceDetails(service) {
+                console.log('Showing service details for:', service);
+                currentState = 'service-details';
+                clearChat();
+                const intro = `You've selected <strong>${service}</strong>. Here's what we offer:`;
+                addBotMessage(intro);
+                const serviceDetails = {
+                    'Inventory Management': 'Driving accuracy, efficiency, and control across your inventory lifecycle.',
+                    'Audit & Assurance': 'Robust internal controls and financial integrity audited with precision.',
+                    'Asset Management': 'Safeguarding your physical assets with transparent tracking.',
+                    'Showroom Audits': 'Dynamic audits for retail environments.',
+                    'Manpower Outsourcing': 'Deploy skilled, compliant resources.',
+                    'Background Verification': 'Secure and digitized verification services.'
+                };
+                addBotMessage(serviceDetails[service] || 'Customized solutions available. Contact us for details.');
+                addBackButton('Back to Services', showServiceOptions);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function createForm(fields, submitText, onSubmit, backHandler, defaultValues = {}) {
+                console.log('Creating form:', submitText);
+                const form = document.createElement('form');
+                form.className = 'form-container';
+                fields.forEach(field => {
+                    const group = document.createElement('div');
+                    group.className = 'form-group';
+                    const label = document.createElement('label');
+                    label.htmlFor = field.id;
+                    label.textContent = field.label;
+                    let input;
+                    if (field.id === 'city') {
+                        const container = document.createElement('div');
+                        container.className = 'city-search';
+                        input = document.createElement('input');
+                        input.type = 'text';
+                        input.id = field.id;
+                        input.setAttribute('aria-label', field.label);
+                        input.placeholder = field.placeholder || '';
+                        if (field.required) input.required = true;
+                        if (defaultValues[field.id]) input.value = defaultValues[field.id];
+                        const suggestions = document.createElement('div');
+                        suggestions.className = 'city-suggestions';
+                        container.appendChild(input);
+                        container.appendChild(suggestions);
+                        input.addEventListener('input', () => {
+                            const query = input.value.toLowerCase();
+                            suggestions.innerHTML = '';
+                            if (query) {
+                                const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
+                                filteredCities.forEach(city => {
+                                    const suggestion = document.createElement('div');
+                                    suggestion.className = 'city-suggestion';
+                                    suggestion.textContent = city;
+                                    suggestion.addEventListener('click', () => {
+                                        input.value = city;
+                                        suggestions.classList.remove('active');
+                                    });
+                                    suggestions.appendChild(suggestion);
+                                });
+                                if (filteredCities.length === 0) {
+                                    const other = document.createElement('div');
+                                    other.className = 'other-option';
+                                    other.textContent = 'Other (Manually Enter)';
+                                    other.addEventListener('click', () => {
+                                        input.value = '';
+                                        suggestions.classList.remove('active');
+                                        const email = document.createElement('a');
+                                        email.href = `mailto:${businessEmail}?subject=Custom City Request&body=Please provide the city details for KYA Form`;
+                                        email.textContent = 'Click here to email us';
+                                        chatMessages.appendChild(email);
+                                        scrollToStart();
+                                    });
+                                    suggestions.appendChild(other);
+                                }
+                                suggestions.classList.add('active');
+                            } else {
+                                suggestions.classList.remove('active');
+                            }
+                        });
+                        input.addEventListener('blur', () => {
+                            setTimeout(() => suggestions.classList.remove('active'), 200);
+                        });
+                        group.appendChild(label);
+                        group.appendChild(container);
+                    } else if (field.id === 'addressproof') {
+                        group.appendChild(label);
+                        const select = document.createElement('select');
+                        select.id = field.id;
+                        select.setAttribute('aria-label', field.label);
+                        select.required = field.required;
+                        ['Aadhar Card', 'Electricity Bill', 'Voter ID'].forEach(opt => {
+                            const option = document.createElement('option');
+                            option.value = opt;
+                            option.textContent = opt;
+                            select.appendChild(option);
+                        });
+                        select.addEventListener('change', (e) => {
+                            const proofContainer = group.querySelector('.address-proof-container');
+                            if (proofContainer) proofContainer.remove();
+                            if (e.target.value) {
+                                const container = document.createElement('div');
+                                container.className = 'address-proof-container active';
+                                const fileInput = document.createElement('input');
+                                fileInput.type = 'file';
+                                fileInput.id = `upload_${e.target.value.toLowerCase().replace(' ', '_')}`;
+                                fileInput.setAttribute('aria-label', `Upload ${e.target.value}`);
+                                container.appendChild(fileInput);
+                                group.appendChild(container);
+                            }
+                        });
+                        group.appendChild(select);
+                    } else if (field.type === 'select') {
+                        group.appendChild(label);
+                        const select = document.createElement('select');
+                        select.id = field.id;
+                        select.setAttribute('aria-label', field.label);
+                        select.required = field.required;
+                        field.options.forEach(opt => {
+                            const option = document.createElement('option');
+                            option.value = opt;
+                            option.textContent = opt;
+                            select.appendChild(option);
+                        });
+                        group.appendChild(select);
+                    } else if (field.type === 'textarea') {
+                        group.appendChild(label);
+                        const textarea = document.createElement('textarea');
+                        textarea.id = field.id;
+                        textarea.setAttribute('aria-label', field.label);
+                        if (field.placeholder) textarea.placeholder = field.placeholder;
+                        if (field.required) textarea.required = true;
+                        if (defaultValues[field.id]) textarea.value = defaultValues[field.id];
+                        group.appendChild(textarea);
+                    } else {
+                        group.appendChild(label);
+                        input = document.createElement('input');
+                        input.type = field.type;
+                        if (field.placeholder) input.placeholder = field.placeholder;
+                        input.id = field.id;
+                        input.setAttribute('aria-label', field.label);
+                        if (field.required) input.required = true;
+                        if (defaultValues[field.id]) input.value = defaultValues[field.id];
+                        group.appendChild(input);
+                    }
+                    form.appendChild(group);
+                });
+                const submitBtn = document.createElement('button');
+                submitBtn.type = 'submit';
+                submitBtn.className = 'submit-btn';
+                submitBtn.textContent = submitText;
+                submitBtn.setAttribute('aria-label', submitText);
+                form.appendChild(submitBtn);
+                form.addEventListener('submit', onSubmit);
+                chatMessages.appendChild(form);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+                speak(`Please fill out the ${submitText.toLowerCase()} form.`);
+            }
+
+            function sendToWhatsApp(formData, refNumber, formType) {
+                console.log('Preparing WhatsApp message');
+                const message = `
+                    New ${formType} Submission
+                    Reference: ${refNumber}
+                    ${Array.from(formData.entries()).map(([key, value]) => {
+                        if (value instanceof File) return `${key.charAt(0).toUpperCase() + key.slice(1)}: File attached (${value.name})`;
+                        return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+                    }).join('\n')}
+                `.trim();
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank');
+            }
+
+            function sendToEmail(formData, refNumber, formType) {
+                console.log('Sending email (simulated)');
+                const emailBody = {
+                    to: businessEmail,
+                    subject: `New ${formType} Submission - Ref: ${refNumber}`,
+                    body: `
+                        New ${formType} Submission
+                        Reference: ${refNumber}
+                        ${Array.from(formData.entries()).map(([key, value]) => {
+                            if (value instanceof File) return `${key.charAt(0).toUpperCase() + key.slice(1)}: File attached (${value.name})`;
+                            return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+                        }).join('\n')}
+                    `
+                };
+                fetch('https://qualitysuccesssolutions.in/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(emailBody)
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error('Email API failed');
+                    console.log('Email sent successfully (simulated)');
+                })
+                .catch(err => {
+                    console.error('Email sending error:', err);
+                    addBotMessage('Failed to send email notification. Please contact us directly.');
+                });
+            }
+
+            function showKYAForm() {
+                console.log('Showing KYA form');
+                currentState = 'kya-form';
+                clearChat();
+                const message = "Please fill out the Auditor KYA Form.";
+                addBotMessage(message);
+                const fields = [
+                    { id: 'name', label: 'Name*', type: 'text', required: true },
+                    { id: 'whatsapp', label: 'WhatsApp Phone number', type: 'tel', required: true },
+                    { id: 'email', label: 'Email Id', type: 'email', required: true },
+                    { id: 'city', label: 'City', type: 'text', required: true, placeholder: 'Start typing to search...' },
+                    { id: 'state', label: 'State', type: 'select', options: ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Lakshadweep', 'Puducherry'], required: true },
+                    { id: 'pincode', label: 'Pin code', type: 'text', required: true },
+                    { id: 'pan', label: 'Pan number', type: 'text', required: true },
+                    { id: 'aadhar', label: 'Upload Aadhar Card', type: 'file', required: false },
+                    { id: 'addressproof', label: 'Address Proof', type: 'select', options: ['Aadhar Card', 'Electricity Bill', 'Voter ID'], required: true }
+                ];
+                createForm(
+                    fields,
+                    'Submit KYA Form',
+                    (e) => {
+                        e.preventDefault();
+                        console.log('KYA form submitted');
+                        const formData = new FormData(e.target);
+                        const refNumber = 'QSS-' + Math.floor(100000 + Math.random() * 900000);
+                        const successMessage = "Thank you for submitting the KYA form! We will review and contact you if needed.";
+                        addBotMessage(successMessage);
+                        const refMessage = `Your reference number is: <strong>${refNumber}</strong>. Please quote this in all communications.`;
+                        addBotMessage(refMessage);
+                        sendToWhatsApp(formData, refNumber, 'Auditor KYA');
+                        sendToEmail(formData, refNumber, 'Auditor KYA');
+                        e.target.remove();
+                        addBackButton('Back to Main Menu', goToMain);
+                    },
+                    goToMain
+                );
+            }
+
+            function showApplyOptions() {
+                console.log('Showing apply options');
+                currentState = 'apply-options';
+                clearChat();
+                const message = "Please select a location code to apply for audits:";
+                addBotMessage(message);
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON281151', 'AIAAIRABB281149'];
+                locationCodes.forEach(code => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${code}`;
+                    btn.setAttribute('aria-label', `Apply for ${code}`);
+                    btn.addEventListener('click', () => {
+                        console.log(`Location code clicked: ${code}`);
+                        showApplyDetails(code);
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showApplyDetails(code) {
+                console.log('Showing apply details for:', code);
+                currentState = 'apply-details';
+                clearChat();
+                const message = `
+                    <strong>Audit Applying ID:</strong> ${code}<br>
+                    <strong>Type of Audit:</strong> Checklist Based Audit<br>
+                    <strong>Timings:</strong> Flexible (to be confirmed)<br>
+                    <strong>Fee:</strong> 1000/- Per Man day (Inclusive of Everything)<br>
+                    <strong>Training:</strong> SOP / Proper training Call will be provided.<br>
+                    <strong>Payment:</strong> Within 30 days after audit completion.<br>
+                    <strong>Cancellation:</strong> 25% fee if cancelled after auditor reaches location.<br>
+                    If interested, join WhatsApp Group and share details.
+                `;
+                addBotMessage(message);
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const options = [
+                    { text: '1 - Apply', icon: 'fa-check', label: 'Apply for audit' },
+                    { text: '2 - Join Group', icon: 'fab fa-whatsapp', label: 'Join WhatsApp group' }
+                ];
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="${opt.icon}"></i> ${opt.text}`;
+                    btn.setAttribute('aria-label', opt.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Option clicked: ${opt.text}`);
+                        if (opt.text.includes('Apply')) {
+                            showApplyForm(code);
+                        } else {
+                            window.open('https://chat.whatsapp.com/YourGroupLinkHere', '_blank');
+                            addBotMessage('Redirected to WhatsApp group. Please share your details.');
+                            addBackButton('Back to Main Menu', goToMain);
+                        }
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showContactUs() {
+                console.log('Showing contact us');
+                currentState = 'contact-us';
+                clearChat();
+                const message = `Contact Us:<br><strong>Email:</strong> <a href="mailto:${businessEmail}">${businessEmail}</a><br><strong>Phone:</strong> <a href="tel:${whatsappNumber}">${whatsappNumber}</a><br><strong>Website:</strong> <a href="https://qualitysuccesssolutions.in" target="_blank">qualitysuccesssolutions.in</a>`;
+                addBotMessage(message);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function getIntent(message) {
+                message = message.toLowerCase();
+                const intentMap = {
+                    services: ['service', 'offer', 'explore'],
+                    audits: ['audit', 'apply'],
+                    kyaform: ['kya', 'form', 'fill'],
+                    contact: ['contact', 'reach', 'us']
+                };
+                for (const [intent, keywords] of Object.entries(intentMap)) {
+                    if (keywords.some(keyword => message.includes(keyword))) {
+                        return intent;
+                    }
+                }
+                return null;
+            }
+
+            function processUserMessage(message) {
+                console.log('Processing user message:', message);
+                const intent = getIntent(message);
+                if (currentState === 'main') {
+                    if (intent === 'services') {
+                        showServiceOptions();
+                    } else if (intent === 'audits') {
+                        showApplyOptions();
+                    } else if (intent === 'kyaform') {
+                        showKYAForm();
+                    } else if (intent === 'contact') {
+                        showContactUs();
+                    } else {
+                        clearChat();
+                        addBotMessage("I'm sorry, I didn't understand that. Please select an option below or speak clearly:");
+                        displayMainOptions();
+                    }
+                } else if (currentState === 'service-options') {
+                    const services = ['inventory', 'audit', 'asset', 'showroom', 'manpower', 'background'];
+                    const selectedService = services.find(s => message.toLowerCase().includes(s));
+                    if (selectedService) {
+                        let serviceName = selectedService.charAt(0).toUpperCase() + selectedService.slice(1);
+                        if (serviceName === 'Inventory') serviceName = 'Inventory Management';
+                        else if (serviceName === 'Audit') serviceName = 'Audit & Assurance';
+                        else if (serviceName === 'Asset') serviceName = 'Asset Management';
+                        else if (serviceName === 'Showroom') serviceName = 'Showroom Audits';
+                        else if (serviceName === 'Manpower') serviceName = 'Manpower Outsourcing';
+                        else if (serviceName === 'Background') serviceName = 'Background Verification';
+                        showServiceDetails(serviceName);
+                    } else {
+                        addBotMessage("Please select a service from the options:");
+                        showServiceOptions();
+                    }
+                } else if (currentState === 'apply-options') {
+                    const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON281151', 'AIAAIRABB281149'];
+                    const selectedCode = locationCodes.find(code => message.toLowerCase().includes(code.toLowerCase()));
+                    if (selectedCode) {
+                        showApplyDetails(selectedCode);
+                    } else {
+                        addBotMessage("Please select a valid location code:");
+                        showApplyOptions();
+                    }
+                } else {
+                    goToMain();
+                }
+            }
+
+            function showApplyForm(code) {
+                console.log('Showing apply form for:', code);
+                currentState = 'apply-form';
+                clearChat();
+                const message = "Please provide your details to apply for the audit:";
+                addBotMessage(message);
+                const fields = [
+                    { id: 'name', label: 'Name', type: 'text', required: true },
+                    { id: 'mobile', label: 'Mobile No', type: 'tel', required: true },
+                    { id: 'qualification', label: 'Qualification', type: 'text', required: true },
+                    { id: 'experience', label: 'Experience', type: 'text', required: true },
+                    { id: 'locationCode', label: 'Location Code(s) applying for', type: 'text', required: true, value: code }
+                ];
+                createForm(
+                    fields,
+                    'Submit Application',
+                    (e) => {
+                        e.preventDefault();
+                        console.log('Apply form submitted');
+                        const formData = new FormData(e.target);
+                        const refNumber = 'QSS-' + Math.floor(100000 + Math.random() * 900000);
+                        const successMessage = "Thank you for your application!";
+                        addBotMessage(successMessage);
+                        const refMessage = `Your reference number is: <strong>${refNumber}</strong>.`;
+                        addBotMessage(refMessage);
+                        sendToWhatsApp(formData, refNumber, 'Audit Application');
+                        sendToEmail(formData, refNumber, 'Audit Application');
+                        e.target.remove();
+                        addBackButton('Back to Main Menu', goToMain);
+                    },
+                    goToMain
+                );
+            }
+
+            function clearChat() {
+                console.log('Clearing chat');
+                chatMessages.replaceChildren();
+            }
+
+            function clearQuickReplies() {
+                console.log('Clearing quick replies');
+                quickReplyContainer.replaceChildren();
+            }
+
+            function addQuickReplies(replies) {
+                console.log('Adding quick replies:', replies);
+                clearQuickReplies();
+                replies.forEach(reply => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-reply-btn';
+                    btn.textContent = reply;
+                    btn.setAttribute('aria-label', `Select ${reply}`);
+                    btn.addEventListener('click', () => {
+                        console.log(`Quick reply clicked: ${reply}`);
+                        addUserMessage(reply);
+                        showTypingIndicator();
+                        setTimeout(() => processUserMessage(reply), 1000);
+                    });
+                    quickReplyContainer.appendChild(btn);
+                });
+            }
+
+            function addBackButton(text, clickHandler) {
+                console.log('Adding back button:', text);
+                const backBtn = document.createElement('button');
+                backBtn.className = 'back-btn';
+                backBtn.innerHTML = `<i class="fas fa-arrow-left"></i> ${text}`;
+                backBtn.setAttribute('aria-label', text);
+                backBtn.addEventListener('click', () => {
+                    console.log(`Back button clicked: ${text}`);
+                    clickHandler();
+                });
+                chatMessages.appendChild(backBtn);
+                scrollToStart();
+            }
+
+            function scrollToStart() {
+                console.log('Scrolling to start');
+                chatMessages.scrollTop = 0;
+            }
+
+            function getCurrentTime() {
+                return new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- chatboat -->
