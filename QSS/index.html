@@ -594,7 +594,7 @@
         <div class="container">
           <div class="combined-card">
             <div class="card-image-section">
-              <img src="service/2.png" 
+              <img src="" 
                    alt="Award" 
                    class="img-fluid">
             </div>
@@ -1744,13 +1744,13 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #c9a560;
-            --secondary-color: #d4b57d;
-            --accent-color: #a8864a;
+            --primary-color: #003466;
+            --secondary-color: #005a8d;
+            --accent-color: #002b4f;
             --light-color: #f5f5f5;
-            --dark-color: #5c4a2a;
+            --dark-color: #1a2a44;
             --success-color: #10b981;
-            --shadow: 0 2px 4px rgba(201, 165, 96, 0.2);
+            --shadow: 0 2px 4px rgba(0, 52, 102, 0.2);
             --border-radius: 12px;
             --transition: all 0.2s ease;
         }
@@ -1760,6 +1760,9 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
         }
 
         body {
@@ -1841,7 +1844,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .control-btn:hover {
-            background-color: #e8d9b9;
+            background-color: #e0e7ff;
         }
 
         .control-btn.close:hover {
@@ -1948,7 +1951,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             box-shadow: var(--shadow);
         }
 
-        #send-btn, #mic-btn, #voice-toggle-btn {
+        #send-btn, #menu-btn {
             width: 40px;
             height: 40px;
             border-radius: var(--border-radius);
@@ -1963,25 +1966,8 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             box-shadow: var(--shadow);
         }
 
-        #send-btn:hover, #mic-btn:hover, #voice-toggle-btn:hover {
-            background-color: #e8d9b9;
-        }
-
-        #mic-btn.active {
-            background-color: var(--success-color);
-            color: #ffffff;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        #voice-toggle-btn.muted {
-            background-color: var(--light-color);
-            color: var(--accent-color);
+        #send-btn:hover, #menu-btn:hover {
+            background-color: #e0e7ff;
         }
 
         .quick-reply-container {
@@ -2032,7 +2018,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         }
 
         .option-btn:hover {
-            background-color: #e8d9b9;
+            background-color: #e0e7ff;
             transform: translateX(3px);
         }
 
@@ -2296,15 +2282,49 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         .address-proof-container.active {
             display: block;
         }
+
+        /* New styles for voice/speaker options */
+        .voice-camera-options {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff;
+        }
+
+        .voice-camera-options.active {
+            display: flex;
+        }
+
+        .voice-camera-btn {
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .voice-camera-btn:hover {
+            background-color: #e0e7ff;
+        }
     </style>
 </head>
 <body>
     <div class="chatbot-container" id="chatbot-container">
         <div class="chatbot-header">
             <div class="header-content">
-                <img src="img/222.png" alt="Quality Success Solutions Logo" class="logo">
+                <img src="img/Gemini_Generated_Image_xpdu9dxpdu9dxpdu.png" alt="Quality Success Solutions Logo" class="logo">
                 <div class="header-text">
-                    <h3>Quality Success Solutions</h3>
+                    <h3>Quick Ex Assistant</h3>
                     <p>Audit & Assurance</p>
                 </div>
             </div>
@@ -2313,12 +2333,15 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
         <div class="chatbot-messages" id="chat-messages" aria-live="polite"></div>
         <div class="chatbot-input-area">
             <div class="input-container">
-                <input type="text" id="user-input" placeholder="Type or speak your message..." aria-label="Type or speak your message">
-                <button id="mic-btn" aria-label="Toggle microphone"><i class="fas fa-microphone"></i></button>
-                <button id="voice-toggle-btn" aria-label="Toggle voice output"><i class="fas fa-volume-up"></i></button>
+                <button id="menu-btn" aria-label="Show menu"><i class="fas fa-ellipsis-v"></i></button>
+                <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
                 <button id="send-btn" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
             </div>
             <div class="quick-reply-container" id="quick-reply-container"></div>
+            <div class="voice-camera-options" id="voice-camera-options">
+                <button class="voice-camera-btn" id="mic-btn"><i class="fas fa-microphone"></i> Voice Input</button>
+                <button class="voice-camera-btn" id="speaker-btn"><i class="fas fa-volume-up"></i> Speaker Output</button>
+            </div>
         </div>
     </div>
     <button class="chatbot-launcher" id="chatbot-launcher" aria-label="Open chatbot">
@@ -2334,29 +2357,26 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             const chatMessages = document.getElementById('chat-messages');
             const userInput = document.getElementById('user-input');
             const sendBtn = document.getElementById('send-btn');
-            const micBtn = document.getElementById('mic-btn');
-            const voiceToggleBtn = document.getElementById('voice-toggle-btn');
+            const menuBtn = document.getElementById('menu-btn');
             const quickReplyContainer = document.getElementById('quick-reply-container');
+            const voiceCameraOptions = document.getElementById('voice-camera-options');
+            const micBtn = document.getElementById('mic-btn');
+            const speakerBtn = document.getElementById('speaker-btn');
 
             // State
             let isChatOpen = false;
             let currentState = 'main';
-            let isVoiceEnabled = true;
-            let isListening = false;
+            let isVoiceCameraOpen = false;
 
             // WhatsApp and Email
             const whatsappNumber = '+917171122231';
             const businessEmail = 'info@qualitysuccesssolutions.in';
 
-            // Speech Recognition
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            let recognition = SpeechRecognition ? new SpeechRecognition() : null;
-
             // City Search Data
             const cities = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Patna', 'Vadodara', 'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi', 'Srinagar', 'Aurangabad', 'Dhanbad', 'Amritsar', 'Navi Mumbai', 'Allahabad', 'Ranchi', 'Howrah', 'Coimbatore', 'Jabalpur', 'Gwalior', 'Vijayawada', 'Jodhpur', 'Madurai', 'Raipur', 'Kota', 'Guwahati', 'Chandigarh', 'Solapur', 'Hubli-Dharwad', 'Bareilly', 'Moradabad', 'Mysore', 'Gurgaon', 'Aligarh', 'Jalandhar', 'Tiruchirappalli', 'Bhopal', 'Salem', 'Warangal', 'Guntur', 'Bhiwandi', 'Saharanpur', 'Gorakhpur', 'Bikaner', 'Amravati', 'Noida', 'Jamshedpur', 'Bhilai', 'Cuttack', 'Firozabad', 'Kochi', 'Nellore', 'Bhavnagar', 'Durgapur', 'Asansol', 'Rourkela', 'Nanded', 'Kolhapur', 'Ajmer', 'Akola', 'Gulbarga', 'Jamnagar', 'Ujjain', 'Latur', 'Dhule', 'Maheshtala', 'Davanagere', 'Kurnool', 'Ajmer', 'Ratlam', 'Hapur', 'Anantapur', 'Karimnagar', 'Bihar Sharif', 'Panchkula', 'Bhilwara', 'Ahmednagar', 'Ambala', 'Morena', 'Ozhukarai', 'Bathinda', 'Rampur', 'Shimla', 'Gandhinagar', 'Shivpuri', 'Chandrapur', 'Junagadh', 'Thrissur', 'Alwar', 'Kakinada', 'Nizamabad', 'Parbhani', 'Tumkur', 'Khammam', 'Ooty', 'Imphal', 'Shillong', 'Aizawl', 'Kohima', 'Gangtok', 'Agartala', 'Itanagar', 'Panaji', 'Port Blair'];
 
             // Validate DOM Elements
-            if (!chatbotLauncher || !chatbotContainer || !chatMessages || !closeBtn || !userInput || !sendBtn || !micBtn || !voiceToggleBtn || !quickReplyContainer) {
+            if (!chatbotLauncher || !chatbotContainer || !chatMessages || !closeBtn || !userInput || !sendBtn || !menuBtn || !quickReplyContainer || !voiceCameraOptions || !micBtn || !speakerBtn) {
                 console.error('One or more DOM elements are missing:', {
                     launcher: !!chatbotLauncher,
                     container: !!chatbotContainer,
@@ -2364,71 +2384,16 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                     closeBtn: !!closeBtn,
                     userInput: !!userInput,
                     sendBtn: !!sendBtn,
+                    menuBtn: !!menuBtn,
+                    quickReplyContainer: !!quickReplyContainer,
+                    voiceCameraOptions: !!voiceCameraOptions,
                     micBtn: !!micBtn,
-                    voiceToggleBtn: !!voiceToggleBtn,
-                    quickReplyContainer: !!quickReplyContainer
+                    speakerBtn: !!speakerBtn
                 });
                 return;
             }
 
             console.log('Voice chatbot script loaded successfully');
-
-            // Initialize Speech Recognition
-            if (recognition) {
-                recognition.continuous = false;
-                recognition.interimResults = false;
-                recognition.lang = 'en-US';
-
-                recognition.onresult = (event) => {
-                    const transcript = event.results[0][0].transcript.trim();
-                    console.log('Voice input:', transcript);
-                    userInput.value = transcript;
-                    sendMessage();
-                };
-
-                recognition.onerror = (event) => {
-                    console.error('Speech recognition error:', event.error);
-                    micBtn.classList.remove('active');
-                    isListening = false;
-                    addBotMessage('Sorry, I couldn’t understand your voice input. Please try again or type your message.');
-                };
-
-                recognition.onend = () => {
-                    console.log('Speech recognition ended');
-                    micBtn.classList.remove('active');
-                    isListening = false;
-                };
-            } else {
-                console.warn('SpeechRecognition not supported in this browser');
-                micBtn.style.display = 'none';
-                addBotMessage('Voice input is not supported in your browser. Please type your message.');
-            }
-
-            // Toggle Microphone
-            micBtn.addEventListener('click', () => {
-                console.log('Microphone button clicked');
-                if (!recognition) return;
-                if (isListening) {
-                    recognition.stop();
-                    micBtn.classList.remove('active');
-                    isListening = false;
-                } else {
-                    recognition.start();
-                    micBtn.classList.add('active');
-                    isListening = true;
-                }
-            });
-
-            // Toggle Voice Output
-            voiceToggleBtn.addEventListener('click', () => {
-                console.log('Voice toggle clicked');
-                isVoiceEnabled = !isVoiceEnabled;
-                voiceToggleBtn.classList.toggle('muted', !isVoiceEnabled);
-                voiceToggleBtn.innerHTML = `<i class="fas fa-volume-${isVoiceEnabled ? 'up' : 'mute'}"></i>`;
-                if (!isVoiceEnabled) {
-                    speechSynthesis.cancel();
-                }
-            });
 
             // Open Chatbot
             chatbotLauncher.addEventListener('click', (e) => {
@@ -2446,11 +2411,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                     } else {
                         chatbotContainer.classList.remove('active');
                         chatbotContainer.style.display = 'none';
-                        if (isListening && recognition) {
-                            recognition.stop();
-                            micBtn.classList.remove('active');
-                            isListening = false;
-                        }
                     }
                 } catch (error) {
                     console.error('Error toggling chatbot:', error);
@@ -2464,11 +2424,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                 isChatOpen = false;
                 chatbotContainer.classList.remove('active');
                 chatbotContainer.style.display = 'none';
-                if (isListening && recognition) {
-                    recognition.stop();
-                    micBtn.classList.remove('active');
-                    isListening = false;
-                }
             });
 
             // Prevent Closing on Inner Clicks
@@ -2480,6 +2435,14 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
             sendBtn.addEventListener('click', sendMessage);
             userInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') sendMessage();
+            });
+
+            // Menu Button
+            menuBtn.addEventListener('click', () => {
+                console.log('Menu button clicked');
+                isVoiceCameraOpen = !isVoiceCameraOpen;
+                voiceCameraOptions.classList.toggle('active');
+                goToMain();
             });
 
             function sendMessage() {
@@ -2517,18 +2480,14 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                 chatMessages.appendChild(optionsDiv);
                 addQuickReplies(['Explore Services', 'Applying for Audits', 'Fill Auditor KYA Form', 'Contact Us']);
                 scrollToStart();
-                if (isVoiceEnabled) {
-                    speak('Please select an option or speak your choice.');
-                }
             }
 
             function goToMain() {
                 console.log('Going to main');
                 clearChat();
                 currentState = 'main';
-                const greeting = "Hi! 👋 Welcome to Quality Success Solutions. How can we help you today? You can speak or type your response.";
+                const greeting = "Hi! 👋 Welcome to Quick Ex Assistantgi. How can we help you today? You can type your response.";
                 addBotMessage(greeting);
-                speak(greeting);
                 displayMainOptions();
             }
 
@@ -2564,19 +2523,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                 messageDiv.appendChild(timeSpan);
                 chatMessages.appendChild(messageDiv);
                 scrollToStart();
-                speak(text);
-            }
-
-            function speak(text) {
-                if (!isVoiceEnabled || !speechSynthesis) return;
-                console.log('Speaking:', text);
-                speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'en-US';
-                utterance.pitch = 1;
-                utterance.rate = 1;
-                utterance.volume = 1;
-                speechSynthesis.speak(utterance);
             }
 
             function showTypingIndicator() {
@@ -2794,7 +2740,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                 chatMessages.appendChild(form);
                 addBackButton('Back to Main Menu', goToMain);
                 scrollToStart();
-                speak(`Please fill out the ${submitText.toLowerCase()} form.`);
             }
 
             function sendToWhatsApp(formData, refNumber, formType) {
@@ -2887,7 +2832,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                 addBotMessage(message);
                 const optionsDiv = document.createElement('div');
                 optionsDiv.className = 'options-container';
-                const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON281151', 'AIAAIRABB281149'];
+                const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON151', 'AIAAIRABB281149'];
                 locationCodes.forEach(code => {
                     const btn = document.createElement('button');
                     btn.className = 'option-btn';
@@ -2987,7 +2932,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                         showContactUs();
                     } else {
                         clearChat();
-                        addBotMessage("I'm sorry, I didn't understand that. Please select an option below or speak clearly:");
+                        addBotMessage("I'm sorry, I didn't understand that. Please select an option below:");
                         displayMainOptions();
                     }
                 } else if (currentState === 'service-options') {
@@ -3007,7 +2952,7 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                         showServiceOptions();
                     }
                 } else if (currentState === 'apply-options') {
-                    const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON281151', 'AIAAIRABB281149'];
+                    const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON151', 'AIAAIRABB281149'];
                     const selectedCode = locationCodes.find(code => message.toLowerCase().includes(code.toLowerCase()));
                     if (selectedCode) {
                         showApplyDetails(selectedCode);
@@ -3108,7 +3053,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
     </script>
 </body>
 </html>
-
 
     </body>
 
