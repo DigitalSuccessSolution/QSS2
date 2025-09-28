@@ -35,71 +35,7 @@
     z-index: 99;
 }
 
-/*** Button Start ***/
-.btn {
-    font-weight: 600;
-    transition: .5s;
-}
 
-.btn-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-sm-square {
-    width: 34px;
-    height: 34px;
-}
-
-.btn-md-square {
-    width: 44px;
-    height: 44px;
-}
-
-.btn-lg-square {
-    width: 56px;
-    height: 56px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-md-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    border-radius: 50%;
-}
-
-.btn.btn-primary {
-    background: #4b4b4b !important;
-    color: var(--bs-white) !important;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    transition: 0.5s;
-}
-
-.btn.btn.btn-primary:hover {
-    background: #c9a560 !important;
-    color: #4b4b4b;
-    border: 1px solid #4b4b4b;
-}
-
-.btn.btn-secondary {
-    background: transparent;
-    color: #4b4b4b;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    border: none;
-    transition: 0.5s;
-}
-
-.btn.btn-secondary:hover {
-    color: #c9a560 !important;
-}
-/*** Button End ***/
 
 
 
@@ -937,3 +873,7 @@
     color: #ffffff;
 }
 /*** Copyright End ***/
+
+
+
+
