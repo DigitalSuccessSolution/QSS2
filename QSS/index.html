@@ -216,463 +216,153 @@
 
 
 
-<!-- hero section  -->
-<section id="matrix-slider" class="pb-4 pb-md-5 position-relative" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); overflow: hidden; padding-top: 0 !important;">
-  <style>
-    /* Custom color classes */
-    .text-primary-custom {
-      color: rgb(45, 45, 45) !important;
-    }
-    .text-highlight {
-      color: #c9a560 !important;
-    }
-    .btn-custom {
-      background: linear-gradient(135deg, #c9a560 0%, #b08e4f 100%);
-      color: #fff;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3);
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      letter-spacing: 0.5px;
-    }
-    .btn-custom:hover {
-      background: linear-gradient(135deg, #b08e4f 0%, #a07e45 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(201, 165, 96, 0.4);
-    }
-    .btn-custom:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      opacity: 0;
-      border-radius: 100%;
-      transform: scale(1, 1) translate(-50%);
-      transform-origin: 50% 50%;
-      z-index: -1;
-    }
-    .btn-custom:focus:after {
-      animation: ripple 1s ease-out;
-    }
-    @keyframes ripple {
-      0% {
-        transform: scale(0, 0);
-        opacity: 1;
-      }
-      20% {
-        transform: scale(25, 25);
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: scale(40, 40);
-      }
-    }
-    
-    /* Carousel enhancements */
-    #matrixCarousel {
-      position: relative;
-      z-index: 2;
-    }
-    .carousel-item {
-      padding: 60px 0;
-    }
-    .carousel-inner {
-      border-radius: 0;
-      overflow: hidden;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      width: 50px;
-      height: 50px;
-      background: rgba(201, 165, 96, 0.9);
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 1;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(2px);
-    }
-    .carousel-control-prev {
-      left: 30px;
-    }
-    .carousel-control-next {
-      right: 30px;
-    }
-    .carousel-control-prev:hover, .carousel-control-next:hover {
-      background: #c9a560;
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 5px 15px rgba(201, 165, 96, 0.4);
-    }
-    .carousel-indicators {
-      bottom: 25px;
-    }
-    .carousel-indicators button {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: rgba(201, 165, 96, 0.4);
-      border: 2px solid transparent;
-      margin: 0 6px;
-      transition: all 0.3s ease;
-    }
-    .carousel-indicators button.active {
-      background-color: #c9a560;
-      border-color: #fff;
-      transform: scale(1.3);
-      box-shadow: 0 0 8px rgba(201, 165, 96, 0.6);
-    }
-    
-    /* Combined card styling */
-    .combined-card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-      height: 450px;
-      margin: 0 30px;
-      transition: all 0.4s ease;
-    }
-    .combined-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 40px 70px rgba(0,0,0,0.18);
-    }
-    
-    .card-content-section {
-      flex: 1;
-      padding: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-    }
-    .card-content-section:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: linear-gradient(to bottom, #c9a560, #b08e4f);
-    }
-    
-    .card-image-section {
-      flex: 1;
-      position: relative;
-      overflow: hidden;
-    }
-    .card-image-section:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 100%);
-      z-index: 1;
-    }
-    .card-image-section img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.5s ease;
-    }
-    .combined-card:hover .card-image-section img {
-      transform: scale(1.03);
-    }
-    
-    .carousel-item h3 {
-      font-size: 2.2rem;
-      line-height: 1.3;
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-    .carousel-item h3:after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(to right, #c9a560, #b08e4f);
-      border-radius: 2px;
-    }
-    .carousel-item p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-    .carousel-item .text-highlight {
-      font-weight: 600;
-      display: inline-block;
-      position: relative;
-    }
-    .carousel-item .text-highlight:after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background: rgba(201, 165, 96, 0.2);
-      z-index: -1;
-    }
-    
-    /* Premium decorative elements */
-    .premium-decoration {
-      position: absolute;
-      z-index: 0;
-    }
-    .decoration-1 {
-      top: 10%;
-      right: 5%;
-      width: 120px;
-      height: 120px;
-      border: 15px solid rgba(201, 165, 96, 0.1);
-      border-radius: 50%;
-    }
-    .decoration-2 {
-      bottom: 15%;
-      left: 5%;
-      width: 80px;
-      height: 80px;
-      border: 10px solid rgba(201, 165, 96, 0.08);
-      transform: rotate(45deg);
-    }
-    
-    /* Subtle background pattern */
-    .bg-pattern {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(rgba(201, 165, 96, 0.1) 1px, transparent 1px);
-      background-size: 20px 20px;
-      z-index: 0;
-      opacity: 0.5;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 1199.98px) {
-      .carousel-item h3 {
-        font-size: 2rem;
-      }
-      .card-content-section {
-        padding: 40px;
-      }
-      .combined-card {
-        height: 420px;
-      }
-    }
-    @media (max-width: 991.98px) {
-      .carousel-item {
-        padding: 40px 0;
-      }
-      .combined-card {
-        flex-direction: column;
-        height: auto;
-        margin: 0 20px;
-      }
-      .card-content-section {
-        padding: 35px;
-        order: 2;
-      }
-      .card-image-section {
-        height: 350px;
-        order: 1;
-      }
-      .carousel-item h3 {
-        font-size: 1.8rem;
-      }
-      .carousel-control-prev {
-        left: 15px;
-      }
-      .carousel-control-next {
-        right: 15px;
-      }
-    }
-    @media (max-width: 767.98px) {
-      .carousel-item {
-        padding: 30px 0;
-      }
-      .combined-card {
-        margin: 0 15px;
-      }
-      .card-content-section {
-        padding: 30px;
-      }
-      .card-image-section {
-        height: 300px;
-      }
-      .carousel-item h3 {
-        font-size: 1.6rem;
-      }
-      .carousel-item h3:after {
-        width: 60px;
-        height: 3px;
-        bottom: -10px;
-      }
-      .carousel-item p {
-        font-size: 1.05rem;
-      }
-      .carousel-control-prev, .carousel-control-next {
-        width: 40px;
-        height: 40px;
-      }
-      .carousel-control-prev {
-        left: 10px;
-      }
-      .carousel-control-next {
-        right: 10px;
-      }
-    }
-    @media (max-width: 575.98px) {
-      .card-content-section {
-        padding: 25px;
-      }
-      .carousel-item h3 {
-        font-size: 1.5rem;
-      }
-      .btn-custom {
-        padding: 12px 28px;
-        font-size: 0.95rem;
-      }
-      .carousel-indicators {
-        bottom: 15px;
-      }
-      .card-image-section {
-        height: 250px;
-      }
-    }
-  </style>
+<!-- Hero Section with Tailwind CSS (Final Updated Version) -->
+<section id="matrix-slider" class="relative overflow-hidden bg-white py-2">
 
-  <!-- Decorative elements -->
-  <div class="premium-decoration decoration-1"></div>
-  <div class="premium-decoration decoration-2"></div>
-  <div class="bg-pattern"></div>
+  <!-- Decorative Background -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(201,165,96,0.08)1px,transparent_1px)] bg-[length:24px_24px] z-0"></div>
 
-  <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Carousel -->
+  <div id="matrixCarousel" class="relative z-10 carousel slide" data-bs-ride="carousel">
+
     <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="2"></button>
+    <div class="absolute bottom-6 flex justify-center w-full z-20">
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="0" class="w-3 h-3 rounded-full bg-yellow-400/50 mx-1 active"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="1" class="w-3 h-3 rounded-full bg-yellow-400/50 mx-1"></button>
+      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="2" class="w-3 h-3 rounded-full bg-yellow-400/50 mx-1"></button>
     </div>
 
+    <!-- Carousel Inner -->
     <div class="carousel-inner">
+
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="container">
-          <div class="combined-card">
-            <div class="card-image-section">
-              <img src="service/1.png" 
-                   alt="Award" 
-                   class="img-fluid">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 bg-white  overflow-hidden">
+
+            <!-- Image -->
+            <div class="relative h-[250px] md:h-[400px] overflow-hidden">
+              <img src="service/1.png" alt="Award" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
             </div>
-            <div class="card-content-section">
-              <h3 class="about-subtitle">
-                Powering Trust Through Precision
-              </h3>
-              <p class="text-primary-custom">
-                <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
-                India's trusted partner for Audit, Risk & Compliance Services.
+
+            <!-- Content -->
+            <div class="p-8 md:p-12">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Powering Trust Through Precision</h2>
+              <p class="text-gray-700 leading-relaxed">
+                <span class="font-semibold">We don’t just audit—we uncover, assure, and empower.</span><br>
+                <b>India’s trusted partner for Audit, Risk & Compliance Services.</b><br>
+                QSS enables organizations to strengthen governance, streamline operations, and stay regulation-ready with audit-led insights.
               </p>
-              <div>
-                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
+              <ul class="mt-4 text-gray-800 space-y-2">
+                <li>📍 Pan-India Reach</li>
+                <li>📊 Process-Driven Audits</li>
+                <li>✅ ISO Certified</li>
+                <li>🛡️ Trusted by Industry Leaders</li>
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a href="#" class="bg-yellow-400 text-black font-bold px-5 py-2.5 rounded-lg shadow hover:bg-yellow-500 transition">➡️ Get in Touch</a>
+                <a href="#" class="bg-[#003466] text-white font-bold px-5 py-2.5 rounded-lg shadow hover:bg-gray-800 transition">Explore Our Services</a>
               </div>
             </div>
+
           </div>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
-        <div class="container">
-          <div class="combined-card">
-            <div class="card-image-section">
-              <img src="img/quick.png" 
-                   alt="Award" 
-                   class="img-fluid">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 bg-white  overflow-hidden">
+
+            <!-- Image -->
+            <div class="relative h-[230px] md:h-[380px]  overflow-hidden">
+              <img src="img/quick.png" alt="QuickEx Platform" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
             </div>
-            <div class="card-content-section">
-              <h3 class="about-subtitle">
-                Tech Platform – QuickEx™
-              </h3>
-              <p class="text-primary-custom">
-                <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
+
+            <!-- Content -->
+            <div class="p-8 md:p-12">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Tech Platform – QuickEx™</h2>
+              <p class="text-gray-700 leading-relaxed">
+                <b>QuickEx™</b> is QSS’s proprietary background verification engine, built for speed, security, and transparency.
               </p>
-              <div>
-                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
-              </div>
+              <p class="text-gray-700 mt-2">
+                From address verification to education checks, <b>QuickEx™</b> digitizes the entire background check journey—ensuring audit-ready records at every step.
+              </p>
+              <ul class="mt-4 text-gray-800 space-y-2">
+                <li>✅ Instant Dashboards</li>
+                <li>📡 Real-Time Updates</li>
+                <li>🔐 Tamper-Proof Results</li>
+              </ul>
             </div>
+
           </div>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
-        <div class="container">
-          <div class="combined-card">
-            <div class="card-image-section">
-              <img src="service/3.png" 
-                   alt="Award" 
-                   class="img-fluid">
-            </div>
-            <div class="card-content-section">
-       
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 bg-white  overflow-hidden">
 
+            <!-- Image -->
+            <div class="relative h-[250px] md:h-[400px]  overflow-hidden">
+              <img src="service/3.png" alt="Industry-Specific Foresight" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
 
-<h3 class="about-subtitle">
-  Industry-Specific Foresight. Local Precision.
-</h3>
-
-              <p class="text-primary-custom">
-                <span class="text-highlight">QSS delivers more than audits—</span><br>
-                Backed by industry specialists and boots-on-ground auditors across India, 
-                we turn operational complexity into compliant clarity.
-              </p>
-              <div>
-                <!-- <a href="#" class="btn btn-custom">Know more</a> -->
+              <!-- Floating overlay box (like holographic analytics) -->
+              <div class="absolute top-6 left-6 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl px-4 py-2 text-white shadow-lg">
+                <h4 class="text-sm font-semibold">📊 Production Metrics</h4>
+                <p class="text-xs opacity-90">AI-Powered Insights</p>
               </div>
             </div>
+
+            <!-- Content -->
+            <div class="p-8 md:p-12">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4"> Industry-Specific Foresight. <br class="hidden md:block"> Local Precision.</h2>
+              <p class="text-yellow-600 font-semibold mb-2">QSS delivers more than audits—</p>
+              <p class="text-gray-700 leading-relaxed">
+                From the factory floor to multi-site retail audits, our teams embed deeply into client ecosystems to flag risks before they escalate. <br>
+                Backed by industry specialists and boots-on-ground auditors across India, we turn operational complexity into compliant clarity.
+              </p>
+              <ul class="mt-4 text-gray-800 space-y-2">
+                <li>🔍 Sector-Aligned Frameworks</li>
+                <li>🌐 Statewide Field Ops</li>
+                <li>🧠 Predictive Non-Compliance Alerts</li>
+              </ul>
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a href="#" class="bg-yellow-400 text-black font-bold px-5 py-2.5 rounded-lg shadow hover:bg-yellow-500 transition">➡️ Get in Touch</a>
+                <a href="#" class="bg-[#003466] text-white font-bold px-5 py-2.5 rounded-lg shadow hover:bg-gray-800 transition">Industries We Serve</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
     </div>
 
-    <!-- Navigation Arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#matrixCarousel" data-bs-slide="prev">
+    <!-- Controls -->
+    <button class="absolute top-1/2 left-8 w-10 h-10 bg-yellow-400/90 rounded-full transform -translate-y-1/2 flex items-center justify-center hover:bg-yellow-500 hover:scale-110 transition shadow-lg" type="button" data-bs-target="#matrixCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#matrixCarousel" data-bs-slide="next">
+    <button class="absolute top-1/2 right-8 w-10 h-10 bg-yellow-400/90 rounded-full transform -translate-y-1/2 flex items-center justify-center hover:bg-yellow-500 hover:scale-110 transition shadow-lg" type="button" data-bs-target="#matrixCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+
   </div>
 </section>
-<!-- hero section end  -->
 
 
 
 
 
 
-<section class="bg-white py-8 px-4 md:py-16 md:px-8">
+
+<section class="bg-[#f0f5fb] py-8 px-4 md:py-16 md:px-8">
   <div class="max-w-5xl mx-auto">
     
     <!-- Header with Optional Button -->
@@ -921,10 +611,11 @@
                                     <p class="pillar-desc text-white " ><strong>Ensuring real-time stock accuracy and end-to-end inventory control. </strong>
                                         QSS delivers audit-ready inventory verification services tailored for businesses with complex supply chains. We ensure integrity in stock reporting and visibility across plants, warehouses, and vendor locations.
                                     </p>
-                                  <a class="btn rounded-pill py-3 px-5"
-   style="background-color: #c9a560; color: white; border-color: #c9a560;"
-   href="./service.html#a">Explore</a>
-
+                                    
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
                                 </div>
                             </div>
                         </div>
@@ -957,9 +648,11 @@
                                         Robust internal controls, streamlined operations, and financial integrity—audited with precision.
                                         At QSS, our Audit & Assurance services go beyond compliance.
                                     </p>
-                                    <a class="btn rounded-pill py-3 px-5"
-                                       style="background-color: #c9a560; color: white; border-color: #c9a560;"
-                                       href="./service.html#b">Explore</a>
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
+
                                 </div>
                             </div>
                         </div>
@@ -990,9 +683,11 @@
                                     <p class="pillar-desc text-white "><strong>Safeguarding your physical assets with transparent tracking and reconciliation.</strong>
                                         QSS provides structured solutions for managing and validating fixed assets to maintain compliance and ensure accurate financial representation.
                                     </p>
-                                    <a class="btn rounded-pill py-3 px-5"
-                                       style="background-color: #c9a560; color: white; border-color: #c9a560;"
-                                       href="./service.html#c">Explore</a>
+                                       </p>
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
                                 </div>
                             </div>
                         </div>
@@ -1025,9 +720,11 @@
 
 Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to reconcile physical stock with system records.
                                     </p>
-                                    <a class="btn rounded-pill py-3 px-5"
-                                       style="background-color: #c9a560; color: white; border-color: #c9a560;"
-                                       href="./service.html#d">Explore</a>
+                                     
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
                                 </div>
                             </div>
                         </div>
@@ -1059,9 +756,11 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                                         Deploy skilled resources that are compliant, accountable, and audit-ready.<br><br>
                                         We provide agile staffing solutions designed for operational flexibility and compliance. 
                                     </p>
-                                    <a class="btn rounded-pill py-3 px-5"
-                                       style="background-color: #c9a560; color: white; border-color: #c9a560;"
-                                       href="./service.html#e">Explore</a>
+                                     
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
                                 </div>
                             </div>
                         </div>
@@ -1092,9 +791,11 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
                                     <p class="pillar-desc text-white "><strong>Seamless, secure, and fully digitized verification—powered by QuickEx™.</strong>
                                         Our background verification services ensure that your workforce is validated and reliable. 
                                     </p>
-                                    <a class="btn rounded-pill py-3 px-5"
-                                       style="background-color: #c9a560; color: white; border-color: #c9a560;"
-                                       href="./service.html#f">Explore</a>
+                                      
+                                   <a href="./service.html#b" 
+   class="btn rounded-full py-3 px-5 bg-yellow-600 text-white border border-yellow-600 hover:bg-yellow-700 hover:text-white transition-colors duration-300">
+   Explore
+</a>
                                 </div>
                             </div>
                         </div>

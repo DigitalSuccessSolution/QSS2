@@ -202,364 +202,311 @@
 <!-- ✅ Header Section End -->
 
 
-<section 
-  class="ca-team-hero-unique" 
-  style="
-    position: relative; 
-    background: url('https://images.unsplash.com/photo-1616344787254-d4575aa102ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVhbSUyMG1lbWJlcnMlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center/cover; 
-    min-height: 60vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: white; 
-    text-align: center; 
-    font-family: 'Inter', sans-serif; 
-    padding: 40px 20px;
-  "
->
-  <!-- Overlay -->
-  <div 
-    style="
-      position: absolute; 
-      inset: 0; 
-      background: rgba(0, 0, 0, 0.5);
-    "
-  ></div>
-
-  <!-- Content -->
-  <div 
-    style="
-      position: relative; 
-      max-width: 800px; 
-      z-index: 1;
-    "
-  >
-    <h1 
-      style="
-        font-size: clamp(28px, 5vw, 48px); 
-        font-weight: 700; 
-        margin-bottom: 15px; 
-        color: #FFD700;
-      "
-    >
-      Meet Our Chartered Accountants
-    </h1>
-    <p 
-      style="
-        font-size: clamp(16px, 2vw, 18px); 
-        line-height: 1.6; 
-        color: #fff;
-      "
-    >
-      Our team of expert Chartered Accountants brings years of experience, precision, and dedication to ensure your business thrives with strategic financial solutions.
-    </p>
-  </div>
-</section>
 
 
 
 
 
 
-<style>
-  .profile-container {
-    max-width: 1200px; /* Slightly increased for a more spacious look */
-    margin: auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); /* Subtle gradient for premium feel */
-  }
 
-  .profile-section {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 80px;
-    flex-wrap: nowrap;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
 
-  .profile-section:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  }
 
-  .profile-section img {
-    width: 320px;
-    height: 320px; /* Slightly larger for prominence */
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-    border: 2px solid transparent;
-    background: linear-gradient(45deg, rgb(195, 147, 34), rgb(75, 75, 75)) border-box; /* Gradient border */
-    transition: border 0.3s ease;
-  }
 
-  .profile-section img:hover {
-    border: 2px solid rgb(195, 147, 34); /* Highlight border on hover */
-  }
 
-  .profile-text {
-    flex: 1;
-    position: relative;
-  }
 
-  .profile-title {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: rgb(195, 147, 34);
-    margin-bottom: 12px;
-    font-weight: 700;
-    letter-spacing: 1.2px; /* Refined typography */
-    position: relative;
-    padding-bottom: 8px;
-  }
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Team</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
 
-  .profile-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background: rgb(195, 147, 34); /* Underline effect */
-    transition: width 0.3s ease;
-  }
-
-  .profile-section:hover .profile-title::after {
-    width: 100px; /* Extend underline on hover */
-  }
-
-  .profile-desc {
-    font-size: clamp(14px, 2vw, 15px);
-    text-align: justify;
-    line-height: 1.9;
-    color: rgb(75, 75, 75);
-    font-family: 'Georgia', serif; /* Premium typography */
-  }
-
-  .profile-quote {
-    font-style: italic;
-    font-size: 14px;
-    color: rgb(75, 75, 75);
-    margin-top: 15px;
-    padding-left: 20px;
-    border-left: 3px solid rgb(195, 147, 34); /* Quote styling */
-    transition: background 0.3s ease;
-  }
-
-  .profile-quote:hover {
-    background: rgba(195, 147, 34, 0.05); /* Subtle hover effect */
-  }
-
-  /* Alternate image position for even sections */
-  .profile-section.reverse {
-    flex-direction: row-reverse;
-  }
-
-  /* Mobile responsive */
-  @media (max-width: 768px) {
-    .profile-section,
-    .profile-section.reverse {
-      flex-direction: column;
-      text-align: center;
-      gap: 25px;
+    .team-section {
+      max-width: 1200px;
+      margin: 50px auto;
       padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
     }
 
-    .profile-section img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
+    .team-card {
+      text-align: center;
     }
 
-    .profile-text {
-      text-align: justify;
+    .team-card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
-    .profile-title::after {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
+    h3, h4 {
+      color:#c9a560;
     }
 
-    .profile-section:hover .profile-title::after {
-      width: 80px;
+    h1, h2, h3, h4, h5 {
+      font-family: 'Roboto Condensed', sans-serif;
     }
-  }
-</style>
 
-<div class="profile-container" style="padding-top: 40px;">
-  <!-- Managing Director -->
-  <div class="profile-section">
-    <img src="team/board  CA Anjali Founder.png" alt="Managing Director">
-    <div class="profile-text">
-      <div class="profile-title">CA Anjali Bhavsar (Founder & Director @ QSS)</div>
-      <p class="profile-desc">
-        FCA, B.Com, MBA<br>
-        A Chartered Accountant with 10+ years of experience in audit and compliance across Retail, Infra, Manufacturing & BFSI.
-      </p>
-      <p class="profile-quote">
-      “Our audits empower organizations to operate with clarity and control.
-      </p>
+    .h3, h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      margin: 0 0 10px;
+      display: block;
+      -webkit-margin-before: .1em;
+      -webkit-margin-after: .1em;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+      color: #040000f9;
+      line-height: 1.6;
+    }
+
+    .read-more {
+      color: #003366;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+
+    .divider {
+  border: 0;
+  border-top: 2px solid #003366;  /* Blue line */
+  margin: 8px 0 15px;             /* Gap between h4 and p */
+  width: 360px;                    /* Short line */
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="team-section">
+
+    <!-- Card 1 -->
+    <div class="team-card" >
+      <img src="team/board__CA_Anjali_Founder-removebg-preview.png" alt="Anjali Bhavsar">
+      <h3 style="color: #c9a560;">CA Anjali Bhavsar (board)</h3>
+      <h4 >Founder & Director @ QSS</h4>
+      <hr class="divider">
+      <p style="height: 16rem; ">FCA, B.Com, MBA
+A Chartered Accountant with 10+ years of experience in audit and compliance across Retail, Infra, Manufacturing & BFSI.
+
+<br> <span style="text-shadow: #333; color: #003366; ">“Our audits empower organizations to operate with clarity and control“</span>.</p>
+      <hr class="divider">
+     
+<!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-  <!-- Executive Director -->
-  <div class="profile-section reverse">
-    <img src="team/board  CA Ramnathan Shetty Director.png" alt="Executive Director">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Ramnathan Shetty (Director) </div>
-      <p class="profile-desc">
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum consequatur saepe necessitatibus optio ab veritatis atque perspiciatis, doloremque quasi repellendus! Libero nam nemo aspernatur. Non sequi consectetur similique eum exercitationem.<br>
-        Leads QSS’s vision and operational excellence, specializing in governance and risk-based audits.
-      </p>
-      <p class="profile-quote">
-        “Trust is built through every insight we deliver.
-      </p>
+    <!-- Card 2 -->
+    <div class="team-card">
+      <img src="team/board__CA_Ashok_Nadda_CEO-removebg-preview.png" alt="CA Ashok_Nadda">
+      <h3>CA Ashok_Nadda (board)</h3>
+      <h4>Director , QSS</h4>
+       <hr class="divider">
+       <p style="height: 16rem; "> A senior Chartered Accountant with deep expertise in financial planning and governance.
+Drives strategic decisions across multi-sector audit operations.
+Committed to upholding transparency and compliance at every level.
+“Precision and integrity are central to sustainable growth.”</p>
+           <hr class="divider">
+
+       <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
+ 
+    <!-- Card 3 -->
+    <div class="team-card">
+      <img src="team/board__CA_Ramnathan_Shetty_Director-removebg-preview.png" alt="CA Ramnathan_Shetty">
+      <h3>CA Ramnathan_Shetty (board)</h3>
+      <h4>Director, QSS</h4>
+            <hr class="divider">
 
-  <!-- General Manager -->
-  <div class="profile-section">
-    <img src="team/board Rahul Bhavsar Managing Director.png" alt="General Manager">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Rahul Bhavsar (Managing Director)</div>
-      <p class="profile-desc">
-        MBA (Business Analytics) | CA Finalist | 8+ Years<br>
-        Drives strategic growth and digital innovation in audits, blending analytics with governance.
-      </p>
-      <p class="profile-quote">
-        “We merge intelligence with audit integrity for future-ready assurance.”
-      </p>
+      <p style="height: 16rem; ">Brings decades of experience in enterprise risk, tax advisory, and compliance.
+Specializes in building resilient audit structures within regulated sectors.
+Focuses on delivering long-term financial clarity to clients.
+“Sound governance begins with sharp financial insight.”</p>
+            <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-  <!-- Executive Director -->
-  <div class="profile-section reverse">
-    <img src="https://qss.net.in/assets/images/vikas.jpeg" alt="Executive Director">
-    <div class="profile-text">
-      <div class="profile-title">Mr. CA Ashok Nadda  (CEO)</div>
-      <p class="profile-desc">
-        MBA | 15+ Years<br>
-        Builds strong client relationships with sector-specific audit strategies.
-      </p>
-      <p class="profile-quote">
-        “We build assurance-led partnerships that grow with our clients.”
-      </p>
+    <!-- Card 4 -->
+    <div class="team-card">
+      <img src="team/board_Rahul_Bhavsar_Managing_Director-removebg-preview.png" alt="Mr. Rahul Bhavsar">
+      <h3>Mr.Rahul Bhavsar (board)</h3>
+      <h4>Managing Director , QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">MBA (Business Analytics) | CA Finalist | 8+ Years
+Drives strategic growth and digital innovation in audits, blending analytics with governance.
+
+<br> <span style="text-shadow: #333; color: #003366; "> “We merge intelligence with audit integrity for future-ready assurance.”</span> </p>
+            <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-  <!-- General Manager -->
-  <div class="profile-section">
-    <img src="team/Nikhil Parmar GM_ A&A.png" alt="General Manager">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Nikhil Parmar (General Manager – Operations & MIS)</div>
-      <p class="profile-desc">
-        MBA | Ops Specialist<br>
-        Leads multi-site audit operations and execution excellence.
-      </p>
-      <p class="profile-quote">
-        “Operational discipline ensures every audit delivers value.”
-      </p>
+    <style>
+        img {
+  display: block;
+  margin: 0 auto;   /* Horizontal center */
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 10px;
+  display: block;
+  -webkit-margin-before: .1em;
+  -webkit-margin-after: .1em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;       /* ✅ Left & right dono side align */
+  text-justify: inter-word;  /* ✅ Word ke beech equal spacing */
+}
+
+
+    </style>
+
+    <!-- Card 5 -->
+    <div class="team-card">
+      <img src="team/board__CS_Sneha_Singh_Tomor_Director-removebg-preview.png" alt="Sneha Singh Tomor">
+      <h3>Sneha Singh Tomor (board)</h3>
+      <h4>Director, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">A results-driven leader in financial operations and audit design.
+Known for integrating client-focused solutions with audit best practices.
+Leads diverse teams to ensure value-driven outcomes.
+“Delivering trust through tailored financial intelligence.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-  <!-- Executive Director -->
-  <div class="profile-section reverse">
-    <img src="team/Naveen Verma GM_BGV.png" alt="Executive Director">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Naveen Verma (General Manager – Audit & Assurance)</div>
-      <p class="profile-desc">
-        MBA | Audit Expert<br>
-        Focuses on risk-aligned audit strategies and governance transformation.
-      </p>
-      <p class="profile-quote">
-        “We audit with precision to unlock long-term business value.”
-      </p>
+    <!-- Card 6 -->
+    <div class="team-card">
+      <img src="team/board__CA_Vikram_Bhavsar_Director-removebg-preview.png" alt="Vikram Bhavsar">
+      <h3>MR.Vikram Bhavsar (board)</h3>
+      <h4>Director, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">Heads operations with a focus on systems, execution, and accountability.
+Drives excellence through data, discipline, and streamlined workflows.
+Plays a key role in aligning audit goals with business strategy.
+“Efficiency is built through process-driven leadership.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
-</div>
 
-<!-- General Manager -->
-  <div class="profile-section">
-    <img src="team/board  CA Vikram Bhavsar Director.png" alt="Directo">
-    <div class="profile-text">
-      <div class="profile-title">Mr. vikram bhavsar (Director)</div>
-      <p class="profile-desc">
-        MBA | Ops Specialist<br>
-        Leads multi-site audit operations and execution excellence.
-      </p>
-      <p class="profile-quote">
-        “Operational discipline ensures every audit delivers value.”
-      </p>
+      <!-- Card 7 -->
+    <div class="team-card">
+      <img src="team/Naveen_Verma_GM_BGV-removebg-preview.png" alt="Naveen Verma">
+      <h3>Naveen Verma</h3>
+      <h4>General Manager – Audit & Assurance | MBA | Audit Expert, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">Leads enterprise-wide audit programs with strategic and analytical depth.
+Brings over a decade of experience in financial audits and compliance.
+Focuses on delivering high-impact audits that support informed decisions.
+“Every audit is an opportunity to build credibility and control.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-  <!-- Executive Director -->
-  <div class="profile-section reverse">
-    <img src="team/Mahesh Birajdar GM _ Showroom Division.png" alt="Executive Director">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Birajdar (Showroom Division)</div>
-      <p class="profile-desc">
-        MBA | Audit Expert<br>
-        Focuses on risk-aligned audit strategies and governance transformation.
-      </p>
-      <p class="profile-quote">
-        “We audit with precision to unlock long-term business value.”
-      </p>
+    <!-- Card 8 -->
+    <div class="team-card">
+      <img src="team/Nikhil_Parmar_GM__A_A-removebg-preview.png" alt="Nikhil Parmar ">
+      <h3>Mr. Nikhil Parmar </h3>
+      <h4>General Manager – Operations & MIS | MBA | Ops Specialist, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; "> Heads operations and MIS with a focus on systems, efficiency, and control.
+Integrates data-driven insights into everyday business processes.
+Ensures alignment between operational execution and business goals.
+“Strong systems create seamless operations and smarter decisions.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-<!-- General Manager -->
-  <div class="profile-section">
-    <img src="team/Satyam Gupta GM_Opreation Manager.png" alt="Directo">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Satyam gupta (Opreation manager)</div>
-      <p class="profile-desc">
-        MBA | Ops Specialist<br>
-        Leads multi-site audit operations and execution excellence.
-      </p>
-      <p class="profile-quote">
-        “Operational discipline ensures every audit delivers value.”
-      </p>
+
+      <!-- Card 9 -->
+    <div class="team-card">
+      <img src="team/Satyam_Gupta_GM_Opreation_Manager-removebg-preview.png" alt="Satyam gupta">
+      <h3>Mr. Satyam gupta </h3>
+      <h4>Opreation manager,<br> QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">Manages day-to-day execution of audit operations with precision.
+Coordinates teams to ensure smooth and timely audit delivery.
+Plays a vital role in bridging planning with ground execution.
+“Strong coordination delivers consistent outcomes.”</p>
+            <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
-<!-- Executive Director -->
-  <div class="profile-section reverse">
-    <img src="team/Yash Gupta MIS Team Head.png" alt="MIS Team Head">
-    <div class="profile-text">
-      <div class="profile-title">Mr. Yash Gupta (MIS Team Head)</div>
-      <p class="profile-desc">
-        MBA | Audit Expert<br>
-        Focuses on risk-aligned audit strategies and governance transformation.
-      </p>
-      <p class="profile-quote">
-        “We audit with precision to unlock long-term business value.”
-      </p>
+    <!-- Card 10 -->
+    <div class="team-card">
+      <img src="team/Mahesh_Birajdar_GM___Showroom_Division-removebg-preview.png" alt="Mahesh Birajdar">
+      <h3>Mr. Mahesh Birajdar </h3>
+      <h4>Showroom Division, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">Handles audit and operational compliance across retail showrooms.
+Monitors showroom-level controls, inventory, and financial hygiene.
+Ensures frontline execution aligns with company-wide audit standards.
+“Discipline at the ground level drives brand trust.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
 
 
-  <!-- General Manager -->
-  <div class="profile-section">
-    <img src="team/board  CS Sneha Singh Tomor Director.png" alt="Director">
-    <div class="profile-text">
-      <div class="profile-title">MRS. Sneha Singh Tomor  (Director)</div>
-      <p class="profile-desc">
-        MBA | Ops Specialist<br>
-        Leads multi-site audit operations and execution excellence.
-      </p>
-      <p class="profile-quote">
-        “Operational discipline ensures every audit delivers value.”
-      </p>
+
+      <!-- Card 11 -->
+    <div class="team-card">
+      <img src="team/Yash_Gupta_MIS_Team_Head-removebg-preview.png" alt="Mr. Yash Gupta">
+      <h3>Mr. Yash Gupta </h3>
+      <h4>MIS Team Headr, QSS</h4>
+       <hr class="divider">
+      <p style="height: 16rem; ">Leads the MIS function, transforming raw data into audit intelligence.
+Creates systems that support real-time reporting and compliance tracking.
+Supports audit teams with accurate, timely, and actionable insights.
+“Numbers tell the story — we ensure it's accurate and timely.”</p>
+           <hr class="divider">
+
+      <!-- <a href="#" class="read-more">Read more</a> -->
     </div>
-  </div>
+
+    
+  </section>
+
+</body>
+</html>
+
 
 
    <!-- Footer Start -->
