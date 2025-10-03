@@ -220,77 +220,74 @@
 
 
 <!-- Contact Section Start -->
-<section class="w-full bg-white py-12 px-4 md:px-12 font-roboto-condensed">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-    
+<section class="w-full bg-white py-4 px-4 md:px-10 font-roboto-condensed min-h-screen" style="max-height:100vh; overflow:hidden;">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-start" style="height: 100%;">
+
     <!-- Left Side: Business Enquiries -->
-    <div class="space-y-6">
-      <div class="space-y-2">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 border-b-2 border-yellow-500 inline-block pb-1">Contact Us</h2>
+    <div class="space-y-4 overflow-auto" style="max-height: 100vh;">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1d2a59] border-b-2 border-yellow-500 inline-block pb-1">Contact Us</h2>
         <h3 class="text-lg md:text-xl font-semibold text-gray-700">For Business Enquiries</h3>
       </div>
-      
-      <div class="space-y-3 mt-4">
-        <div class="flex items-center space-x-3 p-2  bg-white  ">
-          <span class="text-yellow-600 text-lg md:text-xl bg-yellow-50 p-2 rounded-full">✉️</span>
-          <p class="text-gray-700 font-medium">info@qss.net.in</p>
+
+      <div class="space-y-2">
+        <div class="flex items-center space-x-3">
+          <span class="text-yellow-600 text-lg bg-yellow-50 p-2 rounded-full">✉️</span>
+          <p class="text-gray-700 font-medium text-sm md:text-base">info@qss.net.in</p>
         </div>
-        <div class="flex items-center space-x-3 p-2  ">
-          <span class="text-yellow-600 text-lg md:text-xl bg-yellow-50 p-2 rounded-full">📞</span>
+        <div class="flex items-start space-x-3">
+          <span class="text-yellow-600 text-lg bg-yellow-50 p-2 rounded-full">📞</span>
           <div>
-            <p class="text-gray-700 font-semibold">+91-9202456705</p>
-            <p class="text-gray-500 text-sm">Employee Background Check Services</p>
+            <p class="text-gray-700 font-semibold text-sm md:text-base">+91-9202456705</p>
+            <p class="text-gray-500 text-xs md:text-sm">Employee Background Check Services</p>
           </div>
         </div>
-        <div class="flex items-center space-x-3 p-2  bg-white  ">
-          <span class="text-yellow-600 text-lg md:text-xl bg-yellow-50 p-2 rounded-full">📞</span>
+        <div class="flex items-start space-x-3">
+          <span class="text-yellow-600 text-lg bg-yellow-50 p-2 rounded-full">📞</span>
           <div>
-            <p class="text-gray-700 font-semibold">+91-9202456705</p>
-            <p class="text-gray-500 text-sm">Audit & Assurance Services</p>
+            <p class="text-gray-700 font-semibold text-sm md:text-base">+91-9202456705</p>
+            <p class="text-gray-500 text-xs md:text-sm">Audit & Assurance Services</p>
           </div>
         </div>
       </div>
-      
+
       <!-- Contact Form -->
-      <form class="space-y-4 mt-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <input type="text" placeholder="Full Name *" class="w-full border !border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 bg-white  placeholder-black" required>
-          <input type="email" placeholder="Email Address *" class="w-full border !border-black  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 bg-white placeholder-black" required>
+      <form class="space-y-3 text-sm">
+        <div class="grid grid-cols-2 gap-2">
+          <input type="text" placeholder="Full Name *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
+          <input type="email" placeholder="Email Address *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <input type="text" placeholder="Phone Number *" class="w-full border !border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 bg-white  placeholder-black" required>
-          <input type="text" placeholder="City *" class="w-full border !border-black px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 bg-white  placeholder-black" required>
+        <div class="grid grid-cols-2 gap-2">
+          <input type="text" placeholder="Phone Number *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
+          <input type="text" placeholder="City *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
         </div>
-        <textarea placeholder="Your Message *" class="w-full border !border-black px-3 py-2 h-28 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 bg-white  placeholder-black" required></textarea>
-        
+        <textarea placeholder="Your Message *" required class="w-full border border-black px-2 py-1 h-20 placeholder-black focus:ring-yellow-500 focus:border-yellow-500 resize-none"></textarea>
+
         <div class="flex items-center space-x-2">
           <input type="checkbox" id="terms" class="accent-yellow-500 w-4 h-4">
-          <label for="terms" class="text-gray-600 text-sm">I agree to the <span class="text-yellow-600 font-semibold">Terms & Conditions</span> and <span class="text-yellow-600 font-semibold">Privacy Policy</span></label>
+          <label for="terms" class="text-gray-600 text-xs">I agree to the <span class="text-yellow-600 font-semibold">Terms & Conditions</span> and <span class="text-yellow-600 font-semibold">Privacy Policy</span></label>
         </div>
-        
-        <button type="submit" class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-bold px-6 py-2  hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 text-sm md:text-base">
-          <span>Send Message</span>
-          <span class="text-lg">➔</span>
+
+        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded text-sm flex items-center space-x-2">
+          <span>Send Message</span> <span class="text-base">➔</span>
         </button>
       </form>
     </div>
-    
-    <!-- Right Side: Head Office & Map -->
-    <div class="space-y-6">
-      <div class="space-y-2">
-        <h3 class="text-lg md:text-xl text-black font-medium">Head Office</h3>
-        <div class="p-4 md:p-5 rounded-xl bg-gradient-to-br from-white to-gray-50 shadow-sm border border-gray-100">
-          <p class="text-gray-600 text-sm md:text-base">
-            Corporate HQ: S.R. No. 71C/2,<br>
-            Flat No. 201, Harpale Complex, Haveli,<br>
-            Pune, Manjari Bk (N.V.), 412307<br>
-            <span class="text-gray-800 font-semibold mt-1 block">📞 +91-9202456705</span>
-          </p>
+
+    <!-- Right Side: Office Info & Map -->
+    <div class="space-y-4">
+      <div>
+        <h3 class="text-lg md:text-xl font-medium text-[#1d2a59]">Head Office</h3>
+        <div class="text-sm md:text-base">
+          <p>S.R. No. 71C/2, Flat No. 201,</p>
+          <p>Harpale Complex, Haveli,</p>
+          <p>Pune, Manjari Bk (N.V.), 412307</p>
+          <p class="font-semibold mt-1">📞 +91-9202456705</p>
         </div>
       </div>
-      
-      <!-- Google Map Embed -->
-      <div class="w-full h-64 md:h-72 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+
+      <!-- Google Map -->
+      <div class="w-full h-48 rounded overflow-hidden border border-gray-200">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456!2d73.123456!3d18.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b2b0c1b2b2b3%3A0x1234567890abcdef!2sT.%20Nagar!5e0!3m2!1sen!2sin!4v1696156800000!5m2!1sen!2sin" 
           width="100%" 
@@ -298,40 +295,37 @@
           style="border:0;" 
           allowfullscreen="" 
           loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      
-      <!-- Additional Info -->
-      <div class="grid grid-cols-2 gap-3 mt-3">
-        <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-100 text-center text-sm md:text-base">
+
+      <!-- Hours -->
+      <div class="grid grid-cols-2 gap-2 text-sm">
+        <div>
           <p class="text-gray-500">Working Hours</p>
           <p class="text-gray-800 font-semibold">Mon - Fri: 9AM - 6PM</p>
         </div>
-        <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-100 text-center text-sm md:text-base">
+        <div>
           <p class="text-gray-500">Response Time</p>
           <p class="text-gray-800 font-semibold">Within 24 Hours</p>
         </div>
       </div>
     </div>
-    
   </div>
 </section>
 <!-- Contact Section End -->
 
+<!-- Styles -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
 .font-roboto-condensed {
   font-family: 'Roboto Condensed', sans-serif;
 }
-/* Placeholder color black */
 ::placeholder {
   color: #000 !important;
 }
-
-.section-title .sub-style::before, .section-title .sub-style::after{
-    display: none
-}
 </style>
+
 
 
 
