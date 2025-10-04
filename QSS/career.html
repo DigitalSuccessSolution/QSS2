@@ -2,7 +2,8 @@
 <html lang="en">
 
     <head>
-       
+       <script src="https://unpkg.com/feather-icons"></script>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
         
@@ -55,64 +56,62 @@
         <!-- Spinner End -->
 
 
-      <!-- Topbar Start -->
-<div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;" >
-    <div class="row gx-0 align-items-center">
+    <!-- Topbar Start -->
+<div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;">
+  <div class="row gx-0 align-items-center">
 
-        <!-- Left (Mobile: Phone | Desktop: Email & Phone) -->
-        <div class="col-6 col-lg-5 text-start mb-lg-0">
-            <div class="d-none d-lg-flex">
-                <!-- Desktop View -->
-                <a href="mailto:info@qss.net.in" class="text-dark me-4">
-                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
-                </a>
-                <a href="tel:+91-9202456705" class="text-dark">
-                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
-                </a>
-            </div>
-            <div class="d-flex d-lg-none">
-                <!-- Mobile View -->
-                <a href="tel:+91-9202456705" class="text-dark">
-                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
-                </a>
-            </div>
-        </div>
-
-        <!-- Right (Mobile: Email | Desktop: Social Icons) -->
-        <div class="col-6 col-lg-7 text-end">
-            <div class="d-none d-lg-flex justify-content-lg-end">
-                <!-- Desktop Social Icons -->
-              <a href="#" class="text-dark me-3"><i class="fab fa-x-twitter"></i></a>
-<a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
-<a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
-
-            </div>
-            <div class="d-flex d-lg-none justify-content-end">
-                <!-- Mobile Email -->
-                <a href="mailto:info@qss.net.in" class="text-dark">
-                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
-                </a>
-            </div>
-        </div>
-
+    <!-- Left (Desktop: Email | Mobile: Phone) -->
+    <div class="col-6 col-lg-5 text-start mb-lg-0">
+      <div class="d-none d-lg-flex">
+        <!-- Desktop Email Only -->
+        <a href="mailto:info@qss.net.in" class="text-dark">
+          <i class="fas fa-envelope me-2"></i>info@qss.net.in
+        </a>
+      </div>
+      <div class="d-flex d-lg-none">
+        <!-- Mobile: Phone -->
+        <a href="tel:+91-9202456705" class="text-dark">
+          <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+        </a>
+      </div>
     </div>
+
+    <!-- Right (Desktop: Phone + Social Icons | Mobile: Email) -->
+    <div class="col-6 col-lg-7 text-end">
+      <div class="d-none d-lg-flex justify-content-lg-end align-items-center">
+        <!-- Desktop Phone -->
+        <a href="tel:+91-9202456705" class="text-dark me-4">
+          <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+        </a>
+        <!-- Desktop Social Icons -->
+        <a href="#" class="text-dark me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <div class="d-flex d-lg-none justify-content-end">
+        <!-- Mobile Email -->
+        <a href="mailto:info@qss.net.in" class="text-dark">
+          <i class="fas fa-envelope me-2"></i>info@qss.net.in
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <style>
-    /* Mobile Mail White */
-.d-lg-none a {
+  /* Mobile Links White */
+  .d-lg-none a {
     color: #fff !important;
-}
+  }
 
-/* Social Icons White */
-.d-lg-flex a {
+  /* Desktop Links White */
+  .d-lg-flex a {
     color: #fff !important;
-}
-
+  }
 </style>
 <!-- Topbar End -->
-
-
 <!-- ✅ Header Section Start -->
 <section class="w-full border-b border-gray-200 shadow-sm">
   <header class="max-w-7xl mx-auto px-2 md:px-6 py-1.5 flex items-center justify-between">
@@ -335,214 +334,101 @@
 </script>
 
 
-<section class="w-full bg-white pb-16 md:pb-20 font-roboto-condensed">
-  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 px-6 md:px-8 items-start">
-    
-    <!-- Left Side - Job Opportunities -->
-    <div class="relative">
-      <div class="relative bg-white rounded-2xl p-8 md:p-10 ">
-        <!-- Header Section -->
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-14 h-14 bg-[#004A91] rounded-xl flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">We're Hiring!</h2>
-            <div class="w-16 h-1 bg-[#004A91] mt-2 rounded-full"></div>
-          </div>
-        </div>
 
-        <!-- Main Description -->
-        <p class="text-lg text-gray-700 leading-relaxed bg-white p-6 rounded-xl ">
-          "We are seeking talented individuals with <span class="font-semibold text-[#004A91] bg-blue-50 px-1 rounded">energy, passion, and innovative ideas</span> 
-          to become part of our vibrant team. Please contact us to explore potential professional relationships and opportunities."
-        </p>
 
-        <!-- CTA Button -->
-        <button class="mt-8 bg-[#004A91] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all duration-300 hover:scale-105 transform flex items-center gap-3">
-          Apply Now
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+
+<!-- section 1 start -->
+
+<section class="w-full bg-white py-10 font-roboto-condensed">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 px-5 md:px-6 items-center">
+
+    <!-- Left Side -->
+    <div class="flex flex-col">
+      <!-- Header -->
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 md:w-11 md:h-11 bg-[#004A91] rounded-lg flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-        </button>
-
-        <!-- Current Openings Section -->
-        <div class="mt-12">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-2 h-8 bg-red-500 rounded-full"></div>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Current Openings</h3>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl  mb-6">
-            <h4 class="text-xl font-bold text-[#004A91]">Join the team!</h4>
-            <p class="text-gray-600 mt-2">Exciting opportunities await talented professionals</p>
-          </div>
-
-          <!-- Job Card -->
-          <div class="bg-white rounded-2xl p-6 md:p-8 hover:border-blue-200 transition-all duration-300">
-            <!-- Job Header -->
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div>
-                <h5 class="text-xl font-bold text-[#004A91] leading-tight">
-                  Executive / Senior Executive & Team Lead – Field Auditors
-                </h5>
-                <div class="flex flex-wrap gap-4 mt-3">
-                  <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    4-6 years
-                  </span>
-                  <span class="inline-flex items-center gap-2 bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    Bangalore
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Job Details -->
-            <div class="mt-6 space-y-4">
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  </svg>
-                  Locations:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">
-                  Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata,
-                  Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu
-                </p>
-              </div>
-
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-                  </svg>
-                  Educational Qualification:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">Any Graduate</p>
-              </div>
-
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  Required Skills:
-                </p>
-                <ul class="list-none text-sm text-gray-700 space-y-2 mt-2 ml-6">
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                    Excellent communication skills
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                    Proficiency in Advanced Excel
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Job Description Dropdown -->
-            <div class="mt-6">
-              <select class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 bg-white focus:ring-2 focus:ring-blue-100 transition-all duration-300 cursor-pointer">
-                <option class="py-2">📄 View Job Description</option>
-                <option class="py-2">📥 Download Job Description PDF</option>
-                <option class="py-2">👥 Schedule Interview</option>
-              </select>
-            </div>
-          </div>
         </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">We're Hiring!</h2>
+      </div>
+
+      <!-- Description -->
+      <p class="text-gray-700 leading-relaxed text-[15px] md:text-[16px]">
+        "We are seeking talented individuals with 
+        <span class="font-semibold text-[#004A91] bg-blue-50 px-1 rounded">energy, passion, and innovative ideas</span> 
+        to become part of our vibrant team. Please contact us to explore potential professional relationships and opportunities."
+      </p>
+
+      <!-- Smaller Apply Button -->
+      <button class="mt-5 bg-[#004A91] text-white px-4 py-2 rounded-md font-medium text-sm md:text-[14px] hover:opacity-90 transition-all duration-300 flex items-center gap-2">
+        Apply Now
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+
+      <!-- Current Openings - Moved to Bottom on Mobile -->
+      <div class="mt-6 order-last md:order-none">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-2 h-5 bg-red-500 rounded-full"></div>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900">Current Openings</h3>
+        </div>
+        <h4 class="text-[#004A91] font-bold text-base md:text-lg">Join the team!</h4>
+        <p class="text-gray-600 text-sm md:text-[15px] mt-1">Exciting opportunities await talented professionals</p>
       </div>
     </div>
 
-    <!-- Right Side - Contact Information -->
-    <div class="relative">
-      <div class="sticky top-8">
-        <!-- Main Image -->
-        <div class="bg-white rounded-2xl p-8 text-center">
-          <div class="relative inline-block">
-            <img src="img/mail.jpeg" alt="Job Opportunities" class="w-60 h-60 object-contain rounded-xl">
-            <div class="absolute -top-2 -right-2 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-              Hiring!
-            </div>
-          </div>
-          
-          <h4 class="mt-6 text-2xl font-bold text-[#004A91]" >For Job Opportunities</h4>
-          <p class="text-gray-600 mt-2" >Get in touch with our HR team</p>
+    <!-- Right Side -->
+    <div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-start">
+      <div class="relative inline-block">
+        <img src="img/mail.jpeg" alt="Job Opportunities" class="w-32 h-32 md:w-40 md:h-40 object-contain">
+        <div class="absolute -top-2 left-20 md:left-24 bg-amber-500 text-white px-2.5 md:px-3 py-0.5 rounded-full text-[10px] md:text-xs font-semibold">
+          Hiring!
         </div>
+      </div>
 
-        <!-- Contact Card -->
-        <div class="mt-8 bg-white rounded-2xl p-8  transition-all duration-300">
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <!-- Icon Section -->
-            <div class="bg-amber-500 p-4 rounded-2xl flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            
-            <!-- Contact Details -->
-            <div class="text-center sm:text-left flex-1">
-              <h5 class="text-xl font-bold text-gray-900 mb-2" style="text-align: left;">QSS Recruitment</h5>
-              <p class="text-gray-600 mb-4 font-medium" style="text-align: left;">Candidate Queries & Support</p>
-              
-              <div class="space-y-3">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span class="font-semibold text-gray-800 text-sm min-w-20">Email:</span>
-                  <div class="flex flex-col">
-                    <!-- <a href="mailto:info@qss.net.in" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">info@qss.net.in</a> -->
-                    <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">Hr@qss.net.in</a>
-                  </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span class="font-semibold text-gray-800 text-sm min-w-20">Phone:</span>
-                  <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">+91-9202456705</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <h4 class="mt-3 text-lg md:text-xl font-bold text-[#004A91]">For Job Opportunities</h4>
+      <p class="text-gray-600 text-[13px] md:text-[14px] mt-1">Get in touch with our HR team</p>
 
-         <!-- Quick Action Buttons -->
-<div class="mt-6 grid grid-cols-2 gap-3">
-  
-  <!-- Chat Button -->
-  <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" 
-     target="_blank" 
-     class="bg-blue-50 text-[#004A91] px-4 py-2 rounded-lg font-medium text-sm hover:bg-blue-100 transition-colors flex items-center justify-center gap-2">
-    Chat
-  </a>
+      <div class="mt-4 text-gray-800 text-[13px] md:text-[14px] leading-snug text-left">
+        <h5 class="font-bold text-base md:text-lg text-gray-900">QSS Recruitment</h5>
+        <p class="text-gray-600">Candidate Queries & Support</p>
 
-  <!-- Call Button -->
-  <a href="tel:+919202456705" 
-     class="bg-amber-50 text-amber-700 px-4 py-2 rounded-lg font-medium text-sm hover:bg-amber-100 transition-colors flex items-center justify-center gap-2">
-    Call
-  </a>
-  
-</div>
+        <p class="mt-2">
+          <span class="font-semibold">Email:</span>
+          <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700">Hr@qss.net.in</a>
+        </p>
 
-        <!-- Additional Info -->
-        <div class="mt-6 bg-white rounded-2xl p-6 ">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-800">Quick Response</p>
-              <p class="text-sm text-gray-600">We typically respond within 24 hours</p>
-            </div>
-          </div>
+        <p>
+          <span class="font-semibold">Phone:</span>
+          <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="mt-4 flex gap-3">
+        <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" target="_blank" 
+           class="bg-blue-50 text-[#004A91] px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-blue-100 transition">
+          Chat
+        </a>
+        <a href="tel:+919202456705" 
+           class="bg-amber-50 text-amber-700 px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-amber-100 transition">
+          Call
+        </a>
+      </div>
+
+      <!-- Quick Response -->
+      <div class="mt-4 flex items-center gap-3">
+        <div class="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 md:w-4 md:h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800 text-[13px] md:text-[14px]">Quick Response</p>
+          <p class="text-xs md:text-sm text-gray-600">We typically respond within 24 hours</p>
         </div>
       </div>
     </div>
@@ -550,121 +436,307 @@
 </section>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap');
 .font-roboto-condensed {
   font-family: 'Roboto Condensed', sans-serif;
 }
 </style>
 
+<!-- section 1 end -->
 
 
 
-<section class="w-full bg-white px-4 md:px-16 font-sans" style="margin:0 !important; padding:0 !important;">
-  
+<!-- section 2 start -->
 
-  <div class="max-w-6xl mx-auto space-y-10">
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    <!-- Card 1 -->
-    <div class=" p-6 md:p-8 space-y-6">
-                <!-- Job Card -->
-          <div class="bg-white rounded-2xl p-6 md:p-8 hover:border-blue-200 transition-all duration-300">
-            <!-- Job Header -->
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div>
-                <h5 class="text-xl font-bold text-[#004A91] leading-tight">
-                 Gernal
-                </h5>
-                <div class="flex flex-wrap gap-4 mt-3">
-                  <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    4-6 years
-                  </span>
-                  <span class="inline-flex items-center gap-2 bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    Bangalore
-                  </span>
-                </div>
-              </div>
-            </div>
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
 
-            <!-- Job Details -->
-            <div class="mt-6 space-y-4">
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  </svg>
-                  Locations:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">
-                  Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata,
-                  Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu
-                </p>
-              </div>
+  .toggle-btn {
+    padding: 10px 20px;
+    border: 2px solid #004A91;
+    background-color: white;
+    color: #004A91;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
 
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-                  </svg>
-                  Educational Qualification:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">MBA Finance, Marketing & Business Analytics</p>
-              </div>
+  .toggle-btn.active,
+  .toggle-btn:hover {
+    background-color: #004A91;
+    color: white;
+  }
 
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  Required Skills:
-                </p>
-                <ul class="list-none text-sm text-gray-700 space-y-2 mt-2 ml-6">
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                   A minimum of 12–15 years of professional experience in a relevant field.
+  .job-section {
+    display: none;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    width: 100%;
+  }
 
-Expertise in client relationship management and retention.
+  .job-section.active {
+    display: block;
+  }
 
+  .job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004A91;
+  }
 
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                   A proven and effective approach to identifying, approaching, and securing new business clients
-                  </li>
-                </ul>
-              </div>
-            </div>
+  .tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-     
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f0f4ff;
+    color: #004A91;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
 
-    
+  .tag.green {
+    background-color: #e7f6ea;
+    color: #198754;
+  }
 
-          
-        <!-- Extra Description -->
-        <div class="pl-6 border-l-2 border-blue-100 text-gray-600 leading-relaxed">
-          <p class="mb-2">A minimum of 12–15 years of professional experience in a relevant field.</p>
-          <p class="mb-2">Expertise in client relationship management and retention.</p>
-          <p>A proven and effective approach to identifying, approaching, and securing new business clients.</p>
-        </div>
+  .section-block {
+    margin-top: 20px;
+  }
 
-        <div class="text-gray-700">
-          <span class="font-semibold">Educational Qualification:</span> MBA Finance, Marketing &amp; Business Analytics
-        </div>
-      </div>
+  .section-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+  }
 
-      <button class="w-full md:w-auto bg-white border border-blue-600 text-blue-600 py-3 px-6 rounded-md hover:bg-blue-50 transition-colors duration-300 font-medium">
-        View Job Description
-      </button>
+  .section-content,
+  .section-list {
+    color: #444;
+    margin-top: 6px;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+
+  .section-list {
+    list-style-type: disc;
+  }
+
+  .dropdown {
+    margin-top: 25px;
+  }
+
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    color: #444;
+  }
+
+  select:focus {
+    border-color: #004A91;
+    outline: none;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+
+    .toggle-btn {
+      font-size: 13px;
+      padding: 8px 14px;
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    .job-title {
+      font-size: 18px;
+    }
+
+    .section-content,
+    .section-list {
+      margin-left: 16px;
+      font-size: 13px;
+    }
+
+    select {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="container">
+  <!-- Button Group -->
+  <div class="button-group">
+    <button class="toggle-btn active" onclick="showSection('general', this)">General</button>
+    <button class="toggle-btn" onclick="showSection('senior', this)">Senior Executive</button>
+    <button class="toggle-btn" onclick="showSection('business', this)">Business Development</button>
+  </div>
+
+  <!-- General Section -->
+  <div class="job-section active" id="general">
+    <div class="job-title">General</div>
+    <div class="tags">
+      <span class="tag">⏱️ 4-6 years</span>
+      <span class="tag green">📍 Bangalore</span>
     </div>
 
+    <div class="section-block">
+      <div class="section-title">📍 Locations:</div>
+      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">🎓 Educational Qualification:</div>
+      <div class="section-content">MBA Finance, Marketing & Business Analytics</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">⚡ Required Skills:</div>
+      <ul class="section-list">
+        <li>A minimum of 12–15 years of professional experience in a relevant field.</li>
+        <li>Expertise in client relationship management and retention.</li>
+        <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
   </div>
-</section>
+
+  <!-- Senior Executive Section -->
+  <div class="job-section" id="senior">
+    <div class="job-title">Executive / Senior Executive & Team Lead – Field Auditors</div>
+    <div class="tags">
+      <span class="tag">⏱️ 4-6 years</span>
+      <span class="tag green">📍 Bangalore</span>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">📍 Locations:</div>
+      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">🎓 Educational Qualification:</div>
+      <div class="section-content">Any Graduate</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">⚡ Required Skills:</div>
+      <ul class="section-list">
+        <li>Excellent communication skills</li>
+        <li>Proficiency in Advanced Excel</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Business Development Section -->
+  <div class="job-section" id="business">
+    <div class="job-title">Business Development Manager</div>
+    <div class="tags">
+      <span class="tag">⏱️ 10+ years</span>
+      <span class="tag green">📍 Bangalore</span>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">📍 Locations:</div>
+      <div class="section-content">Pan India</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">🎓 Educational Qualification:</div>
+      <div class="section-content">MBA in Sales & Marketing</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">⚡ Required Skills:</div>
+      <ul class="section-list">
+        <li>Strong experience in B2B sales</li>
+        <li>Excellent negotiation and closing skills</li>
+        <li>Ability to drive revenue growth</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showSection(sectionId, btn) {
+    const allSections = document.querySelectorAll('.job-section');
+    const allButtons = document.querySelectorAll('.toggle-btn');
+
+    allSections.forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+
+    allButtons.forEach(button => button.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+<!-- section 2 end -->
+
+
+
+
+
+
+
+
+
+
 
 
 <section class="w-full bg-white py-10 px-4 md:px-12 font-sans">
