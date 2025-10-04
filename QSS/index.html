@@ -248,7 +248,7 @@
 
             <!-- Content -->
             <div class="p-8 md:p-12">
-              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Powering Trust Through Precision</h2>
+              <h2 class="about-title">Powering Trust Through Precision</h2>
               <p class="text-gray-700 leading-relaxed">
                 <span class="font-semibold">We don’t just audit—we uncover, assure, and empower.</span><br>
                 <b>India’s trusted partner for Audit, Risk & Compliance Services.</b><br>
@@ -277,7 +277,7 @@
 
             <!-- Image -->
 <div class="relative h-[230px] md:h-[380px] overflow-hidden bg-black">
-  <img src="img/quick a.jpeg" 
+  <img src="img/quick.jpeg" 
        alt="QuickEx Platform" 
        class="w-full h-full object-contain object-center">
   <div class="absolute inset-0 bg-gradient-to-tr from-black/30 to-transparent"></div>
@@ -285,7 +285,7 @@
 
             <!-- Content -->
             <div class="p-8 md:p-12">
-              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Tech Platform – QuickEx™</h2>
+              <h2 class="about-title">Tech Platform – QuickEx™</h2>
               <p class="text-gray-700 leading-relaxed">
                 <b>QuickEx™</b> is QSS’s proprietary background verification engine, built for speed, security, and transparency.
               </p>
@@ -322,7 +322,7 @@
 
             <!-- Content -->
             <div class="p-8 md:p-12">
-              <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4"> Industry-Specific Foresight. <br class="hidden md:block"> Local Precision.</h2>
+              <h2 class="about-title"> Industry-Specific Foresight. <br class="hidden md:block"> Local Precision.</h2>
               <p class="text-yellow-600 font-semibold mb-2">QSS delivers more than audits—</p>
               <p class="text-gray-700 leading-relaxed">
                 From the factory floor to multi-site retail audits, our teams embed deeply into client ecosystems to flag risks before they escalate. <br>
@@ -456,12 +456,10 @@
 
 
 
-<h1 class="about-title text-black"  style="text-align: left !important;">
-  QSS is a tech-enabled, ISO-certified audit and compliance firm offering precision-driven solutions.
+<!-- About Section -->
+<h1 class="about-title text-black" style="text-align: left !important; margin-bottom: 15px;">
+  ISO-certified audit & compliance firm offering precise audit and compliance
 </h1>
-
-     
-
 
 <p class="about-text text-black">
   We specialize in internal audits, inventory verification, background checks, and manpower outsourcing. With over 10 years of experience and a strong Pan-India presence, QSS is trusted by more than 100 enterprises.
@@ -471,11 +469,19 @@
   Our proprietary 360° Assurance Approach — covering Performance, Protection, and Proof — helps organizations achieve governance, transparency, and operational control.
 </p>
 
-        <a href="about.html" class="btn btn-custom py-3 px-5 rounded-pill">Learn More</a>
+<a href="about.html" class="btn mt-4 btn-custom py-3 px-5 rounded-pill">Learn More</a>
+
       </div>
     </div>
   </div>
 </div>
+
+<style>
+    .about-title {
+  margin-bottom: 20px; /* spacing between heading and first paragraph */
+}
+
+</style>
 <!-- About End -->
 
 
@@ -2706,60 +2712,45 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 
 
 
-<!-- peragraph globle css start  h1-->
+<!-- Paragraph Global CSS Start (h1) -->
 <style>
 .about-title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 550;
-  font-size: 1.rem;      /* <-- Standard font size */
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem; /* reduced for desktop */
+  color: black;
   line-height: 1.2;
-  color: #1a1a1a;
-  text-align: center;
-  letter-spacing: 0.3px;
-  margin-bottom: 1rem;
-  position: relative;
-  padding: 0 10px;        /* Keeps a bit of spacing on smaller screens */
+  letter-spacing: 0.3px; 
 }
 
-.about-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9a560, #d4af37);
-  margin: 10px auto 0;
- 
+/* Responsive Typography */
+@media (max-width: 767px) {
+  .about-title {
+    font-size: 1.2rem;   /* smaller for mobile */
+    line-height: 1.4;   
+    padding: 0 10px;    
+    text-align: center;
+  }
 }
 
-
-  /* Responsive Typography */
-  @media (max-width: 767px) {
-    .about-title {
-      font-size: 1.4rem;   /* smaller on mobile */
-      line-height: 1.4;   /* tighter line spacing */
-      padding: 0 10px;    /* little side spacing */
-      text-align: center;
-    }
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 1.8rem;  /* medium for tablets */
   }
+}
 
-  @media (min-width: 768px) {
-    .about-title {
-      font-size: 2.2rem;  /* normal for tablets */
-    }
+@media (min-width: 1200px) {
+  .about-title {
+    font-size: 2rem;  /* clean & professional for desktop */
   }
-
-  @media (min-width: 1200px) {
-    .about-title {
-      font-size: 2.7rem;  /* big and premium for desktop */
-    }
-  }
+}
 </style>
 
  
 <!-- h3 ke liye  -->
        <style>
   .about-subtitle {
-    font-family: "Inter", sans-serif;   /* Modern corporate font */
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;   /* Modern corporate font */
     font-weight: 600;                   /* Bold but not too heavy */
     font-size: 1.4rem;                  /* Default size */
     line-height: 1.5;
@@ -2802,14 +2793,12 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 <!-- peragraph ke liye  -->
  <style>
   .about-text {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4a4a4a;
-    text-align: justify;            /* Left + Right align */
-    text-justify: inter-word;       /* Equal spacing between words */
-    margin-bottom: 1.2rem;
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem; /* adjust if needed */
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
   }
 
   /* Responsive fix for mobile */
@@ -2831,8 +2820,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
 </style>
 
 
-
-
 <!-- card ke liye  -->
    <style>
        .pillar-desc {
@@ -2852,8 +2839,6 @@ Inventory Scanning & Stock Accuracy: Conduct barcode-based inventory audits to r
    </style>
 
    <!-- card ke liye  -->
-
-
 
 <!-- peragraph globle css end -->
 

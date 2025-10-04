@@ -3553,60 +3553,45 @@
 
 
 
-<!-- peragraph globle css start  h1-->
+<!-- Paragraph Global CSS Start (h1) -->
 <style>
 .about-title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 550;
-  font-size: 1.rem;      /* <-- Standard font size */
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem; /* reduced for desktop */
+  color: black;
   line-height: 1.2;
-  color: #1a1a1a;
-  text-align: center;
-  letter-spacing: 0.3px;
-  margin-bottom: 1rem;
-  position: relative;
-  padding: 0 10px;        /* Keeps a bit of spacing on smaller screens */
+  letter-spacing: 0.3px; 
 }
 
-.about-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #c9a560, #d4af37);
-  margin: 10px auto 0;
- 
+/* Responsive Typography */
+@media (max-width: 767px) {
+  .about-title {
+    font-size: 1.2rem;   /* smaller for mobile */
+    line-height: 1.4;   
+    padding: 0 10px;    
+    text-align: center;
+  }
 }
 
-
-  /* Responsive Typography */
-  @media (max-width: 767px) {
-    .about-title {
-      font-size: 1.4rem;   /* smaller on mobile */
-      line-height: 1.4;   /* tighter line spacing */
-      padding: 0 10px;    /* little side spacing */
-      text-align: center;
-    }
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 1.8rem;  /* medium for tablets */
   }
+}
 
-  @media (min-width: 768px) {
-    .about-title {
-      font-size: 2.2rem;  /* normal for tablets */
-    }
+@media (min-width: 1200px) {
+  .about-title {
+    font-size: 2rem;  /* clean & professional for desktop */
   }
-
-  @media (min-width: 1200px) {
-    .about-title {
-      font-size: 2.7rem;  /* big and premium for desktop */
-    }
-  }
+}
 </style>
 
  
 <!-- h3 ke liye  -->
        <style>
   .about-subtitle {
-    font-family: "Inter", sans-serif;   /* Modern corporate font */
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;   /* Modern corporate font */
     font-weight: 600;                   /* Bold but not too heavy */
     font-size: 1.4rem;                  /* Default size */
     line-height: 1.5;
@@ -3649,14 +3634,12 @@
 <!-- peragraph ke liye  -->
  <style>
   .about-text {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #4a4a4a;
-    text-align: justify;            /* Left + Right align */
-    text-justify: inter-word;       /* Equal spacing between words */
-    margin-bottom: 1.2rem;
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem; /* adjust if needed */
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
   }
 
   /* Responsive fix for mobile */
@@ -3678,8 +3661,6 @@
 </style>
 
 
-
-
 <!-- card ke liye  -->
    <style>
        .pillar-desc {
@@ -3699,8 +3680,6 @@
    </style>
 
    <!-- card ke liye  -->
-
-
 
 <!-- peragraph globle css end -->
 
