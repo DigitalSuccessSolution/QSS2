@@ -1,616 +1,2848 @@
-<section id="matrix-slider" class="pb-4 pb-md-5 position-relative" style="background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%); overflow: hidden; padding-top: 0 !important;">
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+       
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+        
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="utf-8">
+        <title>QSS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+   
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;" >
+
+    <div class="row gx-0 align-items-center" style="margin: 0;">
+
+        <div class="col-6 col-lg-5 text-start mb-lg-0">
+            <div class="d-none d-lg-flex">
+                <a href="mailto:info@qss.net.in" class="text-white me-4">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
+                </a>
+                <a href="tel:+91-9202456705" class="text-white"> 
+                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+                </a>
+            </div>
+            <div class="d-flex d-lg-none">
+                <a href="tel:+91-9202456705" class="text-white">
+                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+                </a>
+            </div>
+        </div>
+
+     <div class="col-6 col-lg-7 text-end">
+    <div class="d-none d-lg-flex justify-content-lg-end">
+        <a href="#" class="text-white me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
+            <div class="d-flex d-lg-none justify-content-end">
+                <a href="mailto:info@qss.net.in" class="text-white">
+                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+<!-- ✅ Header Section Start -->
+<section class="w-full border-b border-gray-200 shadow-sm">
+  <header class="max-w-7xl mx-auto px-2 md:px-6 py-1.5 flex items-center justify-between">
+   
+     
+  <div class="flex items-center space-x-4">
+  <img src="img/bluelogo-removebg-preview.png"
+       alt="QSS Logo" 
+       class="block h-15 w-auto max-w-full" 
+       style="max-height: 5rem;">
+</div>
+
+
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 font-medium relative">
+      <a href="index.html" class="text-[#c9a560] font-semibold">Home</a>
+
+      <!-- About Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">About ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-48 hidden group-hover:block z-50">
+          <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">Who We Are</a>
+          <a href="team.html" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+        </div>
+      </div>
+
+      <!-- Services Dropdown -->
+     <div>
+  <a href="service.html" class="hover:text-[#c9a560]">Services</a>
+</div>
+
+      <!-- Insights Dropdown -->
+      <div class="group relative">
+        <button class="hover:text-[#c9a560]">Insights ▾</button>
+        <div class="absolute top-full left-0 bg-white shadow-md rounded-md w-52 hidden group-hover:block z-50">
+          <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100">Videos</a> -->
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100">News and Events</a>
+        </div>
+      </div>
+
+      <a href="career.html" class="hover:text-[#c9a560]">Careers</a>
+      <a href="contact.html" class="hover:text-[#c9a560]">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuToggle" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 font-medium bg-white shadow-md">
+   <a href="index.html" class="block">Home</a>
+
+    <!-- About -->
+    <details class="group">
+      <summary class="cursor-pointer">About</summary>
+      <div class="pl-4">
+        <a href="about.html" class="block py-1">Who We Are</a>
+        <a href="team.html" class="block py-1">Team</a>
+      </div>
+    </details>
+
+    <!-- Services -->
+    <a href="service.html" class="block py-1 font-semibold cursor-pointer">Services</a>
+
+
+    <!-- Insights -->
+    <details class="group">
+      <summary class="cursor-pointer">Insights</summary>
+      <div class="pl-4">
+        <a href="blogs.html" class="block py-1">Blog</a>
+        <!-- <a href="#" class="block py-1">Videos</a> -->
+        <a href="news.html" class="block py-1">News and Events</a>
+      </div>
+    </details>
+
+    <a href="career.html" class="block">Careers</a>
+    <a href="contact.html" class="block">Contact Us</a>
+  </div>
+</section>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+</script>
+<!-- ✅ Header Section End -->
+
+
+
+<!-- herosection -->
+
+
+
+       <!-- Modal Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <style>
-    /* Custom color classes */
     .text-primary-custom {
       color: rgb(75, 75, 75) !important;
     }
     .text-highlight {
       color: #c9a560 !important;
     }
-    .btn-custom {
-      /* background-color: #c9a560;
-      color: #fff;
-      border: none; */
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      /* box-shadow: 0 8px 20px rgba(201, 165, 96, 0.3); */
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-    .btn-custom:hover {
-      background-color: #b08e4f;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(201, 165, 96, 0.4);
-    }
-    .btn-custom:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      opacity: 0;
-      border-radius: 100%;
-      transform: scale(1, 1) translate(-50%);
-      transform-origin: 50% 50%;
-      z-index: -1;
-    }
-    .btn-custom:focus:after {
-      animation: ripple 1s ease-out;
-    }
-    @keyframes ripple {
-      0% {
-        transform: scale(0, 0);
-        opacity: 1;
-      }
-      20% {
-        transform: scale(25, 25);
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-        transform: scale(40, 40);
-      }
-    }
-    
-    /* Carousel enhancements */
-    #matrixCarousel {
-      position: relative;
-      z-index: 2;
-    }
-    .carousel-item {
-      padding: 40px 0;
-    }
-    .carousel-inner {
-      border-radius: 0;
-      overflow: hidden;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      width: 50px;
-      height: 50px;
-      background: rgba(201, 165, 96, 0.9);
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 1;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(2px);
-    }
-    .carousel-control-prev {
-      left: 15px;
-    }
-    .carousel-control-next {
-      right: 15px;
-    }
-    .carousel-control-prev:hover, .carousel-control-next:hover {
-      background: #c9a560;
-      transform: translateY(-50%) scale(1.1);
-      box-shadow: 0 5px 15px rgba(201, 165, 96, 0.4);
-    }
-    .carousel-indicators {
-      bottom: 15px;
-    }
-    .carousel-indicators button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: rgba(201, 165, 96, 0.4);
+    .btn-highlight {
+      background-color: #c9a560 !important;
+      color: #fff !important;
       border: none;
-      margin: 0 5px;
-      transition: all 0.3s ease;
     }
-    .carousel-indicators button.active {
-      background-color: #c9a560;
-      transform: scale(1.3);
-      box-shadow: 0 0 8px rgba(201, 165, 96, 0.6);
+    .btn-highlight:hover {
+      background-color: #b08e4f !important;
+      color: #fff !important;
     }
-    
-    /* Content styling - Consistent for all slides */
-    .carousel-content-wrapper {
-      background: white;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      height: 100%;
-      min-height: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      margin: 0 15px;
+    .input-group-text {
+      background-color: #c9a560 !important;
+      color: #fff !important;
+      border: none;
     }
-    .carousel-content-wrapper:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: #c9a560;
+    .form-control {
+      border: 1px solid #c9a560;
+      color: rgb(75, 75, 75);
     }
-    .carousel-item h3 {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
-    }
-    .carousel-item h3:after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 70px;
-      height: 3px;
-      background: #c9a560;
-      border-radius: 2px;
-    }
-    .carousel-item p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-    .carousel-item .text-highlight {
-      font-weight: 600;
-      display: inline-block;
-    }
-    
-    /* Image styling - Consistent for all slides */
-    .carousel-img-container {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 15px;
-    }
-    .carousel-item img {
-      border-radius: 12px;
-      transition: all 0.5s ease;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-    .carousel-item:hover img {
-      transform: scale(1.02);
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 1199.98px) {
-      .carousel-item h3 {
-        font-size: 1.8rem;
-      }
-      .carousel-item p {
-        font-size: 1rem;
-      }
-    }
-    @media (max-width: 991.98px) {
-      .carousel-item {
-        padding: 30px 0;
-      }
-      .carousel-content-wrapper {
-        padding: 30px;
-        min-height: 300px;
-      }
-      .carousel-img-container {
-        height: 300px;
-      }
-      .carousel-item h3 {
-        font-size: 1.6rem;
-      }
-    }
-    @media (max-width: 767.98px) {
-      .carousel-item {
-        padding: 20px 0;
-      }
-      .carousel-content-wrapper {
-        min-height: auto;
-        margin-bottom: 20px;
-      }
-      .carousel-item h3 {
-        font-size: 1.4rem;
-      }
-      .carousel-item h3:after {
-        width: 50px;
-        height: 2px;
-        bottom: -8px;
-      }
-      .carousel-item p {
-        font-size: 0.95rem;
-      }
-      .carousel-control-prev, .carousel-control-next {
-        width: 40px;
-        height: 40px;
-      }
-      .carousel-control-prev {
-        left: 5px;
-      }
-      .carousel-control-next {
-        right: 5px;
-      }
-      .carousel-content-wrapper,
-      .carousel-img-container {
-        margin: 0 5px;
-      }
-    }
-    @media (max-width: 575.98px) {
-      .carousel-content-wrapper {
-        padding: 20px;
-      }
-      .carousel-item h3 {
-        font-size: 1.3rem;
-      }
-      .btn-custom {
-        padding: 10px 25px;
-        font-size: 0.95rem;
-      }
+    .form-control::placeholder {
+      color: rgba(75, 75, 75, 0.6);
     }
   </style>
 
-  <div id="matrixCarousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#matrixCarousel" data-bs-slide-to="2"></button>
-    </div>
-
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Powering Trust Through Precision
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">We don't just audit—we uncover, assure, and empower.</span><br>
-                  India's trusted partner for Audit, Risk & Compliance Services.
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1677572452954-1643aa6b84e3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGF3YXJkc3xlbnwwfHwwfHx8MA%3D%3D" 
-                     alt="Award" 
-                     class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h1  class="text-primary-custom modal-title text-primary-custom mb-0" id="exampleModalLabel">Search by keyword</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Tech Platform – QuickEx™
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">QuickEx™ is QSS's proprietary background verification engine, built for speed, security, and transparency.</span>
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1683134650708-d84ff30080c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXdhcmRzfGVufDB8fDB8fHww" 
-                     alt="Award" 
-                     class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="container">
-          <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-              <div class="carousel-content-wrapper">
-                <h3 class="fw-bold text-primary-custom text-center text-lg-start">
-                  Industry-Specific Foresight. Local Precision.
-                </h3>
-                <p class="text-primary-custom text-center text-lg-start">
-                  <span class="text-highlight">QSS delivers more than audits—</span><br>
-                  Backed by industry specialists and boots-on-ground auditors across India, 
-                  we turn operational complexity into compliant clarity.
-                </p>
-                <div class="text-center text-lg-start">
-                  <a href="#" class="btn btn-custom">Know more</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="carousel-img-container">
-                <img src="https://plus.unsplash.com/premium_photo-1714138490029-13be2b064017?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXdhcmRzfGVufDB8fDB8fHww" 
-                     alt="Award" 
-                     class="img-fluid">
-              </div>
-            </div>
-          </div>
+      <div class="modal-body d-flex align-items-center">
+        <div class="input-group w-75 mx-auto d-flex">
+          <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+          <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
         </div>
       </div>
     </div>
-
-    <!-- Navigation Arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#matrixCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#matrixCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-</section>
-
-
-<!-- hero end -->
-
-<!-- Card 9 -->
-    <div class="team-card">
-      <img src="team/Satyam_Gupta_GM_Opreation_Manager-removebg-preview.png" alt="Satyam gupta">
-      <h3>Mr. Satyam gupta </h3>
-      <h4>Opreation manager, QSS</h4>
-       <hr class="divider">
-      <p style="height: 16rem; ">Manages day-to-day execution of audit operations with precision.
-Coordinates teams to ensure smooth and timely audit delivery.
-Plays a vital role in bridging planning with ground execution.
-“Strong coordination delivers consistent outcomes.”</p>
-            <hr class="divider">
-
-
-
-
-
-
-
-<!--  ceerer -->
-
-
-            <section class="w-full bg-white pb-16 md:pb-20 font-roboto-condensed">
-  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-16 px-6 md:px-8 items-start">
-    
-    <!-- Left Side - Job Opportunities -->
-    <div class="relative">
-      <div class="relative bg-white rounded-2xl p-8 md:p-10 ">
-        <!-- Header Section -->
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-14 h-14 bg-[#004A91] rounded-xl flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">We're Hiring!</h2>
-            <div class="w-16 h-1 bg-[#004A91] mt-2 rounded-full"></div>
-          </div>
-        </div>
-
-        <!-- Main Description -->
-        <p class="text-lg text-gray-700 leading-relaxed bg-white p-6 rounded-xl ">
-          "We are seeking talented individuals with <span class="font-semibold text-[#004A91] bg-blue-50 px-1 rounded">energy, passion, and innovative ideas</span> 
-          to become part of our vibrant team. Please contact us to explore potential professional relationships and opportunities."
-        </p>
-
-        <!-- CTA Button -->
-        <button class="mt-8 bg-[#004A91] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all duration-300 hover:scale-105 transform flex items-center gap-3">
-          Apply Now
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </button>
-
-        <!-- Current Openings Section -->
-        <div class="mt-12">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-2 h-8 bg-red-500 rounded-full"></div>
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">Current Openings</h3>
-          </div>
-          
-          <div class="bg-white p-6 rounded-xl  mb-6">
-            <h4 class="text-xl font-bold text-[#004A91]">Join the team!</h4>
-            <p class="text-gray-600 mt-2">Exciting opportunities await talented professionals</p>
-          </div>
-
-          <!-- Job Card -->
-          <div class="bg-white rounded-2xl p-6 md:p-8 hover:border-blue-200 transition-all duration-300">
-            <!-- Job Header -->
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div>
-                <h5 class="text-xl font-bold text-[#004A91] leading-tight">
-                  Executive / Senior Executive & Team Lead – Field Auditors
-                </h5>
-                <div class="flex flex-wrap gap-4 mt-3">
-                  <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    4-6 years
-                  </span>
-                  <span class="inline-flex items-center gap-2 bg-green-50 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    Bangalore
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Job Details -->
-            <div class="mt-6 space-y-4">
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  </svg>
-                  Locations:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">
-                  Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata,
-                  Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu
-                </p>
-              </div>
-
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-                  </svg>
-                  Educational Qualification:
-                </p>
-                <p class="text-gray-700 text-sm mt-1 ml-6">Any Graduate</p>
-              </div>
-
-              <div>
-                <p class="font-semibold text-gray-800 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#004A91]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  Required Skills:
-                </p>
-                <ul class="list-none text-sm text-gray-700 space-y-2 mt-2 ml-6">
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                    Excellent communication skills
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <div class="w-2 h-2 bg-[#004A91] rounded-full"></div>
-                    Proficiency in Advanced Excel
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Job Description Dropdown -->
-            <div class="mt-6">
-              <select class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 bg-white focus:ring-2 focus:ring-blue-100 transition-all duration-300 cursor-pointer">
-                <option class="py-2">📄 View Job Description</option>
-                <option class="py-2">📥 Download Job Description PDF</option>
-                <option class="py-2">👥 Schedule Interview</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Side - Contact Information -->
-    <div class="relative">
-      <div class="sticky top-8">
-        <!-- Main Image -->
-        <div class="bg-white rounded-2xl p-8 text-center">
-          <div class="relative inline-block">
-            <img src="img/mail.jpeg" alt="Job Opportunities" class="w-60 h-60 object-contain rounded-xl">
-            <div class="absolute -top-2 -right-2 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-              Hiring!
-            </div>
-          </div>
-          
-          <h4 class="mt-6 text-2xl font-bold text-[#004A91]" >For Job Opportunities</h4>
-          <p class="text-gray-600 mt-2" >Get in touch with our HR team</p>
-        </div>
-
-        <!-- Contact Card -->
-        <div class="mt-8 bg-white rounded-2xl p-8  transition-all duration-300">
-          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <!-- Icon Section -->
-            <div class="bg-amber-500 p-4 rounded-2xl flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-            </div>
-            
-            <!-- Contact Details -->
-            <div class="text-center sm:text-left flex-1">
-              <h5 class="text-xl font-bold text-gray-900 mb-2" style="text-align: left;">QSS Recruitment</h5>
-              <p class="text-gray-600 mb-4 font-medium" style="text-align: left;">Candidate Queries & Support</p>
-              
-              <div class="space-y-3">
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span class="font-semibold text-gray-800 text-sm min-w-20">Email:</span>
-                  <div class="flex flex-col">
-                    <!-- <a href="mailto:info@qss.net.in" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">info@qss.net.in</a> -->
-                    <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">Hr@qss.net.in</a>
-                  </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span class="font-semibold text-gray-800 text-sm min-w-20">Phone:</span>
-                  <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700 transition-colors text-sm">+91-9202456705</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         <!-- Quick Action Buttons -->
-<div class="mt-6 grid grid-cols-2 gap-3">
-  
-  <!-- Chat Button -->
-  <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" 
-     target="_blank" 
-     class="bg-blue-50 text-[#004A91] px-4 py-2 rounded-lg font-medium text-sm hover:bg-blue-100 transition-colors flex items-center justify-center gap-2">
-    Chat
-  </a>
-
-  <!-- Call Button -->
-  <a href="tel:+919202456705" 
-     class="bg-amber-50 text-amber-700 px-4 py-2 rounded-lg font-medium text-sm hover:bg-amber-100 transition-colors flex items-center justify-center gap-2">
-    Call
-  </a>
-  
 </div>
-
-        <!-- Additional Info -->
-        <div class="mt-6 bg-white rounded-2xl p-6 ">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <div>
-              <p class="font-semibold text-gray-800">Quick Response</p>
-              <p class="text-sm text-gray-600">We typically respond within 24 hours</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Modal Search End -->
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
-.font-roboto-condensed {
-  font-family: 'Roboto Condensed', sans-serif;
+    /* Remove top space from body if any */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove space from container under navbar */
+.container-fluid {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+</style>
+
+   <!-- About Start -->
+<div class="container-fluid pb-16 md:pb-20 d-flex align-items-center "
+     style="background-color: #fff; font-family: 'Merriweather', serif; min-height: 100vh; margin-top: 10px !;">
+
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            
+            <!-- Left Image Column -->
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="animation-duration: 1.2s;">
+                <div style="background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                    <img src="team/aaabbb.png" class="img-fluid w-100" alt="About Image" style="object-fit: cover; height: 350px;">
+                </div>
+            </div>
+
+            <!-- Right Content Column -->
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s" 
+                 style="animation-duration: 1.2s; font-family: 'Open Sans', sans-serif;">
+
+                <!-- Section Heading -->
+                <h5 style="color: #c9a560; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: relative; display: inline-block; margin-bottom: 10px;">
+                    About the company
+                    <span style="position: absolute; bottom: -4px; left: 0; width: 50%; height: 2px; background-color: #c9a560; border-radius: 1px;"></span>
+                </h5>
+
+                <h2 class="about-title">Get to Know Our Company</h2>
+
+                <p style="text-align: justify; font-size: 0.95rem; margin-bottom: 15px;">
+                    QSS is a tech-driven, ISO-certified audit and compliance partner delivering precision-focused services across internal audits, inventory verification, background checks, and manpower outsourcing. With 10+ years of experience and 100+ enterprise clients, QSS ensures governance, compliance, and operational transparency across India.
+                </p>
+
+                <!-- Features -->
+                <div class="row gy-2 mb-3">
+                    <div class="col-6 d-flex align-items-center">
+                        <i class="fas fa-map-marked-alt" style="color: #c9a560; font-size: 1.5rem;"></i>
+                        <span class="ms-2" style="font-size: 0.95rem;">Trusted Partner</span>
+                    </div>
+                    <div class="col-6 d-flex align-items-center">
+                        <i class="fas fa-passport" style="color: #c9a560; font-size: 1.5rem;"></i>
+                        <span class="ms-2" style="font-size: 0.95rem;">Pan-India Coverage</span>
+                    </div>
+                </div>
+
+                <!-- Experience and Checklist -->
+                <div class="d-flex align-items-start mb-3">
+                    <div style="background-color: #fff; text-align: center; border-radius: 8px; padding: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-right: 15px;">
+                        <i class="fas fa-ticket-alt" style="color: #c9a560; font-size: 1.5rem;"></i>
+                        <h3 style="margin: 5px 0; font-size: 1.5rem; color: #4b4b4b;">10</h3>
+                        <p style="font-size: 0.8rem; margin: 0;">Years</p>
+                    </div>
+
+                    <div>
+                        <p style="font-size: 0.9rem; margin-bottom: 6px;">
+                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
+                            ISO-Certified Framework
+                        </p>
+                        <p style="font-size: 0.9rem; margin-bottom: 6px;">
+                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
+                            Real-Time Reporting (QuickEx™)
+                        </p>
+                        <p style="font-size: 0.9rem;">
+                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
+                            100+ Clients / 20+ Sectors
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="d-flex align-items-center">
+                    <i class="fa fa-phone-alt" style="color: #c9a560; font-size: 1.5rem; margin-right: 10px;"></i>
+                    <div>
+                        <p style="margin: 0; font-size: 0.9rem; color: #c9a560; font-weight: 600;">Have any questions?</p>
+                        <a href="tel:+91-9202456705" style="text-decoration: none; font-size: 1rem; color: #4b4b4b; font-weight: bold;">
+                            +91-9202456705
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+
+
+
+
+
+    <style>
+        :root {
+            --primary-gold: #c39722;
+            --dark-gold: #a47e1b;
+            --light-gold: #e6c25c;
+            --pale-gold: #f8f3e6;
+            --dark-navy: #1a2a3b;
+            --medium-navy: #2c3e50;
+            --light-navy: #3c546c;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e2e8f0;
+            --dark-gray: #4b5563;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        .premium-container {
+            max-width: 1280px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .premium-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .premium-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(195, 151, 34, 0.03) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .premium-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(195, 151, 34, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .premium-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .premium-section:hover::after {
+            transform: scale(1.1);
+        }
+
+        .premium-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--dark-navy);
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .premium-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--light-gold));
+            transition: var(--transition);
+        }
+
+        .premium-section:hover .premium-title::after {
+            width: 100px;
+        }
+
+        .premium-subtitle {
+            font-size: 20px;
+            color: var(--light-navy);
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-style: italic;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .premium-subtitle::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 4px;
+            background: var(--primary-gold);
+            border-radius: 2px;
+        }
+
+        .premium-desc {
+            font-size: 17px;
+            text-align: justify;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .premium-desc p {
+            margin-bottom: 20px;
+        }
+
+        .premium-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .premium-pillar {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--medium-gray);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .premium-pillar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary-gold), var(--dark-gold));
+            transition: var(--transition);
+        }
+
+        .premium-pillar:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--light-gold);
+        }
+
+        .premium-pillar:hover::before {
+            height: 100%;
+        }
+
+        .pillar-icon {
+            font-size: 42px;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .premium-pillar:hover .pillar-icon {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .pillar-title {
+            font-size: 22px;
+            color: var(--dark-navy);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .pillar-desc {
+            font-size: 16px;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 60px 0 40px;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            min-width: 200px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--light-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--medium-gray), transparent);
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gold);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 1024px) {
+            .premium-container {
+                padding: 0 15px;
+            }
+            
+            .premium-section {
+                padding: 40px;
+            }
+            
+            .premium-title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .premium-container {
+                margin: 40px auto;
+            }
+            
+            .premium-section {
+                padding: 30px;
+                border-radius: 16px;
+            }
+            
+            .premium-title {
+                font-size: 32px;
+            }
+            
+            .premium-subtitle {
+                font-size: 18px;
+            }
+            
+            .premium-desc {
+                font-size: 16px;
+            }
+            
+            .premium-pillars {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .premium-section {
+                padding: 25px 20px;
+            }
+            
+            .premium-title {
+                font-size: 28px;
+            }
+            
+            .premium-subtitle {
+                font-size: 16px;
+                padding-left: 15px;
+            }
+            
+            .premium-subtitle::before {
+                width: 3px;
+            }
+            
+            .stat-item {
+                min-width: 150px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+<!-- ISO Section -->
+<section class=" py-12 px-4 sm:px-6 lg:py-20 lg:px-24" style="background-color: #f0f5fb;">
+  <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+    
+    <!-- Left Content -->
+    <div class="w-full lg:w-1/2 mt-10 lg:mt-0">
+      <p class="text-[#c9a560] text-sm sm:text-base font-normal uppercase tracking-wider mb-2" style="text-align: left !important;">
+        BUILT ON TRUST, DRIVEN BY INSIGHT
+      </p>
+      <h2 class="about-title" style="text-align: left !important;">
+        Get to know about <span class="about-title">Who We Are</span>
+      </h2>
+      <p class="pillar-desc">
+        QSS is a tech-enabled, ISO-certified audit and compliance firm offering precision-driven services across internal audits, inventory checks, background verifications, and manpower outsourcing. With 10+ years of experience, Pan-India reach, and trusted by 100+ enterprises, QSS empowers organizations with governance, control, and transparency through its 360° assurance approach—Performance, Protection, and Proof.
+      </p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+      <img src="img/iiiisssooo.png" alt="ISO Certifications & QuickEx Tech" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+    </div>
+
+  </div>
+</section>
+<!-- End ISO Section -->
+
+
+    <div class="premium-container">
+        <section class="premium-section">
+            <h2 class="about-title" style="text-align: left;">Who We Are</h2>
+            <p class="premium-subtitle">Quick Support Solutions Built on Trust, Driven by Insight</p>
+            
+            <div >
+                <p class="pillar-desc">Quick Support Solutions is a compliance-first audit & assurance firm that delivers precision-driven solutions across internal audit, retail audits, inventory & asset audits, manpower outsourcing, and background verification.</p>
+                
+                <p class="pillar-desc">Originally established in 2015 as Quick Support Associate, the firm became an LLP in 2019 and was formally incorporated as QSS Audit & Assurance Services Pvt. Ltd. in 2025. Over the years, QSS has grown into a trusted name for scalable audit services across industries including retail, infrastructure, manufacturing, logistics, and hospitality.</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Site Audits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Industry Sectors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+
+            <div class="premium-desc">
+                <p class="pillar-desc">Our strength lies in combining regulatory expertise with tech-enabled execution and operational control. With ISO certification, proprietary technology, and a nationwide delivery network, QSS empowers organizations seeking governance, control, and transparency.</p>
+                
+                <p class="pillar-desc">Our unique 360° approach—Performance, Protection & Proof Assurance—ensures every business function is not just compliant, but audit-resilient, secure, and trust-enabled.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="premium-pillars">
+                <article class="premium-pillar">
+                    <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="pillar-title">Performance</h3>
+                    <p class="pillar-desc">
+                        Driving operational efficiency through audits, compliance, and control reviews. We ensure your business processes are optimized for maximum productivity and effectiveness.
+                    </p>
+
+                  
+                </article>
+                
+                <article class="premium-pillar">
+                    <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="pillar-title">Protection</h3>
+                    <p class="pillar-desc">
+                        Safeguarding assets and operations with risk-based audits and internal controls. Our comprehensive approach identifies vulnerabilities before they become threats.
+                    </p>
+                </article>
+                
+                <article class="premium-pillar">
+                    <div class="pillar-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 class="pillar-title">Proof</h3>
+                    <p class="pillar-desc">
+                        Validating trust through verifications, background checks, and digital authentication via QuickEx™. We provide the evidence needed for confident decision-making.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+      
+         <style>
+        :root {
+            --primary-gold: #c9a560;
+            --dark-gray: #4b4b4b;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --card-bg: #ffffff;
+            --overlay-bg: rgba(33, 37, 41, 0.92);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container-fluid {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        /* .sub-style {
+            display: inline-block;
+            border-bottom: 3px solid var(--primary-gold);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        } */
+        
+        .sub-title {
+            color: var(--primary-gold);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        
+        .section-title h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-top: 15px;
+            line-height: 1.2;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+        
+        .col-lg-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 15px;
+        }
+        
+        @media (max-width: 992px) {
+            .col-lg-3 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .col-lg-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .section-title h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .service-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            background: var(--card-bg);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .service-card:hover .card-image img {
+            transform: scale(1.08);
+        }
+        
+        .card-title-visible {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: white;
+            z-index: 2;
+        }
+        
+        .card-title-visible h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            color: white;
+        }
+        
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 12px;
+        }
+        
+        .card-content p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .btn-read {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-read i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-read:hover {
+            color: #b08d4c;
+        }
+        
+        .btn-read:hover i {
+            transform: translateX(4px);
+        }
+        
+        .card-hover-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--overlay-bg);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 3;
+        }
+        
+        .service-card:hover .card-hover-content {
+            opacity: 1;
+        }
+        
+        .card-hover-content h4 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .card-hover-content p {
+            margin-bottom: 25px;
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .hover-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary-gold);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: fit-content;
+        }
+        
+        .hover-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-btn:hover {
+            background: #b08d4c;
+            transform: translateY(-2px);
+        }
+        
+        .hover-btn:hover i {
+            transform: translateX(4px);
+        }
+    </style>
+
+<body>
+
+
+
+
+
+<!-- Services (CA Chartered Accountant) Start -->
+<div class="container-fluid ca-services" style="padding:60px 0; background:#f0f5fb;">
+  <div class="container" style="max-width:1200px; margin:0 auto;">
+    <!-- Section Title -->
+    <div class="section-title" style="text-align:center; margin-bottom:50px;">
+      <div class="sub-style">
+        <h5 class="sub-title" style="color:#c9a560; font-size:16px; letter-spacing:2px; margin-bottom:10px;">OUR CORE SERVICES</h5>
+      </div>
+      <h1 style="font-size:32px; font-weight:700; color:#222;">Professional Audit & Assurance Solutions</h1>
+    </div>
+
+    <!-- Service Cards Row -->
+    <div class="row service-row" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a1.png" alt="Audit & Assurance">
+          <div class="card-title-visible"><h4>Audit & Assurance</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Audit & Assurance</h4>
+          <p>Independent audits ensuring accuracy, compliance, and transparency in financial reporting for businesses of all sizes.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a2.png" alt="Inventory Management">
+          <div class="card-title-visible"><h4>Inventory Management</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Inventory Management</h4>
+          <p>Smart solutions to track, organize, and optimize stock levels for smooth business operations.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a4.png" alt="Asset Management">
+          <div class="card-title-visible"><h4>Asset Management</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Asset Management</h4>
+          <p>Efficient solutions to monitor, track, and optimize business assets for better growth and profitability.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a3.png" alt="Showroom Audits">
+          <div class="card-title-visible"><h4>Showroom Audits</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Showroom Audits</h4>
+          <p>Comprehensive auditing of showroom operations, inventory, and compliance to ensure smooth and efficient management.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a4.png" alt="Manpower Outsourcing">
+          <div class="card-title-visible"><h4>Manpower Outsourcing</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Manpower Outsourcing</h4>
+          <p>Deploy skilled resources that are compliant, accountable, and audit-ready. We provide agile staffing solutions designed for operational flexibility and compliance.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card">
+        <div class="card-image">
+          <img src="img/a4.png" alt="Background Verification">
+          <div class="card-title-visible"><h4>Background Verification</h4></div>
+        </div>
+        <div class="card-content">
+          <h4>Background Verification</h4>
+          <p>Seamless, secure, and fully digitized verification—powered by QuickEx™. Our background verification services ensure that your workforce is validated and reliable.</p>
+          <a href="service.html" class="btn-read">Explore more Service →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+.service-card {
+  flex: 1 1 22%;
+  max-width: 300px;
+  height: 30rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.card-title-visible {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px 0;
+}
+
+.card-title-visible h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-read {
+  color: #c9a560;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 </style>
 
 
 
 
+
+
+<!-- Services End -->
+
+
+
+
+      <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Contact Info</h4>
+                    <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i>Corporate HQ: S.R. No. 71C/2, Flat No. 201, Harpale Complex, Haveli, Pune, Manjari Bk (N.V.), 412307</a>
+                    <a href="mailto:info@qss.net.in
+" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@qss.net.in
+</a>
+                    <a href="tel:+911234567890" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91-9202456705</a>
+                    <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91-9202456705</a>
+                  <div class="d-flex align-items-center">
+    <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
+
+    <!-- X (Twitter) -->
+    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
+       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+       <i class="fab fa-x-twitter" style="color: #c9a560;"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
+       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+       <i class="fab fa-instagram" style="color: #c9a560;"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
+       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+       <i class="fab fa-linkedin-in" style="color: #c9a560;"></i>
+    </a>
+</div>
+                </div>
+            </div>
+
+            <!-- Opening Time -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Opening Time</h4>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Mon - Friday:</h6>
+                        <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Saturday:</h6>
+                        <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="mb-0 text-white">Vacation:</h6>
+                        <p class="mb-0 text-white">All Sunday is our vacation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Services -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Our Services</h4>
+                       <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Inventory Management</a>
+                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit & Assurance</a>
+                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Asset Management</a>
+                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Showroom Audits</a>
+                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Manpower Outsourcing</a>
+                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Background Verification</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Newsletter</h4>
+                    <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
+                    <div class="position-relative">
+                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
+                        <button type="button" class="btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2" style="background-color: #c9a560; color: white; border: none; padding: 0 15px;">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Premium Golden Copyright Footer -->
+<div class="container-fluid copyright" style="background: #c9a560 !important; padding: 2rem 0; position: relative; overflow: hidden;">
+    <!-- Optional subtle texture overlay -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjxwYXRoIGQ9Ik0wIDUwTDUwIDBaIiBzdHJva2U9InJnYmEoMCwwLDAsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg=='); opacity: 0.3;"></div>
+    
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#2d2d2d" class="bi bi-c-circle me-2" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+                    </svg>
+                    <span class="text-white" style="font-size: 0.9rem; letter-spacing: 0.5px; font-weight: 500;">2025 QSS. All rights reserved.</span>
+                </div>
+            </div>
+            
+            <!-- Right Section -->
+            <div class="col-md-6 text-center text-md-end">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-end">
+                    <span class="text-white mb-1 mb-md-0 me-md-2" style="font-size: 0.8rem; opacity: 0.8; font-weight: 400;">Crafted with passion by</span>
+                    <a href="#" class="ms-md-0" style="text-decoration: none;">
+                        <span class="badge px-3 py-2" style="background: rgba(45,45,45,0.9); color: white; font-weight: 500; letter-spacing: 0.5px; border-radius: 20px; transition: all 0.3s ease;">
+                            Digital Success Solutions
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#ffffff" class="bi bi-arrow-up-right ms-1" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Premium Divider -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div style="height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(45,45,45,0.15) 50%, transparent 100%);"></div>
+            </div>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Success Solutions - Voice Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003466;
+            --secondary-color: #005a8d;
+            --accent-color: #002b4f;
+            --light-color: #f5f5f5;
+            --dark-color: #1a2a44;
+            --success-color: #10b981;
+            --shadow: 0 2px 4px rgba(0, 52, 102, 0.2);
+            --border-radius: 12px;
+            --transition: all 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 100%;
+            max-width: 320px;
+            height: 450px;
+            background-color: #ffffff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .chatbot-container.active {
+            display: flex !important;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .header-text h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: var(--primary-color);
+        }
+
+        .header-text p {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+
+        .control-btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .control-btn:hover {
+            background-color: #e0e7ff;
+        }
+
+        .control-btn.close:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 16px;
+            line-height: 1.5;
+            font-size: 13px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bot-message {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border-bottom-left-radius: 4px;
+            margin-right: auto;
+            box-shadow: var(--shadow);
+            border: 1px solid #e5e7eb;
+        }
+
+        .bot-message::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            bottom: 0;
+            border: 8px solid transparent;
+            border-right-color: var(--light-color);
+            border-bottom: 0;
+            margin-bottom: 6px;
+        }
+
+        .user-message {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            border-bottom-right-radius: 4px;
+            margin-left: auto;
+            box-shadow: var(--shadow);
+        }
+
+        .user-message::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            bottom: 0;
+            border: 8px solid transparent;
+            border-left-color: var(--light-color);
+            border-bottom: 0;
+            margin-bottom: 6px;
+        }
+
+        .message-time {
+            display: block;
+            font-size: 10px;
+            opacity: 0.6;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .chatbot-input-area {
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            padding: 12px;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            outline: none;
+            transition: var(--transition);
+            font-size: 13px;
+        }
+
+        #user-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        #send-btn, #menu-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        #send-btn:hover, #menu-btn:hover {
+            background-color: #e0e7ff;
+        }
+
+        .quick-reply-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .quick-reply-btn {
+            padding: 6px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color);
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .quick-reply-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .option-btn {
+            padding: 10px 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            box-shadow: var(--shadow);
+        }
+
+        .option-btn:hover {
+            background-color: #e0e7ff;
+            transform: translateX(3px);
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .service-btn {
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .service-btn i {
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+
+        .service-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .service-btn:hover i {
+            color: #ffffff;
+        }
+
+        .form-container {
+            margin-top: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            font-size: 13px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 70px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 13px;
+            box-shadow: var(--shadow);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .back-btn {
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .back-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .chatbot-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            border: none;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+
+        .chatbot-launcher:hover {
+            transform: scale(1.05);
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .chatbot-launcher i {
+            font-size: 20px;
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 10px 14px;
+            background-color: var(--light-color);
+            border-radius: 16px;
+            border-bottom-left-radius: 4px;
+            width: fit-content;
+            box-shadow: var(--shadow);
+            border: 1px solid #e5e7eb;
+            margin-right: auto;
+        }
+
+        .typing-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: 0s; }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-4px); }
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-container {
+                bottom: 0;
+                right: 0;
+                border-radius: 0;
+                height: 100vh;
+                max-width: 100%;
+            }
+
+            .chatbot-header {
+                font-size: 13px;
+            }
+
+            .header-text h3 {
+                font-size: 15px;
+            }
+
+            .header-text p {
+                font-size: 11px;
+            }
+
+            .option-btn {
+                font-size: 13px;
+            }
+
+            .service-btn {
+                font-size: 12px;
+            }
+        }
+
+        .city-search {
+            position: relative;
+        }
+
+        .city-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: var(--border-radius);
+            max-height: 140px;
+            overflow-y: auto;
+            display: none;
+            z-index: 10;
+        }
+
+        .city-suggestions.active {
+            display: block;
+        }
+
+        .city-suggestion {
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+
+        .city-suggestion:hover {
+            background-color: var(--light-color);
+        }
+
+        .other-option {
+            padding: 6px 10px;
+            cursor: pointer;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .other-option:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .address-proof-container {
+            margin-top: 8px;
+            display: none;
+        }
+
+        .address-proof-container.active {
+            display: block;
+        }
+
+        /* New styles for voice/speaker options */
+        .voice-camera-options {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+            border-top: 1px solid #e5e7eb;
+            background-color: #ffffff;
+        }
+
+        .voice-camera-options.active {
+            display: flex;
+        }
+
+        .voice-camera-btn {
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: none;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .voice-camera-btn:hover {
+            background-color: #e0e7ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <div class="header-content">
+                <img src="img/Gemini_Generated_Image_xpdu9dxpdu9dxpdu.png" alt="Quality Success Solutions Logo" class="logo">
+                <div class="header-text">
+                   <h3 class="about-subtitle">Quick Ex Assistant</h3>
+                    <p>Audit & Assurance</p>
+                </div>
+            </div>
+            <button class="control-btn close" id="close-btn" aria-label="Close chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages" aria-live="polite"></div>
+        <div class="chatbot-input-area">
+            <div class="input-container">
+                <button id="menu-btn" aria-label="Show menu"><i class="fas fa-ellipsis-v"></i></button>
+                <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+                <button id="send-btn" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="quick-reply-container" id="quick-reply-container"></div>
+            <div class="voice-camera-options" id="voice-camera-options">
+                <button class="voice-camera-btn" id="mic-btn"><i class="fas fa-microphone"></i> Voice Input</button>
+                <button class="voice-camera-btn" id="speaker-btn"><i class="fas fa-volume-up"></i> Speaker Output</button>
+            </div>
+        </div>
+    </div>
+    <button class="chatbot-launcher" id="chatbot-launcher" aria-label="Open chatbot">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // DOM Elements
+            const chatbotLauncher = document.getElementById('chatbot-launcher');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const closeBtn = document.getElementById('close-btn');
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            const menuBtn = document.getElementById('menu-btn');
+            const quickReplyContainer = document.getElementById('quick-reply-container');
+            const voiceCameraOptions = document.getElementById('voice-camera-options');
+            const micBtn = document.getElementById('mic-btn');
+            const speakerBtn = document.getElementById('speaker-btn');
+
+            // State
+            let isChatOpen = false;
+            let currentState = 'main';
+            let isVoiceCameraOpen = false;
+
+            // WhatsApp and Email
+            const whatsappNumber = '+917171122231';
+            const businessEmail = 'info@qualitysuccesssolutions.in';
+
+            // City Search Data
+            const cities = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Patna', 'Vadodara', 'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi', 'Srinagar', 'Aurangabad', 'Dhanbad', 'Amritsar', 'Navi Mumbai', 'Allahabad', 'Ranchi', 'Howrah', 'Coimbatore', 'Jabalpur', 'Gwalior', 'Vijayawada', 'Jodhpur', 'Madurai', 'Raipur', 'Kota', 'Guwahati', 'Chandigarh', 'Solapur', 'Hubli-Dharwad', 'Bareilly', 'Moradabad', 'Mysore', 'Gurgaon', 'Aligarh', 'Jalandhar', 'Tiruchirappalli', 'Bhopal', 'Salem', 'Warangal', 'Guntur', 'Bhiwandi', 'Saharanpur', 'Gorakhpur', 'Bikaner', 'Amravati', 'Noida', 'Jamshedpur', 'Bhilai', 'Cuttack', 'Firozabad', 'Kochi', 'Nellore', 'Bhavnagar', 'Durgapur', 'Asansol', 'Rourkela', 'Nanded', 'Kolhapur', 'Ajmer', 'Akola', 'Gulbarga', 'Jamnagar', 'Ujjain', 'Latur', 'Dhule', 'Maheshtala', 'Davanagere', 'Kurnool', 'Ajmer', 'Ratlam', 'Hapur', 'Anantapur', 'Karimnagar', 'Bihar Sharif', 'Panchkula', 'Bhilwara', 'Ahmednagar', 'Ambala', 'Morena', 'Ozhukarai', 'Bathinda', 'Rampur', 'Shimla', 'Gandhinagar', 'Shivpuri', 'Chandrapur', 'Junagadh', 'Thrissur', 'Alwar', 'Kakinada', 'Nizamabad', 'Parbhani', 'Tumkur', 'Khammam', 'Ooty', 'Imphal', 'Shillong', 'Aizawl', 'Kohima', 'Gangtok', 'Agartala', 'Itanagar', 'Panaji', 'Port Blair'];
+
+            // Validate DOM Elements
+            if (!chatbotLauncher || !chatbotContainer || !chatMessages || !closeBtn || !userInput || !sendBtn || !menuBtn || !quickReplyContainer || !voiceCameraOptions || !micBtn || !speakerBtn) {
+                console.error('One or more DOM elements are missing:', {
+                    launcher: !!chatbotLauncher,
+                    container: !!chatbotContainer,
+                    messages: !!chatMessages,
+                    closeBtn: !!closeBtn,
+                    userInput: !!userInput,
+                    sendBtn: !!sendBtn,
+                    menuBtn: !!menuBtn,
+                    quickReplyContainer: !!quickReplyContainer,
+                    voiceCameraOptions: !!voiceCameraOptions,
+                    micBtn: !!micBtn,
+                    speakerBtn: !!speakerBtn
+                });
+                return;
+            }
+
+            console.log('Voice chatbot script loaded successfully');
+
+            // Open Chatbot
+            chatbotLauncher.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Chatbot launcher clicked');
+                try {
+                    isChatOpen = !isChatOpen;
+                    if (isChatOpen) {
+                        chatbotContainer.classList.add('active');
+                        chatbotContainer.style.display = 'flex';
+                        if (!chatMessages.children.length) {
+                            goToMain();
+                        }
+                    } else {
+                        chatbotContainer.classList.remove('active');
+                        chatbotContainer.style.display = 'none';
+                    }
+                } catch (error) {
+                    console.error('Error toggling chatbot:', error);
+                    alert('Unable to open chatbot. Please try again later.');
+                }
+            }, { capture: true });
+
+            // Close Chatbot
+            closeBtn.addEventListener('click', () => {
+                console.log('Close button clicked');
+                isChatOpen = false;
+                chatbotContainer.classList.remove('active');
+                chatbotContainer.style.display = 'none';
+            });
+
+            // Prevent Closing on Inner Clicks
+            chatbotContainer.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            // Send Message
+            sendBtn.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendMessage();
+            });
+
+            // Menu Button
+            menuBtn.addEventListener('click', () => {
+                console.log('Menu button clicked');
+                isVoiceCameraOpen = !isVoiceCameraOpen;
+                voiceCameraOptions.classList.toggle('active');
+                goToMain();
+            });
+
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message) {
+                    addUserMessage(message);
+                    userInput.value = '';
+                    showTypingIndicator();
+                    setTimeout(() => processUserMessage(message), 1000);
+                }
+            }
+
+            function displayMainOptions() {
+                console.log('Displaying main options');
+                clearQuickReplies();
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const options = [
+                    { text: '1 - Explore Services', icon: 'fa-briefcase', label: 'Explore our services' },
+                    { text: '2 - Applying for Audits', icon: 'fa-file-alt', label: 'Apply for audits' },
+                    { text: '3 - Fill - Auditor KYA Form', icon: 'fa-file-signature', label: 'Fill auditor KYA form' },
+                    { text: '4 - Contact Us', icon: 'fa-envelope', label: 'Contact us' }
+                ];
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="fas ${opt.icon}"></i> ${opt.text}`;
+                    btn.setAttribute('aria-label', opt.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Option clicked: ${opt.text}`);
+                        handleMainOption(opt.text);
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addQuickReplies(['Explore Services', 'Applying for Audits', 'Fill Auditor KYA Form', 'Contact Us']);
+                scrollToStart();
+            }
+
+            function goToMain() {
+                console.log('Going to main');
+                clearChat();
+                currentState = 'main';
+                const greeting = "Hi! 👋 Welcome to Quick Ex Assistantgi. How can we help you today? You can type your response.";
+                addBotMessage(greeting);
+                displayMainOptions();
+            }
+
+            function sanitizeInput(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+
+            function addUserMessage(text) {
+                console.log('Adding user message:', text);
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user-message';
+                messageDiv.textContent = sanitizeInput(text);
+                const timeSpan = document.createElement('span');
+                timeSpan.className = 'message-time';
+                timeSpan.textContent = getCurrentTime();
+                messageDiv.appendChild(timeSpan);
+                chatMessages.appendChild(messageDiv);
+                scrollToStart();
+            }
+
+            function addBotMessage(text) {
+                console.log('Adding bot message:', text);
+                const typingIndicator = document.querySelector('.typing-indicator');
+                if (typingIndicator) typingIndicator.remove();
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message bot-message';
+                messageDiv.innerHTML = text;
+                const timeSpan = document.createElement('span');
+                timeSpan.className = 'message-time';
+                timeSpan.textContent = getCurrentTime();
+                messageDiv.appendChild(timeSpan);
+                chatMessages.appendChild(messageDiv);
+                scrollToStart();
+            }
+
+            function showTypingIndicator() {
+                console.log('Showing typing indicator');
+                const existingIndicator = document.querySelector('.typing-indicator');
+                if (existingIndicator) existingIndicator.remove();
+                const indicatorDiv = document.createElement('div');
+                indicatorDiv.className = 'typing-indicator';
+                for (let i = 0; i < 3; i++) {
+                    indicatorDiv.appendChild(document.createElement('div')).className = 'typing-dot';
+                }
+                chatMessages.appendChild(indicatorDiv);
+                scrollToStart();
+            }
+
+            function handleMainOption(option) {
+                console.log('Handling main option:', option);
+                if (option.includes('Explore Services')) {
+                    showServiceOptions();
+                } else if (option.includes('Applying for Audits')) {
+                    showApplyOptions();
+                } else if (option.includes('Fill - Auditor KYA Form')) {
+                    showKYAForm();
+                } else if (option.includes('Contact Us')) {
+                    showContactUs();
+                }
+            }
+
+            function showServiceOptions() {
+                console.log('Showing service options');
+                currentState = 'service-options';
+                clearChat();
+                const message = "We offer a wide range of audit and assurance solutions. Please select a service category:";
+                addBotMessage(message);
+                const serviceOptionsDiv = document.createElement('div');
+                serviceOptionsDiv.className = 'service-options';
+                const services = [
+                    { name: 'Inventory Management', icon: 'fa-warehouse', label: 'Inventory management solutions' },
+                    { name: 'Audit & Assurance', icon: 'fa-shield-alt', label: 'Audit and assurance services' },
+                    { name: 'Asset Management', icon: 'fa-chart-line', label: 'Asset management solutions' },
+                    { name: 'Showroom Audits', icon: 'fa-store', label: 'Audit services for showrooms' },
+                    { name: 'Manpower Outsourcing', icon: 'fa-user-tie', label: 'Manpower outsourcing services' },
+                    { name: 'Background Verification', icon: 'fa-user-check', label: 'Background verification services' }
+                ];
+                services.forEach(service => {
+                    const btn = document.createElement('button');
+                    btn.className = 'service-btn';
+                    btn.innerHTML = `<i class="fas ${service.icon}"></i> ${service.name}`;
+                    btn.setAttribute('aria-label', service.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Service clicked: ${service.name}`);
+                        showServiceDetails(service.name);
+                    });
+                    serviceOptionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(serviceOptionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showServiceDetails(service) {
+                console.log('Showing service details for:', service);
+                currentState = 'service-details';
+                clearChat();
+                const intro = `You've selected <strong>${service}</strong>. Here's what we offer:`;
+                addBotMessage(intro);
+                const serviceDetails = {
+                    'Inventory Management': 'Driving accuracy, efficiency, and control across your inventory lifecycle.',
+                    'Audit & Assurance': 'Robust internal controls and financial integrity audited with precision.',
+                    'Asset Management': 'Safeguarding your physical assets with transparent tracking.',
+                    'Showroom Audits': 'Dynamic audits for retail environments.',
+                    'Manpower Outsourcing': 'Deploy skilled, compliant resources.',
+                    'Background Verification': 'Secure and digitized verification services.'
+                };
+                addBotMessage(serviceDetails[service] || 'Customized solutions available. Contact us for details.');
+                addBackButton('Back to Services', showServiceOptions);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function createForm(fields, submitText, onSubmit, backHandler, defaultValues = {}) {
+                console.log('Creating form:', submitText);
+                const form = document.createElement('form');
+                form.className = 'form-container';
+                fields.forEach(field => {
+                    const group = document.createElement('div');
+                    group.className = 'form-group';
+                    const label = document.createElement('label');
+                    label.htmlFor = field.id;
+                    label.textContent = field.label;
+                    let input;
+                    if (field.id === 'city') {
+                        const container = document.createElement('div');
+                        container.className = 'city-search';
+                        input = document.createElement('input');
+                        input.type = 'text';
+                        input.id = field.id;
+                        input.setAttribute('aria-label', field.label);
+                        input.placeholder = field.placeholder || '';
+                        if (field.required) input.required = true;
+                        if (defaultValues[field.id]) input.value = defaultValues[field.id];
+                        const suggestions = document.createElement('div');
+                        suggestions.className = 'city-suggestions';
+                        container.appendChild(input);
+                        container.appendChild(suggestions);
+                        input.addEventListener('input', () => {
+                            const query = input.value.toLowerCase();
+                            suggestions.innerHTML = '';
+                            if (query) {
+                                const filteredCities = cities.filter(city => city.toLowerCase().includes(query));
+                                filteredCities.forEach(city => {
+                                    const suggestion = document.createElement('div');
+                                    suggestion.className = 'city-suggestion';
+                                    suggestion.textContent = city;
+                                    suggestion.addEventListener('click', () => {
+                                        input.value = city;
+                                        suggestions.classList.remove('active');
+                                    });
+                                    suggestions.appendChild(suggestion);
+                                });
+                                if (filteredCities.length === 0) {
+                                    const other = document.createElement('div');
+                                    other.className = 'other-option';
+                                    other.textContent = 'Other (Manually Enter)';
+                                    other.addEventListener('click', () => {
+                                        input.value = '';
+                                        suggestions.classList.remove('active');
+                                        const email = document.createElement('a');
+                                        email.href = `mailto:${businessEmail}?subject=Custom City Request&body=Please provide the city details for KYA Form`;
+                                        email.textContent = 'Click here to email us';
+                                        chatMessages.appendChild(email);
+                                        scrollToStart();
+                                    });
+                                    suggestions.appendChild(other);
+                                }
+                                suggestions.classList.add('active');
+                            } else {
+                                suggestions.classList.remove('active');
+                            }
+                        });
+                        input.addEventListener('blur', () => {
+                            setTimeout(() => suggestions.classList.remove('active'), 200);
+                        });
+                        group.appendChild(label);
+                        group.appendChild(container);
+                    } else if (field.id === 'addressproof') {
+                        group.appendChild(label);
+                        const select = document.createElement('select');
+                        select.id = field.id;
+                        select.setAttribute('aria-label', field.label);
+                        select.required = field.required;
+                        ['Aadhar Card', 'Electricity Bill', 'Voter ID'].forEach(opt => {
+                            const option = document.createElement('option');
+                            option.value = opt;
+                            option.textContent = opt;
+                            select.appendChild(option);
+                        });
+                        select.addEventListener('change', (e) => {
+                            const proofContainer = group.querySelector('.address-proof-container');
+                            if (proofContainer) proofContainer.remove();
+                            if (e.target.value) {
+                                const container = document.createElement('div');
+                                container.className = 'address-proof-container active';
+                                const fileInput = document.createElement('input');
+                                fileInput.type = 'file';
+                                fileInput.id = `upload_${e.target.value.toLowerCase().replace(' ', '_')}`;
+                                fileInput.setAttribute('aria-label', `Upload ${e.target.value}`);
+                                container.appendChild(fileInput);
+                                group.appendChild(container);
+                            }
+                        });
+                        group.appendChild(select);
+                    } else if (field.type === 'select') {
+                        group.appendChild(label);
+                        const select = document.createElement('select');
+                        select.id = field.id;
+                        select.setAttribute('aria-label', field.label);
+                        select.required = field.required;
+                        field.options.forEach(opt => {
+                            const option = document.createElement('option');
+                            option.value = opt;
+                            option.textContent = opt;
+                            select.appendChild(option);
+                        });
+                        group.appendChild(select);
+                    } else if (field.type === 'textarea') {
+                        group.appendChild(label);
+                        const textarea = document.createElement('textarea');
+                        textarea.id = field.id;
+                        textarea.setAttribute('aria-label', field.label);
+                        if (field.placeholder) textarea.placeholder = field.placeholder;
+                        if (field.required) textarea.required = true;
+                        if (defaultValues[field.id]) textarea.value = defaultValues[field.id];
+                        group.appendChild(textarea);
+                    } else {
+                        group.appendChild(label);
+                        input = document.createElement('input');
+                        input.type = field.type;
+                        if (field.placeholder) input.placeholder = field.placeholder;
+                        input.id = field.id;
+                        input.setAttribute('aria-label', field.label);
+                        if (field.required) input.required = true;
+                        if (defaultValues[field.id]) input.value = defaultValues[field.id];
+                        group.appendChild(input);
+                    }
+                    form.appendChild(group);
+                });
+                const submitBtn = document.createElement('button');
+                submitBtn.type = 'submit';
+                submitBtn.className = 'submit-btn';
+                submitBtn.textContent = submitText;
+                submitBtn.setAttribute('aria-label', submitText);
+                form.appendChild(submitBtn);
+                form.addEventListener('submit', onSubmit);
+                chatMessages.appendChild(form);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function sendToWhatsApp(formData, refNumber, formType) {
+                console.log('Preparing WhatsApp message');
+                const message = `
+                    New ${formType} Submission
+                    Reference: ${refNumber}
+                    ${Array.from(formData.entries()).map(([key, value]) => {
+                        if (value instanceof File) return `${key.charAt(0).toUpperCase() + key.slice(1)}: File attached (${value.name})`;
+                        return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+                    }).join('\n')}
+                `.trim();
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank');
+            }
+
+            function sendToEmail(formData, refNumber, formType) {
+                console.log('Sending email (simulated)');
+                const emailBody = {
+                    to: businessEmail,
+                    subject: `New ${formType} Submission - Ref: ${refNumber}`,
+                    body: `
+                        New ${formType} Submission
+                        Reference: ${refNumber}
+                        ${Array.from(formData.entries()).map(([key, value]) => {
+                            if (value instanceof File) return `${key.charAt(0).toUpperCase() + key.slice(1)}: File attached (${value.name})`;
+                            return `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`;
+                        }).join('\n')}
+                    `
+                };
+                fetch('https://qualitysuccesssolutions.in/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(emailBody)
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error('Email API failed');
+                    console.log('Email sent successfully (simulated)');
+                })
+                .catch(err => {
+                    console.error('Email sending error:', err);
+                    addBotMessage('Failed to send email notification. Please contact us directly.');
+                });
+            }
+
+            function showKYAForm() {
+                console.log('Showing KYA form');
+                currentState = 'kya-form';
+                clearChat();
+                const message = "Please fill out the Auditor KYA Form.";
+                addBotMessage(message);
+                const fields = [
+                    { id: 'name', label: 'Name*', type: 'text', required: true },
+                    { id: 'whatsapp', label: 'WhatsApp Phone number', type: 'tel', required: true },
+                    { id: 'email', label: 'Email Id', type: 'email', required: true },
+                    { id: 'city', label: 'City', type: 'text', required: true, placeholder: 'Start typing to search...' },
+                    { id: 'state', label: 'State', type: 'select', options: ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal', 'Andaman and Nicobar Islands', 'Chandigarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Lakshadweep', 'Puducherry'], required: true },
+                    { id: 'pincode', label: 'Pin code', type: 'text', required: true },
+                    { id: 'pan', label: 'Pan number', type: 'text', required: true },
+                    { id: 'aadhar', label: 'Upload Aadhar Card', type: 'file', required: false },
+                    { id: 'addressproof', label: 'Address Proof', type: 'select', options: ['Aadhar Card', 'Electricity Bill', 'Voter ID'], required: true }
+                ];
+                createForm(
+                    fields,
+                    'Submit KYA Form',
+                    (e) => {
+                        e.preventDefault();
+                        console.log('KYA form submitted');
+                        const formData = new FormData(e.target);
+                        const refNumber = 'QSS-' + Math.floor(100000 + Math.random() * 900000);
+                        const successMessage = "Thank you for submitting the KYA form! We will review and contact you if needed.";
+                        addBotMessage(successMessage);
+                        const refMessage = `Your reference number is: <strong>${refNumber}</strong>. Please quote this in all communications.`;
+                        addBotMessage(refMessage);
+                        sendToWhatsApp(formData, refNumber, 'Auditor KYA');
+                        sendToEmail(formData, refNumber, 'Auditor KYA');
+                        e.target.remove();
+                        addBackButton('Back to Main Menu', goToMain);
+                    },
+                    goToMain
+                );
+            }
+
+            function showApplyOptions() {
+                console.log('Showing apply options');
+                currentState = 'apply-options';
+                clearChat();
+                const message = "Please select a location code to apply for audits:";
+                addBotMessage(message);
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON151', 'AIAAIRABB281149'];
+                locationCodes.forEach(code => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${code}`;
+                    btn.setAttribute('aria-label', `Apply for ${code}`);
+                    btn.addEventListener('click', () => {
+                        console.log(`Location code clicked: ${code}`);
+                        showApplyDetails(code);
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showApplyDetails(code) {
+                console.log('Showing apply details for:', code);
+                currentState = 'apply-details';
+                clearChat();
+                const message = `
+                    <strong>Audit Applying ID:</strong> ${code}<br>
+                    <strong>Type of Audit:</strong> Checklist Based Audit<br>
+                    <strong>Timings:</strong> Flexible (to be confirmed)<br>
+                    <strong>Fee:</strong> 1000/- Per Man day (Inclusive of Everything)<br>
+                    <strong>Training:</strong> SOP / Proper training Call will be provided.<br>
+                    <strong>Payment:</strong> Within 30 days after audit completion.<br>
+                    <strong>Cancellation:</strong> 25% fee if cancelled after auditor reaches location.<br>
+                    If interested, join WhatsApp Group and share details.
+                `;
+                addBotMessage(message);
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options-container';
+                const options = [
+                    { text: '1 - Apply', icon: 'fa-check', label: 'Apply for audit' },
+                    { text: '2 - Join Group', icon: 'fab fa-whatsapp', label: 'Join WhatsApp group' }
+                ];
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `<i class="${opt.icon}"></i> ${opt.text}`;
+                    btn.setAttribute('aria-label', opt.label);
+                    btn.addEventListener('click', () => {
+                        console.log(`Option clicked: ${opt.text}`);
+                        if (opt.text.includes('Apply')) {
+                            showApplyForm(code);
+                        } else {
+                            window.open('https://chat.whatsapp.com/YourGroupLinkHere', '_blank');
+                            addBotMessage('Redirected to WhatsApp group. Please share your details.');
+                            addBackButton('Back to Main Menu', goToMain);
+                        }
+                    });
+                    optionsDiv.appendChild(btn);
+                });
+                chatMessages.appendChild(optionsDiv);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function showContactUs() {
+                console.log('Showing contact us');
+                currentState = 'contact-us';
+                clearChat();
+                const message = `Contact Us:<br><strong>Email:</strong> <a href="mailto:${businessEmail}">${businessEmail}</a><br><strong>Phone:</strong> <a href="tel:${whatsappNumber}">${whatsappNumber}</a><br><strong>Website:</strong> <a href="https://qualitysuccesssolutions.in" target="_blank">qualitysuccesssolutions.in</a>`;
+                addBotMessage(message);
+                addBackButton('Back to Main Menu', goToMain);
+                scrollToStart();
+            }
+
+            function getIntent(message) {
+                message = message.toLowerCase();
+                const intentMap = {
+                    services: ['service', 'offer', 'explore'],
+                    audits: ['audit', 'apply'],
+                    kyaform: ['kya', 'form', 'fill'],
+                    contact: ['contact', 'reach', 'us']
+                };
+                for (const [intent, keywords] of Object.entries(intentMap)) {
+                    if (keywords.some(keyword => message.includes(keyword))) {
+                        return intent;
+                    }
+                }
+                return null;
+            }
+
+            function processUserMessage(message) {
+                console.log('Processing user message:', message);
+                const intent = getIntent(message);
+                if (currentState === 'main') {
+                    if (intent === 'services') {
+                        showServiceOptions();
+                    } else if (intent === 'audits') {
+                        showApplyOptions();
+                    } else if (intent === 'kyaform') {
+                        showKYAForm();
+                    } else if (intent === 'contact') {
+                        showContactUs();
+                    } else {
+                        clearChat();
+                        addBotMessage("I'm sorry, I didn't understand that. Please select an option below:");
+                        displayMainOptions();
+                    }
+                } else if (currentState === 'service-options') {
+                    const services = ['inventory', 'audit', 'asset', 'showroom', 'manpower', 'background'];
+                    const selectedService = services.find(s => message.toLowerCase().includes(s));
+                    if (selectedService) {
+                        let serviceName = selectedService.charAt(0).toUpperCase() + selectedService.slice(1);
+                        if (serviceName === 'Inventory') serviceName = 'Inventory Management';
+                        else if (serviceName === 'Audit') serviceName = 'Audit & Assurance';
+                        else if (serviceName === 'Asset') serviceName = 'Asset Management';
+                        else if (serviceName === 'Showroom') serviceName = 'Showroom Audits';
+                        else if (serviceName === 'Manpower') serviceName = 'Manpower Outsourcing';
+                        else if (serviceName === 'Background') serviceName = 'Background Verification';
+                        showServiceDetails(serviceName);
+                    } else {
+                        addBotMessage("Please select a service from the options:");
+                        showServiceOptions();
+                    }
+                } else if (currentState === 'apply-options') {
+                    const locationCodes = ['AIAAIRIC281130', 'AIAAIRBAJ281133', 'AIAAIRFIR281138', 'AIAAIRABB281140', 'AIAAIRTOR281139', 'AIAAIRGR281150', 'AIAAIRAX281148', 'AIAAIRDS281145', 'AIAAIRCON151', 'AIAAIRABB281149'];
+                    const selectedCode = locationCodes.find(code => message.toLowerCase().includes(code.toLowerCase()));
+                    if (selectedCode) {
+                        showApplyDetails(selectedCode);
+                    } else {
+                        addBotMessage("Please select a valid location code:");
+                        showApplyOptions();
+                    }
+                } else {
+                    goToMain();
+                }
+            }
+
+            function showApplyForm(code) {
+                console.log('Showing apply form for:', code);
+                currentState = 'apply-form';
+                clearChat();
+                const message = "Please provide your details to apply for the audit:";
+                addBotMessage(message);
+                const fields = [
+                    { id: 'name', label: 'Name', type: 'text', required: true },
+                    { id: 'mobile', label: 'Mobile No', type: 'tel', required: true },
+                    { id: 'qualification', label: 'Qualification', type: 'text', required: true },
+                    { id: 'experience', label: 'Experience', type: 'text', required: true },
+                    { id: 'locationCode', label: 'Location Code(s) applying for', type: 'text', required: true, value: code }
+                ];
+                createForm(
+                    fields,
+                    'Submit Application',
+                    (e) => {
+                        e.preventDefault();
+                        console.log('Apply form submitted');
+                        const formData = new FormData(e.target);
+                        const refNumber = 'QSS-' + Math.floor(100000 + Math.random() * 900000);
+                        const successMessage = "Thank you for your application!";
+                        addBotMessage(successMessage);
+                        const refMessage = `Your reference number is: <strong>${refNumber}</strong>.`;
+                        addBotMessage(refMessage);
+                        sendToWhatsApp(formData, refNumber, 'Audit Application');
+                        sendToEmail(formData, refNumber, 'Audit Application');
+                        e.target.remove();
+                        addBackButton('Back to Main Menu', goToMain);
+                    },
+                    goToMain
+                );
+            }
+
+            function clearChat() {
+                console.log('Clearing chat');
+                chatMessages.replaceChildren();
+            }
+
+            function clearQuickReplies() {
+                console.log('Clearing quick replies');
+                quickReplyContainer.replaceChildren();
+            }
+
+            function addQuickReplies(replies) {
+                console.log('Adding quick replies:', replies);
+                clearQuickReplies();
+                replies.forEach(reply => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-reply-btn';
+                    btn.textContent = reply;
+                    btn.setAttribute('aria-label', `Select ${reply}`);
+                    btn.addEventListener('click', () => {
+                        console.log(`Quick reply clicked: ${reply}`);
+                        addUserMessage(reply);
+                        showTypingIndicator();
+                        setTimeout(() => processUserMessage(reply), 1000);
+                    });
+                    quickReplyContainer.appendChild(btn);
+                });
+            }
+
+            function addBackButton(text, clickHandler) {
+                console.log('Adding back button:', text);
+                const backBtn = document.createElement('button');
+                backBtn.className = 'back-btn';
+                backBtn.innerHTML = `<i class="fas fa-arrow-left"></i> ${text}`;
+                backBtn.setAttribute('aria-label', text);
+                backBtn.addEventListener('click', () => {
+                    console.log(`Back button clicked: ${text}`);
+                    clickHandler();
+                });
+                chatMessages.appendChild(backBtn);
+                scrollToStart();
+            }
+
+            function scrollToStart() {
+                console.log('Scrolling to start');
+                chatMessages.scrollTop = 0;
+            }
+
+            function getCurrentTime() {
+                return new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- Paragraph Global CSS Start (h1) -->
+<style>
+.about-title {
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem; /* reduced for desktop */
+  color: black;
+  line-height: 1.2;
+  letter-spacing: 0.3px; 
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+  .about-title {
+    font-size: 1.2rem;   /* smaller for mobile */
+    line-height: 1.4;   
+    padding: 0 10px;    
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 1.8rem;  /* medium for tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-title {
+    font-size: 2rem;  /* clean & professional for desktop */
+  }
+}
+</style>
+
+ 
+<!-- h3 ke liye  -->
+       <style>
+  .about-subtitle {
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;   /* Modern corporate font */
+    font-weight: 600;                   /* Bold but not too heavy */
+    font-size: 1.4rem;                  /* Default size */
+    line-height: 1.5;
+    color: #1a1a1a;                     /* Neutral dark */
+    text-align: center;
+    letter-spacing: 0.3px;              /* Subtle spacing */
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  /* Accent line under h3 */
+  .about-subtitle::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a560, #d4af37);
+    margin: 10px auto 0;
+    border-radius: 3px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 767px) {
+    .about-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.4;
+      padding: 0 8px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .about-subtitle {
+      font-size: 1.6rem;
+    }
+  }
+</style>
+<!-- h3 ke liye -->
+
+
+<!-- peragraph ke liye  -->
+ <style>
+  .about-text {
+  font-family: 'Helvetica Neue', Arial, 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem; /* adjust if needed */
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  }
+
+  /* Responsive fix for mobile */
+  @media (max-width: 767px) {
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;     /* Still keeps spacing clean */
+      padding: 0 12px;              /* little side breathing room */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .about-text {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+
+<!-- card ke liye  -->
+   <style>
+       .pillar-desc {
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  color: #2c2c2c;
+
+  /* Smooth justify look */
+  hyphens: auto; 
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  text-justify: inter-word;
+}
+   </style>
+
+   <!-- card ke liye  -->
+
+<!-- peragraph globle css end -->
+</html>
