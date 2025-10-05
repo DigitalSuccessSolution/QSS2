@@ -215,14 +215,12 @@
 
 
 
-
-
 <!-- Contact Section Start -->
-<section class="w-full bg-white py-4 px-4 md:px-10 font-roboto-condensed min-h-screen" style="max-height:100vh; overflow:hidden;">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-start" style="height: 100%;">
+<section class="w-full bg-white py-4 px-4 md:px-10 font-roboto-condensed min-h-screen">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
     <!-- Left Side: Business Enquiries -->
-    <div class="space-y-4 overflow-auto" style="max-height: 100vh;">
+    <div class="space-y-4">
       <div>
         <h2 class="text-2xl md:text-3xl font-bold text-[#1d2a59] border-b-2 border-yellow-500 inline-block pb-1">Contact Us</h2>
         <h3 class="text-lg md:text-xl font-semibold text-gray-700">For Business Enquiries</h3>
@@ -251,15 +249,15 @@
 
       <!-- Contact Form -->
       <form class="space-y-3 text-sm">
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
           <input type="text" placeholder="Full Name *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
           <input type="email" placeholder="Email Address *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
           <input type="text" placeholder="Phone Number *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
           <input type="text" placeholder="City *" required class="w-full border border-black px-2 py-1 placeholder-black focus:ring-yellow-500 focus:border-yellow-500">
         </div>
-        <textarea placeholder="Your Message *" required class="w-full border border-black px-2 py-1 h-20 placeholder-black focus:ring-yellow-500 focus:border-yellow-500 resize-none"></textarea>
+        <textarea placeholder="Your Message *" required class="w-full border border-black px-2 py-1 h-28 md:h-20 placeholder-black focus:ring-yellow-500 focus:border-yellow-500 resize-none"></textarea>
 
         <div class="flex items-center space-x-2">
           <input type="checkbox" id="terms" class="accent-yellow-500 w-4 h-4">
@@ -285,20 +283,18 @@
       </div>
 
       <!-- Google Map -->
-      <div class="w-full h-[17.5rem] rounded overflow-hidden border border-gray-200">
+      <div class="w-full h-64 md:h-72 rounded overflow-hidden border border-gray-200">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.123456!2d73.123456!3d18.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b2b0c1b2b2b3%3A0x1234567890abcdef!2sT.%20Nagar!5e0!3m2!1sen!2sin!4v1696156800000!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
 
       <!-- Hours -->
-      <div class="grid grid-cols-2 gap-2 text-sm">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
         <div>
           <p class="text-gray-500">Working Hours</p>
           <p class="text-gray-800 font-semibold">Mon - Fri: 9AM - 6PM</p>
@@ -311,7 +307,6 @@
     </div>
   </div>
 </section>
-<!-- Contact Section End -->
 
 <!-- Styles -->
 <style>
@@ -323,6 +318,7 @@
   color: #000 !important;
 }
 </style>
+
 
 
 
