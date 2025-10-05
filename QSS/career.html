@@ -338,7 +338,6 @@
 
 
 
-
 <!-- section 1 start -->
 
 <section class="w-full bg-white py-10 font-roboto-condensed">
@@ -357,13 +356,13 @@
       </div>
 
       <!-- Description -->
-      <p class="text-gray-700 leading-relaxed text-[15px] md:text-[16px]">
+      <p class="text-gray-700 leading-relaxed text-[15px] md:text-[16px]" style="text-align: justify">
         "We are seeking talented individuals with 
         <span class="font-semibold text-[#004A91] bg-blue-50 px-1 rounded">energy, passion, and innovative ideas</span> 
         to become part of our vibrant team. Please contact us to explore potential professional relationships and opportunities."
       </p>
 
-      <!-- Smaller Apply Button -->
+      <!-- Apply Button -->
       <button class="mt-5 bg-[#004A91] text-white px-4 py-2 rounded-md font-medium text-sm md:text-[14px] hover:opacity-90 transition-all duration-300 flex items-center gap-2">
         Apply Now
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -371,8 +370,8 @@
         </svg>
       </button>
 
-      <!-- Current Openings -->
-      <div class="mt-6">
+      <!-- Current Openings (Desktop Only) -->
+      <div class="mt-6 hidden md:block">
         <div class="flex items-center gap-3 mb-3">
           <div class="w-2 h-5 bg-red-500 rounded-full"></div>
           <h3 class="text-lg md:text-xl font-bold text-gray-900">Current Openings</h3>
@@ -383,35 +382,34 @@
     </div>
 
     <!-- Right Side -->
-    <div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-center md:items-start">
+    <div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-start">
       <div class="relative inline-block">
-        <img src="img/mail.jpeg" alt="Job Opportunities" class="w-32 h-32 md:w-40 md:h-40 object-contain mx-auto md:mx-0">
+        <img src="img/mail.jpeg" alt="Job Opportunities" class="w-32 h-32 md:w-40 md:h-40 object-contain">
         <div class="absolute -top-2 left-20 md:left-24 bg-amber-500 text-white px-2.5 md:px-3 py-0.5 rounded-full text-[10px] md:text-xs font-semibold">
           Hiring!
         </div>
       </div>
 
-      <h4 class="mt-3 text-lg md:text-xl font-bold text-[#004A91] text-center md:text-left">For Job Opportunities</h4>
-      <p class="text-gray-600 text-[13px] md:text-[14px] mt-1 text-center md:text-left">Get in touch with our HR team</p>
+      <h4 class="mt-3 text-lg md:text-xl font-bold text-[#004A91]">For Job Opportunities</h4>
+      <p class="text-gray-600 text-[13px] md:text-[14px] mt-1">Get in touch with our HR team</p>
 
-    <div class="mt-4 text-gray-800 text-[13px] md:text-[14px] leading-snug text-left">
-  <h5 class="font-bold text-base md:text-lg text-gray-900">QSS Recruitment</h5>
-  <p class="text-gray-600">Candidate Queries & Support</p>
+      <div class="mt-4 text-gray-800 text-[13px] md:text-[14px] leading-snug text-left w-full">
+        <h5 class="font-bold text-base md:text-lg text-gray-900">QSS Recruitment</h5>
+        <p class="text-gray-600">Candidate Queries & Support</p>
 
-  <p class="mt-2">
-    <span class="font-semibold">Email:</span>
-    <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700">Hr@qss.net.in</a>
-  </p>
+        <p class="mt-2">
+          <span class="font-semibold">Email:</span>
+          <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700">Hr@qss.net.in</a>
+        </p>
 
-  <p>
-    <span class="font-semibold">Phone:</span>
-    <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
-  </p>
-</div>
-
+        <p>
+          <span class="font-semibold">Phone:</span>
+          <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
+        </p>
+      </div>
 
       <!-- Buttons -->
-      <div class="mt-4 flex gap-3 justify-center md:justify-start">
+      <div class="mt-4 flex gap-3">
         <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" target="_blank" 
            class="bg-blue-50 text-[#004A91] px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-blue-100 transition">
           Chat
@@ -423,18 +421,29 @@
       </div>
 
       <!-- Quick Response -->
-      <div class="mt-4 flex items-center gap-3 justify-center md:justify-start">
+      <div class="mt-4 flex items-center gap-3">
         <div class="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 md:w-4 md:h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <div class="text-center md:text-left">
-          <p class="font-semibold text-gray-800 text-[13px] md:text-[14px]" style="text-align: left;">Quick Response</p>
+        <div>
+          <p class="font-semibold text-gray-800 text-[13px] md:text-[14px] text-left">Quick Response</p>
           <p class="text-xs md:text-sm text-gray-600">We typically respond within 24 hours</p>
         </div>
       </div>
     </div>
+
+  </div>
+
+  <!-- Current Openings (Mobile Only - moved to bottom) -->
+  <div class="mt-10 px-5 md:hidden">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-2 h-5 bg-red-500 rounded-full"></div>
+      <h3 class="text-lg font-bold text-gray-900">Current Openings</h3>
+    </div>
+    <h4 class="text-[#004A91] font-bold text-base">Join the team!</h4>
+    <p class="text-gray-600 text-sm mt-1">Exciting opportunities await talented professionals</p>
   </div>
 </section>
 
@@ -445,7 +454,9 @@
 }
 </style>
 
-<!-- section 1 end-->
+<!-- section 1 end -->
+
+
 
 
 <!-- section 2 start -->
@@ -602,22 +613,49 @@
 <div class="container">
   <!-- Button Group -->
   <div class="button-group">
-    <button class="toggle-btn active" onclick="showSection('general', this)">General</button>
+    <button class="toggle-btn active" onclick="showSection('general', this)">General Manager</button>
     <button class="toggle-btn" onclick="showSection('senior', this)">Senior Executive</button>
     <button class="toggle-btn" onclick="showSection('business', this)">Business Development</button>
   </div>
 
   <!-- General Section -->
   <div class="job-section active" id="general">
-    <div class="job-title">General</div>
+    <div class="job-title">General manager</div>
     <div class="tags">
-      <span class="tag">⏱️ 4-6 years</span>
-      <span class="tag green">📍 Bangalore</span>
+      <span class="tag">⏱️ 12-15 years</span>
+     <span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Bangalore
+</span>
+
+
+<style>
+  .tag .icon-location {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+</style>
     </div>
 
     <div class="section-block">
-      <div class="section-title">📍 Locations:</div>
-      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Locations
+</span>      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
     </div>
 
     <div class="section-block">
@@ -648,12 +686,22 @@
     <div class="job-title">Executive / Senior Executive & Team Lead – Field Auditors</div>
     <div class="tags">
       <span class="tag">⏱️ 4-6 years</span>
-      <span class="tag green">📍 Bangalore</span>
-    </div>
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Bangalore
+</span>    </div>
 
     <div class="section-block">
-      <div class="section-title">📍 Locations:</div>
-      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Locations
+</span>      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
     </div>
 
     <div class="section-block">
@@ -678,41 +726,42 @@
     </div>
   </div>
 
-  <!-- Business Development Section -->
-  <div class="job-section" id="business">
-    <div class="job-title">Business Development Manager</div>
-    <div class="tags">
-      <span class="tag">⏱️ 10+ years</span>
-      <span class="tag green">📍 Bangalore</span>
-    </div>
+ <!-- Business Development Section -->
+<div class="job-section" id="business">
+  <div class="job-title">Business Development Manager</div>
 
-    <div class="section-block">
-      <div class="section-title">📍 Locations:</div>
-      <div class="section-content">Pan India</div>
-    </div>
+  <div class="tags">
+    <span class="tag">⏱️ 12–15 years</span>
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Bangalore
+</span>  </div>
 
-    <div class="section-block">
-      <div class="section-title">🎓 Educational Qualification:</div>
-      <div class="section-content">MBA in Sales & Marketing</div>
-    </div>
-
-    <div class="section-block">
-      <div class="section-title">⚡ Required Skills:</div>
-      <ul class="section-list">
-        <li>Strong experience in B2B sales</li>
-        <li>Excellent negotiation and closing skills</li>
-        <li>Ability to drive revenue growth</li>
-      </ul>
-    </div>
-
-    <div class="dropdown">
-      <select>
-        <option>📄 View Job Description</option>
-        <option>📥 Download Job Description PDF</option>
-        <option>👥 Schedule Interview</option>
-      </select>
-    </div>
+  <div class="section-block">
+    <div class="section-title">🎓 Educational Qualification:</div>
+    <div class="section-content">MBA in Sales & Marketing</div>
   </div>
+
+  <div class="section-block">
+    <div class="section-title">⚡ Required Experience & Skills:</div>
+    <ul class="section-list">
+      <li>A minimum of <strong>12–15 years</strong> of professional experience in a relevant field.</li>
+      <li>Expertise in <strong>client relationship management</strong> and retention.</li>
+      <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <select>
+      <option>📄 View Job Description</option>
+      <option>📥 Download Job Description PDF</option>
+      <option>👥 Schedule Interview</option>
+    </select>
+  </div>
+</div>
 </div>
 
 <script>
