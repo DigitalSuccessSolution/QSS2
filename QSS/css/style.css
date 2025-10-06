@@ -84,7 +84,7 @@
     color: #c9a560;
 }
 
-.sub-title::before {
+/* .sub-title::before {
     content: "";
     width: 100px;
     position: absolute;
@@ -94,9 +94,9 @@
     margin-bottom: -8px;
     margin-right: -100px;
     border: 1px solid #4b4b4b !important;
-}
+} */
 
-.sub-title::after {
+/* .sub-title::after {
     content: "";
     width: 50px;
     position: absolute;
@@ -106,7 +106,7 @@
     margin-top: -6px;
     margin-right: -50px;
     border: 1px solid #c9a560 !important;
-}
+} */
 
 
 /*** Topbar Start ***/
