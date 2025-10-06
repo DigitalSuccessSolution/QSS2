@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+    
+    <!DOCTYPE html>
 <html lang="en">
 
     <head>
-       <script src="https://unpkg.com/feather-icons"></script>
+        <!-- head ke andar -->
 
+
+        
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
         
@@ -38,15 +41,8 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-    
-<style>
-  html, body {
-  overflow-x: hidden;
-}
+    <body>
 
-</style>
-
-    
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
@@ -55,8 +51,7 @@
         </div>
         <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
+<!-- Topbar Start -->
 <div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;">
   <div class="row gx-0 align-items-center">
 
@@ -112,6 +107,9 @@
   }
 </style>
 <!-- Topbar End -->
+
+
+
 <!-- ✅ Header Section Start -->
 <section class="w-full border-b border-gray-200 shadow-sm">
   <header class="max-w-7xl mx-auto px-2 md:px-6 py-1.5 flex items-center justify-between">
@@ -207,137 +205,6 @@
 <!-- ✅ Header Section End -->
 
 
-<!-- AOS CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <style>
-    /* --- Your existing styles (kept & slightly cleaned) --- */
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#4b4b4b; background:#fff; }
-
-    .why-join-us { width: 100%; background: #f9f9f9; padding: 80px 0; }
-    .why-join-us .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .why-join-us h2 { color:#4b4b4b; font-size:36px; text-align:center; margin-bottom:50px; }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      align-items: start;
-    }
-
-    .benefit {
-      text-align: center;
-      padding: 10px;
-    }
-
-    .icon-circle {
-      width: 80px;
-      height: 80px;
-      background: #f8f3e8;
-      border-radius: 50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin: 0 auto 25px;
-    }
-
-    .benefit h3 { color:#4b4b4b; font-size:22px; margin:0 0 15px; }
-    .benefit p { color:#666; line-height:1.6; margin:0; }
-
-    .cta-wrap { text-align:center; margin-top:60px; }
-
-    .cta-wrap a {
-      display:inline-block;
-      padding:15px 40px;
-      background:#c9a560;
-      color:white;
-      text-decoration:none;
-      border-radius:30px;
-      font-weight:600;
-      font-size:16px;
-      transition: background .3s;
-    }
-    .cta-wrap a:hover { background:#b8934d; }
-
-    /* Career inquiry */
-    .career-inquiry-section { width:100%; background:#f9f9f9; padding:80px 0; }
-    .career-inquiry-section .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-    .career-wrap { display:flex; flex-wrap:wrap; gap:60px; align-items:center; }
-    .career-left { flex:1 1 400px; min-width:280px; }
-    .career-right { flex:1 1 400px; min-width:280px; background:white; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.05); padding:40px; }
-
-    .contact-row { display:grid; gap:25px; }
-    .contact-item { display:flex; gap:20px; align-items:center; }
-    .small-circle { flex:0 0 60px; height:60px; background:#f8f3e8; border-radius:50%; display:flex; align-items:center; justify-content:center; }
-
-    form { display:grid; gap:20px; }
-    label { display:block; color:#4b4b4b; font-weight:600; margin-bottom:8px; }
-    input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"] {
-      width:100%;
-      padding:12px 15px;
-      border:1px solid #ddd;
-      border-radius:6px;
-      font-size:16px;
-      transition: border .3s;
-      background: white;
-    }
-    button[type="submit"] {
-      width:100%;
-      padding:15px;
-      background:#c9a560;
-      color:white;
-      border:none;
-      border-radius:6px;
-      font-size:16px;
-      font-weight:600;
-      cursor:pointer;
-      transition:background .3s;
-    }
-    button[type="submit"]:hover { background:#b8934d; }
-
-    /* Focus styles */
-    input:focus, select:focus { outline:none; border-color:#c9a560; box-shadow:0 0 0 2px rgba(201,165,96,0.15); }
-
-    /* Responsive tweaks */
-    @media (max-width:1024px) {
-      .why-join-us, .career-inquiry-section { padding:60px 0; }
-      .why-join-us h2, .career-inquiry-section h2 { font-size:32px; }
-      .career-right { padding:30px; }
-    }
-    @media (max-width:768px) {
-      .why-join-us, .career-inquiry-section { padding:50px 0; }
-      .why-join-us h2, .career-inquiry-section h2 { font-size:28px; }
-      .career-wrap { flex-direction:column; gap:40px; }
-      .why-grid { grid-template-columns:1fr; }
-      .icon-circle { width:70px; height:70px; }
-    }
-    @media (max-width:480px) {
-      .why-join-us h2 { font-size:26px; }
-      .benefit h3 { font-size:20px; }
-      .icon-circle { width:60px; height:60px; }
-      input, select, button { padding:10px 12px !important; font-size:15px !important; }
-      .small-circle { flex:0 0 50px; height:50px; }
-      .career-right { padding:25px; }
-    }
-  </style>
-
-<body>
-
-<!-- ✅ Add AOS CSS in <head> -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-
-
-
-
-
 <!-- section 1 start -->
 
 <section class="w-full bg-white py-10 font-roboto-condensed">
@@ -363,12 +230,14 @@
       </p>
 
       <!-- Apply Button -->
-      <button class="mt-5 bg-[#004A91] text-white px-4 py-2 rounded-md font-medium text-sm md:text-[14px] hover:opacity-90 transition-all duration-300 flex items-center gap-2">
+      <a href="#ap">
+        <button class="mt-5 bg-[#004A91] text-white px-4 py-2 rounded-md font-medium text-sm md:text-[14px] hover:opacity-90 transition-all duration-300 flex items-center gap-2">
         Apply Now
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </button>
+      </a>
 
       <!-- Current Openings (Desktop Only) -->
       <div class="mt-6 hidden md:block">
@@ -381,58 +250,78 @@
       </div>
     </div>
 
-    <!-- Right Side -->
-    <div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-start">
-      <div class="relative inline-block">
-        <img src="img/mail.jpeg" alt="Job Opportunities" class="w-32 h-32 md:w-40 md:h-40 object-contain">
-        <div class="absolute -top-2 left-20 md:left-24 bg-amber-500 text-white px-2.5 md:px-3 py-0.5 rounded-full text-[10px] md:text-xs font-semibold">
-          Hiring!
-        </div>
-      </div>
-
-      <h4 class="mt-3 text-lg md:text-xl font-bold text-[#004A91]">For Job Opportunities</h4>
-      <p class="text-gray-600 text-[13px] md:text-[14px] mt-1">Get in touch with our HR team</p>
-
-      <div class="mt-4 text-gray-800 text-[13px] md:text-[14px] leading-snug text-left w-full">
-        <h5 class="font-bold text-base md:text-lg text-gray-900">QSS Recruitment</h5>
-        <p class="text-gray-600">Candidate Queries & Support</p>
-
-        <p class="mt-2">
-          <span class="font-semibold">Email:</span>
-          <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700">Hr@qss.net.in</a>
-        </p>
-
-        <p>
-          <span class="font-semibold">Phone:</span>
-          <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
-        </p>
-      </div>
-
-      <!-- Buttons -->
-      <div class="mt-4 flex gap-3">
-        <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" target="_blank" 
-           class="bg-blue-50 text-[#004A91] px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-blue-100 transition">
-          Chat
-        </a>
-        <a href="tel:+919202456705" 
-           class="bg-amber-50 text-amber-700 px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-amber-100 transition">
-          Call
-        </a>
-      </div>
-
-      <!-- Quick Response -->
-      <div class="mt-4 flex items-center gap-3">
-        <div class="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 md:w-4 md:h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <div>
-          <p class="font-semibold text-gray-800 text-[13px] md:text-[14px] text-left">Quick Response</p>
-          <p class="text-xs md:text-sm text-gray-600">We typically respond within 24 hours</p>
-        </div>
-      </div>
+   <!-- Right Side (Updated Version with Balanced Scaling) -->
+<div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-start ">
+  <!-- Image + Hiring Badge -->
+ <div class="flex flex-col items-center justify-center text-center relative">
+  <div class="relative inline-block md:pl-6">
+    <img src="img/malijiiii.jpeg" alt="Job Opportunities"
+      class="w-40 h-40 md:w-52 md:h-52 object-contain transition-all duration-300 mx-auto">
+    <div
+      class="absolute -top-2 right-4 md:right-6 bg-amber-500 text-white px-2.5 md:px-3 py-0.5 rounded-full text-[10px] md:text-xs font-semibold">
+      Hiring!
     </div>
+  </div>
+</div>
+
+  <!-- Headings -->
+  <h4 class="text-[15px] md:text-[22px] font-bold text-[#004A91] leading-tight " >For Job Opportunities</h4>
+  <p class="text-gray-600 text-[11px] md:text-[15px] mt-1 leading-snug md:pl-4">Get in touch with our HR team</p>
+
+  <!-- Contact Details -->
+  <div class="mt-3 text-gray-800 text-[11px] md:text-[12px] leading-tight text-left w-full">
+  <div class="flex items-center gap-2">
+  <!-- Mail Icon -->
+<div class="w-10 h-10 bg-[#f6a21d] flex items-center justify-center rounded-xl">
+  <i class="fa-solid fa-envelope text-white text-[16px]"></i>
+</div>
+
+
+  <!-- Text -->
+  <h5 class="font-bold text-[13px] md:text-[15px] text-gray-900">QSS Recruitment</h5>
+</div>
+
+    <p class="text-gray-600 text-[11px] md:text-[12px] md:pl-10">Candidate Queries & Support</p>
+
+    <p class="mt-2">
+      <span class="font-semibold md:pl-10">Email:</span>
+      <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700 ">@qss.net.in</a>
+    </p>
+
+    <p>
+      <span class="font-semibold md:pl-10">Phone:</span>
+      <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
+    </p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="mt-3 flex gap-3 justify-center w-full">
+  <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" target="_blank"
+    class="bg-blue-50 text-[#004A91] px-8 py-2 rounded-lg font-medium text-[12px] md:text-[13px] hover:bg-blue-100 transition w-40 md:w-42text-center" style="text-align: center;">
+    Chat
+  </a>
+  <a href="tel:+919202456705"
+    class="bg-amber-50 text-amber-700 px-8 py-2 rounded-lg font-medium text-[12px] md:text-[13px] hover:bg-amber-100 transition w-40 md:w-42text-center text-center" style="text-align: center;">
+    Call
+  </a>
+</div>
+
+
+  <!-- Quick Response -->
+  <div class="mt-3 flex items-center gap-2.5">
+    <div class="w-5 h-5 md:w-6 md:h-6 bg-green-500 rounded-full flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 md:w-3.5 md:h-3.5 text-white" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-semibold text-gray-800 text-[11px] md:text-[12px] text-left leading-tight">Quick Response</p>
+      <p class="text-[10px] md:text-[11px] text-gray-600">We typically respond within 24 hours</p>
+    </div>
+  </div>
+</div>
+
 
   </div>
 
@@ -455,14 +344,12 @@
 </style>
 
 <!-- section 1 end -->
-
-
-
-
-<!-- section 2 start -->
+    
+    
+ <!-- section 2 start (unique version) -->
 
 <style>
-  .container {
+  .jobContainerUniq {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
@@ -471,14 +358,14 @@
     align-items: flex-start;
   }
 
-  .button-group {
+  .btnGroupUniq {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
   }
 
-  .toggle-btn {
+  .toggleBtnUniq {
     padding: 10px 20px;
     border: 2px solid #004A91;
     background-color: white;
@@ -490,13 +377,13 @@
     font-size: 14px;
   }
 
-  .toggle-btn.active,
-  .toggle-btn:hover {
+  .toggleBtnUniq.active,
+  .toggleBtnUniq:hover {
     background-color: #004A91;
     color: white;
   }
 
-  .job-section {
+  .jobSectionUniq {
     display: none;
     background-color: #fff;
     border-radius: 16px;
@@ -505,24 +392,24 @@
     width: 100%;
   }
 
-  .job-section.active {
+  .jobSectionUniq.active {
     display: block;
   }
 
-  .job-title {
+  .jobTitleUniq {
     font-size: 20px;
     font-weight: bold;
     color: #004A91;
   }
 
-  .tags {
+  .tagsUniq {
     margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .tag {
+  .tagUniq {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -533,16 +420,17 @@
     font-size: 14px;
   }
 
-  .tag.green {
+  .tagUniq.green {
     background-color: #e7f6ea;
     color: #198754;
+    max-width: 120px;
   }
 
-  .section-block {
+  .sectionBlockUniq {
     margin-top: 20px;
   }
 
-  .section-title {
+  .sectionTitleUniq {
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -550,23 +438,23 @@
     color: #333;
   }
 
-  .section-content,
-  .section-list {
+  .sectionContentUniq,
+  .sectionListUniq {
     color: #444;
     margin-top: 6px;
     margin-left: 24px;
     font-size: 14px;
   }
 
-  .section-list {
+  .sectionListUniq {
     list-style-type: disc;
   }
 
-  .dropdown {
+  .dropdownUniq {
     margin-top: 25px;
   }
 
-  select {
+  .dropdownUniq select {
     width: 100%;
     padding: 12px;
     font-size: 15px;
@@ -576,103 +464,89 @@
     color: #444;
   }
 
-  select:focus {
+  .dropdownUniq select:focus {
     border-color: #004A91;
     outline: none;
   }
 
-  /* Responsive Styles */
+  .tagUniq .iconLocationUniq {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  /* Responsive */
   @media (max-width: 600px) {
-    .container {
+    .jobContainerUniq {
       padding: 15px;
     }
 
-    .toggle-btn {
+    .toggleBtnUniq {
       font-size: 13px;
       padding: 8px 14px;
       flex: 1 1 100%;
       text-align: center;
     }
 
-    .job-title {
+    .jobTitleUniq {
       font-size: 18px;
     }
 
-    .section-content,
-    .section-list {
+    .sectionContentUniq,
+    .sectionListUniq {
       margin-left: 16px;
       font-size: 13px;
     }
 
-    select {
+    .dropdownUniq select {
       font-size: 14px;
     }
   }
 </style>
 
-<div class="container">
+<div class="jobContainerUniq">
   <!-- Button Group -->
-  <div class="button-group">
-    <button class="toggle-btn active" onclick="showSection('general', this)">General Manager</button>
-    <button class="toggle-btn" onclick="showSection('senior', this)">Senior Executive</button>
-    <button class="toggle-btn" onclick="showSection('business', this)">Business Development</button>
+  <div class="btnGroupUniq">
+    <button class="toggleBtnUniq active" onclick="showSectionUniq('generalUniq', this)">General Manager / Operation's</button>
+    <button class="toggleBtnUniq" onclick="showSectionUniq('seniorUniq', this)">Executive / Senior Executive</button>
+    <button class="toggleBtnUniq" onclick="showSectionUniq('businessUniq', this)">General Manager / Business Development Manager</button>
   </div>
 
   <!-- General Section -->
-  <div class="job-section active" id="general">
-    <div class="job-title">General manager</div>
-    <div class="tags">
-      <span class="tag">⏱️ 12-15 years</span>
-     <span class="tag green">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Bangalore
-</span>
-
-
-<style>
-  .tag .icon-location {
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  vertical-align: middle;
-}
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-</style>
+  <div class="jobSectionUniq active" id="generalUniq">
+    <div class="jobTitleUniq">General Manager / Operation's</div>
+    <div class="tagsUniq">
+      <span class="tagUniq">⏱️ 12-15 years</span>
     </div>
 
-    <div class="section-block">
-<span class="tag green">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Locations
-</span>      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+    <div class="sectionBlockUniq">
+      <span class="tagUniq green">
+        <svg xmlns="http://www.w3.org/2000/svg" class="iconLocationUniq" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Locations
+      </span>
+      <div class="sectionContentUniq">Bangalore, Hyderabad, Pune, Mumbai, Kolkata, Delhi</div>
     </div>
 
-    <div class="section-block">
-      <div class="section-title">🎓 Educational Qualification:</div>
-      <div class="section-content">MBA Finance, Marketing & Business Analytics</div>
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">🎓 Educational Qualification:</div>
+      <div class="sectionContentUniq">MBA Finance, Marketing & Business Analytics</div>
     </div>
 
-    <div class="section-block">
-      <div class="section-title">⚡ Required Skills:</div>
-      <ul class="section-list">
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">⚡ Required Skills:</div>
+      <ul class="sectionListUniq">
         <li>A minimum of 12–15 years of professional experience in a relevant field.</li>
         <li>Expertise in client relationship management and retention.</li>
         <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
       </ul>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdownUniq">
       <select>
         <option>📄 View Job Description</option>
         <option>📥 Download Job Description PDF</option>
@@ -682,42 +556,41 @@
   </div>
 
   <!-- Senior Executive Section -->
-  <div class="job-section" id="senior">
-    <div class="job-title">Executive / Senior Executive & Team Lead – Field Auditors</div>
-    <div class="tags">
-      <span class="tag">⏱️ 4-6 years</span>
-<span class="tag green">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Bangalore
-</span>    </div>
-
-    <div class="section-block">
-<span class="tag green">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Locations
-</span>      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+  <div class="jobSectionUniq" id="seniorUniq">
+    <div class="jobTitleUniq">Executive / Senior Executive & Team Lead – Field Auditors</div>
+    <div class="tagsUniq">
+      <span class="tagUniq">⏱️ 4-6 years</span>
     </div>
 
-    <div class="section-block">
-      <div class="section-title">🎓 Educational Qualification:</div>
-      <div class="section-content">Any Graduate</div>
+    <div class="sectionBlockUniq">
+      <span class="tagUniq green">
+        <svg xmlns="http://www.w3.org/2000/svg" class="iconLocationUniq" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Locations
+      </span>
+      <div class="sectionContentUniq">
+        Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh,
+        Amritsar, Rohtak, Jammu
+      </div>
     </div>
 
-    <div class="section-block">
-      <div class="section-title">⚡ Required Skills:</div>
-      <ul class="section-list">
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">🎓 Educational Qualification:</div>
+      <div class="sectionContentUniq">Any Graduate</div>
+    </div>
+
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">⚡ Required Skills:</div>
+      <ul class="sectionListUniq">
         <li>Excellent communication skills</li>
         <li>Proficiency in Advanced Excel</li>
       </ul>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdownUniq">
       <select>
         <option>📄 View Job Description</option>
         <option>📥 Download Job Description PDF</option>
@@ -726,48 +599,54 @@
     </div>
   </div>
 
- <!-- Business Development Section -->
-<div class="job-section" id="business">
-  <div class="job-title">Business Development Manager</div>
+  <!-- Business Development Section -->
+  <div class="jobSectionUniq" id="businessUniq">
+    <div class="jobTitleUniq">General Manager / Business Development Manager</div>
 
-  <div class="tags">
-    <span class="tag">⏱️ 12–15 years</span>
-<span class="tag green">
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Bangalore
-</span>  </div>
+    <div class="tagsUniq">
+      <span class="tagUniq">⏱️ 12–15 years</span>
+    </div>
 
-  <div class="section-block">
-    <div class="section-title">🎓 Educational Qualification:</div>
-    <div class="section-content">MBA in Sales & Marketing</div>
+    <div class="sectionBlockUniq">
+      <span class="tagUniq green">
+        <svg xmlns="http://www.w3.org/2000/svg" class="iconLocationUniq" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Locations
+      </span>
+      <div class="sectionContentUniq">Bangalore, Hyderabad, Pune, Mumbai, Kolkata, Delhi</div>
+    </div>
+
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">🎓 Educational Qualification:</div>
+      <div class="sectionContentUniq">MBA in Sales & Marketing</div>
+    </div>
+
+    <div class="sectionBlockUniq">
+      <div class="sectionTitleUniq">⚡ Required Experience & Skills:</div>
+      <ul class="sectionListUniq">
+        <li>A minimum of <strong>12–15 years</strong> of professional experience in a relevant field.</li>
+        <li>Expertise in <strong>client relationship management</strong> and retention.</li>
+        <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
+      </ul>
+    </div>
+
+    <div class="dropdownUniq">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
   </div>
-
-  <div class="section-block">
-    <div class="section-title">⚡ Required Experience & Skills:</div>
-    <ul class="section-list">
-      <li>A minimum of <strong>12–15 years</strong> of professional experience in a relevant field.</li>
-      <li>Expertise in <strong>client relationship management</strong> and retention.</li>
-      <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
-    </ul>
-  </div>
-
-  <div class="dropdown">
-    <select>
-      <option>📄 View Job Description</option>
-      <option>📥 Download Job Description PDF</option>
-      <option>👥 Schedule Interview</option>
-    </select>
-  </div>
-</div>
 </div>
 
 <script>
-  function showSection(sectionId, btn) {
-    const allSections = document.querySelectorAll('.job-section');
-    const allButtons = document.querySelectorAll('.toggle-btn');
+  function showSectionUniq(sectionId, btn) {
+    const allSections = document.querySelectorAll('.jobSectionUniq');
+    const allButtons = document.querySelectorAll('.toggleBtnUniq');
 
     allSections.forEach(section => section.classList.remove('active'));
     document.getElementById(sectionId).classList.add('active');
@@ -778,23 +657,12 @@
 </script>
 
 <!-- section 2 end -->
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="w-full bg-white py-10 px-4 md:px-12 font-sans">
-  <div class="max-w-6xl mx-auto">
+   
+    <section class="w-full bg-white py-10 px-4 md:px-12 font-sans">
+  <div class="max-w-6xl mx-auto" id="ap">
     
     <!-- Heading -->
-    <h2 class="text-2xl md:text-3xl font-semibold text-center text-[#111827] mb-8">
+    <h2 class="text-2xl md:text-3xl font-semibold text-center text-[#111827] mb-8" >
       Apply for a Position
     </h2>
 
@@ -976,19 +844,8 @@
   generateCaptcha();
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Footer Start -->
+    
+    <!-- Footer Start -->
 <div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5">
@@ -1120,7 +977,7 @@
         </div>
         
         <!-- Social Links -->
-        <div class="row mt-3" >
+        <div class="row mt-3">
             <div class="col-12 text-center">
                 <div class="d-flex justify-content-center gap-3">
                     <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">

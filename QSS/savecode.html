@@ -2,7 +2,8 @@
 <html lang="en">
 
     <head>
-       
+       <script src="https://unpkg.com/feather-icons"></script>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
         
@@ -37,8 +38,15 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-   
+    
+<style>
+  html, body {
+  overflow-x: hidden;
+}
 
+</style>
+
+    
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
@@ -48,44 +56,62 @@
         <!-- Spinner End -->
 
 
-        <div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;" >
+    <!-- Topbar Start -->
+<div class="container-fluid px-4 py-2" style="background-color: #003466; white-space: nowrap;">
+  <div class="row gx-0 align-items-center">
 
-    <div class="row gx-0 align-items-center" style="margin: 0;">
-
-        <div class="col-6 col-lg-5 text-start mb-lg-0">
-            <div class="d-none d-lg-flex">
-                <a href="mailto:info@qss.net.in" class="text-white me-4">
-                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
-                </a>
-                <a href="tel:+91-9202456705" class="text-white"> 
-                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
-                </a>
-            </div>
-            <div class="d-flex d-lg-none">
-                <a href="tel:+91-9202456705" class="text-white">
-                    <i class="fas fa-phone-alt me-2"></i>+91-9202456705
-                </a>
-            </div>
-        </div>
-
-     <div class="col-6 col-lg-7 text-end">
-    <div class="d-none d-lg-flex justify-content-lg-end">
-        <a href="#" class="text-white me-3"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Left (Desktop: Email | Mobile: Phone) -->
+    <div class="col-6 col-lg-5 text-start mb-lg-0">
+      <div class="d-none d-lg-flex">
+        <!-- Desktop Email Only -->
+        <a href="mailto:info@qss.net.in" class="text-dark">
+          <i class="fas fa-envelope me-2"></i>info@qss.net.in
+        </a>
+      </div>
+      <div class="d-flex d-lg-none">
+        <!-- Mobile: Phone -->
+        <a href="tel:+91-9202456705" class="text-dark">
+          <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+        </a>
+      </div>
     </div>
+
+    <!-- Right (Desktop: Phone + Social Icons | Mobile: Email) -->
+    <div class="col-6 col-lg-7 text-end">
+      <div class="d-none d-lg-flex justify-content-lg-end align-items-center">
+        <!-- Desktop Phone -->
+        <a href="tel:+91-9202456705" class="text-dark me-4">
+          <i class="fas fa-phone-alt me-2"></i>+91-9202456705
+        </a>
+        <!-- Desktop Social Icons -->
+        <a href="#" class="text-dark me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <div class="d-flex d-lg-none justify-content-end">
+        <!-- Mobile Email -->
+        <a href="mailto:info@qss.net.in" class="text-dark">
+          <i class="fas fa-envelope me-2"></i>info@qss.net.in
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-            <div class="d-flex d-lg-none justify-content-end">
-                <a href="mailto:info@qss.net.in" class="text-white">
-                    <i class="fas fa-envelope me-2"></i>info@qss.net.in
-                </a>
-            </div>
-        </div>
+<style>
+  /* Mobile Links White */
+  .d-lg-none a {
+    color: #fff !important;
+  }
 
-    </div>
-
-
+  /* Desktop Links White */
+  .d-lg-flex a {
+    color: #fff !important;
+  }
+</style>
+<!-- Topbar End -->
 <!-- ✅ Header Section Start -->
 <section class="w-full border-b border-gray-200 shadow-sm">
   <header class="max-w-7xl mx-auto px-2 md:px-6 py-1.5 flex items-center justify-between">
@@ -181,158 +207,581 @@
 <!-- ✅ Header Section End -->
 
 
+<!-- AOS CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-<!-- herosection -->
-
-
-
-       <!-- Modal Search Start -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <style>
-    .text-primary-custom {
-      color: rgb(75, 75, 75) !important;
+    /* --- Your existing styles (kept & slightly cleaned) --- */
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#4b4b4b; background:#fff; }
+
+    .why-join-us { width: 100%; background: #f9f9f9; padding: 80px 0; }
+    .why-join-us .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .why-join-us h2 { color:#4b4b4b; font-size:36px; text-align:center; margin-bottom:50px; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: start;
     }
-    .text-highlight {
-      color: #c9a560 !important;
+
+    .benefit {
+      text-align: center;
+      padding: 10px;
     }
-    .btn-highlight {
-      background-color: #c9a560 !important;
-      color: #fff !important;
-      border: none;
+
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      background: #f8f3e8;
+      border-radius: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin: 0 auto 25px;
     }
-    .btn-highlight:hover {
-      background-color: #b08e4f !important;
-      color: #fff !important;
+
+    .benefit h3 { color:#4b4b4b; font-size:22px; margin:0 0 15px; }
+    .benefit p { color:#666; line-height:1.6; margin:0; }
+
+    .cta-wrap { text-align:center; margin-top:60px; }
+
+    .cta-wrap a {
+      display:inline-block;
+      padding:15px 40px;
+      background:#c9a560;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      font-weight:600;
+      font-size:16px;
+      transition: background .3s;
     }
-    .input-group-text {
-      background-color: #c9a560 !important;
-      color: #fff !important;
-      border: none;
+    .cta-wrap a:hover { background:#b8934d; }
+
+    /* Career inquiry */
+    .career-inquiry-section { width:100%; background:#f9f9f9; padding:80px 0; }
+    .career-inquiry-section .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+    .career-wrap { display:flex; flex-wrap:wrap; gap:60px; align-items:center; }
+    .career-left { flex:1 1 400px; min-width:280px; }
+    .career-right { flex:1 1 400px; min-width:280px; background:white; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.05); padding:40px; }
+
+    .contact-row { display:grid; gap:25px; }
+    .contact-item { display:flex; gap:20px; align-items:center; }
+    .small-circle { flex:0 0 60px; height:60px; background:#f8f3e8; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+
+    form { display:grid; gap:20px; }
+    label { display:block; color:#4b4b4b; font-weight:600; margin-bottom:8px; }
+    input[type="text"], input[type="email"], input[type="tel"], select, input[type="file"] {
+      width:100%;
+      padding:12px 15px;
+      border:1px solid #ddd;
+      border-radius:6px;
+      font-size:16px;
+      transition: border .3s;
+      background: white;
     }
-    .form-control {
-      border: 1px solid #c9a560;
-      color: rgb(75, 75, 75);
+    button[type="submit"] {
+      width:100%;
+      padding:15px;
+      background:#c9a560;
+      color:white;
+      border:none;
+      border-radius:6px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .3s;
     }
-    .form-control::placeholder {
-      color: rgba(75, 75, 75, 0.6);
+    button[type="submit"]:hover { background:#b8934d; }
+
+    /* Focus styles */
+    input:focus, select:focus { outline:none; border-color:#c9a560; box-shadow:0 0 0 2px rgba(201,165,96,0.15); }
+
+    /* Responsive tweaks */
+    @media (max-width:1024px) {
+      .why-join-us, .career-inquiry-section { padding:60px 0; }
+      .why-join-us h2, .career-inquiry-section h2 { font-size:32px; }
+      .career-right { padding:30px; }
+    }
+    @media (max-width:768px) {
+      .why-join-us, .career-inquiry-section { padding:50px 0; }
+      .why-join-us h2, .career-inquiry-section h2 { font-size:28px; }
+      .career-wrap { flex-direction:column; gap:40px; }
+      .why-grid { grid-template-columns:1fr; }
+      .icon-circle { width:70px; height:70px; }
+    }
+    @media (max-width:480px) {
+      .why-join-us h2 { font-size:26px; }
+      .benefit h3 { font-size:20px; }
+      .icon-circle { width:60px; height:60px; }
+      input, select, button { padding:10px 12px !important; font-size:15px !important; }
+      .small-circle { flex:0 0 50px; height:50px; }
+      .career-right { padding:25px; }
     }
   </style>
 
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content rounded-0">
-      <div class="modal-header">
-        <h1  class="text-primary-custom modal-title text-primary-custom mb-0" id="exampleModalLabel">Search by keyword</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body>
+
+<!-- ✅ Add AOS CSS in <head> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+
+
+<!-- section 1 start -->
+
+<section class="w-full bg-white py-10 font-roboto-condensed">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 px-5 md:px-6 items-center">
+
+    <!-- Left Side -->
+    <div>
+      <!-- Header -->
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 md:w-11 md:h-11 bg-[#004A91] rounded-lg flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">We're Hiring!</h2>
       </div>
-      <div class="modal-body d-flex align-items-center">
-        <div class="input-group w-75 mx-auto d-flex">
-          <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-          <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+
+      <!-- Description -->
+      <p class="text-gray-700 leading-relaxed text-[15px] md:text-[16px]" style="text-align: justify">
+        "We are seeking talented individuals with 
+        <span class="font-semibold text-[#004A91] bg-blue-50 px-1 rounded">energy, passion, and innovative ideas</span> 
+        to become part of our vibrant team. Please contact us to explore potential professional relationships and opportunities."
+      </p>
+
+      <!-- Apply Button -->
+      <button class="mt-5 bg-[#004A91] text-white px-4 py-2 rounded-md font-medium text-sm md:text-[14px] hover:opacity-90 transition-all duration-300 flex items-center gap-2">
+        Apply Now
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </button>
+
+      <!-- Current Openings (Desktop Only) -->
+      <div class="mt-6 hidden md:block">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-2 h-5 bg-red-500 rounded-full"></div>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900">Current Openings</h3>
+        </div>
+        <h4 class="text-[#004A91] font-bold text-base md:text-lg">Join the team!</h4>
+        <p class="text-gray-600 text-sm md:text-[15px] mt-1">Exciting opportunities await talented professionals</p>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="flex flex-col justify-center md:pl-10 lg:pl-20 items-start">
+      <div class="relative inline-block">
+        <img src="img/mail.jpeg" alt="Job Opportunities" class="w-32 h-32 md:w-40 md:h-40 object-contain">
+        <div class="absolute -top-2 left-20 md:left-24 bg-amber-500 text-white px-2.5 md:px-3 py-0.5 rounded-full text-[10px] md:text-xs font-semibold">
+          Hiring!
+        </div>
+      </div>
+
+      <h4 class="mt-3 text-lg md:text-xl font-bold text-[#004A91]">For Job Opportunities</h4>
+      <p class="text-gray-600 text-[13px] md:text-[14px] mt-1">Get in touch with our HR team</p>
+
+      <div class="mt-4 text-gray-800 text-[13px] md:text-[14px] leading-snug text-left w-full">
+        <h5 class="font-bold text-base md:text-lg text-gray-900">QSS Recruitment</h5>
+        <p class="text-gray-600">Candidate Queries & Support</p>
+
+        <p class="mt-2">
+          <span class="font-semibold">Email:</span>
+          <a href="mailto:Hr@qss.net.in" class="text-[#004A91] hover:text-blue-700">Hr@qss.net.in</a>
+        </p>
+
+        <p>
+          <span class="font-semibold">Phone:</span>
+          <a href="tel:+919202456705" class="text-[#004A91] hover:text-blue-700">+91-9202456705</a>
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="mt-4 flex gap-3">
+        <a href="https://wa.me/919202456705?text=Hello%20QSS%20Team!" target="_blank" 
+           class="bg-blue-50 text-[#004A91] px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-blue-100 transition">
+          Chat
+        </a>
+        <a href="tel:+919202456705" 
+           class="bg-amber-50 text-amber-700 px-4 py-1.5 rounded-lg font-medium text-xs md:text-sm hover:bg-amber-100 transition">
+          Call
+        </a>
+      </div>
+
+      <!-- Quick Response -->
+      <div class="mt-4 flex items-center gap-3">
+        <div class="w-6 h-6 md:w-7 md:h-7 bg-green-500 rounded-full flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 md:w-4 md:h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800 text-[13px] md:text-[14px] text-left">Quick Response</p>
+          <p class="text-xs md:text-sm text-gray-600">We typically respond within 24 hours</p>
         </div>
       </div>
     </div>
+
   </div>
-</div>
-<!-- Modal Search End -->
+
+  <!-- Current Openings (Mobile Only - moved to bottom) -->
+  <div class="mt-10 px-5 md:hidden">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-2 h-5 bg-red-500 rounded-full"></div>
+      <h3 class="text-lg font-bold text-gray-900">Current Openings</h3>
+    </div>
+    <h4 class="text-[#004A91] font-bold text-base">Join the team!</h4>
+    <p class="text-gray-600 text-sm mt-1">Exciting opportunities await talented professionals</p>
+  </div>
+</section>
 
 <style>
-    /* Remove top space from body if any */
-body {
-    margin: 0 !important;
-    padding: 0 !important;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap');
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
 }
+</style>
 
-/* Remove space from container under navbar */
-.container-fluid {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
+<!-- section 1 end -->
+
+
+
+
+<!-- section 2 start -->
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .toggle-btn {
+    padding: 10px 20px;
+    border: 2px solid #004A91;
+    background-color: white;
+    color: #004A91;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .toggle-btn.active,
+  .toggle-btn:hover {
+    background-color: #004A91;
+    color: white;
+  }
+
+  .job-section {
+    display: none;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    width: 100%;
+  }
+
+  .job-section.active {
+    display: block;
+  }
+
+  .job-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004A91;
+  }
+
+  .tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f0f4ff;
+    color: #004A91;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .tag.green {
+    background-color: #e7f6ea;
+    color: #198754;
+  }
+
+  .section-block {
+    margin-top: 20px;
+  }
+
+  .section-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+  }
+
+  .section-content,
+  .section-list {
+    color: #444;
+    margin-top: 6px;
+    margin-left: 24px;
+    font-size: 14px;
+  }
+
+  .section-list {
+    list-style-type: disc;
+  }
+
+  .dropdown {
+    margin-top: 25px;
+  }
+
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    color: #444;
+  }
+
+  select:focus {
+    border-color: #004A91;
+    outline: none;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+
+    .toggle-btn {
+      font-size: 13px;
+      padding: 8px 14px;
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    .job-title {
+      font-size: 18px;
+    }
+
+    .section-content,
+    .section-list {
+      margin-left: 16px;
+      font-size: 13px;
+    }
+
+    select {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="container">
+  <!-- Button Group -->
+  <div class="button-group">
+    <button class="toggle-btn active" onclick="showSection('general', this)">General Manager / Operation's</button>
+    <button class="toggle-btn" onclick="showSection('senior', this)">Executive / Senior Executive</button>
+    <button class="toggle-btn" onclick="showSection('business', this)">General Manager / Business Development Manager</button>
+  </div>
+
+  <!-- General Section -->
+  <div class="job-section active" id="general">
+    <div class="job-title">General Manager / Operation's</div>
+    <div class="tags">
+      <span class="tag">⏱️ 12-15 years</span>
+     <!-- <span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Bangalore
+</span> -->
+
+
+<style>
+  .tag .icon-location {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 </style>
-
-   <!-- About Start -->
-<div class="container-fluid pb-16 md:pb-20 d-flex align-items-center "
-     style="background-color: #fff; font-family: 'Merriweather', serif; min-height: 100vh; margin-top: 10px !;">
-
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            
-            <!-- Left Image Column -->
-            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s" style="animation-duration: 1.2s;">
-                <div style="background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
-                    <img src="team/aaabbb.png" class="img-fluid w-100" alt="About Image" style="object-fit: cover; height: 350px;">
-                </div>
-            </div>
-
-            <!-- Right Content Column -->
-            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s" 
-                 style="animation-duration: 1.2s; font-family: 'Open Sans', sans-serif;">
-
-                <!-- Section Heading -->
-                <h5 style="color: #c9a560; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: relative; display: inline-block; margin-bottom: 10px;">
-                    About the company
-                    <span style="position: absolute; bottom: -4px; left: 0; width: 50%; height: 2px; background-color: #c9a560; border-radius: 1px;"></span>
-                </h5>
-
-                <h2 class="about-title">Get to Know Our Company</h2>
-
-                <p style="text-align: justify; font-size: 0.95rem; margin-bottom: 15px;">
-                    QSS is a tech-driven, ISO-certified audit and compliance partner delivering precision-focused services across internal audits, inventory verification, background checks, and manpower outsourcing. With 10+ years of experience and 100+ enterprise clients, QSS ensures governance, compliance, and operational transparency across India.
-                </p>
-
-                <!-- Features -->
-                <div class="row gy-2 mb-3">
-                    <div class="col-6 d-flex align-items-center">
-                        <i class="fas fa-map-marked-alt" style="color: #c9a560; font-size: 1.5rem;"></i>
-                        <span class="ms-2" style="font-size: 0.95rem;">Trusted Partner</span>
-                    </div>
-                    <div class="col-6 d-flex align-items-center">
-                        <i class="fas fa-passport" style="color: #c9a560; font-size: 1.5rem;"></i>
-                        <span class="ms-2" style="font-size: 0.95rem;">Pan-India Coverage</span>
-                    </div>
-                </div>
-
-                <!-- Experience and Checklist -->
-                <div class="d-flex align-items-start mb-3">
-                    <div style="background-color: #fff; text-align: center; border-radius: 8px; padding: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-right: 15px;">
-                        <i class="fas fa-ticket-alt" style="color: #c9a560; font-size: 1.5rem;"></i>
-                        <h3 style="margin: 5px 0; font-size: 1.5rem; color: #4b4b4b;">10</h3>
-                        <p style="font-size: 0.8rem; margin: 0;">Years</p>
-                    </div>
-
-                    <div>
-                        <p style="font-size: 0.9rem; margin-bottom: 6px;">
-                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
-                            ISO-Certified Framework
-                        </p>
-                        <p style="font-size: 0.9rem; margin-bottom: 6px;">
-                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
-                            Real-Time Reporting (QuickEx™)
-                        </p>
-                        <p style="font-size: 0.9rem;">
-                            <i class="fa fa-check-circle" style="color: #c9a560; margin-right: 5px;"></i>
-                            100+ Clients / 20+ Sectors
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Contact -->
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-phone-alt" style="color: #c9a560; font-size: 1.5rem; margin-right: 10px;"></i>
-                    <div>
-                        <p style="margin: 0; font-size: 0.9rem; color: #c9a560; font-weight: 600;">Have any questions?</p>
-                        <a href="tel:+91-9202456705" style="text-decoration: none; font-size: 1rem; color: #4b4b4b; font-weight: bold;">
-                            +91-9202456705
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
+
+    <div class="section-block">
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Locations
+</span>      <div class="section-content">Bangalore , Hyderabad , Pune , Mumbai ,Kolkata , Delhi</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">🎓 Educational Qualification:</div>
+      <div class="section-content">MBA Finance, Marketing & Business Analytics</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">⚡ Required Skills:</div>
+      <ul class="section-list">
+        <li>A minimum of 12–15 years of professional experience in a relevant field.</li>
+        <li>Expertise in client relationship management and retention.</li>
+        <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Senior Executive Section -->
+  <div class="job-section" id="senior">
+    <div class="job-title">Executive / Senior Executive & Team Lead – Field Auditors</div>
+    <div class="tags">
+      <span class="tag">⏱️ 4-6 years</span>
+<!-- <span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Bangalore
+</span>    -->
+ </div>
+
+    <div class="section-block">
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Locations
+</span>      <div class="section-content">Hyderabad, Chennai, Kochi, Mumbai, Pune, Ahmedabad, Jaipur, Kolkata, Bhubaneshwar, Delhi, Noida, Lucknow, Chandigarh, Amritsar, Rohtak, Jammu</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">🎓 Educational Qualification:</div>
+      <div class="section-content">Any Graduate</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">⚡ Required Skills:</div>
+      <ul class="section-list">
+        <li>Excellent communication skills</li>
+        <li>Proficiency in Advanced Excel</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>📄 View Job Description</option>
+        <option>📥 Download Job Description PDF</option>
+        <option>👥 Schedule Interview</option>
+      </select>
+    </div>
+  </div>
+
+ <!-- Business Development Section -->
+<div class="job-section" id="business">
+  <div class="job-title">general manager / Business Development Manager</div>
+
+  <div class="tags">
+    <span class="tag">⏱️ 12–15 years</span>
+ </div>
+
+ <div class="section-block">
+<span class="tag green">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-location" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+  Locations
+</span>      <div class="section-content">Bangalore , Hyderabad , Pune , Mumbai ,Kolkata , Delhi</div>
+
+  <div class="section-block">
+    <div class="section-title">🎓 Educational Qualification:</div>
+    <div class="section-content">MBA in Sales & Marketing</div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-title">⚡ Required Experience & Skills:</div>
+    <ul class="section-list">
+      <li>A minimum of <strong>12–15 years</strong> of professional experience in a relevant field.</li>
+      <li>Expertise in <strong>client relationship management</strong> and retention.</li>
+      <li>A proven and effective approach to identifying, approaching, and securing new business clients.</li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <select>
+      <option>📄 View Job Description</option>
+      <option>📥 Download Job Description PDF</option>
+      <option>👥 Schedule Interview</option>
+    </select>
+  </div>
 </div>
-<!-- About End -->
+</div>
+</div>
+<script>
+  function showSection(sectionId, btn) {
+    const allSections = document.querySelectorAll('.job-section');
+    const allButtons = document.querySelectorAll('.toggle-btn');
+
+    allSections.forEach(section => section.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+
+    allButtons.forEach(button => button.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+<!-- section 2 end -->
 
 
 
@@ -341,1037 +790,415 @@ body {
 
 
 
-    <style>
-        :root {
-            --primary-gold: #c39722;
-            --dark-gold: #a47e1b;
-            --light-gold: #e6c25c;
-            --pale-gold: #f8f3e6;
-            --dark-navy: #1a2a3b;
-            --medium-navy: #2c3e50;
-            --light-navy: #3c546c;
-            --light-gray: #f5f7fa;
-            --medium-gray: #e2e8f0;
-            --dark-gray: #4b5563;
-            --white: #ffffff;
-            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark-gray);
-            background-color: var(--light-gray);
-            line-height: 1.6;
-        }
-
-        .premium-container {
-            max-width: 1280px;
-            margin: 80px auto;
-            padding: 0 20px;
-        }
-
-        .premium-section {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 60px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-            z-index: 1;
-        }
-
-        .premium-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(195, 151, 34, 0.03) 0%, transparent 70%);
-            z-index: -1;
-        }
-
-        .premium-section::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(195, 151, 34, 0.08) 0%, transparent 70%);
-            z-index: -1;
-            transition: var(--transition);
-        }
-
-        .premium-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .premium-section:hover::after {
-            transform: scale(1.1);
-        }
-
-        .premium-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            color: var(--dark-navy);
-            font-weight: 700;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .premium-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--light-gold));
-            transition: var(--transition);
-        }
-
-        .premium-section:hover .premium-title::after {
-            width: 100px;
-        }
-
-        .premium-subtitle {
-            font-size: 20px;
-            color: var(--light-navy);
-            margin-bottom: 30px;
-            font-weight: 400;
-            font-style: italic;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .premium-subtitle::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 80%;
-            width: 4px;
-            background: var(--primary-gold);
-            border-radius: 2px;
-        }
-
-        .premium-desc {
-            font-size: 17px;
-            text-align: justify;
-            line-height: 1.8;
-            color: var(--dark-gray);
-            margin-bottom: 50px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .premium-desc p {
-            margin-bottom: 20px;
-        }
-
-        .premium-pillars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .premium-pillar {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--medium-gray);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .premium-pillar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 0;
-            background: linear-gradient(to bottom, var(--primary-gold), var(--dark-gold));
-            transition: var(--transition);
-        }
-
-        .premium-pillar:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--light-gold);
-        }
-
-        .premium-pillar:hover::before {
-            height: 100%;
-        }
-
-        .pillar-icon {
-            font-size: 42px;
-            color: var(--primary-gold);
-            margin-bottom: 20px;
-            transition: var(--transition);
-            display: inline-block;
-        }
-
-        .premium-pillar:hover .pillar-icon {
-            transform: scale(1.1) translateY(-5px);
-        }
-
-        .pillar-title {
-            font-size: 22px;
-            color: var(--dark-navy);
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .pillar-desc {
-            font-size: 16px;
-            color: var(--dark-gray);
-            line-height: 1.7;
-            flex-grow: 1;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 60px 0 40px;
-            gap: 20px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            min-width: 200px;
-        }
-
-        .stat-number {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--primary-gold);
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: var(--light-navy);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--medium-gray), transparent);
-            margin: 40px 0;
-            position: relative;
-        }
-
-        .divider::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary-gold);
-            border-radius: 3px;
-        }
-
-        @media (max-width: 1024px) {
-            .premium-container {
-                padding: 0 15px;
-            }
-            
-            .premium-section {
-                padding: 40px;
-            }
-            
-            .premium-title {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .premium-container {
-                margin: 40px auto;
-            }
-            
-            .premium-section {
-                padding: 30px;
-                border-radius: 16px;
-            }
-            
-            .premium-title {
-                font-size: 32px;
-            }
-            
-            .premium-subtitle {
-                font-size: 18px;
-            }
-            
-            .premium-desc {
-                font-size: 16px;
-            }
-            
-            .premium-pillars {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .premium-section {
-                padding: 25px 20px;
-            }
-            
-            .premium-title {
-                font-size: 28px;
-            }
-            
-            .premium-subtitle {
-                font-size: 16px;
-                padding-left: 15px;
-            }
-            
-            .premium-subtitle::before {
-                width: 3px;
-            }
-            
-            .stat-item {
-                min-width: 150px;
-            }
-            
-            .stat-number {
-                font-size: 36px;
-            }
-        }
-    </style>
 
 
 
 
-
-
-
-
-<!-- ISO Section -->
-<section class=" py-12 px-4 sm:px-6 lg:py-20 lg:px-24" style="background-color: #f0f5fb;">
-  <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+<section class="w-full bg-white py-10 px-4 md:px-12 font-sans">
+  <div class="max-w-6xl mx-auto">
     
-    <!-- Left Content -->
-    <div class="w-full lg:w-1/2 mt-10 lg:mt-0">
-      <p class="text-[#c9a560] text-sm sm:text-base font-normal uppercase tracking-wider mb-2" style="text-align: left !important;">
-        BUILT ON TRUST, DRIVEN BY INSIGHT
-      </p>
-      <h2 class="about-title" style="text-align: left !important;">
-        Get to know about <span class="about-title">Who We Are</span>
-      </h2>
-      <p class="pillar-desc">
-        QSS is a tech-enabled, ISO-certified audit and compliance firm offering precision-driven services across internal audits, inventory checks, background verifications, and manpower outsourcing. With 10+ years of experience, Pan-India reach, and trusted by 100+ enterprises, QSS empowers organizations with governance, control, and transparency through its 360° assurance approach—Performance, Protection, and Proof.
-      </p>
-    </div>
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold text-center text-[#111827] mb-8">
+      Apply for a Position
+    </h2>
 
-    <!-- Right Image -->
-    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
-      <img src="img/iiiisssooo.png" alt="ISO Certifications & QuickEx Tech" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
-    </div>
+    <!-- Form Start -->
+    <form id="jobApplicationForm" class="space-y-8" onsubmit="handleFormSubmit(event)">
+      
+      <!-- Sub Heading -->
+      <h3 class="text-lg font-semibold text-blue-700 border-b !border-black pb-2">
+        Furnish Your Details
+      </h3>
+
+      <!-- Row 1 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block text-sm text-black mb-2">Enter your Name</label>
+          <input type="text" name="name" placeholder="Your Name" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required />
+        </div>
+
+        <div>
+          <label class="block text-sm text-black mb-2">Enter your Email Id</label>
+          <input type="email" name="email" placeholder="you@example.com" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required />
+        </div>
+
+        <div>
+          <label class="block text-sm text-black mb-2">Enter your Mobile Number</label>
+          <input type="tel" name="mobile" placeholder="1234567890" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required />
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label class="block text-sm text-black mb-2">Enter your Location</label>
+          <input type="text" name="location" placeholder="Your Location" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required />
+        </div>
+
+        <div>
+          <label class="block text-sm text-black mb-2">Select your Experience</label>
+          <div class="grid grid-cols-2 gap-2">
+            <select name="experience_year" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required>
+              <option value="">Year</option>
+              <option value="0">0 Year</option>
+              <option value="1">1 Year</option>
+              <option value="2">2 Years</option>
+              <option value="3">3 Years</option>
+              <option value="4">4 Years</option>
+              <option value="5">5+ Years</option>
+            </select>
+            <select name="experience_month" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required>
+              <option value="">Month</option>
+              <option value="0">0 Month</option>
+              <option value="1">1 Month</option>
+              <option value="2">2 Months</option>
+              <option value="3">3 Months</option>
+              <option value="4">4 Months</option>
+              <option value="5">5 Months</option>
+              <option value="6">6+ Months</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-700 mb-2">Position</label>
+          <select name="position" class="w-full border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required>
+            <option value="">Select Position</option>
+            <option value="general_manager">General Manager</option>
+            <option value="general_manager_business">General Manager - Business Development</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Upload + Captcha -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm text-black mb-2">Upload your Resume</label>
+          <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" class="hidden" />
+          <button type="button" onclick="document.getElementById('resume').click()" class="w-full bg-blue-900 text-white py-2 rounded-md text-sm hover:bg-blue-800 transition-colors">
+            ⬆ Upload Resume (Accepts only pdf, doc & docx file)
+          </button>
+          <span id="fileName" class="text-xs text-gray-500 mt-1 block"></span>
+        </div>
+
+        <div>
+          <label class="block text-sm text-gray-700 mb-2">Captcha *</label>
+          <div class="flex items-center gap-2">
+            <input type="text" name="captcha" placeholder="Enter Captcha" class="flex-1 border !border-black rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-blue-600" required />
+            <div class="bg-blue-900 text-white px-4 py-2 rounded-md font-mono" id="captchaDisplay">Vy I6Ax8</div>
+            <button type="button" onclick="generateCaptcha()" class="text-blue-700 text-xl hover:text-blue-900">⟳</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <!-- Checkbox + Text -->
+        <div class="flex items-start gap-2">
+          <input type="checkbox" name="terms" class="mt-1" required />
+          <p class="text-sm text-gray-700">
+            I've read and accept the 
+            <a href="#" class="text-blue-700 underline">Terms & Conditions</a> and 
+            <a href="#" class="text-blue-700 underline">Privacy Policy</a>*
+          </p>
+        </div>
+
+        <!-- Submit Button Updated -->
+   
+
+      </div>
+   <button 
+  type="submit" 
+  style="
+    width: 8rem; 
+    padding: 0.5rem 0; 
+    border: 2px solid black; 
+    background-color: white; 
+    color: black; 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+    border-radius: 0; 
+    transition: background-color 0.3s, color 0.3s;
+  "
+  onmouseover="this.style.backgroundColor='rgb(0 52 102)'; this.style.color='white';"
+  onmouseout="this.style.backgroundColor='white'; this.style.color='black';"
+>
+  SUBMIT
+</button>
+
+
+
+    </form>
+    <!-- Form End -->
 
   </div>
 </section>
-<!-- End ISO Section -->
+
+<script>
+  // File upload display
+  document.getElementById('resume').addEventListener('change', function(e) {
+    const fileName = e.target.files[0] ? e.target.files[0].name : 'No file chosen';
+    document.getElementById('fileName').textContent = fileName;
+  });
+
+  // Captcha generation
+  function generateCaptcha() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let captcha = '';
+    for (let i = 0; i < 7; i++) {
+      captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById('captchaDisplay').textContent = captcha;
+  }
+
+  // Form submission handler
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Basic validation
+    if (!data.terms) {
+      alert('Please accept the Terms & Conditions and Privacy Policy');
+      return;
+    }
+
+    // Here you would typically send the data to your server
+    console.log('Form data:', data);
+    
+    // Simulate form submission
+    alert('Application submitted successfully! We will contact you soon.');
+    
+    // Reset form
+    event.target.reset();
+    document.getElementById('fileName').textContent = '';
+    generateCaptcha();
+  }
+
+  // Generate initial captcha
+  generateCaptcha();
+</script>
 
 
-    <div class="premium-container">
-        <section class="premium-section">
-            <h2 class="about-title" style="text-align: left;">Who We Are</h2>
-            <p class="premium-subtitle">Quick Support Solutions Built on Trust, Driven by Insight</p>
-            
-            <div >
-                <p class="pillar-desc">Quick Support Solutions is a compliance-first audit & assurance firm that delivers precision-driven solutions across internal audit, retail audits, inventory & asset audits, manpower outsourcing, and background verification.</p>
-                
-                <p class="pillar-desc">Originally established in 2015 as Quick Support Associate, the firm became an LLP in 2019 and was formally incorporated as QSS Audit & Assurance Services Pvt. Ltd. in 2025. Over the years, QSS has grown into a trusted name for scalable audit services across industries including retail, infrastructure, manufacturing, logistics, and hospitality.</p>
-            </div>
 
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number">5000+</div>
-                    <div class="stat-label">Site Audits</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Industry Sectors</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>
 
-            <div class="premium-desc">
-                <p class="pillar-desc">Our strength lies in combining regulatory expertise with tech-enabled execution and operational control. With ISO certification, proprietary technology, and a nationwide delivery network, QSS empowers organizations seeking governance, control, and transparency.</p>
-                
-                <p class="pillar-desc">Our unique 360° approach—Performance, Protection & Proof Assurance—ensures every business function is not just compliant, but audit-resilient, secure, and trust-enabled.</p>
-            </div>
 
-            <div class="divider"></div>
 
-            <div class="premium-pillars">
-                <article class="premium-pillar">
-                    <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3 class="pillar-title">Performance</h3>
-                    <p class="pillar-desc">
-                        Driving operational efficiency through audits, compliance, and control reviews. We ensure your business processes are optimized for maximum productivity and effectiveness.
-                    </p>
 
-                  
-                </article>
-                
-                <article class="premium-pillar">
-                    <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="pillar-title">Protection</h3>
-                    <p class="pillar-desc">
-                        Safeguarding assets and operations with risk-based audits and internal controls. Our comprehensive approach identifies vulnerabilities before they become threats.
-                    </p>
-                </article>
-                
-                <article class="premium-pillar">
-                    <div class="pillar-icon"><i class="fas fa-certificate"></i></div>
-                    <h3 class="pillar-title">Proof</h3>
-                    <p class="pillar-desc">
-                        Validating trust through verifications, background checks, and digital authentication via QuickEx™. We provide the evidence needed for confident decision-making.
-                    </p>
-                </article>
-            </div>
-        </section>
+
+
+
+
+
+ <!-- QSS Footer Start -->
+<div class="qss-footer-container container-fluid py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
+  <div class="container py-5">
+    <div class="row g-5">
+
+      <!-- Contact Info -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="qss-footer-item d-flex flex-column">
+          <h1 class="qss-footer-title mb-4" style="color: #c9a560;">Contact Info</h1>
+          <a href="#" class="qss-footer-link mb-2 text-white">
+            <i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i>
+            Corporate HQ: S.R. No. 71C/2, Flat No. 201, Harpale Complex, Haveli, Pune, Manjari Bk (N.V.), 412307
+          </a>
+          <a href="mailto:info@qss.net.in" class="qss-footer-link mb-2 text-white">
+            <i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@qss.net.in
+          </a>
+          <a href="tel:+919202456705" class="qss-footer-link mb-2 text-white">
+            <i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91-9202456705
+          </a>
+          <a href="tel:+919202456705" class="qss-footer-link mb-3 text-white">
+            <i class="fas fa-print me-2" style="color: #c9a560;"></i> +91-9202456705
+          </a>
+
+          <div class="d-flex align-items-center">
+            <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
+            <!-- Social Icons -->
+            <a class="qss-footer-social mx-1" href="#"><i class="fab fa-x-twitter"></i></a>
+            <a class="qss-footer-social mx-1" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="qss-footer-social mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opening Time -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="qss-footer-item d-flex flex-column">
+          <h1 class="qss-footer-title mb-4" style="color: #c9a560;">Opening Time</h1>
+          <div class="mb-3">
+            <h6 class="mb-0 text-white">Mon - Friday:</h6>
+            <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
+          </div>
+          <div class="mb-3">
+            <h6 class="mb-0 text-white">Saturday:</h6>
+            <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
+          </div>
+          <div class="mb-3">
+            <h6 class="mb-0 text-white">Vacation:</h6>
+            <p class="mb-0 text-white">All Sunday is our vacation</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Services -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="qss-footer-item d-flex flex-column">
+          <h1 class="qss-footer-title mb-4" style="color: #c9a560;">Our Services</h1>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Inventory Management</a>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit & Assurance</a>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Asset Management</a>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Showroom Audits</a>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Manpower Outsourcing</a>
+          <a href="contact.html#footer" class="qss-footer-link mb-2 text-white"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Background Verification</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="qss-footer-item">
+          <h1 class="qss-footer-title mb-4" style="color: #c9a560;">Newsletter</h1>
+          <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
+          <div class="position-relative">
+            <input class="qss-footer-input form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email">
+            <button type="button" class="qss-footer-btn btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- QSS Footer End -->
+
+<!-- QSS Copyright Section -->
+<div class="qss-footer-copyright container-fluid" style="background: #c9a560 !important; padding: 2rem 0; position: relative; overflow: hidden;">
+  <div class="qss-footer-overlay"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#2d2d2d" class="me-2" viewBox="0 0 16 16">
+            <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z" />
+          </svg>
+          <span class="text-white" style="font-size: 0.9rem; letter-spacing: 0.5px; font-weight: 500;">2025 QSS. All rights reserved.</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center text-md-end">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-end">
+          <span class="text-white mb-1 mb-md-0 me-md-2" style="font-size: 0.8rem; opacity: 0.8; font-weight: 400;">Crafted with passion by</span>
+          <a href="#" class="qss-footer-designer ms-md-0">
+            Digital Success Solutions
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#ffffff" class="bi bi-arrow-up-right ms-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
 
-
-
-
-
-      
-         <style>
-        :root {
-            --primary-gold: #c9a560;
-            --dark-gray: #4b4b4b;
-            --light-gray: #f8f9fa;
-            --medium-gray: #6c757d;
-            --card-bg: #ffffff;
-            --overlay-bg: rgba(33, 37, 41, 0.92);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container-fluid {
-            padding: 100px 0;
-            background-color: var(--light-gray);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        
-        /* .sub-style {
-            display: inline-block;
-            border-bottom: 3px solid var(--primary-gold);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        } */
-        
-        .sub-title {
-            color: var(--primary-gold);
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-        
-        .section-title h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--dark-gray);
-            margin-top: 15px;
-            line-height: 1.2;
-        }
-        
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -15px;
-        }
-        
-        .col-lg-3 {
-            flex: 0 0 25%;
-            max-width: 25%;
-            padding: 15px;
-        }
-        
-        @media (max-width: 992px) {
-            .col-lg-3 {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .col-lg-3 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-            
-            .section-title h1 {
-                font-size: 2.2rem;
-            }
-        }
-        
-        .service-card {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            background: var(--card-bg);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
-        
-        .card-image {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .service-card:hover .card-image img {
-            transform: scale(1.08);
-        }
-        
-        .card-title-visible {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-            color: white;
-            z-index: 2;
-        }
-        
-        .card-title-visible h4 {
-            font-size: 20px;
-            font-weight: 600;
-            margin: 0;
-            color: white;
-        }
-        
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-content h4 {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--dark-gray);
-            margin-bottom: 12px;
-        }
-        
-        .card-content p {
-            color: var(--medium-gray);
-            margin-bottom: 20px;
-            flex-grow: 1;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        
-        .btn-read {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary-gold);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-read i {
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-read:hover {
-            color: #b08d4c;
-        }
-        
-        .btn-read:hover i {
-            transform: translateX(4px);
-        }
-        
-        .card-hover-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--overlay-bg);
-            color: white;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: 3;
-        }
-        
-        .service-card:hover .card-hover-content {
-            opacity: 1;
-        }
-        
-        .card-hover-content h4 {
-            color: white;
-            font-size: 22px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .card-hover-content p {
-            margin-bottom: 25px;
-            font-size: 15px;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.85);
-        }
-        
-        .hover-btn {
-            display: inline-flex;
-            align-items: center;
-            background: var(--primary-gold);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            width: fit-content;
-        }
-        
-        .hover-btn i {
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-btn:hover {
-            background: #b08d4c;
-            transform: translateY(-2px);
-        }
-        
-        .hover-btn:hover i {
-            transform: translateX(4px);
-        }
-    </style>
-
-<body>
-
-
-
-
-
-<!-- Services (CA Chartered Accountant) Start -->
-<div class="container-fluid ca-services" style="padding:60px 0; background:#f0f5fb;">
-  <div class="container" style="max-width:1200px; margin:0 auto;">
-    <!-- Section Title -->
-    <div class="section-title" style="text-align:center; margin-bottom:50px;">
-      <div class="sub-style">
-        <h5 class="sub-title" style="color:#c9a560; font-size:16px; letter-spacing:2px; margin-bottom:10px;">OUR CORE SERVICES</h5>
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="qss-footer-divider"></div>
       </div>
-      <h1 style="font-size:32px; font-weight:700; color:#222;">Professional Audit & Assurance Solutions</h1>
     </div>
 
-    <!-- Service Cards Row -->
-    <div class="row service-row" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-
-      <!-- Card 1 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a1.png" alt="Audit & Assurance">
-          <div class="card-title-visible"><h4>Audit & Assurance</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Audit & Assurance</h4>
-          <p>Independent audits ensuring accuracy, compliance, and transparency in financial reporting for businesses of all sizes.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <div class="qss-footer-social-links d-flex justify-content-center gap-3">
+          <a href="#" class="text-dark opacity-75 hover-opacity-100"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-dark opacity-75 hover-opacity-100"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-dark opacity-75 hover-opacity-100"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a2.png" alt="Inventory Management">
-          <div class="card-title-visible"><h4>Inventory Management</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Inventory Management</h4>
-          <p>Smart solutions to track, organize, and optimize stock levels for smooth business operations.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a4.png" alt="Asset Management">
-          <div class="card-title-visible"><h4>Asset Management</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Asset Management</h4>
-          <p>Efficient solutions to monitor, track, and optimize business assets for better growth and profitability.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a3.png" alt="Showroom Audits">
-          <div class="card-title-visible"><h4>Showroom Audits</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Showroom Audits</h4>
-          <p>Comprehensive auditing of showroom operations, inventory, and compliance to ensure smooth and efficient management.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a4.png" alt="Manpower Outsourcing">
-          <div class="card-title-visible"><h4>Manpower Outsourcing</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Manpower Outsourcing</h4>
-          <p>Deploy skilled resources that are compliant, accountable, and audit-ready. We provide agile staffing solutions designed for operational flexibility and compliance.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="service-card">
-        <div class="card-image">
-          <img src="img/a4.png" alt="Background Verification">
-          <div class="card-title-visible"><h4>Background Verification</h4></div>
-        </div>
-        <div class="card-content">
-          <h4>Background Verification</h4>
-          <p>Seamless, secure, and fully digitized verification—powered by QuickEx™. Our background verification services ensure that your workforce is validated and reliable.</p>
-          <a href="service.html" class="btn-read">Explore more Service →</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>
 
-<!-- Styles -->
+
 <style>
-.service-card {
-  flex: 1 1 22%;
-  max-width: 300px;
-  height: 30rem;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  text-align: center;
-  padding-bottom: 20px;
+    /* ==============================
+   QSS Unique Footer Styles
+============================== */
+.qss-footer-container .qss-footer-item a.qss-footer-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.qss-footer-container .qss-footer-link:hover {
+  color: #c9a560 !important;
 }
 
-.card-image {
+.qss-footer-social {
+  border: 1px solid #c9a560;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.qss-footer-social i {
+  color: #c9a560;
+}
+.qss-footer-social:hover {
+  background-color: #c9a560;
+}
+.qss-footer-social:hover i {
+  color: #fff;
+}
+
+.qss-footer-btn {
+  background-color: #c9a560;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  transition: all 0.3s ease;
+}
+.qss-footer-btn:hover {
+  background-color: #b8944e;
+}
+
+.qss-footer-input {
+  border: 1px solid #c9a560;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+}
+.qss-footer-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.qss-footer-copyright {
   position: relative;
 }
-
-.card-image img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #eee;
-}
-
-.card-title-visible {
+.qss-footer-overlay {
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 8px 0;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR...') no-repeat;
+  opacity: 0.3;
 }
-
-.card-title-visible h4 {
-  margin: 0;
-  font-size: 18px;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.card-content p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.btn-read {
-  color: #c9a560;
-  font-weight: 600;
+.qss-footer-designer {
   text-decoration: none;
-  font-size: 14px;
+  background: rgba(45,45,45,0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.qss-footer-designer:hover {
+  background: rgba(30,30,30,1);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .service-card {
-    flex: 1 1 45%;
-  }
+.qss-footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(45,45,45,0.15) 50%, transparent 100%);
 }
 
-@media (max-width: 768px) {
-  .service-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
 </style>
-
-
-
-
-
-
-<!-- Services End -->
-
-
-
-
-      <!-- Footer Start -->
-<div class="container-fluid footer py-5 wow fadeIn" style="background-color: rgb(75,75,75);" data-wow-delay="0.2s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <!-- Contact Info -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Contact Info</h4>
-                    <a href="" class="mb-2 text-white" style="text-decoration: none;"><i class="fa fa-map-marker-alt me-2" style="color: #c9a560;"></i>Corporate HQ: S.R. No. 71C/2, Flat No. 201, Harpale Complex, Haveli, Pune, Manjari Bk (N.V.), 412307</a>
-                    <a href="mailto:info@qss.net.in
-" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-envelope me-2" style="color: #c9a560;"></i> info@qss.net.in
-</a>
-                    <a href="tel:+911234567890" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-phone me-2" style="color: #c9a560;"></i> +91-9202456705</a>
-                    <a href="tel:+911234567891" class="mb-3 text-white" style="text-decoration: none;"><i class="fas fa-print me-2" style="color: #c9a560;"></i> +91-9202456705</a>
-                  <div class="d-flex align-items-center">
-    <i class="fas fa-share fa-2x me-2" style="color: #c9a560;"></i>
-
-    <!-- X (Twitter) -->
-    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
-       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-       <i class="fab fa-x-twitter" style="color: #c9a560;"></i>
-    </a>
-
-    <!-- Instagram -->
-    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
-       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-       <i class="fab fa-instagram" style="color: #c9a560;"></i>
-    </a>
-
-    <!-- LinkedIn -->
-    <a class="btn btn-outline-light btn-social mx-1 rounded-circle" href="" 
-       style="border-color: #c9a560; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
-       <i class="fab fa-linkedin-in" style="color: #c9a560;"></i>
-    </a>
-</div>
-                </div>
-            </div>
-
-            <!-- Opening Time -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Opening Time</h4>
-                    <div class="mb-3">
-                        <h6 class="mb-0 text-white">Mon - Friday:</h6>
-                        <p class="mb-0 text-white">09.00 am to 07.00 pm</p>
-                    </div>
-                    <div class="mb-3">
-                        <h6 class="mb-0 text-white">Saturday:</h6>
-                        <p class="mb-0 text-white">10.00 am to 05.00 pm</p>
-                    </div>
-                    <div class="mb-3">
-                        <h6 class="mb-0 text-white">Vacation:</h6>
-                        <p class="mb-0 text-white">All Sunday is our vacation</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Our Services -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Our Services</h4>
-                       <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Inventory Management</a>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Audit & Assurance</a>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Asset Management</a>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Showroom Audits</a>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Manpower Outsourcing</a>
-                    <a href="contact.html#footer" class="mb-2 text-white" style="text-decoration: none;"><i class="fas fa-angle-right me-2" style="color: #c9a560;"></i> Background Verification</a>
-                </div>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item">
-                    <h1  class="text-primary-custom mb-4" style="color: #c9a560 !important;">Newsletter</h4>
-                    <p class="mb-3 text-white">Subscribe to our newsletter for financial tips, tax updates, and business insights.</p>
-                    <div class="position-relative">
-                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Enter your email" style="border: 1px solid #c9a560; background-color: rgba(255,255,255,0.1); color: white;">
-                        <button type="button" class="btn rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2" style="background-color: #c9a560; color: white; border: none; padding: 0 15px;">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
-
-<!-- Premium Golden Copyright Footer -->
-<div class="container-fluid copyright" style="background: #c9a560 !important; padding: 2rem 0; position: relative; overflow: hidden;">
-    <!-- Optional subtle texture overlay -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0icmdiYSgwLDAsMCwwLjAzKSIvPjxwYXRoIGQ9Ik0wIDUwTDUwIDBaIiBzdHJva2U9InJnYmEoMCwwLDAsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg=='); opacity: 0.3;"></div>
-    
-    <div class="container position-relative">
-        <div class="row align-items-center">
-            <!-- Left Section -->
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#2d2d2d" class="bi bi-c-circle me-2" viewBox="0 0 16 16">
-                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
-                    </svg>
-                    <span class="text-white" style="font-size: 0.9rem; letter-spacing: 0.5px; font-weight: 500;">2025 QSS. All rights reserved.</span>
-                </div>
-            </div>
-            
-            <!-- Right Section -->
-            <div class="col-md-6 text-center text-md-end">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-end">
-                    <span class="text-white mb-1 mb-md-0 me-md-2" style="font-size: 0.8rem; opacity: 0.8; font-weight: 400;">Crafted with passion by</span>
-                    <a href="#" class="ms-md-0" style="text-decoration: none;">
-                        <span class="badge px-3 py-2" style="background: rgba(45,45,45,0.9); color: white; font-weight: 500; letter-spacing: 0.5px; border-radius: 20px; transition: all 0.3s ease;">
-                            Digital Success Solutions
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#ffffff" class="bi bi-arrow-up-right ms-1" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Premium Divider -->
-        <div class="row mt-3">
-            <div class="col-12">
-                <div style="height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(45,45,45,0.15) 50%, transparent 100%);"></div>
-            </div>
-        </div>
-        
-        <!-- Social Links -->
-        <div class="row mt-3">
-            <div class="col-12 text-center">
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-dark opacity-75 hover-opacity-100" style="transition: all 0.3s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- QSS Footer End -->
 
 
 
@@ -1393,16 +1220,14 @@ body {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quality Success Solutions - Voice Chatbot</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+
+    
+
+
     <style>
         :root {
             --primary-color: #003466;
@@ -1978,8 +1803,7 @@ body {
             background-color: #e0e7ff;
         }
     </style>
-</head>
-<body>
+
     <div class="chatbot-container" id="chatbot-container">
         <div class="chatbot-header">
             <div class="header-content">
@@ -2712,8 +2536,8 @@ body {
             }
         });
     </script>
-</body>
-</html>
+
+
 
 
 <!-- Paragraph Global CSS Start (h1) -->
@@ -2845,4 +2669,9 @@ body {
    <!-- card ke liye  -->
 
 <!-- peragraph globle css end -->
+
+    </body>
+
+   
+
 </html>
